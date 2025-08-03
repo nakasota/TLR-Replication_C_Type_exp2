@@ -29,7 +29,8 @@ data/raw/
 data/repos/
 data/db/
 data/processed/go_repo_structure.json
-data/preprocess/go_repo_structure
+data/preprocess/go_repo_structure.json
+data/ground_truth/go_repo_structure.json
 
 # Docker
 *.pid
@@ -74,7 +75,8 @@ data/preprocess/go_repo_structure.json
 # Embedding cache files (pickle files can be regenerated)
 embedding_based/embeddings_cache_openai/*.pkl
 embedding_based/embeddings_cache_openai/intermediate/*.pkl
-embedding_based/output/*.pkl
+embedding_based/output/
+embedding_based/embeddings_cache_openai/
 
 # Any large pickle files
 *.pkl

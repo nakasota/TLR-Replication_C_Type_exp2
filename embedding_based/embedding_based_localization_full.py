@@ -223,7 +223,7 @@ def main():
     if args.prop_dir:
         prop_dir = Path(args.prop_dir)
     else:
-        prop_dir = base / 'data' / 'preprocess' / 'accepted_proposals' / 'cleaned_evaluable_proposals_content_validated'
+        prop_dir = base / 'data' / 'preprocess' / 'accepted_proposals' / 'cleaned_evaluable_proposals_for_embedding_content_validated'
     
     if args.gt_file:
         gt_file = Path(args.gt_file)
@@ -243,6 +243,9 @@ def main():
     proposals    = load_proposals(prop_dir)
     ground_truth = load_ground_truth(gt_file)
     
+    print(f"📄 Loaded {len(proposals)} proposals")
+    print(f"📊 Loaded ground truth for {len(ground_truth)} proposals")
+    
     # Limit the number of proposals if specified
     if args.all:
         print(f"🔢 Processing all {len(proposals)} proposals")
@@ -258,21 +261,79 @@ def main():
     embedding_based_dir = Path(__file__).parent
     openai_embed_dir = embedding_based_dir / "embeddings_cache_openai"
     
+    # Validate paths
+    print(f"📁 Proposal directory: {prop_dir}")
+    print(f"📁 Ground truth file: {gt_file}")
+    print(f"📁 Embedding directory: {openai_embed_dir}")
+    
+    if not prop_dir.exists():
+        print(f"❌ Proposal directory not found: {prop_dir}")
+        return
+    
+    if not gt_file.exists():
+        print(f"❌ Ground truth file not found: {gt_file}")
+        return
+        
+    if not openai_embed_dir.exists():
+        print(f"❌ Embedding directory not found: {openai_embed_dir}")
+        return
+    
     try:
-        # Load OpenAI embeddings with the correct file names from embedding_creator_for_file_and_func
-        with open(openai_embed_dir / 'file_embeddings.pkl', 'rb') as f:
-            file_embs = pickle.load(f)
+        # Load OpenAI embeddings with available file names
+        # Try different possible file names for file embeddings
+        file_emb_files = [
+            'file_embeddings.pkl',
+            'all_file_embeddings.pkl',
+            'intermediate/file_embeddings_batch_2.pkl'
+        ]
+        
+        file_embs = None
+        for file_name in file_emb_files:
+            try:
+                with open(openai_embed_dir / file_name, 'rb') as f:
+                    file_embs = pickle.load(f)
+                print(f"✅ Loaded file embeddings from {file_name}")
+                break
+            except FileNotFoundError:
+                continue
+        
+        if file_embs is None:
+            raise FileNotFoundError("No file embeddings found")
+        
         file_embs = np.array(file_embs)
         
         with open(openai_embed_dir / 'file_paths.pkl', 'rb') as f:
             file_paths = pickle.load(f)
         
-        with open(openai_embed_dir / 'function_embeddings.pkl', 'rb') as f:
-            func_embs = pickle.load(f)
-        func_embs = np.array(func_embs)
+        # Try different possible file names for function embeddings
+        func_emb_files = [
+            'function_embeddings.pkl',
+            'all_function_embeddings.pkl'
+        ]
         
-        with open(openai_embed_dir / 'function_identifiers.pkl', 'rb') as f:
-            func_ids = pickle.load(f)
+        func_embs = None
+        func_ids = None
+        
+        # If no function embeddings available, create dummy data for files only
+        for file_name in func_emb_files:
+            try:
+                with open(openai_embed_dir / file_name, 'rb') as f:
+                    func_embs = pickle.load(f)
+                print(f"✅ Loaded function embeddings from {file_name}")
+                break
+            except FileNotFoundError:
+                continue
+        
+        if func_embs is None:
+            print("⚠️  No function embeddings found, using file embeddings only")
+            # Use file embeddings as function embeddings for file-level evaluation only
+            func_embs = file_embs.copy()
+            # Create dummy function identifiers based on file paths
+            func_ids = [(path, f"dummy_func_{i}") for i, path in enumerate(file_paths)]
+        else:
+            func_embs = np.array(func_embs)
+            with open(openai_embed_dir / 'function_identifiers.pkl', 'rb') as f:
+                func_ids = pickle.load(f)
         
         print(f"✅ Loaded OpenAI embeddings from {openai_embed_dir}")
         print(f"   Files: {len(file_paths)}, Functions: {len(func_ids)}")
