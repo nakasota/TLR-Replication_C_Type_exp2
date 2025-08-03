@@ -1,0 +1,2235 @@
+
+You are analyzing a Go proposal and repository to identify which files are **most relevant** to the given proposal.
+
+### Proposal Content ###
+# Proposal: 50062.md
+==== [Issue Title] ====
+time: add Time.ZoneBounds
+
+==== [Issue Body] ====
+Export `Location.lookup()` as `Location.Lookup()` to help finding DST transitions.
+
+Sometimes one want to find the when a zone transition starts or ends, which is already implemented in the non exported `func (l *Location) lookup(sec int64) (name string, offset int, start, end int64, isDST bool)`
+
+Example: I need to correct '2021-03-28 02:30:00' in 'Europe/Amsterdam', which is in the non-existing hour during DST transition between CET and CEST, to the first coming valid time.
+I.e. there is a requirement to have a function that takes a date and time in a DST Location and if it is incorrect, correct it to the first following correct date and time.
+
+Setting the time and then reading it back may give a new time that is not at the DST transition, like: https://go.dev/play/p/sJdTyNZJPT6
+
+And I don't expect time.Date() to change it current behaviour, but if there was an efficient way to find the DST transition one could easily just check the DST transition and correct it one self.
+
+==== [Comments] ====
+
+--- Comment #1 by ianlancetaylor ---
+We don't want to simply export the current `Location.lookup` method.  That method takes and returns a number of seconds in the Unix epoch, but an exported method should use `time.Time`.  For an exported API we should probably return some indication of ambiguity, when a `time.Time` value exists in two different timezones (e.g., when the hour between 1am and 2am is repeated in typical daylight savings time transitions).
+
+Want to propose a useful API to export?  Thanks.
+
+--- Comment #2 by rsc ---
+
+This proposal has been added to the [active column](https://golang.org/s/proposal-status#active) of the proposals project
+and will now be reviewed at the weekly proposal review meetings.
+— rsc for the proposal review group
+
+
+--- Comment #3 by rsc ---
+It sounds like the need here is for a new method on time.Time that tells the time zone transitions to either side of the instant that is described by the time.Time? Do I have that right?
+
+
+
+--- Comment #4 by mjonss ---
+> It sounds like the need here is for a new method on time.Time that tells the time zone transitions to either side of the instant that is described by the time.Time? Do I have that right?
+
+Yes, the primary need is to find the time zone transitions, since that information already exists, but is not exposed.
+
+--- Comment #5 by ianlancetaylor ---
+Thanks.  What about
+
+```Go
+// ZoneBounds returns the bounds of the time zone in effect at time t.
+// The zone begins at start and the next zone begins at end.
+// If the zone begins at the beginning of time, start will be returned as a zero Time.
+// If the zone goes on forever, end will be returned as a Time in the very distant future.
+// The Location of the returned times will be the same as t.
+func (t Time) ZoneBounds() (start, end Time)
+
+--- Comment #6 by martin-sucha ---
+Yeah, that might work. I like that `ZoneBounds` is simple. There are a couple limitations of that interface though, see below.
+
+> If the zone goes on forever, end will be returned as a Time in the very distant future.
+
+Should we expose that future time as a constant or add a method to check for it (similar to `IsZero()`) to time.Time? Consider a program that prints the next 10 zone transitions is given a location that goes on forever without transitions, like UTC. That program will need to determine when to stop iterating.
+
+How is the user supposed to iterate backwards in time? Subtract `Duration(1)` from `start` and call `ZoneBounds()` on the result?
+
+So, daylight saving time flag, zone name and offset will be exposed with `Time.IsDST` and `Time.Zone`, right? `IsDST`/`Zone` do lookups currently, is it okay if we first do lookup in `ZoneBounds()` and then again for `IsDST`/`Zone` calls? While we could theoretically cache lookup results in `Time`, I would be cautious about making `Time` bigger.
+
+If we wanted iteration that is O(1) instead of needing to do O(log N) lookup every time, we could cache the zone index, but it would require an additional type. What about something like
+
+```go
+type Zone struct {
+	// location that the zone is part of.
+	location *Location
+	// index of the current zone in Location.tx.
+	// -1 if the first zone (lookupFirstZone) is used.
+	// 0..len(Location.tx)-1 for a zone starting with the given transition index.
+	// len(Location.tx) if we used extend string to build this Zone.
+	index int
+	// start time of the zone.
+	// Zero time if the zone starts at the beginning of time.
+	// This identifies the zone instance when using extend string.
+	start Time
+}
+
+// Name of the zone.
+func (z Zone) Name() string
+
+// Offset of the zone east of UTC.
+func (z Zone) Offset() Duration
+
+// Start is the time when the zone starts.
+// If the zone begins at the beginning of time, start will be returned as a zero Time and ok will be false.
+func (z Zone) Start() (start Time, ok bool)
+
+// End is the time when next zone starts.
+// If the zone goes on forever, end will be returned as a Time in the very distant future and ok will be false.
+func (z Zone) End() (end Time, ok bool)
+
+// IsDST reports whether the time in the zone is in Daylight Savings Time.
+func (z Zone) IsDST() bool
+
+// LaterZone returns the next zone.
+// If there is no later zone, LaterZone returns (z, false).
+func (z Zone) LaterZone() (later Zone, ok bool)
+
+// EarlierZone returns the previous zone.
+// If there is no previous zone, EarlierZone returns (z, false).
+func (z Zone) EarlierZone() (earlier Zone, ok bool)
+
+// LookupZone describes the zone in effect at t.
+// The Location of the times returned by the Zone will be the same as t.Location().
+func (t Time) LookupZone() Zone
+```
+
+Disadvatages:
+* Larger API surface.
+
+Advantages:
+* Efficient iteration of zones.
+* Easy to add a field to the result in the future if needed.
+
+For a use case like building a VTIMEZONE, we could add methods like:
+
+```go
+// IsExtended returns true if the Zone was computed from an extend string.
+func (z Zone) IsExtended() bool
+
+// Extend returns the zone extend string.
+func (l *Location) Extend() string
+```
+
+However, the name `Zone` might clash with types proposed in #49951. We could use `ZoneIter` instead of `Zone`, but I don't like `ZoneIter` as much as `Zone`.
+
+--- Comment #7 by ianlancetaylor ---
+> Should we expose that future time as a constant or add a method to check for it (similar to `IsZero()`) to time.Time?
+
+Fair question.  There is a tension between returning a zero result for the end of time and returning a time in the distant future.  Returning a zero result makes it easy to see that there is no information but harder to write a quick comparison to see whether a time is in range.  Defining a new constant or method extends the API only for purposes of this new method, which seems unfortunate.
+
+> How is the user supposed to iterate backwards in time?
+
+Is this a common operation that needs to be supported efficiently in the low-level time package?
+
+--- Comment #8 by martin-sucha ---
+If we are going to expose zone boundaries, we should probably document what a zone boundary is or isn't.
+
+In valid TZif files, it seems that a transition time is when at least one of the following changes (RFC 8536, section 2):
+
+* UT offset
+* whether daylight saving time is in effect
+* time zone abbreviation
+
+although there is the following in RFC 8536, section 3.2:
+
+> Each value is used as a transition time at which the rules for computing local time may change.
+
+so I'm not sure whether it is guaranteed that something changes.
+
+Also I have no idea how the properties of boundaries look like if we are getting the zone data from another source, for example Windows.
+
+--- Comment #9 by rsc ---
+If we wanted to do a scan of all known time zone changes at a given location, then assuming there are N of them, that scan takes O(N log N) with the simple API and O(N) with the complex API. But log N is tiny, since N is two per year. Is it really worth all this new API just to save a small constant factor? It seems hard to believe that it would be.
+
+It seems like in the ZoneBounds API, end needs to be zero if there is no future switch, just so that loops can see a value to terminate with.
+
+
+--- Comment #10 by rsc ---
+@mjonss would the API in https://github.com/golang/go/issues/50062#issuecomment-1006162293 address your use case?
+
+
+--- Comment #11 by mjonss ---
+> @mjonss would the API in [#50062 (comment)](https://github.com/golang/go/issues/50062#issuecomment-1006162293) address your use case?
+
+That should be enough and I agree with keeping it simple. My specific use case is just check the bounds once when the parsing/conversion of a time does not yield the same result (i.e. due to DST transition). But I can also see other use cases needing to loop over a few years.
+
+Also changing `the very distant future` to `zero Time` would make it more complete and still simple to check. So the ZoneBounds() of an UTC location would just return two zero Time.
+
+If performance would be needed, then the data set is also small enough to run once and cache by own implementation.
+
+--- Comment #12 by martin-sucha ---
+Also +1 for end to be zero time if the zone goes on forever.
+
+> If we wanted to do a scan of all known time zone changes at a given location, then assuming there are N of them, that scan takes O(N log N) with the simple API and O(N) with the complex API. But log N is tiny, since N is two per year. Is it really worth all this new API just to save a small constant factor? It seems hard to believe that it would be.
+
+That is a good point. I agree that it is not worth adding the complex API.
+
+For the use case of scanning all known time zone changes, there is one piece still missing - a zone with an extend string can repeat transitions forever. Although it seems that it is better to have a method like
+
+```go
+// Extend returns the location's extend string and the time when it first takes effect.
+func (*Location) Extend() (extend string, start time.Time)
+```
+
+instead of exposing that information as part of the zone lookup. Seems that adding the `Extend()` method or similar could be handled in a separate proposal.
+
+The only remaining question I have is whether we want to add a note to the documentation warning that (some?) zone properties might not change at zone boundaries. For example:
+
+```
+// Return values of Zone or IsDST might change only at zone boundaries,
+// but subsequent zones are not required to differ.
+```
+
+Does it make sense?
+
+--- Comment #13 by mjonss ---
+Since time zones are not stable over time and changes happens frequently, I don't think it makes much sense of iterating over time zone transitions for more than a "few" years (I don't imagine any time zone 'extension' to be left unchanged for more than some 100 years? Hopefully European Union will get rid of theirs eventually...)
+
+--- Comment #14 by rsc ---
+The Extend string seems like too much. Those are a cryptic, not terribly well-defined format, and we don't want to expose that as our API for all time.
+
+But adding ZoneBounds seems OK.
+
+
+
+--- Comment #15 by rsc ---
+It sounds like the current ZoneBounds proposal is:
+
+```
+// ZoneBounds returns the bounds of the time zone in effect at time t.
+// The zone begins at start and the next zone begins at end.
+// If the zone begins at the beginning of time, start will be returned as a zero Time.
+// If the zone goes on forever, end will be returned as a zero Time.
+// The Location of the returned times will be the same as t.
+func (t Time) ZoneBounds() (start, end Time)
+```
+
+(The difference from iant's comment above is that end is a zero time when there isn't one.)
+
+Do I have that right? Does anyone object to that?
+
+
+
+--- Comment #16 by mjonss ---
+Looks good to me, no objections.
+
+--- Comment #17 by martin-sucha ---
+Looks good to me.
+
+--- Comment #18 by rsc ---
+
+Based on the discussion above, this proposal seems like a **[likely accept](https://golang.org/s/proposal-status#likely-accept)**.
+— rsc for the proposal review group
+
+
+--- Comment #19 by rsc ---
+
+No change in consensus, so **[accepted](https://golang.org/s/proposal-status#accepted)**. 🎉
+
+
+### Go Repository Directory Structure ###
+```
+src/
+    encoding/
+        hex/
+            example_test.go
+            hex.go
+            hex_test.go
+        json/
+            internal/
+                jsonflags/
+                    flags.go
+                    flags_test.go
+                jsonopts/
+                    options.go
+                    options_test.go
+                jsontest/
+                    testcase.go
+                    testdata.go
+                jsonwire/
+                    decode.go
+                    decode_test.go
+                    encode.go
+                    encode_test.go
+                    wire.go
+                    wire_test.go
+                internal.go
+            jsontext/
+                coder_test.go
+                decode.go
+                decode_test.go
+                doc.go
+                encode.go
+                encode_test.go
+                errors.go
+                example_test.go
+                export.go
+                fuzz_test.go
+                options.go
+                pools.go
+                quote.go
+                state.go
+                state_test.go
+                token.go
+                token_test.go
+                value.go
+                value_test.go
+            v2/
+                arshal.go
+                arshal_any.go
+                arshal_default.go
+                arshal_funcs.go
+                arshal_inlined.go
+                arshal_methods.go
+                arshal_test.go
+                arshal_time.go
+                arshal_time_test.go
+                bench_test.go
+                doc.go
+                errors.go
+                errors_test.go
+                example_orderedobject_test.go
+                example_test.go
+                fields.go
+                fields_test.go
+                fold.go
+                fold_test.go
+                fuzz_test.go
+                inline_test.go
+                intern.go
+                intern_test.go
+                options.go
+            bench_test.go
+            decode.go
+            decode_test.go
+            encode.go
+            encode_test.go
+            example_marshaling_test.go
+            example_test.go
+            example_text_marshaling_test.go
+            fold.go
+            fold_test.go
+            fuzz_test.go
+            indent.go
+            number_test.go
+            scanner.go
+            scanner_test.go
+            stream.go
+            stream_test.go
+            tables.go
+            tagkey_test.go
+            tags.go
+            tags_test.go
+            v2_bench_test.go
+            v2_decode.go
+            v2_decode_test.go
+            v2_diff_test.go
+            v2_encode.go
+            v2_encode_test.go
+            v2_example_marshaling_test.go
+            v2_example_test.go
+            v2_example_text_marshaling_test.go
+            v2_fuzz_test.go
+            v2_indent.go
+            v2_inject.go
+            v2_options.go
+            v2_scanner.go
+            v2_scanner_test.go
+            v2_stream.go
+            v2_stream_test.go
+            v2_tagkey_test.go
+        pem/
+            example_test.go
+            pem.go
+            pem_test.go
+        xml/
+            atom_test.go
+            example_marshaling_test.go
+            example_test.go
+            example_text_marshaling_test.go
+            marshal.go
+            marshal_test.go
+            read.go
+            read_test.go
+            typeinfo.go
+            xml.go
+            xml_test.go
+        encoding.go
+    errors/
+        errors.go
+        errors_test.go
+        example_test.go
+        join.go
+        join_test.go
+        wrap.go
+        wrap_test.go
+    expvar/
+        expvar.go
+        expvar_test.go
+    flag/
+        example_flagset_test.go
+        example_func_test.go
+        example_test.go
+        example_textvar_test.go
+        example_value_test.go
+        export_test.go
+        flag.go
+        flag_test.go
+    fmt/
+        doc.go
+        errors.go
+        errors_test.go
+        example_test.go
+        export_test.go
+        fmt_test.go
+        format.go
+        gostringer_example_test.go
+        print.go
+        scan.go
+        scan_test.go
+        state_test.go
+        stringer_example_test.go
+        stringer_test.go
+    go/
+        ast/
+            ast.go
+            ast_test.go
+            commentmap.go
+            commentmap_test.go
+            example_test.go
+            filter.go
+            filter_test.go
+            import.go
+            import_test.go
+            issues_test.go
+            print.go
+            print_test.go
+            resolve.go
+            scope.go
+            walk.go
+            walk_test.go
+        build/
+            constraint/
+                expr.go
+                expr_test.go
+                vers.go
+                vers_test.go
+            testdata/
+                alltags/
+                    alltags.go
+                    x_netbsd_arm.go
+                cgo_disabled/
+                    cgo_disabled.go
+                    empty.go
+                directives/
+                    a.go
+                    a_test.go
+                    b_test.go
+                    c_test.go
+                    d_test.go
+                    eve.go
+                doc/
+                    a_test.go
+                    b_test.go
+                    c_test.go
+                    d_test.go
+                    e.go
+                    f.go
+                multi/
+                    file.go
+                    file_appengine.go
+                non_source_tags/
+                    non_source_tags.go
+                other/
+                    file/
+                        file.go
+                    main.go
+                withvendor/
+                    src/
+                        a/
+                            b/
+                                b.go
+                            vendor/
+                                c/
+                                    d/
+                                        d.go
+            build.go
+            build_test.go
+            deps_test.go
+            doc.go
+            gc.go
+            gccgo.go
+            read.go
+            read_test.go
+            syslist_test.go
+            vendor_test.go
+        constant/
+            example_test.go
+            kind_string.go
+            value.go
+            value_test.go
+        doc/
+            comment/
+                doc.go
+                html.go
+                markdown.go
+                old_test.go
+                parse.go
+                parse_test.go
+                print.go
+                std.go
+                std_test.go
+                testdata_test.go
+                text.go
+                wrap_test.go
+            testdata/
+                examples/
+                    empty.go
+                    generic_constraints.go
+                    import_groups.go
+                    import_groups_named.go
+                    inspect_signature.go
+                    iota.go
+                    issue43658.go
+                    multiple.go
+                    shadow_predeclared.go
+                    values.go
+                    whole_file.go
+                    whole_function.go
+                    whole_function_external.go
+                pkgdoc/
+                    doc.go
+                a0.go
+                a1.go
+                b.go
+                benchmark.go
+                blank.go
+                bugpara.go
+                c.go
+                d1.go
+                d2.go
+                e.go
+                error1.go
+                error2.go
+                example.go
+                f.go
+                g.go
+                generics.go
+                issue12839.go
+                issue13742.go
+                issue16153.go
+                issue17788.go
+                issue22856.go
+                predeclared.go
+                testing.go
+            comment.go
+            comment_test.go
+            doc.go
+            doc_test.go
+            example.go
+            example_internal_test.go
+            example_test.go
+            exports.go
+            filter.go
+            headscan.go
+            reader.go
+            synopsis.go
+            synopsis_test.go
+        format/
+            benchmark_test.go
+            example_test.go
+            format.go
+            format_test.go
+            internal.go
+        importer/
+            importer.go
+            importer_test.go
+        internal/
+            gccgoimporter/
+                testdata/
+                    aliases.go
+                    complexnums.go
+                    conversions.go
+                    escapeinfo.go
+                    imports.go
+                    issue27856.go
+                    issue29198.go
+                    issue30628.go
+                    issue31540.go
+                    issue34182.go
+                    nointerface.go
+                    notinheap.go
+                    pointer.go
+                ar.go
+                gccgoinstallation.go
+                gccgoinstallation_test.go
+                importer.go
+                importer_test.go
+                parser.go
+                parser_test.go
+            gcimporter/
+                testdata/
+                    versions/
+                        test.go
+                    a.go
+                    b.go
+                    exports.go
+                    g.go
+                    generics.go
+                    issue15920.go
+                    issue20046.go
+                    issue25301.go
+                    issue25596.go
+                    issue57015.go
+                    issue69912.go
+                    p.go
+                gcimporter.go
+                gcimporter_test.go
+                support.go
+                ureader.go
+            srcimporter/
+                testdata/
+                    issue20855/
+                        issue20855.go
+                    issue23092/
+                        issue23092.go
+                    issue24392/
+                        issue24392.go
+                srcimporter.go
+                srcimporter_test.go
+        parser/
+            testdata/
+                goversion/
+                    t01.go
+                    t02.go
+                    t03.go
+                    t04.go
+                    t05.go
+                    t06.go
+                issue42951/
+                    not_a_file.go/
+                        invalid.go
+            error_test.go
+            example_test.go
+            interface.go
+            parser.go
+            parser_test.go
+            performance_test.go
+            resolver.go
+            resolver_test.go
+            short_test.go
+        printer/
+            testdata/
+                parser.go
+            comment.go
+            example_test.go
+            gobuild.go
+            nodes.go
+            performance_test.go
+            printer.go
+            printer_test.go
+        scanner/
+            errors.go
+            example_test.go
+            scanner.go
+            scanner_test.go
+        token/
+            example_test.go
+            export_test.go
+            position.go
+            position_bench_test.go
+            position_test.go
+            serialize.go
+            serialize_test.go
+            token.go
+            token_test.go
+        types/
+            testdata/
+                local/
+                    issue47996.go
+                    shifts.go
+                manual.go
+            alias.go
+            api.go
+            api_predicates.go
+            api_test.go
+            array.go
+            assignments.go
+            badlinkname.go
+            basic.go
+            builtins.go
+            builtins_test.go
+            call.go
+            chan.go
+            check.go
+            check_test.go
+            commentMap_test.go
+            const.go
+            context.go
+            context_test.go
+            conversions.go
+            decl.go
+            errorcalls_test.go
+            errors.go
+            errors_test.go
+            errsupport.go
+            eval.go
+            eval_test.go
+            example_test.go
+            expr.go
+            exprstring.go
+            exprstring_test.go
+            format.go
+            gccgosizes.go
+            gcsizes.go
+            generate.go
+            generate_test.go
+            gotype.go
+            hilbert_test.go
+            index.go
+            infer.go
+            initorder.go
+            instantiate.go
+            instantiate_test.go
+            interface.go
+            issues_test.go
+            iter.go
+            labels.go
+            literals.go
+            lookup.go
+            lookup_test.go
+            main_test.go
+            map.go
+            methodset.go
+            methodset_test.go
+            mono.go
+            mono_test.go
+            named.go
+            named_test.go
+            object.go
+            object_test.go
+            objset.go
+            operand.go
+            package.go
+            pointer.go
+            predicates.go
+            range.go
+            recording.go
+            resolver.go
+            resolver_test.go
+            return.go
+            scope.go
+            scope2.go
+            scope2_test.go
+            selection.go
+            self_test.go
+            signature.go
+            sizeof_test.go
+            sizes.go
+            sizes_test.go
+            slice.go
+            stdlib_test.go
+            stmt.go
+            struct.go
+            subst.go
+            termlist.go
+            termlist_test.go
+            token_test.go
+            tuple.go
+            type.go
+            typelists.go
+            typeparam.go
+            typeset.go
+            typeset_test.go
+            typestring.go
+            typestring_test.go
+            typeterm.go
+            typeterm_test.go
+            typexpr.go
+            under.go
+            unify.go
+            union.go
+            universe.go
+            util.go
+            util_test.go
+            validtype.go
+            version.go
+        version/
+            version.go
+            version_test.go
+    hash/
+        adler32/
+            adler32.go
+            adler32_test.go
+        crc32/
+            crc32.go
+            crc32_amd64.go
+            crc32_arm64.go
+            crc32_generic.go
+            crc32_loong64.go
+            crc32_otherarch.go
+            crc32_ppc64le.go
+            crc32_s390x.go
+            crc32_test.go
+            example_test.go
+            gen.go
+            gen_const_ppc64le.go
+        crc64/
+            crc64.go
+            crc64_test.go
+        fnv/
+            fnv.go
+            fnv_test.go
+        maphash/
+            example_test.go
+            maphash.go
+            maphash_purego.go
+            maphash_runtime.go
+            maphash_test.go
+            smhasher_test.go
+        example_test.go
+        hash.go
+        marshal_test.go
+    html/
+        template/
+            attr.go
+            attr_string.go
+            clone_test.go
+            content.go
+            content_test.go
+            context.go
+            css.go
+            css_test.go
+            delim_string.go
+            doc.go
+            element_string.go
+            error.go
+            escape.go
+            escape_test.go
+            example_test.go
+            examplefiles_test.go
+            exec_test.go
+            html.go
+            html_test.go
+            js.go
+            js_test.go
+            jsctx_string.go
+            multi_test.go
+            state_string.go
+            template.go
+            template_test.go
+            transition.go
+            transition_test.go
+            url.go
+            url_test.go
+            urlpart_string.go
+        entity.go
+        entity_test.go
+        escape.go
+        escape_test.go
+        example_test.go
+        fuzz_test.go
+    image/
+        color/
+            palette/
+                gen.go
+                generate.go
+                palette.go
+            color.go
+            color_test.go
+            ycbcr.go
+            ycbcr_test.go
+        draw/
+            bench_test.go
+            clip_test.go
+            draw.go
+            draw_test.go
+            example_test.go
+        gif/
+            fuzz_test.go
+            reader.go
+            reader_test.go
+            writer.go
+            writer_test.go
+        internal/
+            imageutil/
+                gen.go
+                imageutil.go
+                impl.go
+        jpeg/
+            dct_test.go
+            fdct.go
+            fuzz_test.go
+            huffman.go
+            idct.go
+            reader.go
+            reader_test.go
+            scan.go
+            writer.go
+            writer_test.go
+        png/
+            example_test.go
+            fuzz_test.go
+            paeth.go
+            paeth_test.go
+            reader.go
+            reader_test.go
+            writer.go
+            writer_test.go
+        decode_example_test.go
+        decode_test.go
+        format.go
+        geom.go
+        geom_test.go
+        image.go
+        image_test.go
+        names.go
+        ycbcr.go
+        ycbcr_test.go
+    index/
+        suffixarray/
+            example_test.go
+            gen.go
+            sais.go
+            sais2.go
+            suffixarray.go
+            suffixarray_test.go
+    internal/
+        abi/
+            testdata/
+                x.go
+            abi.go
+            abi_amd64.go
+            abi_arm64.go
+            abi_generic.go
+            abi_loong64.go
+            abi_ppc64x.go
+            abi_riscv64.go
+            abi_test.go
+            compiletype.go
+            escape.go
+            export_test.go
+            funcpc.go
+            funcpc_gccgo.go
+            iface.go
+            map_noswiss.go
+            map_select_noswiss.go
+            map_select_swiss.go
+            map_swiss.go
+            rangefuncconsts.go
+            runtime.go
+            stack.go
+            switch.go
+            symtab.go
+            type.go
+        asan/
+            asan.go
+            doc.go
+            noasan.go
+        bisect/
+            bisect.go
+        buildcfg/
+            cfg.go
+            cfg_test.go
+            exp.go
+        bytealg/
+            bytealg.go
+            compare_generic.go
+            compare_native.go
+            count_generic.go
+            count_native.go
+            equal_generic.go
+            equal_native.go
+            index_amd64.go
+            index_arm64.go
+            index_generic.go
+            index_native.go
+            index_ppc64x.go
+            index_s390x.go
+            indexbyte_generic.go
+            indexbyte_native.go
+            lastindexbyte_generic.go
+        byteorder/
+            byteorder.go
+        cfg/
+            cfg.go
+        cgrouptest/
+            cgrouptest_linux.go
+            cgrouptest_linux_test.go
+        chacha8rand/
+            chacha8.go
+            chacha8_generic.go
+            export_test.go
+            rand_test.go
+        copyright/
+            copyright_test.go
+        coverage/
+            calloc/
+                batchcounteralloc.go
+            cfile/
+                testdata/
+                    issue56006/
+                        repro.go
+                        repro_test.go
+                    issue59563/
+                        repro.go
+                        repro_test.go
+                    harness.go
+                apis.go
+                emit.go
+                emitdata_test.go
+                hooks.go
+                snapshot_test.go
+                testsupport.go
+                ts_test.go
+            cformat/
+                fmt_test.go
+                format.go
+            cmerge/
+                merge.go
+                merge_test.go
+            decodecounter/
+                decodecounterfile.go
+            decodemeta/
+                decode.go
+                decodefile.go
+            encodecounter/
+                encode.go
+            encodemeta/
+                encode.go
+                encodefile.go
+            pods/
+                pods.go
+                pods_test.go
+            rtcov/
+                rtcov.go
+            slicereader/
+                slicereader.go
+                slr_test.go
+            slicewriter/
+                slicewriter.go
+                slw_test.go
+            stringtab/
+                stringtab.go
+            test/
+                counter_test.go
+                roundtrip_test.go
+            uleb128/
+                uleb128.go
+            defs.go
+            pkid.go
+        cpu/
+            cpu.go
+            cpu_arm.go
+            cpu_arm64.go
+            cpu_arm64_android.go
+            cpu_arm64_darwin.go
+            cpu_arm64_freebsd.go
+            cpu_arm64_hwcap.go
+            cpu_arm64_linux.go
+            cpu_arm64_openbsd.go
+            cpu_arm64_other.go
+            cpu_loong64.go
+            cpu_loong64_hwcap.go
+            cpu_loong64_linux.go
+            cpu_mips.go
+            cpu_mips64x.go
+            cpu_mipsle.go
+            cpu_no_name.go
+            cpu_ppc64x.go
+            cpu_ppc64x_aix.go
+            cpu_ppc64x_linux.go
+            cpu_ppc64x_other.go
+            cpu_riscv64.go
+            cpu_riscv64_linux.go
+            cpu_riscv64_other.go
+            cpu_s390x.go
+            cpu_s390x_test.go
+            cpu_test.go
+            cpu_wasm.go
+            cpu_x86.go
+            cpu_x86_test.go
+            export_test.go
+            export_x86_test.go
+        dag/
+            alg.go
+            alg_test.go
+            parse.go
+            parse_test.go
+        diff/
+            diff.go
+            diff_test.go
+        exportdata/
+            exportdata.go
+            support.go
+        filepathlite/
+            path.go
+            path_nonwindows.go
+            path_plan9.go
+            path_unix.go
+            path_windows.go
+        fmtsort/
+            export_test.go
+            sort.go
+            sort_test.go
+        fuzz/
+            counters_supported.go
+            counters_unsupported.go
+            coverage.go
+            encoding.go
+            encoding_test.go
+            fuzz.go
+            mem.go
+            minimize.go
+            minimize_test.go
+            mutator.go
+            mutator_test.go
+            mutators_byteslice.go
+            mutators_byteslice_test.go
+            pcg.go
+            queue.go
+            queue_test.go
+            sys_posix.go
+            sys_unimplemented.go
+            sys_windows.go
+            trace.go
+            worker.go
+            worker_test.go
+        goarch/
+            gengoarch.go
+            goarch.go
+            goarch_386.go
+            goarch_amd64.go
+            goarch_arm.go
+            goarch_arm64.go
+            goarch_loong64.go
+            goarch_mips.go
+            goarch_mips64.go
+            goarch_mips64le.go
+            goarch_mipsle.go
+            goarch_ppc64.go
+            goarch_ppc64le.go
+            goarch_riscv64.go
+            goarch_s390x.go
+            goarch_wasm.go
+            zgoarch_386.go
+            zgoarch_amd64.go
+            zgoarch_arm.go
+            zgoarch_arm64.go
+            zgoarch_arm64be.go
+            zgoarch_armbe.go
+            zgoarch_loong64.go
+            zgoarch_mips.go
+            zgoarch_mips64.go
+            zgoarch_mips64le.go
+            zgoarch_mips64p32.go
+            zgoarch_mips64p32le.go
+            zgoarch_mipsle.go
+            zgoarch_ppc.go
+            zgoarch_ppc64.go
+            zgoarch_ppc64le.go
+            zgoarch_riscv.go
+            zgoarch_riscv64.go
+            zgoarch_s390.go
+            zgoarch_s390x.go
+            zgoarch_sparc.go
+            zgoarch_sparc64.go
+            zgoarch_wasm.go
+        godebug/
+            godebug.go
+            godebug_test.go
+        godebugs/
+            godebugs_test.go
+            table.go
+        goexperiment/
+            exp_aliastypeparams_off.go
+            exp_aliastypeparams_on.go
+            exp_arenas_off.go
+            exp_arenas_on.go
+            exp_boringcrypto_off.go
+            exp_boringcrypto_on.go
+            exp_cacheprog_off.go
+            exp_cacheprog_on.go
+            exp_cgocheck2_off.go
+            exp_cgocheck2_on.go
+            exp_dwarf5_off.go
+            exp_dwarf5_on.go
+            exp_fieldtrack_off.go
+            exp_fieldtrack_on.go
+            exp_greenteagc_off.go
+            exp_greenteagc_on.go
+            exp_heapminimum512kib_off.go
+            exp_heapminimum512kib_on.go
+            exp_jsonv2_off.go
+            exp_jsonv2_on.go
+            exp_loopvar_off.go
+            exp_loopvar_on.go
+            exp_newinliner_off.go
+            exp_newinliner_on.go
+            exp_preemptibleloops_off.go
+            exp_preemptibleloops_on.go
+            exp_rangefunc_off.go
+            exp_rangefunc_on.go
+            exp_regabiargs_off.go
+            exp_regabiargs_on.go
+            exp_regabiwrappers_off.go
+            exp_regabiwrappers_on.go
+            exp_staticlockranking_off.go
+            exp_staticlockranking_on.go
+            exp_swissmap_off.go
+            exp_swissmap_on.go
+            exp_synchashtriemap_off.go
+            exp_synchashtriemap_on.go
+            exp_synctest_off.go
+            exp_synctest_on.go
+            flags.go
+            mkconsts.go
+        goos/
+            gengoos.go
+            goos.go
+            nonunix.go
+            unix.go
+            zgoos_aix.go
+            zgoos_android.go
+            zgoos_darwin.go
+            zgoos_dragonfly.go
+            zgoos_freebsd.go
+            zgoos_hurd.go
+            zgoos_illumos.go
+            zgoos_ios.go
+            zgoos_js.go
+            zgoos_linux.go
+            zgoos_netbsd.go
+            zgoos_openbsd.go
+            zgoos_plan9.go
+            zgoos_solaris.go
+            zgoos_wasip1.go
+            zgoos_windows.go
+            zgoos_zos.go
+        goroot/
+            gc.go
+            gccgo.go
+        gover/
+            gover.go
+            gover_test.go
+        goversion/
+            goversion.go
+        itoa/
+            itoa.go
+            itoa_test.go
+        lazyregexp/
+            lazyre.go
+        lazytemplate/
+            lazytemplate.go
+        msan/
+            doc.go
+            msan.go
+            nomsan.go
+        nettrace/
+            nettrace.go
+        obscuretestdata/
+            obscuretestdata.go
+        oserror/
+            errors.go
+        pkgbits/
+            codes.go
+            decoder.go
+            doc.go
+            encoder.go
+            flags.go
+            pkgbits_test.go
+            reloc.go
+            support.go
+            sync.go
+            syncmarker_string.go
+            version.go
+        platform/
+            supported.go
+            zosarch.go
+            zosarch_test.go
+        poll/
+            copy_file_range_freebsd.go
+            copy_file_range_linux.go
+            copy_file_range_unix.go
+            errno_unix.go
+            errno_windows.go
+            error_linux_test.go
+            error_stub_test.go
+            error_test.go
+            export_linux_test.go
+            export_posix_test.go
+            export_test.go
+            fd.go
+            fd_fsync_darwin.go
+            fd_fsync_posix.go
+            fd_fsync_windows.go
+            fd_io_plan9.go
+            fd_mutex.go
+            fd_mutex_test.go
+            fd_opendir_darwin.go
+            fd_plan9.go
+            fd_poll_js.go
+            fd_poll_runtime.go
+            fd_posix.go
+            fd_posix_test.go
+            fd_unix.go
+            fd_unixjs.go
+            fd_wasip1.go
+            fd_windows.go
+            fd_windows_test.go
+            fd_writev_libc.go
+            fd_writev_unix.go
+            file_plan9.go
+            hook_cloexec.go
+            hook_unix.go
+            hook_windows.go
+            iovec_solaris.go
+            iovec_unix.go
+            read_test.go
+            sendfile.go
+            sendfile_solaris.go
+            sendfile_unix.go
+            sendfile_windows.go
+            sock_cloexec.go
+            sock_cloexec_solaris.go
+            sockopt.go
+            sockopt_linux.go
+            sockopt_unix.go
+            sockopt_windows.go
+            sockoptip.go
+            splice_linux.go
+            splice_linux_test.go
+            sys_cloexec.go
+            writev.go
+            writev_test.go
+        profile/
+            encode.go
+            filter.go
+            graph.go
+            merge.go
+            profile.go
+            proto.go
+            proto_test.go
+            prune.go
+        profilerecord/
+            profilerecord.go
+        race/
+            doc.go
+            norace.go
+            race.go
+        reflectlite/
+            all_test.go
+            export_test.go
+            reflect_mirror_test.go
+            set_test.go
+            swapper.go
+            tostring_test.go
+            type.go
+            value.go
+        routebsd/
+            address.go
+            address_darwin_test.go
+            address_test.go
+            binary.go
+            interface.go
+            interface_classic.go
+            interface_freebsd.go
+            interface_multicast.go
+            interface_openbsd.go
+            message.go
+            message_darwin_test.go
+            message_freebsd_test.go
+            message_test.go
+            route.go
+            route_test.go
+            sys.go
+            sys_darwin.go
+            sys_dragonfly.go
+            sys_freebsd.go
+            sys_netbsd.go
+            sys_openbsd.go
+        runtime/
+            atomic/
+                atomic_386.go
+                atomic_amd64.go
+                atomic_andor_generic.go
+                atomic_andor_test.go
+                atomic_arm.go
+                atomic_arm64.go
+                atomic_loong64.go
+                atomic_mips64x.go
+                atomic_mipsx.go
+                atomic_ppc64x.go
+                atomic_riscv64.go
+                atomic_s390x.go
+                atomic_test.go
+                atomic_wasm.go
+                bench_test.go
+                doc.go
+                stubs.go
+                types.go
+                types_64bit.go
+                unaligned.go
+                xchg8.go
+                xchg8_test.go
+            cgroup/
+                cgroup_linux.go
+                cgroup_linux_test.go
+                export_linux_test.go
+                export_test.go
+                line_reader.go
+                line_reader_test.go
+                runtime.go
+            exithook/
+                hooks.go
+            gc/
+                malloc.go
+                mksizeclasses.go
+                scan.go
+                sizeclasses.go
+            maps/
+                export_noswiss_test.go
+                export_swiss_test.go
+                export_test.go
+                fuzz_test.go
+                group.go
+                map.go
+                map_swiss_test.go
+                map_test.go
+                runtime.go
+                runtime_fast32_swiss.go
+                runtime_fast64_swiss.go
+                runtime_faststr_swiss.go
+                runtime_swiss.go
+                table.go
+                table_debug.go
+            math/
+                math.go
+                math_test.go
+            startlinetest/
+                func_amd64.go
+            strconv/
+                atoi.go
+                atoi_test.go
+            sys/
+                consts.go
+                consts_norace.go
+                consts_race.go
+                dit_arm64.go
+                intrinsics.go
+                intrinsics_test.go
+                nih.go
+                no_dit.go
+                sys.go
+            syscall/
+                defs_linux.go
+                defs_linux_386.go
+                defs_linux_amd64.go
+                defs_linux_arm.go
+                defs_linux_arm64.go
+                defs_linux_loong64.go
+                defs_linux_mips64x.go
+                defs_linux_mipsx.go
+                defs_linux_ppc64x.go
+                defs_linux_riscv64.go
+                defs_linux_s390x.go
+                syscall_linux.go
+                syscall_linux_test.go
+            wasitest/
+                testdata/
+                    nonblock.go
+                    tcpecho.go
+                host_test.go
+                nonblock_test.go
+                tcpecho_test.go
+        saferio/
+            io.go
+            io_test.go
+        singleflight/
+            singleflight.go
+            singleflight_test.go
+        stringslite/
+            strings.go
+        sync/
+            export_test.go
+            hashtriemap.go
+            hashtriemap_bench_test.go
+            hashtriemap_test.go
+            mutex.go
+            runtime.go
+        synctest/
+            synctest.go
+            synctest_test.go
+        syscall/
+            execenv/
+                execenv_default.go
+                execenv_windows.go
+            unix/
+                arandom_netbsd.go
+                arc4random_darwin.go
+                arc4random_openbsd.go
+                at.go
+                at_aix.go
+                at_darwin.go
+                at_fstatat.go
+                at_fstatat2.go
+                at_js.go
+                at_libc.go
+                at_libc2.go
+                at_openbsd.go
+                at_solaris.go
+                at_sysnum_darwin.go
+                at_sysnum_dragonfly.go
+                at_sysnum_freebsd.go
+                at_sysnum_fstatat64_linux.go
+                at_sysnum_fstatat_linux.go
+                at_sysnum_linux.go
+                at_sysnum_netbsd.go
+                at_sysnum_newfstatat_linux.go
+                at_sysnum_openbsd.go
+                at_wasip1.go
+                constants.go
+                copy_file_range_unix.go
+                eaccess.go
+                faccessat_bsd.go
+                faccessat_darwin.go
+                faccessat_openbsd.go
+                faccessat_solaris.go
+                faccessat_syscall.go
+                fallocate_freebsd_386.go
+                fallocate_freebsd_64bit.go
+                fallocate_freebsd_arm.go
+                fcntl_js.go
+                fcntl_unix.go
+                fcntl_wasip1.go
+                getrandom.go
+                getrandom_dragonfly.go
+                getrandom_freebsd.go
+                getrandom_linux.go
+                getrandom_linux_test.go
+                getrandom_solaris.go
+                ioctl_aix.go
+                kernel_version_freebsd.go
+                kernel_version_freebsd_test.go
+                kernel_version_linux.go
+                kernel_version_other.go
+                kernel_version_solaris.go
+                kernel_version_solaris_test.go
+                net.go
+                net_darwin.go
+                net_js.go
+                net_wasip1.go
+                nofollow_bsd.go
+                nofollow_netbsd.go
+                nofollow_posix.go
+                nonblocking_js.go
+                nonblocking_unix.go
+                nonblocking_wasip1.go
+                pidfd_linux.go
+                pty_darwin.go
+                renameat2_sysnum_linux.go
+                renameat_sysnum_linux.go
+                siginfo_linux.go
+                siginfo_linux_mipsx.go
+                siginfo_linux_other.go
+                siginfo_linux_test.go
+                syscall.go
+                sysnum_freebsd.go
+                sysnum_linux_386.go
+                sysnum_linux_amd64.go
+                sysnum_linux_arm.go
+                sysnum_linux_generic.go
+                sysnum_linux_mips64x.go
+                sysnum_linux_mipsx.go
+                sysnum_linux_ppc64x.go
+                sysnum_linux_s390x.go
+                tcsetpgrp_bsd.go
+                tcsetpgrp_linux.go
+                user_darwin.go
+                utimes.go
+                utimes_wasip1.go
+                waitid_linux.go
+            windows/
+                registry/
+                    export_test.go
+                    key.go
+                    mksyscall.go
+                    registry_test.go
+                    syscall.go
+                    value.go
+                    zsyscall_windows.go
+                sysdll/
+                    sysdll.go
+                at_windows.go
+                at_windows_test.go
+                exec_windows_test.go
+                memory_windows.go
+                mksyscall.go
+                net_windows.go
+                nonblocking_windows.go
+                psapi_windows.go
+                reparse_windows.go
+                security_windows.go
+                string_windows.go
+                symlink_windows.go
+                syscall_windows.go
+                types_windows.go
+                version_windows.go
+                version_windows_test.go
+                zsyscall_windows.go
+        sysinfo/
+            cpuinfo_bsd.go
+            cpuinfo_linux.go
+            cpuinfo_stub.go
+            export_test.go
+            sysinfo.go
+            sysinfo_test.go
+        syslist/
+            syslist.go
+        testenv/
+            exec.go
+            noopt.go
+            opt.go
+            testenv.go
+            testenv_notunix.go
+            testenv_notwin.go
+            testenv_test.go
+            testenv_unix.go
+            testenv_windows.go
+        testhash/
+            hash.go
+        testlog/
+            exit.go
+            log.go
+        testpty/
+            pty.go
+            pty_cgo.go
+            pty_darwin.go
+            pty_none.go
+        trace/
+            internal/
+                testgen/
+                    trace.go
+                tracev1/
+                    order.go
+                    parser.go
+                    parser_test.go
+            raw/
+                doc.go
+                event.go
+                reader.go
+                textreader.go
+                textwriter.go
+                writer.go
+            testdata/
+                generators/
+                    go122-confuse-seq-across-generations.go
+                    go122-create-syscall-reuse-thread-id.go
+                    go122-create-syscall-with-p.go
+                    go122-fail-first-gen-first.go
+                    go122-go-create-without-running-g.go
+                    go122-syscall-steal-proc-ambiguous.go
+                    go122-syscall-steal-proc-gen-boundary-bare-m.go
+                    go122-syscall-steal-proc-gen-boundary-reacquire-new-proc-bare-m.go
+                    go122-syscall-steal-proc-gen-boundary-reacquire-new-proc.go
+                    go122-syscall-steal-proc-gen-boundary.go
+                    go122-syscall-steal-proc-reacquire-new-proc-bare-m.go
+                    go122-syscall-steal-proc-reacquire-new-proc.go
+                    go122-syscall-steal-proc-self.go
+                    go122-syscall-steal-proc-simple-bare-m.go
+                    go122-syscall-steal-proc-simple.go
+                    go122-syscall-steal-proc-sitting-in-syscall.go
+                    go122-task-across-generations.go
+                    go123-sync.go
+                    go125-sync.go
+                testprog/
+                    annotations-stress.go
+                    annotations.go
+                    cgo-callback.go
+                    cpu-profile.go
+                    futile-wakeup.go
+                    gc-stress.go
+                    gomaxprocs.go
+                    iter-pull.go
+                    many-start-stop.go
+                    stacks.go
+                    stress-start-stop.go
+                    stress.go
+                    wait-on-pipe.go
+                generate.go
+                mktests.go
+            testtrace/
+                expectation.go
+                format.go
+                validation.go
+            tracev2/
+                doc.go
+                events.go
+                events_test.go
+                spec.go
+            traceviewer/
+                format/
+                    format.go
+                emitter.go
+                fakep.go
+                histogram.go
+                http.go
+                mmu.go
+                pprof.go
+            version/
+                version.go
+            base.go
+            batch.go
+            batchcursor.go
+            batchcursor_test.go
+            event.go
+            event_test.go
+            export_reader_test.go
+            export_test.go
+            gc.go
+            gc_test.go
+            generation.go
+            mud.go
+            mud_test.go
+            order.go
+            order_test.go
+            reader.go
+            reader_test.go
+            resources.go
+            summary.go
+            summary_test.go
+            trace_test.go
+            tracev1.go
+            tracev1_test.go
+            value.go
+        txtar/
+            archive.go
+        types/
+            errors/
+                code_string.go
+                codes.go
+                codes_test.go
+                generrordocs.go
+            testdata/
+                check/
+                    decls2/
+                        decls2a.go
+                        decls2b.go
+                    importdecl0/
+                        importdecl0a.go
+                        importdecl0b.go
+                    importdecl1/
+                        importdecl1a.go
+                        importdecl1b.go
+                    issue25008/
+                        issue25008a.go
+                        issue25008b.go
+                    blank.go
+                    builtins0.go
+                    builtins1.go
+                    chans.go
+                    compliterals.go
+                    const0.go
+                    const1.go
+                    constdecl.go
+                    conversions0.go
+                    conversions1.go
+                    cycles0.go
+                    cycles1.go
+                    cycles2.go
+                    cycles3.go
+                    cycles4.go
+                    cycles5.go
+                    cycles5a.go
+                    decls0.go
+                    decls1.go
+                    decls3.go
+                    decls4.go
+                    decls5.go
+                    doubled_labels.go
+                    errors.go
+                    expr0.go
+                    expr1.go
+                    expr2.go
+                    expr3.go
+                    funcinference.go
+                    go1_12.go
+                    go1_13.go
+                    go1_16.go
+                    go1_19.go
+                    go1_19_20.go
+                    go1_20_19.go
+                    go1_21_19.go
+                    go1_21_22.go
+                    go1_22_21.go
+                    go1_8.go
+                    go1_xx_19.go
+                    gotos.go
+                    importC.go
+                    init0.go
+                    init1.go
+                    init2.go
+                    issue70974.go
+                    issues0.go
+                    issues1.go
+                    labels.go
+                    linalg.go
+                    literals.go
+                    lookup1.go
+                    lookup2.go
+                    main0.go
+                    main1.go
+                    map0.go
+                    map1.go
+                    methodsets.go
+                    shifts.go
+                    slices.go
+                    stmt0.go
+                    stmt1.go
+                    typeinference.go
+                    typeinst0.go
+                    typeinst1.go
+                    typeinstcycles.go
+                    typeparams.go
+                    unions.go
+                    vardecl.go
+                examples/
+                    constraints.go
+                    functions.go
+                    inference.go
+                    inference2.go
+                    methods.go
+                    operations.go
+                    types.go
+                    typesets.go
+                fixedbugs/
+                    issue20583.go
+                    issue23203a.go
+                    issue23203b.go
+                    issue25838.go
+                    issue26390.go
+                    issue28251.go
+                    issue3117.go
+                    issue39634.go
+                    issue39664.go
+                    issue39680.go
+                    issue39693.go
+                    issue39699.go
+                    issue39711.go
+                    issue39723.go
+                    issue39725.go
+                    issue39754.go
+                    issue39755.go
+                    issue39768.go
+                    issue39938.go
+                    issue39948.go
+                    issue39976.go
+                    issue39982.go
+                    issue40038.go
+                    issue40056.go
+                    issue40057.go
+                    issue40301.go
+                    issue40350.go
+                    issue40684.go
+                    issue40789.go
+                    issue41124.go
+                    issue41176.go
+                    issue42695.go
+                    issue42758.go
+                    issue42881.go
+                    issue42987.go
+                    issue43056.go
+                    issue43087.go
+                    issue43109.go
+                    issue43110.go
+                    issue43124.go
+                    issue43125.go
+                    issue43190.go
+                    issue43527.go
+                    issue43671.go
+                    issue44688.go
+                    issue44799.go
+                    issue45114.go
+                    issue45548.go
+                    issue45550.go
+                    issue45635.go
+                    issue45639.go
+                    issue45920.go
+                    issue45985.go
+                    issue46090.go
+                    issue46275.go
+                    issue46403.go
+                    issue46404.go
+                    issue46461.go
+                    issue46461a.go
+                    issue46583.go
+                    issue47031.go
+                    issue47115.go
+                    issue47127.go
+                    issue47411.go
+                    issue47747.go
+                    issue47796.go
+                    issue47818.go
+                    issue47887.go
+                    issue47968.go
+                    issue48008.go
+                    issue48018.go
+                    issue48048.go
+                    issue48082.go
+                    issue48083.go
+                    issue48136.go
+                    issue48234.go
+                    issue48312.go
+                    issue48472.go
+                    issue48529.go
+                    issue48582.go
+                    issue48619.go
+                    issue48656.go
+                    issue48695.go
+                    issue48703.go
+                    issue48712.go
+                    issue48819.go
+                    issue48827.go
+                    issue48951.go
+                    issue48962.go
+                    issue48974.go
+                    issue49003.go
+                    issue49005.go
+                    issue49043.go
+                    issue49112.go
+                    issue49179.go
+                    issue49242.go
+                    issue49247.go
+                    issue49276.go
+                    issue49296.go
+                    issue49439.go
+                    issue49482.go
+                    issue49541.go
+                    issue49579.go
+                    issue49592.go
+                    issue49602.go
+                    issue49705.go
+                    issue49735.go
+                    issue49736.go
+                    issue49739.go
+                    issue49864.go
+                    issue50259.go
+                    issue50276.go
+                    issue50281.go
+                    issue50321.go
+                    issue50372.go
+                    issue50417.go
+                    issue50426.go
+                    issue50427.go
+                    issue50450.go
+                    issue50516.go
+                    issue50646.go
+                    issue50729.go
+                    issue50729b.go
+                    issue50755.go
+                    issue50779.go
+                    issue50779a.go
+                    issue50782.go
+                    issue50816.go
+                    issue50833.go
+                    issue50912.go
+                    issue50918.go
+                    issue50929.go
+                    issue50965.go
+                    issue51025.go
+                    issue51048.go
+                    issue51139.go
+                    issue51145.go
+                    issue51158.go
+                    issue51229.go
+                    issue51232.go
+                    issue51233.go
+                    issue51257.go
+                    issue51335.go
+                    issue51339.go
+                    issue51360.go
+                    issue51376.go
+                    issue51386.go
+                    issue51437.go
+                    issue51472.go
+                    issue51503.go
+                    issue51509.go
+                    issue51525.go
+                    issue51533.go
+                    issue51578.go
+                    issue51593.go
+                    issue51607.go
+                    issue51610.go
+                    issue51616.go
+                    issue51658.go
+                    issue51877.go
+                    issue52031.go
+                    issue52401.go
+                    issue52529.go
+                    issue52698.go
+                    issue52915.go
+                    issue53358.go
+                    issue53535.go
+                    issue53650.go
+                    issue53692.go
+                    issue54280.go
+                    issue54405.go
+                    issue54424.go
+                    issue54942.go
+                    issue56351.go
+                    issue56425.go
+                    issue56665.go
+                    issue57155.go
+                    issue57160.go
+                    issue57192.go
+                    issue57352.go
+                    issue57486.go
+                    issue57500.go
+                    issue57522.go
+                    issue58611.go
+                    issue58612.go
+                    issue58671.go
+                    issue58742.go
+                    issue59190.go
+                    issue59207.go
+                    issue59209.go
+                    issue59338a.go
+                    issue59338b.go
+                    issue59371.go
+                    issue59639.go
+                    issue59740.go
+                    issue59848.go
+                    issue59890.go
+                    issue59953.go
+                    issue59956.go
+                    issue59958.go
+                    issue60346.go
+                    issue60377.go
+                    issue60434.go
+                    issue60460.go
+                    issue60500.go
+                    issue60542.go
+                    issue60556.go
+                    issue60562.go
+                    issue60688.go
+                    issue60747.go
+                    issue60906.go
+                    issue60933.go
+                    issue60946.go
+                    issue61486.go
+                    issue61685.go
+                    issue61822.go
+                    issue61879.go
+                    issue61903.go
+                    issue62157.go
+                    issue63563.go
+                    issue64406.go
+                    issue64704.go
+                    issue65344.go
+                    issue65711.go
+                    issue65854.go
+                    issue66064.go
+                    issue66285.go
+                    issue66323.go
+                    issue66751.go
+                    issue66878.go
+                    issue67547.go
+                    issue67628.go
+                    issue67683.go
+                    issue67872.go
+                    issue67962.go
+                    issue68184.go
+                    issue68903.go
+                    issue68935.go
+                    issue69576.go
+                    issue6977.go
+                    issue69955.go
+                    issue70150.go
+                    issue70417.go
+                    issue70526.go
+                    issue70549.go
+                    issue71131.go
+                    issue71198.go
+                    issue71284.go
+                    issue72936.go
+                spec/
+                    assignability.go
+                    comparable.go
+                    comparable1.19.go
+                    comparisons.go
+                    conversions.go
+                    range.go
+                    range_int.go
+                    receivers.go
+                    typeAliases1.22.go
+                    typeAliases1.23a.go
+                    typeAliases1.23b.go
+                    typeAliases1.8.go
+        unsafeheader/
+            unsafeheader.go
+            unsafeheader_test.go
+        xcoff/
+            ar.go
+            ar_test.go
+            file.go
+            file_test.go
+            xcoff.go
+        zstd/
+            bits.go
+            block.go
+            fse.go
+            fse_test.go
+            fuzz_test.go
+            huff.go
+            literals.go
+            window.go
+            window_test.go
+            xxhash.go
+            xxhash_test.go
+            zstd.go
+            zstd_test.go
+    io/
+        fs/
+            example_test.go
+            format.go
+            format_test.go
+            fs.go
+            fs_test.go
+            glob.go
+            glob_test.go
+            readdir.go
+            readdir_test.go
+            readfile.go
+            readfile_test.go
+            readlink.go
+            readlink_test.go
+            stat.go
+            stat_test.go
+            sub.go
+            sub_test.go
+            walk.go
+            walk_test.go
+        ioutil/
+            example_test.go
+            ioutil.go
+            ioutil_test.go
+            tempfile.go
+            tempfile_test.go
+        example_test.go
+        export_test.go
+        io.go
+        io_test.go
+        multi.go
+        multi_test.go
+        pipe.go
+        pipe_test.go
+    iter/
+        iter.go
+        pull_test.go
+    log/
+        internal/
+            internal.go
+        slog/
+            internal/
+                benchmarks/
+                    benchmarks.go
+                    benchmarks_test.go
+                    handlers.go
+                    handlers_test.go
+                buffer/
+                    buffer.go
+                    buffer_test.go
+                ignorepc.go
+            attr.go
+            attr_test.go
+            doc.go
+            example_custom_levels_test.go
+            example_discard_test.go
+            example_level_handler_test.go
+            example_log_level_test.go
+            example_logvaluer_group_test.go
+            example_logvaluer_secret_test.go
+            example_test.go
+            example_wrap_test.go
+            handler.go
+            handler_test.go
+            json_handler.go
+            json_handler_test.go
+            level.go
+            level_test.go
+            logger.go
+            logger_test.go
+            record.go
+            record_test.go
+            slogtest_test.go
+            text_handler.go
+            text_handler_test.go
+            value.go
+            value_access_benchmark_test.go
+            value_test.go
+        syslog/
+            doc.go
+            example_test.go
+            syslog.go
+            syslog_test.go
+            syslog_unix.go
+        example_test.go
+        log.go
+        log_test.go
+    maps/
+        example_test.go
+        iter.go
+        iter_test.go
+        maps.go
+        maps_test.go
+```
+
+**CRITICAL INSTRUCTION:** 
+You can ONLY select files that are explicitly shown in the repository structure above. 
+If the proposal discusses topics not covered by the files in this structure, return an empty list.
+
+**Step-by-step process:**
+1. Read the proposal title and content.  
+2. Scan the repository structure above for matching file paths.  
+3. Include only those files you actually see listed.  
+4. If none match, return an empty list (`[]`).
+
+Please output your answer in the following format:
+Return a JSON object with the following format.
+The response MUST:
+- Be a valid JSON block.
+- Contain a key `found_files` with a list of file paths.
+- Output ONLY the raw JSON object. Do NOT include any markdown formatting (no ```json or ```).
+- Do NOT add any explanations or additional text.
+- If you are unsure which files apply, return an empty list.
+
+Example of correct output when files are found:
+{
+  "found_files": [
+    "src/crypto/dsa/dsa.go",
+    "src/net/http/server.go"
+  ]
+}
+
+Example of correct output when files are not found:
+{
+  "found_files": []
+}

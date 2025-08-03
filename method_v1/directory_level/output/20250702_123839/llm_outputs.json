@@ -1,0 +1,7 @@
+{
+  "45428.md": "{\n  \"found_directories\": [\n    \"src/crypto/tls\",\n    \"src/crypto/tls/fipsonly\",\n    \"src/crypto/tls/internal/fips140tls\"\n  ]\n}",
+  "48801.md": "{\n  \"found_directories\": [\n    \"src/cmd/vet\",\n    \"src/go/types\",\n    \"src/time\"\n  ]\n}",
+  "34875.md": "```json\n{\n  \"found_directories\": [\n    \"src/go/doc/comment\"\n  ]\n}\n```",
+  "32716.md": "```json\n{\n  \"found_directories\": [\n    \"src/crypto/tls\"\n  ]\n}\n```",
+  "51777.md": "```json\n{\n  \"found_directories\": [\n    \"src/net/netip\"\n  ]\n}\n```"
+}

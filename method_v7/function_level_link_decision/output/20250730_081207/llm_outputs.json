@@ -1,0 +1,22 @@
+{
+  "selected_function_level_output": "20250730_081151",
+  "47459.md": {
+    "src/go/types/typeparam.go": {
+      "NewTypeParam": "No",
+      "newTypeParam": "No",
+      "Obj": "No",
+      "Index": "No",
+      "Constraint": "No",
+      "SetConstraint": "No",
+      "Underlying": "No",
+      "String": "No"
+    },
+    "src/go/types/instantiate.go": {
+      "Instantiate": "No",
+      "instance": "No",
+      "validateTArgLen": "No",
+      "verify": "No",
+      "mentions": "No"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "directory_level": {
+    "macro_precision": 0.6830660501115049,
+    "macro_recall": 0.7010803164508628,
+    "macro_f1": 0.6348704462848223,
+    "num_processed_proposals": 231
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "40239.md": {
+    "granularity": "file",
+    "found_files": [
+      "src/net/url/url.go",
+      "src/net/url/url_test.go"
+    ]
+  },
+  "47459.md": {
+    "granularity": "function",
+    "found_files": []
+  },
+  "29951.md": {
+    "granularity": "function",
+    "found_files": [
+      "src/math/big/nat.go",
+      "src/math/big/int.go",
+      "src/math/big/arith.go"
+    ]
+  },
+  "39528.md": {
+    "granularity": "directory",
+    "found_directories": [
+      "src/reflectlite",
+      "src/reflect",
+      "src/go/types",
+      "src/runtime"
+    ],
+    "found_files": [
+      "src/reflectlite/value.go",
+      "src/reflect/type.go",
+      "src/reflectlite/type.go",
+      "src/runtime/type.go",
+      "src/go/types/named.go",
+      "src/go/types/named_test.go",
+      "src/reflect/value.go"
+    ]
+  },
+  "44412.md": {
+    "granularity": "function",
+    "found_files": [
+      "src/time/time.go",
+      "src/runtime/time_test.go",
+      "src/runtime/time.go",
+      "src/time/time_test.go"
+    ]
+  }
+}

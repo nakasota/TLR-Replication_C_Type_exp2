@@ -1,0 +1,304 @@
+{
+  "selected_function_level_output": "20250731_053902",
+  "47459.md": {
+    "src/cmd/compile/internal/types2/typeset.go": {
+      "IsEmpty": "No",
+      "IsAll": "No",
+      "IsMethodSet": "No",
+      "IsComparable": "No",
+      "NumMethods": "No",
+      "Method": "No",
+      "LookupMethod": "No",
+      "String": "No",
+      "hasTerms": "No",
+      "subsetOf": "No",
+      "typeset": "No",
+      "is": "No"
+    },
+    "src/go/types/instantiate_test.go": {
+      "TestMethodInstantiation": "No"
+    },
+    "src/go/types/instantiate.go": {
+      "Instantiate": "No",
+      "instance": "No",
+      "validateTArgLen": "No",
+      "verify": "No",
+      "mentions": "No"
+    },
+    "src/cmd/compile/internal/types2/typeparam.go": {
+      "NewTypeParam": "No",
+      "newTypeParam": "No",
+      "Obj": "No",
+      "Index": "No",
+      "Constraint": "No",
+      "SetConstraint": "No",
+      "Underlying": "No",
+      "String": "No",
+      "cleanup": "No",
+      "iface": "No",
+      "is": "No",
+      "typeset": "No"
+    },
+    "src/go/types/typeparam.go": {
+      "NewTypeParam": "No",
+      "Obj": "No",
+      "Index": "No",
+      "Constraint": "No",
+      "SetConstraint": "No",
+      "Underlying": "No",
+      "String": "No"
+    },
+    "src/cmd/compile/internal/types2/typeset_test.go": {}
+  },
+  "29951.md": {
+    "src/math/big/arith.go": {
+      "addVV_g": "No",
+      "subVV_g": "No",
+      "addVW": "No",
+      "addVW_ref": "No",
+      "subVW": "No",
+      "subVW_ref": "No"
+    },
+    "src/math/big/int.go": {
+      "NewInt": "Yes",
+      "Add": "Yes",
+      "Sub": "No",
+      "Cmp": "No",
+      "SetInt64": "Yes",
+      "SetUint64": "No",
+      "Int64": "No",
+      "Uint64": "No",
+      "IsInt64": "No",
+      "IsUint64": "No"
+    },
+    "src/math/big/nat.go": {
+      "setUint64": "No",
+      "add": "No",
+      "sub": "No",
+      "cmp": "No"
+    }
+  },
+  "44412.md": {
+    "src/time/time_test.go": {
+      "TestUnixMilli": "Yes",
+      "TestUnixMicro": "Yes",
+      "BenchmarkNowUnixMilli": "No",
+      "BenchmarkNowUnixMicro": "No"
+    },
+    "src/time/time.go": {
+      "UnixMilli": "Yes",
+      "UnixMicro": "Yes",
+      "Unix": "Yes",
+      "unixTime": "Yes",
+      "UnixNano": "No"
+    }
+  },
+  "34593.md": {
+    "src/database/sql/driver/types.go": {
+      "IsValue": "No",
+      "IsScanValue": "No",
+      "ConvertValue": "No"
+    },
+    "src/database/sql/sql.go": {
+      "NullString": "No",
+      "NullInt64": "No",
+      "NullInt32": "No",
+      "NullInt16": "No",
+      "NullByte": "No",
+      "NullFloat64": "No",
+      "NullBool": "No",
+      "NullTime": "No",
+      "Null": "No",
+      "Scan": "No",
+      "Value": "No"
+    }
+  },
+  "52157.md": {
+    "src/runtime/map_fast32_noswiss.go": {
+      "growWork_fast32": "No",
+      "evacuate_fast32": "No"
+    },
+    "src/runtime/map_fast64_noswiss.go": {
+      "growWork_fast64": "No",
+      "evacuate_fast64": "No"
+    },
+    "src/runtime/map_faststr_noswiss.go": {
+      "growWork_faststr": "No",
+      "evacuate_faststr": "No"
+    },
+    "test/map1.go": {
+      "main": "No"
+    },
+    "src/cmd/compile/internal/reflectdata/map_noswiss.go": {
+      "OldMapType": "No"
+    },
+    "test/makemap.go": {
+      "main": "No"
+    },
+    "src/runtime/map_fast64_swiss.go": {
+      "mapaccess1_fast64": "No",
+      "mapaccess2_fast64": "No",
+      "mapassign_fast64": "No",
+      "mapassign_fast64ptr": "No",
+      "mapdelete_fast64": "No"
+    },
+    "src/runtime/map_noswiss.go": {
+      "makemap": "Yes",
+      "makemap_small": "No",
+      "makemap64": "No",
+      "makeBucketArray": "No",
+      "overLoadFactor": "No",
+      "tooManyOverflowBuckets": "No",
+      "hashGrow": "No",
+      "mapassign": "No",
+      "mapdelete": "No",
+      "mapclear": "No"
+    },
+    "src/cmd/compile/internal/reflectdata/map_swiss.go": {
+      "SwissMapType": "No",
+      "swissTableType": "No"
+    },
+    "src/runtime/map_test.go": {
+      "TestIgnoreBogusMapHint": "No"
+    },
+    "test/map.go": {
+      "main": "No",
+      "testbasic": "No"
+    },
+    "test/maplinear.go": {
+      "main": "No",
+      "checkLinear": "No"
+    },
+    "src/runtime/map_benchmark_test.go": {
+      "BenchmarkMakeMap": "No",
+      "BenchmarkNewEmptyMapHintLessThan8": "No",
+      "BenchmarkNewEmptyMapHintGreaterThan8": "No",
+      "BenchmarkMapAssignFillHint": "No",
+      "BenchmarkMapAssignFillNoHint": "No",
+      "BenchmarkGoMapClear": "No"
+    },
+    "test/mapclear.go": {
+      "main": "No"
+    },
+    "src/runtime/map_faststr_swiss.go": {
+      "mapaccess1_faststr": "No",
+      "mapaccess2_faststr": "No",
+      "mapassign_faststr": "No",
+      "mapdelete_faststr": "No"
+    },
+    "src/runtime/map_swiss.go": {
+      "makemap": "No",
+      "makemap64": "No",
+      "makemap_small": "No",
+      "reflect_makemap": "No",
+      "reflect_maplen": "No",
+      "reflectlite_maplen": "No"
+    },
+    "src/runtime/map_fast32_swiss.go": {
+      "mapaccess1_fast32": "No",
+      "mapaccess2_fast32": "No",
+      "mapassign_fast32": "No",
+      "mapassign_fast32ptr": "No",
+      "mapdelete_fast32": "No"
+    }
+  },
+  "51039.md": {
+    "src/strings/strings_test.go": {
+      "TestLines": "No",
+      "TestSplit": "No",
+      "TestSplitAfter": "No",
+      "TestFields": "No",
+      "TestFieldsFunc": "No",
+      "TestCut": "No",
+      "TestCutPrefix": "No",
+      "TestCutSuffix": "No"
+    },
+    "src/strings/strings.go": {
+      "Split": "No",
+      "SplitAfter": "Yes",
+      "Fields": "No",
+      "FieldsFunc": "No",
+      "Cut": "Yes",
+      "TrimSuffix": "No",
+      "ReplaceAll": "No"
+    }
+  },
+  "42099.md": {
+    "src/reflect/value.go": {
+      "NumMethod": "Yes",
+      "String": "No",
+      "QualifiedString": "No"
+    },
+    "src/reflect/type.go": {
+      "String": "No",
+      "NumMethod": "Yes",
+      "Method": "No",
+      "PkgPath": "No",
+      "Name": "No"
+    }
+  },
+  "52310.md": {
+    "src/reflect/value.go": {
+      "ValueOf": "Yes",
+      "Set": "Yes",
+      "IsValid": "No",
+      "Zero": "No"
+    },
+    "src/reflect/type.go": {
+      "Set": "No",
+      "ValueOf": "No",
+      "Zero": "No"
+    },
+    "src/reflect/all_test.go": {
+      "TestSet": "No",
+      "TestSetValue": "No",
+      "TestInterfaceSet": "No",
+      "TestSetPanic": "No",
+      "Set": "No"
+    }
+  },
+  "45568.md": {
+    "src/errors/wrap.go": {
+      "Is": "Yes",
+      "is": "Yes",
+      "As": "Yes",
+      "as": "Yes"
+    },
+    "src/errors/wrap_test.go": {
+      "Is": "No",
+      "As": "Yes"
+    }
+  },
+  "41130.md": {
+    "src/builtin/builtin.go": {
+      "delete": "Yes"
+    }
+  },
+  "53510.md": {
+    "src/slices/slices_test.go": {
+      "TestIndex": "No",
+      "TestIndexFunc": "No",
+      "TestContains": "No",
+      "TestContainsFunc": "No"
+    },
+    "src/slices/slices.go": {
+      "Index": "No",
+      "IndexFunc": "No"
+    }
+  },
+  "51887.md": {
+    "src/strconv/quote.go": {
+      "unquote": "Yes",
+      "appendQuotedWith": "Yes",
+      "QuotedPrefix": "Yes",
+      "Unquote": "Yes"
+    },
+    "src/strconv/quote_test.go": {
+      "TestUnquote": "No",
+      "TestUnquoteInvalidUTF8": "No",
+      "testUnquote": "No",
+      "BenchmarkUnquoteEasy": "No",
+      "BenchmarkUnquoteHard": "No"
+    }
+  }
+}

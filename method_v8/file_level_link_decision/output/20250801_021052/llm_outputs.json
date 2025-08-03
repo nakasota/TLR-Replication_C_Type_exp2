@@ -1,0 +1,1942 @@
+{
+  "selected_directory_and_file_localization_output": "20250712_080410",
+  "45428.md": {
+    "src/crypto/tls/common.go": "Yes",
+    "src/crypto/tls/tls.go": "Yes",
+    "src/crypto/tls/tls_test.go": "No",
+    "src/crypto/tls/conn.go": "No",
+    "src/crypto/tls/handshake_client.go": "Yes",
+    "src/crypto/tls/handshake_server_test.go": "No",
+    "src/crypto/tls/handshake_client_test.go": "Yes",
+    "src/crypto/tls/handshake_server.go": "No"
+  },
+  "48801.md": {
+    "src/time/format_test.go": "No",
+    "src/cmd/vet/main.go": "No",
+    "src/time/format.go": "Yes",
+    "src/cmd/vet/vet_test.go": "No"
+  },
+  "34875.md": {
+    "src/go/doc/comment/text.go": "No",
+    "src/go/doc/comment.go": "Yes",
+    "src/go/doc/comment/markdown.go": "Yes",
+    "src/cmd/doc/main.go": "No",
+    "src/cmd/doc/pkg.go": "No",
+    "src/go/doc/comment/doc.go": "Yes",
+    "src/go/doc/comment/html.go": "Yes"
+  },
+  "32716.md": {
+    "src/crypto/tls/prf_test.go": "No",
+    "src/crypto/tls/prf.go": "Yes",
+    "src/crypto/tls/common.go": "Yes",
+    "src/crypto/tls/tls_test.go": "No",
+    "src/crypto/tls/key_agreement.go": "Yes",
+    "src/crypto/tls/conn.go": "Yes",
+    "src/crypto/tls/auth_test.go": "No",
+    "src/crypto/tls/handshake_server_test.go": "No",
+    "src/crypto/tls/cipher_suites.go": "Yes"
+  },
+  "51777.md": {
+    "src/net/netip/netip_test.go": "No",
+    "src/net/netip/netip.go": "Yes"
+  },
+  "47164.md": {
+    "src/log/log_test.go": "Yes",
+    "src/log/log.go": "Yes"
+  },
+  "42710.md": {
+    "src/hash/maphash/maphash.go": "Yes",
+    "hash/maphash/maphash.go": "No",
+    "src/hash/maphash/maphash_test.go": "No",
+    "src/hash/maphash/maphash_purego.go": "No",
+    "src/hash/maphash/maphash_runtime.go": "Yes"
+  },
+  "46259.md": {
+    "src/syscall/exec_freebsd.go": "Yes",
+    "src/syscall/syscall_freebsd.go": "No",
+    "src/syscall/exec_bsd.go": "Yes",
+    "src/syscall/exec_freebsd_test.go": "Yes",
+    "syscall/exec_bsd.go": "No"
+  },
+  "47257.md": {
+    "src/net/netcgo_off.go": "Yes",
+    "src/cmd/dist/main.go": "No",
+    "src/cmd/dist/imports.go": "No",
+    "src/os/user/cgo_lookup_unix.go": "Yes",
+    "src/cmd/dist/util_gccgo.go": "No",
+    "src/cmd/dist/buildtool.go": "No",
+    "src/cmd/dist/doc.go": "No",
+    "src/cmd/dist/notgo122.go": "No",
+    "src/cmd/dist/util.go": "No",
+    "src/net/netcgo_on.go": "Yes",
+    "src/cmd/dist/quoted.go": "No",
+    "src/os/user/cgo_unix_test.go": "No",
+    "src/cmd/dist/build.go": "No",
+    "src/cmd/dist/util_gc.go": "No",
+    "src/net/netgo_netcgo.go": "Yes",
+    "src/net/netgo_off.go": "Yes",
+    "src/cmd/dist/buildtag_test.go": "No",
+    "src/cmd/dist/testjson.go": "No",
+    "src/cmd/dist/sys_default.go": "No",
+    "src/cmd/dist/test.go": "No",
+    "src/cmd/dist/sys_windows.go": "No",
+    "src/cmd/dist/exec.go": "No",
+    "src/net/netgo_on.go": "Yes",
+    "src/cmd/dist/buildruntime.go": "No",
+    "src/cmd/dist/buildgo.go": "No",
+    "src/os/user/lookup_unix.go": "Yes",
+    "src/cmd/dist/buildtag.go": "No",
+    "src/cmd/dist/supported_test.go": "No",
+    "src/cmd/dist/testjson_test.go": "No",
+    "src/cmd/dist/build_test.go": "No"
+  },
+  "47216.md": {
+    "src/runtime/metrics/description.go": "Yes",
+    "src/runtime/metrics/histogram.go": "No",
+    "src/runtime/metrics/sample.go": "Yes",
+    "src/runtime/metrics/value.go": "No",
+    "src/runtime/metrics/example_test.go": "No",
+    "src/runtime/metrics/description_test.go": "No",
+    "src/runtime/metrics/doc.go": "Yes"
+  },
+  "53747.md": {
+    "src/flag/flag.go": "Yes",
+    "src/flag/flag_test.go": "Yes"
+  },
+  "34974.md": {
+    "src/archive/zip/reader.go": "Yes",
+    "src/archive/zip/struct.go": "No",
+    "src/archive/zip/writer.go": "Yes"
+  },
+  "34626.md": {
+    "src/testing/benchmark_test.go": "No",
+    "src/testing/benchmark.go": "Yes"
+  },
+  "48530.md": {
+    "src/syscall/zsyscall_linux_mips64x.go": "No",
+    "src/net/splice_linux.go": "Yes",
+    "src/syscall/zsyscall_linux_loong64.go": "No",
+    "src/net/splice_linux_test.go": "Yes",
+    "src/syscall/zsyscall_linux_amd64.go": "Yes",
+    "src/syscall/zsyscall_linux_386.go": "Yes",
+    "src/syscall/zsyscall_linux_arm64.go": "Yes",
+    "src/net/tcpsock_test.go": "No",
+    "src/internal/poll/splice_linux.go": "Yes",
+    "src/syscall/zsyscall_linux_s390x.go": "Yes",
+    "src/syscall/zsyscall_linux_riscv64.go": "No",
+    "src/syscall/syscall_linux.go": "No",
+    "src/internal/poll/splice_linux_test.go": "Yes",
+    "src/syscall/zsyscall_linux_mipsx.go": "No",
+    "src/net/tcpsock_posix.go": "Yes",
+    "src/net/tcpsock.go": "Yes",
+    "src/syscall/zsyscall_linux_arm.go": "No",
+    "src/net/splice_stub.go": "Yes",
+    "src/syscall/zsyscall_linux_ppc64x.go": "No"
+  },
+  "50102.md": {
+    "src/archive/tar/stat_unix.go": "Yes",
+    "src/archive/tar/common.go": "Yes"
+  },
+  "38687.md": {
+    "src/cmd/go/internal/generate/generate.go": "Yes",
+    "src/cmd/go/internal/generate/generate_test.go": "No"
+  },
+  "50062.md": {
+    "src/time/zoneinfo.go": "Yes",
+    "src/time/time.go": "Yes"
+  },
+  "46731.md": {
+    "src/cmd/compile/internal/typecheck/type.go": "Yes",
+    "src/cmd/compile/internal/typecheck/typecheck.go": "No",
+    "src/cmd/compile/internal/typecheck/universe.go": "No",
+    "test/fixedbugs/notinheap3.go": "No",
+    "src/cmd/cgo/main.go": "No",
+    "src/cmd/compile/internal/types2/api.go": "No",
+    "test/fixedbugs/notinheap.go": "No",
+    "test/fixedbugs/notinheap2.go": "No",
+    "src/cmd/compile/internal/types2/types.go": "No",
+    "src/cmd/compile/internal/types2/universe.go": "No",
+    "src/runtime/cgo/cgo.go": "Yes",
+    "src/cmd/cgo/ast.go": "No",
+    "src/cmd/compile/internal/ir/type.go": "No",
+    "src/cmd/compile/internal/types2/type.go": "No",
+    "src/cmd/cgo/out.go": "Yes",
+    "src/runtime/internal/sys/types.go": "No",
+    "src/runtime/internal/sys/sys.go": "No",
+    "src/runtime/internal/sys/nih.go": "No",
+    "src/cmd/compile/internal/types2/object.go": "No"
+  },
+  "33184.md": {
+    "src/time/tick.go": "Yes",
+    "src/time/tick_test.go": "Yes"
+  },
+  "50489.md": {
+    "src/math/big/rat_test.go": "No",
+    "src/math/big/rat.go": "Yes"
+  },
+  "47342.md": {
+    "src/hash/maphash/maphash.go": "Yes",
+    "escape_hash_maphash.go": "No",
+    "src/hash/maphash/maphash_purego.go": "Yes",
+    "src/hash/maphash/maphash_test.go": "No",
+    "src/hash/maphash/maphash_runtime.go": "Yes"
+  },
+  "37255.md": {
+    "src/os/signal/signal_test.go": "Yes",
+    "src/os/signal/doc.go": "No",
+    "src/context/context.go": "No",
+    "src/os/signal/signal.go": "Yes"
+  },
+  "42502.md": {
+    "src/runtime/pprof/pprof.go": "Yes",
+    "src/runtime/cpuprof.go": "Yes",
+    "src/runtime/pprof/pprof_test.go": "No"
+  },
+  "42782.md": {
+    "src/reflect/visiblefields.go": "Yes",
+    "src/reflect/type.go": "Yes",
+    "src/reflect/visiblefields_test.go": "Yes"
+  },
+  "38248.md": {
+    "src/cmd/compile/internal/typecheck/typecheck.go": "No",
+    "src/syscall/js/func.go": "No",
+    "src/cmd/compile/internal/wasm/obj.go": "No",
+    "src/syscall/js/fs_js.go": "No",
+    "test/wasmexport2.go": "No",
+    "src/runtime/stubs_wasm.go": "No",
+    "src/cmd/compile/internal/ssagen/ssa.go": "No",
+    "src/cmd/compile/internal/walk/expr.go": "No",
+    "src/cmd/compile/internal/wasm/asm.go": "No",
+    "src/cmd/compile/internal/wasm/ssa.go": "No",
+    "test/wasmexport.go": "No",
+    "src/syscall/js/export_test.go": "No",
+    "test/wasmmemsize.dir/main.go": "No",
+    "src/internal/abi/abi.go": "No",
+    "src/syscall/js/js_test.go": "No",
+    "src/runtime/os_wasm.go": "No",
+    "test/wasmmemsize.go": "No",
+    "src/internal/abi/abi_wasm.go": "No",
+    "src/syscall/js/js.go": "No"
+  },
+  "46279.md": {
+    "src/runtime/rlimit_unix.go": "No",
+    "src/syscall/exec_unix.go": "No",
+    "src/internal/syscall/unix/syscall_linux.go": "No",
+    "src/syscall/rlimit_darwin.go": "Yes",
+    "src/runtime/rlimit_js.go": "No",
+    "src/cmd/go/internal/base/limit.go": "No",
+    "src/internal/poll/fd_unix.go": "No",
+    "src/syscall/syscall_unix.go": "No",
+    "src/runtime/runtime_unix.go": "No",
+    "src/syscall/rlimit.go": "Yes",
+    "src/runtime/sys_unix.go": "No",
+    "src/syscall/rlimit_test.go": "No"
+  },
+  "40724.md": {
+    "src/runtime/abi_test.go": "Yes",
+    "src/reflect/abi_test.go": "Yes",
+    "src/cmd/asm/internal/asm/parse.go": "No",
+    "src/reflect/value.go": "Yes",
+    "src/internal/goexperiment/exp_regabiwrappers_on.go": "Yes",
+    "src/cmd/internal/objabi/funcid.go": "No",
+    "src/cmd/internal/obj/abi_string.go": "No",
+    "src/internal/abi/abi_loong64.go": "No",
+    "src/cmd/compile/internal/abi/abiutils.go": "Yes",
+    "src/internal/abi/abi_test.go": "Yes",
+    "src/cmd/compile/internal/ir/abi.go": "No",
+    "src/reflect/abi.go": "Yes",
+    "src/cmd/compile/internal/ssa/op.go": "Yes",
+    "src/runtime/traceback.go": "No",
+    "src/cmd/link/internal/ld/sym.go": "No",
+    "src/internal/goexperiment/exp_regabiargs_off.go": "No",
+    "src/cmd/compile/internal/ssagen/ssa.go": "Yes",
+    "src/cmd/compile/internal/ssa/expand_calls.go": "Yes",
+    "src/runtime/asm_amd64.s": "No",
+    "src/cmd/compile/internal-abi.md": "No",
+    "src/cmd/compile/internal/types/type.go": "No",
+    "src/runtime/wincallback.go": "Yes",
+    "src/cmd/compile/internal/abi/abi.go": "No",
+    "src/runtime/zcallback_windows.go": "Yes",
+    "src/internal/goexperiment/exp_regabiwrappers_off.go": "No",
+    "src/cmd/compile/internal/ssagen/abi.go": "Yes",
+    "src/internal/abi/abi_generic.go": "No",
+    "src/internal/abi/abi_ppc64x.go": "Yes",
+    "src/runtime/runtime2.go": "No",
+    "src/internal/abi/abi_amd64.go": "Yes",
+    "src/internal/abi/abi.go": "Yes",
+    "src/internal/abi/abi_arm64.go": "No",
+    "src/internal/goexperiment/exp_regabiargs_on.go": "Yes",
+    "src/internal/abi/abi_riscv64.go": "Yes"
+  },
+  "51914.md": {
+    "src/net/http/response.go": "No",
+    "src/net/http/httputil/reverseproxy.go": "Yes",
+    "src/net/http/httputil/reverseproxy_test.go": "Yes"
+  },
+  "40481.md": {
+    "test/unsafe_slice_data.go": "No",
+    "test/unsafe_string_data.go": "No",
+    "src/unsafe/unsafe.go": "Yes",
+    "test/unsafe_string.go": "No",
+    "src/runtime/unsafe.go": "No",
+    "src/builtin/builtin.go": "No",
+    "src/cmd/compile/internal/test/testdata/unsafe_test.go": "No",
+    "test/unsafebuiltins.go": "No"
+  },
+  "46552.md": {
+    "src/syscall/dll_windows.go": "Yes",
+    "src/internal/syscall/windows/zsyscall_windows.go": "No",
+    "src/internal/syscall/windows/syscall_windows.go": "No",
+    "src/syscall/zsyscall_windows.go": "No",
+    "src/runtime/syscall_windows.go": "Yes",
+    "src/runtime/syscall_windows_test.go": "Yes",
+    "src/syscall/syscall_windows.go": "Yes"
+  },
+  "33136.md": {
+    "src/reflect/type.go": "No",
+    "src/reflect/value.go": "Yes"
+  },
+  "52221.md": {
+    "src/crypto/ecdh/x25519.go": "Yes",
+    "src/crypto/ecdh/ecdh.go": "Yes",
+    "src/crypto/ecdh/ecdh_test.go": "No",
+    "src/crypto/ecdh/nist.go": "Yes"
+  },
+  "44853.md": {
+    "src/runtime/msan0.go": "No",
+    "src/cmd/go/internal/work/asan.go": "No",
+    "src/cmd/link/internal/ld/asan.go": "No",
+    "src/runtime/asan.go": "Yes",
+    "src/internal/asan/asan.go": "Yes",
+    "src/runtime/asan0.go": "Yes",
+    "src/runtime/malloc.go": "Yes",
+    "src/internal/asan/doc.go": "Yes",
+    "src/internal/asan/noasan.go": "Yes",
+    "src/runtime/asan/asan.go": "Yes",
+    "src/cmd/compile/internal/asan/asan.go": "No",
+    "src/runtime/msan.go": "No"
+  },
+  "50599.md": {
+    "src/syscall/exec_solaris.go": "No",
+    "src/syscall/exec_unix.go": "Yes",
+    "src/syscall/exec_bsd.go": "No",
+    "src/syscall/exec_unix_test.go": "No",
+    "src/syscall/exec_darwin.go": "No",
+    "src/syscall/exec_aix.go": "No",
+    "src/os/exec/exec_unix.go": "Yes",
+    "src/os/exec/exec_windows.go": "No",
+    "src/os/exec/exec.go": "Yes",
+    "src/syscall/exec_linux.go": "No",
+    "src/os/exec/exec_test.go": "No"
+  },
+  "42537.md": {
+    "src/cmd/go/proxy_test.go": "Yes",
+    "src/testing/benchmark.go": "Yes",
+    "src/mime/mediatype.go": "Yes",
+    "test/run.go": "No",
+    "src/testing/fstest/mapfs.go": "No",
+    "src/cmd/go/internal/modload/load.go": "No",
+    "src/strings/strings.go": "Yes",
+    "src/strings/strings_test.go": "Yes"
+  },
+  "40995.md": {
+    "src/runtime/internal/atomic/atomic_mips64x.go": "No",
+    "src/runtime/os_openbsd_mips64.go": "Yes",
+    "src/internal/syscall/unix/nofollow_openbsd.go": "No",
+    "src/cmd/link/internal/mips64/asm.go": "Yes",
+    "src/internal/goarch/goarch_mips64.go": "No",
+    "src/syscall/ztypes_openbsd_mips64.go": "Yes",
+    "src/syscall/zsysnum_openbsd_mips64.go": "Yes",
+    "src/syscall/zerrors_openbsd_mips64.go": "Yes",
+    "src/cmd/dist/dist.go": "No",
+    "src/cmd/link/internal/mips64/l.go": "Yes",
+    "src/internal/syscall/unix/faccessat_openbsd.go": "No",
+    "src/internal/goarch/zgoarch_mips64.go": "No",
+    "src/syscall/zsyscall_openbsd_mips64.go": "Yes",
+    "src/runtime/defs_openbsd_mips64.go": "Yes",
+    "src/cmd/link/internal/mips64/obj.go": "Yes",
+    "src/internal/syscall/unix/at_sysnum_openbsd.go": "Yes",
+    "src/runtime/signal_openbsd_mips64.go": "Yes",
+    "src/internal/goos/zgoos_openbsd.go": "No",
+    "src/syscall/syscall_openbsd_mips64.go": "Yes",
+    "src/internal/syscall/unix/tcsetpgrp_openbsd.go": "No",
+    "src/internal/syscall/unix/at_openbsd.go": "No",
+    "src/cmd/link/internal/ld/arch_mips64.go": "No"
+  },
+  "39034.md": {
+    "src/time/format_test.go": "No",
+    "src/time/time.go": "Yes",
+    "src/time/time_test.go": "No",
+    "src/time/format.go": "Yes"
+  },
+  "45100.md": {
+    "src/net/url/url.go": "Yes",
+    "src/net/url/url_test.go": "No"
+  },
+  "47005.md": {
+    "src/net/url/url.go": "Yes",
+    "src/net/url/url_test.go": "Yes"
+  },
+  "53482.md": {
+    "src/syscall/zerrors_linux_amd64.go": "Yes",
+    "src/syscall/zerrors_freebsd_arm64.go": "No",
+    "src/net/interface_darwin.go": "No",
+    "src/syscall/zerrors_linux_riscv64.go": "Yes",
+    "src/net/interface_plan9.go": "No",
+    "src/net/interface_aix.go": "Yes",
+    "src/net/interface_solaris.go": "Yes",
+    "src/syscall/zerrors_netbsd_386.go": "Yes",
+    "src/net/interface_bsd_test.go": "No",
+    "src/net/interface_bsd.go": "Yes",
+    "src/net/interface_stub.go": "No",
+    "src/syscall/zerrors_freebsd_arm.go": "No",
+    "src/syscall/zerrors_openbsd_arm64.go": "Yes",
+    "src/net/interface.go": "Yes",
+    "src/net/interface_bsdvar.go": "No",
+    "src/net/interface_test.go": "No",
+    "src/syscall/zerrors_linux_s390x.go": "Yes",
+    "src/net/interface_unix_test.go": "No",
+    "src/syscall/zerrors_freebsd_amd64.go": "No",
+    "src/net/interface_linux_test.go": "No",
+    "src/syscall/zerrors_freebsd_386.go": "Yes",
+    "src/net/interface_windows.go": "No",
+    "src/net/interface_linux.go": "Yes",
+    "src/net/interface_freebsd.go": "No",
+    "src/syscall/zerrors_aix_ppc64.go": "Yes"
+  },
+  "37112.md": {
+    "src/runtime/metrics/description.go": "Yes",
+    "src/runtime/metrics/histogram.go": "Yes",
+    "src/runtime/metrics.go": "Yes",
+    "src/runtime/metrics/sample.go": "Yes",
+    "src/runtime/metrics/value.go": "Yes",
+    "src/runtime/metrics/example_test.go": "Yes",
+    "src/runtime/metrics_test.go": "Yes",
+    "src/runtime/metrics/description_test.go": "Yes",
+    "src/runtime/metrics/doc.go": "Yes"
+  },
+  "46771.md": {
+    "src/mime/multipart/writer.go": "Yes",
+    "src/mime/multipart/writer_test.go": "Yes"
+  },
+  "48424.md": {
+    "src/cmd/compile/internal/types2/interface.go": "Yes",
+    "test/typeparam/issue48424.go": "Yes",
+    "src/go/types/interface.go": "Yes",
+    "src/cmd/compile/internal/types2/typeparam.go": "Yes",
+    "src/slices/slices_test.go": "No",
+    "src/slices/slices.go": "Yes"
+  },
+  "46485.md": {
+    "src/go/parser/resolver.go": "Yes",
+    "src/go/parser/parser.go": "Yes",
+    "src/go/parser/parser_test.go": "No",
+    "src/go/parser/resolver_test.go": "No"
+  },
+  "34652.md": {
+    "src/text/template/parse/lex.go": "Yes",
+    "src/text/template/parse/node.go": "Yes",
+    "src/text/template/parse/parse.go": "Yes"
+  },
+  "42098.md": {
+    "src/syscall/syscall_windows.go": "No",
+    "syscall/exec_windows.go": "No",
+    "src/syscall/exec_windows.go": "Yes"
+  },
+  "35998.md": {
+    "src/testing/testing_test.go": "Yes",
+    "src/testing/testing.go": "Yes"
+  },
+  "43698.md": {
+    "src/embed/embed.go": "No",
+    "src/embed/example_test.go": "No",
+    "src/cmd/vet/main.go": "No",
+    "src/cmd/vet/vet_test.go": "No"
+  },
+  "51414.md": {
+    "src/time/time.go": "Yes",
+    "src/time/time_test.go": "Yes"
+  },
+  "37023.md": {
+    "src/runtime/panic.go": "Yes",
+    "src/runtime/signal_unix.go": "Yes",
+    "src/runtime/debug/panic_test.go": "No"
+  },
+  "46258.md": {
+    "src/syscall/exec_unix.go": "Yes",
+    "src/syscall/syscall_freebsd_amd64.go": "No",
+    "src/syscall/zsyscall_freebsd_riscv64.go": "No",
+    "src/syscall/syscall_freebsd.go": "Yes",
+    "src/syscall/zerrors_freebsd_arm64.go": "No",
+    "src/syscall/zerrors_freebsd_riscv64.go": "No",
+    "src/syscall/syscall_freebsd_riscv64.go": "No",
+    "src/syscall/syscall_freebsd_386.go": "No",
+    "src/syscall/exec_freebsd.go": "Yes",
+    "src/syscall/zsyscall_freebsd_arm.go": "No",
+    "src/syscall/zerrors_freebsd_arm.go": "No",
+    "src/syscall/zsyscall_freebsd_386.go": "No",
+    "src/syscall/syscall_freebsd_arm.go": "No",
+    "src/syscall/types_freebsd.go": "Yes",
+    "src/syscall/zerrors_freebsd_amd64.go": "No",
+    "src/syscall/zerrors_freebsd_386.go": "No",
+    "src/syscall/syscall_unix.go": "No",
+    "src/syscall/zsyscall_freebsd_arm64.go": "No",
+    "src/syscall/exec_bsd.go": "Yes",
+    "src/syscall/zsyscall_freebsd_amd64.go": "No",
+    "src/syscall/syscall_freebsd_arm64.go": "No"
+  },
+  "51430.md": {
+    "src/cmd/cover/testdata/pkgcfg/a/a.go": "No",
+    "src/internal/coverage/slicewriter/slicewriter.go": "No",
+    "src/cmd/cover/testdata/test.go": "No",
+    "src/cmd/covdata/doc.go": "Yes",
+    "src/cmd/compile/internal/coverage/cover.go": "Yes",
+    "src/runtime/coverage/coverage.go": "Yes",
+    "src/cmd/covdata/merge.go": "Yes",
+    "src/runtime/covercounter.go": "Yes",
+    "src/cmd/cover/profile.go": "No",
+    "src/internal/coverage/rtcov/rtcov.go": "Yes",
+    "src/runtime/covermeta.go": "Yes",
+    "src/internal/coverage/stringtab/stringtab.go": "No",
+    "src/internal/coverage/defs.go": "Yes",
+    "src/internal/coverage/pkid.go": "No",
+    "src/cmd/covdata/covdata.go": "No",
+    "src/internal/coverage/calloc/batchcounteralloc.go": "No",
+    "src/cmd/cover/cover.go": "Yes",
+    "src/testing/cover.go": "No",
+    "src/cmd/cover/testdata/pkgcfg/a/a_test.go": "No",
+    "src/cmd/covdata/subtractintersect.go": "Yes",
+    "src/internal/coverage/uleb128/uleb128.go": "No",
+    "src/internal/coverage/encodecounter/encode.go": "Yes",
+    "src/internal/coverage/cmerge/merge.go": "Yes",
+    "src/cmd/covdata/testdata/dep.go": "No",
+    "src/testing/newcover.go": "No",
+    "src/internal/coverage/encodemeta/encode.go": "Yes",
+    "src/cmd/cover/testdata/main.go": "No",
+    "src/internal/coverage/cfile/apis.go": "Yes",
+    "src/internal/coverage/decodemeta/decodefile.go": "Yes",
+    "src/cmd/cover/doc.go": "Yes",
+    "src/cmd/cover/testdata/pkgcfg/noFuncsNoTests/nfnt.go": "No",
+    "src/internal/coverage/cformat/format.go": "No",
+    "src/cmd/cover/testdata/p.go": "No",
+    "src/internal/coverage/decodecounter/decodecounterfile.go": "Yes",
+    "src/cmd/covdata/testdata/prog2.go": "No",
+    "src/internal/coverage/decodemeta/decode.go": "Yes",
+    "src/internal/coverage/pods/pods.go": "Yes",
+    "src/cmd/cover/testdata/pkgcfg/yesFuncsNoTests/yfnt.go": "No",
+    "src/internal/coverage/encodemeta/encodefile.go": "Yes",
+    "src/internal/coverage/cfile/emit.go": "Yes",
+    "src/internal/coverage/cfile/hooks.go": "Yes",
+    "src/internal/coverage/slicereader/slicereader.go": "No",
+    "src/cmd/cover/testdata/directives.go": "No",
+    "src/cmd/cover/testdata/html/html.go": "No",
+    "src/cmd/covdata/testdata/prog1.go": "No"
+  },
+  "46308.md": {
+    "src/crypto/tls/common.go": "Yes",
+    "src/crypto/tls/common_string.go": "Yes"
+  },
+  "37033.md": {
+    "src/runtime/cgo/handle.go": "Yes",
+    "src/runtime/cgo/handle_test.go": "Yes"
+  },
+  "51766.md": {
+    "src/net/netip/netip_test.go": "No",
+    "src/net/netip/netip.go": "Yes"
+  },
+  "51684.md": {
+    "src/regexp/syntax/parse_test.go": "No",
+    "src/regexp/syntax/parse.go": "Yes"
+  },
+  "51896.md": {
+    "src/unicode/utf16/utf16_test.go": "Yes",
+    "src/unicode/utf16/utf16.go": "Yes"
+  },
+  "42088.md": {
+    "src/cmd/go/internal/work/build.go": "No",
+    "src/cmd/go/internal/work/exec.go": "No",
+    "src/cmd/go/internal/run/run.go": "Yes"
+  },
+  "19367.md": {
+    "src/cmd/compile/internal/test/unsafe_test.go": "No",
+    "test/unsafe_slice_data.go": "No",
+    "src/cmd/compile/internal/ssa/rewrite_test.go": "No",
+    "test/unsafe_string_data.go": "No",
+    "src/unsafe/unsafe.go": "Yes",
+    "test/unsafe_string.go": "No",
+    "src/runtime/unsafe.go": "Yes",
+    "src/cmd/compile/internal/ssa/rewritegeneric.go": "No",
+    "src/reflect/value.go": "No",
+    "src/reflect/type.go": "No"
+  },
+  "37168.md": {
+    "src/math/big/internal/asmgen/riscv64.go": "Yes",
+    "src/crypto/aes/aes_test.go": "No",
+    "src/crypto/rc4/rc4.go": "No",
+    "src/math/big/arith_arm.s": "No",
+    "src/crypto/sha1/sha1.go": "No",
+    "src/crypto/aes/gcm_amd64.s": "No",
+    "src/math/big/arith_decl.go": "Yes",
+    "src/hash/crc32/crc32_loong64.go": "No",
+    "src/math/big/internal/asmgen/mips64.go": "No",
+    "src/crypto/hmac/hmac.go": "No",
+    "src/math/big/arith_s390x.s": "No",
+    "src/crypto/des/block.go": "No",
+    "src/math/big/arith_ppc64x.s": "No",
+    "src/crypto/aes/aes.go": "No",
+    "src/crypto/subtle/constant_time.go": "No",
+    "src/hash/crc32/crc32_s390x.go": "No",
+    "src/crypto/sha1/sha1_test.go": "No",
+    "src/hash/crc32/crc32_otherarch.go": "No",
+    "src/math/big/arith_decl_pure.go": "No",
+    "src/crypto/rsa/rsa.go": "No",
+    "src/crypto/rsa/rsa_test.go": "No",
+    "src/math/big/arith_arm64.s": "No",
+    "src/math/big/arith_amd64.s": "No",
+    "src/math/big/internal/asmgen/mips.go": "Yes",
+    "src/math/big/internal/asmgen/pipe.go": "Yes",
+    "src/math/big/internal/asmgen/shift.go": "No",
+    "src/math/big/internal/asmgen/asm.go": "Yes",
+    "src/math/big/internal/asmgen/cheat.go": "Yes",
+    "src/math/big/internal/asmgen/loong64.go": "No",
+    "src/math/big/internal/asmgen/s390x.go": "Yes",
+    "src/crypto/ecdsa/ecdsa_test.go": "No",
+    "src/crypto/aes/asm_amd64.s": "No",
+    "src/hash/crc32/crc32_arm64.go": "No",
+    "src/math/big/arith_s390x_test.go": "No",
+    "src/math/big/arithvec_s390x.go": "No",
+    "src/math/big/internal/asmgen/arm.go": "Yes",
+    "src/math/big/internal/asmgen/add.go": "No",
+    "src/crypto/cipher/cipher.go": "No",
+    "src/math/big/internal/asmgen/main.go": "Yes",
+    "src/crypto/hmac/hmac_test.go": "No",
+    "src/hash/crc32/crc32_generic.go": "No",
+    "src/math/big/arith.go": "Yes",
+    "src/math/big/internal/asmgen/arm64.go": "Yes",
+    "src/crypto/ecdsa/ecdsa.go": "No",
+    "src/crypto/sha256/sha256_test.go": "No",
+    "src/math/big/internal/asmgen/arch.go": "Yes",
+    "src/hash/crc32/crc32_ppc64le.go": "No",
+    "src/crypto/md5/md5_test.go": "No",
+    "src/crypto/cipher/gcm.go": "No",
+    "src/crypto/rc4/rc4_test.go": "No",
+    "src/crypto/des/des_test.go": "No",
+    "src/math/big/internal/asmgen/amd64.go": "Yes",
+    "src/math/big/internal/asmgen/ppc64.go": "Yes",
+    "src/crypto/cipher/gcm_test.go": "No",
+    "src/math/big/arith_amd64_test.go": "No",
+    "src/math/big/arith_amd64.go": "No",
+    "src/crypto/elliptic/p256_test.go": "No",
+    "src/crypto/sha512/sha512_test.go": "No",
+    "src/crypto/md5/md5.go": "No",
+    "src/crypto/subtle/constant_time_test.go": "No",
+    "src/crypto/sha256/sha256.go": "No",
+    "src/crypto/des/cipher.go": "No",
+    "src/crypto/elliptic/elliptic_test.go": "No",
+    "src/crypto/tls/tls.go": "No",
+    "src/crypto/tls/tls_test.go": "No",
+    "src/crypto/elliptic/p256_asm_amd64.s": "No",
+    "src/math/big/internal/asmgen/386.go": "Yes",
+    "src/hash/crc32/crc32_amd64.go": "Yes",
+    "src/crypto/elliptic/elliptic.go": "No",
+    "src/crypto/sha512/sha512.go": "No",
+    "src/math/big/arith_test.go": "No",
+    "src/math/big/internal/asmgen/func.go": "Yes",
+    "src/math/big/internal/asmgen/main_test.go": "No",
+    "src/math/big/internal/asmgen/mul.go": "Yes"
+  },
+  "29062.md": {
+    "src/cmd/go/internal/test/test.go": "No",
+    "src/testing/testing.go": "Yes"
+  },
+  "43823.md": {
+    "src/time/format_test.go": "Yes",
+    "src/time/format.go": "Yes"
+  },
+  "48157.md": {
+    "src/cmd/go/internal/test/test.go": "No",
+    "src/testing/testing_test.go": "No",
+    "src/testing/testing.go": "Yes",
+    "src/cmd/go/test.go": "No",
+    "src/cmd/go/internal/test/testflag.go": "No"
+  },
+  "32779.md": {
+    "src/encoding/json/decode.go": "Yes",
+    "src/encoding/json/v2/intern.go": "Yes",
+    "src/encoding/json/encode.go": "No",
+    "src/encoding/json/v2/intern_test.go": "Yes",
+    "src/encoding/json/decode_test.go": "No"
+  },
+  "46131.md": {
+    "src/reflect/map_swiss_test.go": "No",
+    "src/reflect/iter.go": "No",
+    "src/reflect/iter_test.go": "No",
+    "src/reflect/value.go": "Yes",
+    "src/reflect/map_noswiss_test.go": "No",
+    "src/reflect/map_noswiss.go": "Yes",
+    "src/reflect/type.go": "No",
+    "src/reflect/map_swiss.go": "Yes"
+  },
+  "51225.md": {
+    "src/cmd/compile/internal/base/flag.go": "Yes",
+    "src/cmd/compile/internal/pkgpath/pkgpath.go": "No",
+    "src/cmd/compile/internal/pkgpath/pkgpath_test.go": "No",
+    "src/cmd/compile/main.go": "Yes",
+    "src/cmd/compile/doc.go": "Yes"
+  },
+  "40025.md": {
+    "src/io/io.go": "Yes",
+    "src/io/io_test.go": "No",
+    "src/io/ioutil/ioutil_test.go": "No",
+    "src/io/ioutil/ioutil.go": "Yes"
+  },
+  "47527.md": {
+    "src/bufio/bufio.go": "Yes",
+    "src/bufio/bufio_test.go": "No"
+  },
+  "37974.md": {
+    "src/go/doc/doc_test.go": "No",
+    "test/directive2.go": "No",
+    "test/directive.go": "No",
+    "src/go/doc/doc.go": "Yes",
+    "src/cmd/doc/main.go": "No"
+  },
+  "37776.md": {
+    "src/net/url/url.go": "Yes",
+    "src/net/url/url_test.go": "No"
+  },
+  "40357.md": {
+    "src/cmd/go/internal/modload/list.go": "No",
+    "src/cmd/go/internal/modload/query.go": "No",
+    "src/cmd/go/internal/modload/load.go": "No",
+    "src/cmd/go/internal/modload/modfile.go": "Yes"
+  },
+  "39557.md": {
+    "src/flag/flag.go": "Yes",
+    "src/flag/flag_test.go": "No"
+  },
+  "35804.md": {
+    "src/database/sql/sql.go": "Yes",
+    "src/database/sql/sql_test.go": "No"
+  },
+  "53003.md": {
+    "test/unsafe_slice_data.go": "No",
+    "test/unsafe_string_data.go": "No",
+    "src/unsafe/unsafe.go": "Yes",
+    "test/unsafe_string.go": "No",
+    "src/runtime/unsafe.go": "Yes",
+    "src/reflect/value.go": "No",
+    "src/builtin/builtin.go": "No",
+    "src/cmd/compile/internal/test/testdata/unsafe_test.go": "No",
+    "src/reflect/type.go": "No"
+  },
+  "40281.md": {
+    "src/reflect/type_test.go": "No",
+    "src/cmd/vet/testdata/tagtest/file1.go": "No",
+    "src/cmd/vet/testdata/tagtest/file2.go": "No",
+    "src/reflect/value.go": "Yes",
+    "src/reflect/type.go": "Yes",
+    "src/cmd/vet/testdata/structtag/structtag.go": "No"
+  },
+  "41563.md": {
+    "src/reflect/type.go": "Yes",
+    "src/reflect/value.go": "No"
+  },
+  "46121.md": {
+    "src/text/template/template.go": "No",
+    "src/html/template/template.go": "Yes",
+    "src/text/template/funcs.go": "No"
+  },
+  "43947.md": {
+    "src/os/exec/lp_windows_test.go": "Yes",
+    "src/syscall/zsyscall_windows.go": "No",
+    "src/syscall/syscall_windows.go": "No",
+    "src/os/exec/exec.go": "No",
+    "src/os/exec/exec_windows.go": "Yes",
+    "src/os/exec/lookpath_windows.go": "No",
+    "src/syscall/exec_windows.go": "No",
+    "src/os/exec/lp_windows.go": "Yes"
+  },
+  "50860.md": {
+    "test/escape_runtime_atomic.go": "No",
+    "test/escape_sync_atomic.go": "No",
+    "src/sync/atomic/doc.go": "No",
+    "src/sync/atomic/example_test.go": "No",
+    "src/sync/atomic/doc_64.go": "No",
+    "src/sync/atomic/value_test.go": "No",
+    "src/sync/atomic/type.go": "Yes",
+    "src/sync/atomic/doc_32.go": "No",
+    "src/sync/atomic/atomic_test.go": "No",
+    "test/atomicload.go": "No",
+    "src/sync/atomic/value.go": "No"
+  },
+  "52444.md": {
+    "src/crypto/x509/x509.go": "Yes",
+    "src/crypto/x509/x509_test.go": "No"
+  },
+  "43724.md": {
+    "src/os/exec/lp_windows_test.go": "Yes",
+    "src/syscall/exec_unix.go": "No",
+    "src/os/exec/lp_test.go": "Yes",
+    "src/os/exec/lp_unix.go": "Yes",
+    "src/os/exec/exec_windows_test.go": "No",
+    "src/os/exec/exec_windows.go": "No",
+    "src/os/exec/exec.go": "Yes",
+    "src/os/exec/exec_test.go": "Yes",
+    "src/syscall/exec_windows.go": "No",
+    "src/os/exec/lp_windows.go": "Yes"
+  },
+  "41730.md": {
+    "src/cmd/go/internal/modfetch/codehost/vcs.go": "Yes",
+    "src/cmd/go/internal/modfetch/codehost/svn.go": "No",
+    "src/cmd/go/internal/vcs/vcs.go": "Yes",
+    "src/cmd/go/internal/vcweb/fossil.go": "No",
+    "src/cmd/go/internal/vcweb/vcweb.go": "No",
+    "src/cmd/go/internal/vcweb/vcweb_test.go": "No",
+    "src/cmd/go/internal/vcweb/hg.go": "No",
+    "src/cmd/go/internal/vcweb/svn.go": "No",
+    "src/cmd/go/internal/modfetch/codehost/git.go": "Yes",
+    "src/cmd/go/internal/vcweb/git.go": "No",
+    "src/cmd/go/internal/vcs/vcs_test.go": "Yes",
+    "src/cmd/go/internal/vcweb/bzr.go": "No",
+    "src/cmd/go/internal/modfetch/codehost/git_test.go": "No",
+    "src/cmd/go/internal/modfetch/codehost/codehost.go": "No"
+  },
+  "51668.md": {
+    "src/fmt/print.go": "Yes",
+    "src/fmt/state_test.go": "Yes",
+    "src/fmt/format.go": "No"
+  },
+  "41980.md": {
+    "src/testing/run_example.go": "Yes",
+    "test/fixedbugs/issue41980.go": "No",
+    "src/testing/example.go": "Yes"
+  },
+  "41792.md": {
+    "src/flag/flag.go": "Yes",
+    "src/flag/flag_test.go": "Yes"
+  },
+  "45453.md": {
+    "src/cmd/internal/sys/arch.go": "No",
+    "src/cmd/compile/internal/amd64/galign.go": "No",
+    "src/cmd/compile/internal/amd64/ggen.go": "No",
+    "src/cmd/link/internal/amd64/l.go": "No",
+    "src/cmd/link/internal/amd64/obj.go": "No",
+    "src/internal/cpu/cpu_x86_test.go": "No",
+    "src/vendor/golang.org/x/sys/cpu/cpu_x86.go": "Yes",
+    "src/internal/cpu/cpu_x86.go": "Yes",
+    "src/cmd/compile/internal/amd64/versions_test.go": "Yes",
+    "src/internal/cpu/cpu.go": "Yes",
+    "src/cmd/internal/objabi/head.go": "No",
+    "src/cmd/compile/internal/amd64/ssa.go": "No",
+    "src/cmd/link/internal/amd64/asm.go": "No"
+  },
+  "40276.md": {
+    "src/cmd/go/internal/modfetch/coderepo.go": "No",
+    "src/cmd/go/internal/work/build.go": "No",
+    "src/cmd/go/internal/load/pkg.go": "No",
+    "src/cmd/go/internal/modload/query.go": "No",
+    "src/cmd/go/internal/modcmd/mod.go": "No",
+    "src/cmd/go/internal/modget/get.go": "No",
+    "src/cmd/go/internal/work/exec.go": "No"
+  },
+  "42322.md": {
+    "src/io/fs/fs.go": "No",
+    "src/io/fs/sub_test.go": "Yes",
+    "src/net/http/fs.go": "No",
+    "src/embed/embed.go": "No",
+    "src/io/fs/sub.go": "Yes"
+  },
+  "42100.md": {
+    "misc/ios/detect.go": "No",
+    "src/syscall/syscall_darwin_amd64.go": "No",
+    "src/syscall/ztypes_darwin_amd64.go": "No",
+    "misc/ios/go_ios_exec.go": "Yes",
+    "src/internal/goos/zgoos_ios.go": "Yes",
+    "src/syscall/syscall_darwin.go": "No",
+    "src/syscall/zsyscall_darwin_amd64.go": "No",
+    "src/runtime/cgo/signal_ios_arm64.go": "No",
+    "src/syscall/zerrors_darwin_amd64.go": "No"
+  },
+  "37475.md": {
+    "src/cmd/go/internal/modfetch/codehost/vcs.go": "Yes",
+    "src/cmd/go/internal/modfetch/codehost/svn.go": "No",
+    "src/runtime/debug/buildinfo.go": "No",
+    "src/cmd/go/internal/load/pkg.go": "No",
+    "src/cmd/go/internal/modfetch/codehost/": "No",
+    "src/cmd/go/internal/modfetch/codehost/git.go": "Yes",
+    "src/cmd/go/internal/modfetch/codehost": "No",
+    "src/runtime/debug/mod.go": "Yes",
+    "src/cmd/go/internal/modfetch/codehost/codehost.go": "Yes",
+    "src/cmd/go/internal/work/exec.go": "Yes"
+  },
+  "39567.md": {
+    "src/net/http/server_test.go": "No",
+    "src/net/http/server.go": "Yes"
+  },
+  "44808.md": {
+    "src/image/image.go": "Yes",
+    "src/image/draw/draw.go": "Yes",
+    "src/image/color/color.go": "No"
+  },
+  "45754.md": {
+    "src/flag/flag.go": "Yes",
+    "src/flag/flag_test.go": "No",
+    "src/flag/example_textvar_test.go": "Yes"
+  },
+  "47651.md": {
+    "src/reflect/type.go": "Yes",
+    "src/reflect/value.go": "Yes"
+  },
+  "48052.md": {
+    "src/debug/plan9obj/plan9obj.go": "No",
+    "src/debug/plan9obj/file.go": "Yes",
+    "src/debug/plan9obj/file_test.go": "No"
+  },
+  "33920.md": {
+    "src/io/ioutil/tempfile_test.go": "Yes",
+    "src/io/ioutil/tempfile.go": "Yes"
+  },
+  "47209.md": {
+    "src/path/filepath/symlink.go": "No",
+    "src/path/filepath/path_unix.go": "No",
+    "src/path/filepath/path.go": "Yes",
+    "src/path/filepath/path_test.go": "Yes",
+    "src/path/filepath/symlink_unix.go": "No",
+    "src/path/filepath/symlink_windows.go": "No",
+    "src/path/filepath/path_windows.go": "No"
+  },
+  "48152.md": {
+    "src/crypto/tls/prf_test.go": "No",
+    "src/crypto/tls/quic_test.go": "No",
+    "src/crypto/tls/quic.go": "No",
+    "src/crypto/tls/handshake_test.go": "No",
+    "src/crypto/tls/example_test.go": "No",
+    "src/crypto/tls/auth.go": "No",
+    "src/crypto/tls/handshake_unix_test.go": "No",
+    "src/crypto/tls/cache_test.go": "No",
+    "src/crypto/tls/handshake_server_test.go": "No",
+    "src/crypto/tls/cache.go": "No",
+    "src/crypto/tls/ticket_test.go": "No",
+    "src/crypto/tls/handshake_messages.go": "No",
+    "src/crypto/tls/key_schedule.go": "No",
+    "src/crypto/tls/common_string.go": "No",
+    "src/crypto/tls/key_agreement.go": "No",
+    "src/crypto/tls/handshake_messages_test.go": "No",
+    "src/crypto/tls/handshake_server_tls13.go": "No",
+    "src/crypto/tls/key_schedule_test.go": "No",
+    "src/crypto/tls/fips140_test.go": "No",
+    "src/crypto/tls/alert.go": "No",
+    "src/crypto/tls/defaults_fips140.go": "No",
+    "src/crypto/tls/ech.go": "No",
+    "src/crypto/tls/prf.go": "No",
+    "src/crypto/tls/defaults_boring.go": "No",
+    "src/crypto/tls/link_test.go": "No",
+    "src/crypto/tls/handshake_client.go": "Yes",
+    "src/crypto/tls/handshake_client_tls13.go": "Yes",
+    "src/crypto/tls/defaults.go": "No",
+    "src/crypto/tls/ech_test.go": "No",
+    "src/crypto/tls/handshake_client_test.go": "No",
+    "src/crypto/tls/handshake_server.go": "Yes",
+    "src/crypto/tls/conn_test.go": "No",
+    "src/crypto/tls/common.go": "Yes",
+    "src/crypto/tls/tls.go": "Yes",
+    "src/crypto/tls/tls_test.go": "No",
+    "src/crypto/tls/conn.go": "Yes",
+    "src/crypto/tls/generate_cert.go": "No",
+    "src/crypto/tls/ticket.go": "No",
+    "src/crypto/tls/auth_test.go": "No",
+    "src/crypto/tls/cipher_suites.go": "No"
+  },
+  "41682.md": {
+    "src/crypto/x509/verify_test.go": "No",
+    "src/crypto/x509/verify.go": "Yes",
+    "src/crypto/x509/x509.go": "Yes"
+  },
+  "53200.md": {
+    "src/go/token/position.go": "Yes",
+    "src/go/token/token.go": "No"
+  },
+  "40082.md": {
+    "src/database/sql/convert.go": "No",
+    "src/database/sql/sql.go": "Yes",
+    "src/database/sql/sql_test.go": "Yes",
+    "src/database/sql/convert_test.go": "No"
+  },
+  "45963.md": {
+    "src/cmd/go/internal/test/test.go": "Yes",
+    "src/cmd/go/internal/vet/vetflag.go": "No",
+    "src/cmd/vet/vet_test.go": "No",
+    "src/cmd/go/internal/vet/vet.go": "Yes",
+    "src/cmd/go/test.go": "No",
+    "src/cmd/go/internal/test/testflag.go": "Yes",
+    "src/cmd/vet/main.go": "No"
+  },
+  "46518.md": {
+    "src/net/netip/uint128_test.go": "Yes",
+    "src/net/netip/netip_test.go": "Yes",
+    "src/net/netip/fuzz_test.go": "No",
+    "src/net/netip/netip_pkg_test.go": "Yes",
+    "src/net/netip/uint128.go": "Yes",
+    "src/net/netip/inlining_test.go": "No",
+    "src/net/netip/export_test.go": "Yes",
+    "src/net/netip/slow_test.go": "Yes",
+    "src/net/netip/netip.go": "Yes"
+  },
+  "40337.md": {
+    "src/crypto/dsa/dsa.go": "Yes",
+    "src/crypto/dsa/dsa_test.go": "Yes",
+    "src/crypto/x509/x509.go": "Yes",
+    "src/crypto/x509/x509_test.go": "Yes"
+  },
+  "45973.md": {
+    "src/net/http/request.go": "No",
+    "src/net/http/http.go": "No",
+    "src/net/http/server.go": "Yes"
+  },
+  "49471.md": {
+    "src/runtime/crashdump.go": "No",
+    "src/runtime/crash_windows.go": "No",
+    "src/runtime/signal_windows.go": "Yes",
+    "src/runtime/os_windows.go": "No",
+    "src/runtime/crashdump_windows.go": "No"
+  },
+  "52746.md": {
+    "src/time/format_test.go": "No",
+    "src/time/format.go": "Yes"
+  },
+  "34293.md": {
+    "src/go/doc/example.go": "No",
+    "src/cmd/doc/doc_test.go": "No",
+    "src/go/doc/doc.go": "Yes",
+    "src/go/doc/comment.go": "No",
+    "src/cmd/doc/main.go": "Yes",
+    "src/cmd/doc/doc.go": "No"
+  },
+  "31804.md": {
+    "src/crypto/ed25519/ed25519.go": "Yes",
+    "src/crypto/ed25519/ed25519_test.go": "Yes"
+  },
+  "43744.md": {
+    "src/testing/benchmark_test.go": "No",
+    "src/testing/benchmark.go": "Yes"
+  },
+  "47916.md": {
+    "src/go/types/api.go": "No",
+    "src/go/types/signature.go": "Yes",
+    "src/go/types/instantiate.go": "Yes",
+    "src/go/types/types.go": "No",
+    "src/go/types/named.go": "Yes",
+    "src/go/types/object.go": "No",
+    "src/go/types/interface.go": "Yes",
+    "src/go/types/infer.go": "Yes",
+    "src/go/types/typeparam.go": "Yes"
+  },
+  "40356.md": {
+    "src/cmd/vet/vet_test.go": "No",
+    "src/errors/wrap_test.go": "Yes",
+    "src/errors/wrap.go": "Yes",
+    "src/errors/errors.go": "No",
+    "src/cmd/vet/main.go": "No"
+  },
+  "40034.md": {
+    "src/net/smtp/smtp.go": "Yes",
+    "src/net/smtp/smtp_test.go": "Yes"
+  },
+  "53002.md": {
+    "src/net/http/httputil/reverseproxy_test.go": "Yes",
+    "src/net/http/httputil/reverseproxy.go": "Yes"
+  },
+  "44196.md": {
+    "src/time/time.go": "Yes",
+    "src/time/time_test.go": "Yes"
+  },
+  "50465.md": {
+    "src/net/http/httputil/reverseproxy_test.go": "Yes",
+    "src/net/http/httputil/reverseproxy.go": "Yes"
+  },
+  "41696.md": {
+    "src/cmd/go/internal/work/build.go": "Yes",
+    "src/cmd/go/internal/work/gc.go": "No",
+    "src/cmd/go/internal/work/security.go": "No",
+    "src/cmd/go/internal/work/gccgo.go": "No",
+    "src/cmd/go/internal/work/exec.go": "No"
+  },
+  "46336.md": {
+    "src/strings/strings_test.go": "Yes",
+    "src/bytes/bytes.go": "Yes",
+    "src/strings/strings.go": "Yes"
+  },
+  "44011.md": {
+    "src/internal/syscall/windows/types_windows.go": "No",
+    "src/internal/syscall/windows/zsyscall_windows.go": "No",
+    "src/internal/syscall/windows/syscall_windows.go": "No",
+    "src/syscall/types_windows.go": "No",
+    "src/syscall/zsyscall_windows.go": "No",
+    "src/syscall/exec_windows.go": "Yes",
+    "src/internal/syscall/windows/exec_windows_test.go": "No",
+    "src/os/exec/exec_windows.go": "No",
+    "src/syscall/syscall_windows.go": "Yes"
+  },
+  "43620.md": {
+    "src/testing/benchmark.go": "Yes"
+  },
+  "48256.md": {
+    "src/cmd/go/internal/workcmd/edit.go": "Yes",
+    "src/cmd/go/internal/workcmd/work.go": "No",
+    "src/cmd/go/internal/workcmd/init.go": "No"
+  },
+  "38017.md": {
+    "lib/time/mkzip.go": "No",
+    "src/time/zoneinfo_test.go": "No",
+    "src/time/zoneinfo.go": "No",
+    "src/time/tzdata/tzdata.go": "Yes",
+    "src/time/zoneinfo_read.go": "No"
+  },
+  "50601.md": {
+    "src/encoding/binary/binary_test.go": "Yes",
+    "src/encoding/binary/binary.go": "Yes"
+  },
+  "50842.md": {
+    "src/io/multi.go": "Yes",
+    "src/io/multi_test.go": "Yes"
+  },
+  "41790.md": {
+    "src/database/sql/driver/driver.go": "No",
+    "src/database/sql/sql.go": "Yes"
+  },
+  "5901.md": {
+    "src/encoding/json/encode_test.go": "No",
+    "src/encoding/json/decode.go": "No",
+    "src/encoding/json/decode_test.go": "No",
+    "src/encoding/json/encode.go": "Yes"
+  },
+  "52792.md": {
+    "src/cmd/go/internal/modinfo/info.go": "Yes"
+  },
+  "28308.md": {
+    "src/cmd/vet/README": "No",
+    "src/net/net.go": "No",
+    "src/fmt/format.go": "No",
+    "src/cmd/vet/vet_test.go": "No",
+    "src/net/dial.go": "Yes",
+    "src/net/dial_test.go": "No",
+    "src/cmd/vet/main.go": "No"
+  },
+  "44006.md": {
+    "src/syscall/js/js.go": "Yes"
+  },
+  "53021.md": {
+    "src/crypto/subtle/xor_linux_test.go": "Yes",
+    "src/crypto/subtle/xor_test.go": "Yes",
+    "src/crypto/subtle/xor.go": "Yes",
+    "src/crypto/subtle/xor_asm.go": "No",
+    "src/crypto/cipher/xor_generic.go": "No",
+    "src/crypto/subtle/xor_generic.go": "No"
+  },
+  "49580.md": {
+    "src/io/fs/fs.go": "Yes",
+    "src/io/fs/readlink_test.go": "Yes",
+    "src/io/fs/readlink.go": "Yes"
+  },
+  "53015.md": {
+    "src/text/template/export_test.go": "No",
+    "src/text/template/exec_test.go": "No",
+    "src/text/template/helper.go": "No",
+    "src/text/template/doc.go": "No",
+    "src/text/template/parse.go": "No",
+    "src/text/template/funcs.go": "No",
+    "src/text/template/parse/parse.go": "Yes",
+    "src/text/template/template.go": "Yes",
+    "src/text/template/example_test.go": "No",
+    "src/text/template/exec.go": "Yes"
+  },
+  "41048.md": {
+    "src/net/http/transport.go": "Yes",
+    "src/net/http/transport_test.go": "Yes"
+  },
+  "48409.md": {
+    "src/runtime/mgclimit_test.go": "No",
+    "src/runtime/debug/garbage_test.go": "No",
+    "src/runtime/mgcscavenge_test.go": "No",
+    "src/runtime/mgcpacer_test.go": "No",
+    "src/runtime/mgc.go": "Yes",
+    "src/runtime/debug/garbage.go": "Yes",
+    "src/runtime/mgcscavenge.go": "Yes",
+    "src/runtime/mgcwork.go": "No",
+    "src/runtime/mgclimit.go": "No",
+    "src/runtime/mheap.go": "No",
+    "src/runtime/mgcmark.go": "No",
+    "src/runtime/mgcpacer.go": "Yes"
+  },
+  "42102.md": {
+    "src/time/zoneinfo.go": "Yes",
+    "src/time/time.go": "Yes"
+  },
+  "39904.md": {
+    "src/testing/match.go": "Yes",
+    "src/testing/match_test.go": "Yes"
+  },
+  "42027.md": {
+    "src/io/fs/walk.go": "Yes",
+    "src/path/filepath/path_unix.go": "No",
+    "src/path/filepath/path.go": "Yes",
+    "src/path/filepath/path_test.go": "Yes",
+    "src/path/filepath/path_windows.go": "No",
+    "src/io/fs/walk_test.go": "Yes"
+  },
+  "27628.md": {
+    "src/cmd/go/internal/work/build.go": "No",
+    "src/cmd/go/internal/work/toolid.go": "No",
+    "src/cmd/go/internal/work/exec.go": "No",
+    "src/cmd/go/internal/cache/cache.go": "No"
+  },
+  "51868.md": {
+    "src/debug/pe/section.go": "No",
+    "src/debug/pe/pe.go": "Yes",
+    "src/debug/pe/file.go": "Yes",
+    "src/debug/pe/symbol.go": "Yes"
+  },
+  "28089.md": {
+    "src/go/ast/ast_test.go": "No",
+    "src/go/ast/ast.go": "Yes"
+  },
+  "41773.md": {
+    "src/net/http/server.go": "Yes"
+  },
+  "50674.md": {
+    "src/crypto/x509/parser.go": "Yes",
+    "src/crypto/x509/x509.go": "Yes",
+    "src/crypto/x509/pkix/pkix.go": "Yes",
+    "src/crypto/x509/parser_test.go": "No",
+    "src/crypto/x509/x509_test.go": "Yes"
+  },
+  "26535.md": {
+    "src/compress/lzw/reader_test.go": "Yes",
+    "src/image/gif/reader.go": "No",
+    "src/compress/lzw/writer_test.go": "Yes",
+    "src/image/gif/writer.go": "Yes",
+    "src/compress/lzw/reader.go": "Yes",
+    "src/compress/lzw/writer.go": "Yes"
+  },
+  "45964.md": {
+    "src/runtime/defs_linux_riscv64.go": "No",
+    "src/runtime/defs_linux_ppc64le.go": "No",
+    "src/runtime/defs_linux_386.go": "No",
+    "src/runtime/defs_linux_mipsx.go": "No",
+    "src/runtime/internal/atomic/sys_linux_arm.s": "No",
+    "src/runtime/os_linux_be64.go": "No",
+    "src/runtime/os_linux_arm.go": "No",
+    "src/runtime/os_linux_x86.go": "No",
+    "src/runtime/defs_linux_loong64.go": "No",
+    "src/runtime/os_linux_riscv64.go": "No",
+    "src/runtime/defs_linux_s390x.go": "No",
+    "src/runtime/os_linux_s390x.go": "No",
+    "src/syscall/exec_linux.go": "No",
+    "src/runtime/os_linux_novdso.go": "No",
+    "src/runtime/os_linux_generic.go": "No",
+    "src/runtime/os_linux_ppc64x.go": "No",
+    "src/syscall/syscall_linux.go": "Yes",
+    "src/runtime/defs_linux_arm.go": "No",
+    "src/runtime/os_linux_noauxv.go": "No",
+    "src/runtime/os_linux_arm64.go": "No",
+    "src/runtime/os_linux_mips64x.go": "No",
+    "src/runtime/os_linux.go": "No",
+    "src/internal/poll/sock_cloexec.go": "Yes",
+    "src/runtime/defs_linux_ppc64.go": "No",
+    "src/runtime/os_linux_loong64.go": "No",
+    "src/runtime/defs_linux.go": "No",
+    "src/runtime/defs_linux_amd64.go": "No",
+    "src/runtime/defs_linux_mips64x.go": "No",
+    "src/runtime/os_linux_mipsx.go": "No",
+    "src/runtime/defs_linux_arm64.go": "No"
+  },
+  "39444.md": {
+    "src/os/exec_unix.go": "Yes"
+  },
+  "45430.md": {
+    "src/crypto/tls/common.go": "Yes",
+    "src/crypto/tls/tls.go": "No",
+    "src/crypto/tls/conn.go": "No",
+    "src/crypto/tls/handshake_client.go": "No",
+    "src/crypto/tls/cipher_suites.go": "Yes",
+    "src/crypto/tls/handshake_server.go": "Yes"
+  },
+  "37533.md": {
+    "src/flag/flag.go": "Yes",
+    "src/flag/flag_test.go": "Yes"
+  },
+  "47781.md": {
+    "src/go/ast": "No",
+    "src/go/ast/ast_test.go": "No",
+    "src/go/token/token_test.go": "No",
+    "src/go/token/token.go": "No",
+    "src/go/ast/ast.go": "Yes",
+    "src/go/token": "No"
+  },
+  "46057.md": {
+    "src/crypto/x509/cert_pool_test.go": "Yes",
+    "src/crypto/x509/cert_pool.go": "Yes"
+  },
+  "43401.md": {
+    "src/encoding/csv/reader_test.go": "No",
+    "src/encoding/csv/reader.go": "Yes"
+  },
+  "40728.md": {
+    "src/cmd/go/internal/modload/import_test.go": "No",
+    "src/cmd/go/internal/modload/import.go": "Yes",
+    "src/cmd/go/internal/modcmd/mod.go": "No",
+    "src/cmd/go/internal/modload/load.go": "No",
+    "src/cmd/go/internal/modget/get.go": "No",
+    "src/cmd/go/internal/modload/modfile.go": "No"
+  },
+  "43993.md": {
+    "src/reflect/deepequal.go": "Yes",
+    "src/reflect/value.go": "Yes",
+    "src/cmd/vet/main.go": "No",
+    "src/cmd/vet/vet_test.go": "No"
+  },
+  "50770.md": {
+    "src/time/time.go": "Yes",
+    "src/time/time_test.go": "No"
+  },
+  "44221.md": {
+    "src/encoding/csv/reader_test.go": "No",
+    "src/encoding/csv/reader.go": "Yes"
+  },
+  "44143.md": {
+    "src/context/context.go": "Yes"
+  },
+  "43931.md": {
+    "src/go/types/testdata/examples/constraints.go": "No",
+    "src/cmd/compile/internal/typecheck/type.go": "Yes",
+    "src/cmd/compile/internal/noder/noder.go": "No",
+    "src/go/parser/parser.go": "Yes",
+    "src/go/types/types.go": "No",
+    "src/go/types/testdata/check/typeparams.go": "No",
+    "src/go/types/instantiate_test.go": "Yes",
+    "src/go/types/testdata/examples/types.go": "No",
+    "src/go/types/typeset.go": "Yes",
+    "src/go/types/testdata/examples/operations.go": "No",
+    "src/cmd/compile/internal/types2/subst.go": "Yes",
+    "src/go/types/testdata/examples/inference.go": "No",
+    "src/go/types/instantiate.go": "Yes",
+    "src/go/types/testdata/examples/methods.go": "No",
+    "src/go/types/testdata/examples/functions.go": "No",
+    "src/cmd/compile/internal/ir/type.go": "No",
+    "src/go/types/typeparam.go": "Yes",
+    "src/go/types/testdata/examples/typesets.go": "No",
+    "src/go/types/typeparams.go": "No",
+    "src/go/ast/ast.go": "No",
+    "src/cmd/compile/internal/types2/typeparam.go": "Yes",
+    "src/cmd/compile/internal/types2/instantiate.go": "Yes",
+    "src/cmd/compile/internal/types2/typeset.go": "Yes"
+  },
+  "48294.md": {
+    "src/reflect/type.go": "No",
+    "src/reflect/iter_test.go": "No",
+    "src/reflect/iter.go": "No",
+    "src/reflect/value.go": "Yes"
+  },
+  "51428.md": {
+    "src/net/dial.go": "Yes",
+    "src/net/net.go": "Yes"
+  },
+  "52463.md": {
+    "src/go/parser/resolver.go": "Yes",
+    "src/go/parser/parser.go": "No",
+    "src/go/ast/scope.go": "Yes",
+    "src/go/ast/ast.go": "Yes",
+    "src/go/types/object.go": "No"
+  },
+  "51115.md": {
+    "src/io/io.go": "Yes",
+    "src/io/io_test.go": "No"
+  },
+  "35567.md": {
+    "src/testing/testing.go": "Yes",
+    "src/testing/export_test.go": "No"
+  },
+  "40255.md": {
+    "src/cmd/compile/internal/amd64/ggen.go": "No",
+    "test/fixedbugs/issue22429.go": "No",
+    "src/cmd/compile/internal/x86/ggen.go": "No",
+    "src/cmd/compile/internal/ssa/softfloat.go": "Yes"
+  },
+  "46648.md": {
+    "src/go/types/goversion.go": "No",
+    "src/go/types/types.go": "No",
+    "src/cmd/compile/internal/types2/version.go": "Yes",
+    "src/go/types/check.go": "Yes"
+  },
+  "53346.md": {
+    "src/encoding/xml/xml_test.go": "No",
+    "src/encoding/xml/xml.go": "Yes",
+    "src/encoding/xml/marshal.go": "Yes"
+  },
+  "40127.md": {
+    "src/encoding/json/stream.go": "Yes",
+    "src/encoding/json/encode_test.go": "No",
+    "src/encoding/json/stream_test.go": "No",
+    "src/encoding/json/encode.go": "Yes"
+  },
+  "51082.md": {
+    "src/go/doc/comment/testdata_test.go": "No",
+    "src/go/doc/comment/old_test.go": "No",
+    "src/go/doc/comment/doc.go": "Yes",
+    "src/cmd/doc/doc.go": "No",
+    "src/go/doc/comment/comment.go": "No",
+    "src/go/doc/doc.go": "Yes",
+    "src/go/doc/comment/print.go": "Yes",
+    "src/go/doc/comment/std_test.go": "Yes",
+    "src/internal/pkgdoc/pkgdoc.go": "No",
+    "src/go/doc/comment/text.go": "Yes",
+    "src/go/doc/doc_test.go": "No",
+    "src/cmd/gofmt/gofmt.go": "No",
+    "src/go/doc/comment/html.go": "Yes",
+    "src/go/doc/comment/std.go": "Yes",
+    "src/go/doc/comment/markdown.go": "Yes",
+    "src/go/printer/printer_test.go": "No",
+    "src/go/doc/comment/parse_test.go": "Yes",
+    "src/go/doc/comment/wrap_test.go": "No",
+    "src/go/doc/comment/parse.go": "Yes",
+    "src/go/printer/printer.go": "Yes"
+  },
+  "35833.md": {
+    "src/math/big/int_test.go": "Yes",
+    "src/math/big/int.go": "Yes"
+  },
+  "45460.md": {
+    "src/net/http/transport.go": "Yes"
+  },
+  "42387.md": {
+    "src/io/fs/fs.go": "Yes",
+    "src/io/fs/stat.go": "Yes",
+    "src/io/fs/readdir.go": "Yes",
+    "src/io/fs/stat_test.go": "No",
+    "src/io/fs/readdir_test.go": "Yes"
+  },
+  "45454.md": {
+    "src/cmd/go/internal/work/build.go": "No",
+    "src/go/build/build.go": "Yes",
+    "src/cmd/go/internal/cfg/cfg.go": "Yes",
+    "src/go/build/constraint/expr.go": "No",
+    "src/cmd/go/internal/base/env.go": "No",
+    "src/cmd/go/internal/work/exec.go": "No",
+    "src/go/build/constraint/expr_test.go": "No"
+  },
+  "50436.md": {
+    "src/os/exec/exec_test.go": "No",
+    "src/os/exec/exec_unix.go": "No",
+    "src/os/exec/exec_windows.go": "No",
+    "src/os/exec/exec.go": "Yes"
+  },
+  "44167.md": {
+    "test/gc2.go": "No",
+    "src/runtime/mgcpacer_test.go": "Yes",
+    "src/runtime/mgc.go": "No",
+    "src/runtime/mgcwork.go": "No",
+    "test/gc1.go": "No",
+    "test/gc.go": "No",
+    "src/runtime/mgcmark.go": "No",
+    "src/runtime/mgcpacer.go": "Yes"
+  },
+  "39178.md": {
+    "src/net/dnsclient_unix.go": "No",
+    "src/net/dnsconfig_windows.go": "No",
+    "src/net/dnsconfig.go": "No",
+    "src/net/dnsclient_unix_test.go": "No",
+    "src/net/dnsclient_test.go": "No",
+    "src/net/dnsclient.go": "No",
+    "src/net/dnsconfig_unix.go": "No",
+    "src/net/dnsconfig_unix_test.go": "No",
+    "src/net/lookup.go": "Yes"
+  },
+  "46287.md": {
+    "src/crypto/x509/internal/macos/corefoundation.go": "Yes",
+    "src/crypto/x509/cert_pool_test.go": "No",
+    "src/crypto/x509/verify_test.go": "Yes",
+    "src/crypto/x509/root_darwin.go": "Yes",
+    "src/crypto/x509/verify.go": "Yes",
+    "src/crypto/x509/internal/macos/security.go": "Yes",
+    "src/crypto/x509/root_windows.go": "Yes",
+    "src/crypto/x509/cert_pool.go": "Yes"
+  },
+  "48257.md": {
+    "src/cmd/go/internal/workcmd/use.go": "Yes"
+  },
+  "46293.md": {
+    "src/reflect/type.go": "No",
+    "src/reflect/iter_test.go": "No",
+    "src/reflect/iter.go": "Yes",
+    "src/reflect/value.go": "Yes"
+  },
+  "42026.md": {
+    "src/os/file.go": "Yes",
+    "src/os/dir.go": "Yes",
+    "src/io/fs/readdir.go": "Yes",
+    "src/os/types.go": "No",
+    "src/os/path.go": "No",
+    "src/io/fs/readfile.go": "Yes",
+    "src/os/tempfile.go": "Yes",
+    "src/io/ioutil/ioutil.go": "Yes",
+    "src/io/ioutil/tempfile.go": "Yes"
+  },
+  "45435.md": {
+    "src/sync/mutex.go": "Yes",
+    "src/sync/rwmutex.go": "Yes",
+    "src/sync/rwmutex_test.go": "No",
+    "src/sync/mutex_test.go": "No"
+  },
+  "48187.md": {
+    "src/cmd/go/internal/version/version.go": "Yes",
+    "src/debug/buildinfo/buildinfo.go": "Yes",
+    "src/debug/buildinfo/buildinfo_test.go": "Yes"
+  },
+  "37519.md": {
+    "src/cmd/go/internal/modget/get.go": "Yes",
+    "src/cmd/go/internal/modget/modget.go": "No",
+    "src/cmd/go/internal/get/get.go": "No"
+  },
+  "38627.md": {
+    "src/text/template/parse/node.go": "No",
+    "src/text/template/parse/lex_test.go": "No",
+    "src/text/template/parse/parse_test.go": "Yes",
+    "src/text/template/parse/parse.go": "Yes",
+    "src/text/template/parse/lex.go": "No"
+  },
+  "41260.md": {
+    "src/testing/testing_test.go": "Yes",
+    "src/testing/testing.go": "Yes"
+  },
+  "44505.md": {
+    "src/cmd/dist/main.go": "No",
+    "src/cmd/dist/imports.go": "No",
+    "src/cmd/dist/util_gccgo.go": "No",
+    "src/cmd/dist/buildtool.go": "No",
+    "src/cmd/dist/doc.go": "No",
+    "src/cmd/dist/notgo122.go": "No",
+    "src/cmd/dist/util.go": "No",
+    "src/cmd/dist/quoted.go": "No",
+    "src/cmd/dist/build.go": "Yes",
+    "src/cmd/dist/util_gc.go": "No",
+    "src/cmd/dist/buildtag_test.go": "No",
+    "src/cmd/dist/testjson.go": "No",
+    "src/cmd/dist/sys_default.go": "No",
+    "src/cmd/dist/test.go": "No",
+    "src/cmd/dist/sys_windows.go": "No",
+    "src/cmd/dist/exec.go": "No",
+    "src/cmd/dist/buildruntime.go": "No",
+    "src/cmd/dist/buildgo.go": "No",
+    "src/cmd/dist/buildtag.go": "No",
+    "src/cmd/dist/supported_test.go": "No",
+    "src/cmd/dist/testjson_test.go": "No",
+    "src/cmd/dist/build_test.go": "No"
+  },
+  "50429.md": {
+    "test/rangegen.go": "No",
+    "test/range3.go": "No",
+    "src/go/ast/ast_test.go": "No",
+    "test/range.go": "No",
+    "src/go/ast/ast.go": "Yes",
+    "test/range4.go": "No",
+    "test/range2.go": "No"
+  },
+  "53573.md": {
+    "src/crypto/x509/pkix/pkix.go": "No",
+    "src/crypto/x509/x509.go": "Yes"
+  },
+  "46059.md": {
+    "src/net/url/url.go": "Yes",
+    "src/net/url/url_test.go": "Yes"
+  },
+  "42681.md": {
+    "src/internal/goexperiment/exp_staticlockranking_on.go": "Yes",
+    "src/internal/goexperiment/exp_regabi_off.go": "No",
+    "src/internal/goexperiment/exp_regabi_on.go": "No",
+    "src/internal/goexperiment/flags.go": "Yes",
+    "src/cmd/internal/objabi/util.go": "Yes",
+    "src/cmd/compile/internal/objabi/util.go": "No",
+    "src/internal/goexperiment/exp_preemptibleloops_on.go": "No",
+    "src/cmd/go/internal/cfg/cfg.go": "Yes",
+    "src/cmd/compile/internal/base/base.go": "No",
+    "src/internal/goexperiment/exp_fieldtrack_off.go": "Yes",
+    "src/internal/goexperiment/exp_staticlockranking_off.go": "Yes",
+    "src/internal/goexperiment/exp_preemptibleloops_off.go": "No",
+    "src/cmd/go/internal/base/env.go": "No",
+    "src/cmd/go/internal/work/exec.go": "Yes",
+    "src/internal/goexperiment/exp_fieldtrack_on.go": "Yes"
+  },
+  "40592.md": {
+    "src/reflect/value.go": "Yes",
+    "src/reflect/type.go": "No",
+    "test/fixedbugs/issue36085.go": "No"
+  },
+  "51644.md": {
+    "src/encoding/binary/binary.go": "Yes",
+    "src/encoding/binary/varint_test.go": "No",
+    "src/encoding/binary/varint.go": "Yes"
+  },
+  "34527.md": {
+    "src/cmd/go/internal/modfetch/cache.go": "Yes",
+    "src/cmd/go/internal/modfetch/sumdb.go": "Yes",
+    "src/cmd/go/internal/cache/cache.go": "No"
+  },
+  "45628.md": {
+    "src/encoding/xml/read.go": "No",
+    "src/encoding/xml/read_test.go": "No",
+    "src/encoding/xml/xml.go": "Yes"
+  },
+  "46746.md": {
+    "src/reflect/type.go": "Yes",
+    "src/reflect/value.go": "Yes"
+  },
+  "44940.md": {
+    "src/unicode/utf16/utf16_test.go": "Yes",
+    "src/unicode/utf16/utf16.go": "Yes",
+    "utf.go": "No"
+  },
+  "41066.md": {
+    "src/crypto/tls/conn.go": "Yes",
+    "src/crypto/tls/conn_test.go": "No"
+  },
+  "41184.md": {
+    "src/go/build/constraint/vers_test.go": "No",
+    "src/cmd/vet/testdata/buildtag/buildtag3.go": "No",
+    "src/cmd/go/internal/load/pkg.go": "No",
+    "src/cmd/asm/internal/asm/parse.go": "No",
+    "src/cmd/vet/testdata/buildtag/buildtag5.go": "No",
+    "src/cmd/vet/testdata/buildtag/buildtag4.go": "No",
+    "src/go/build/constraint/expr_test.go": "Yes",
+    "src/cmd/vet/testdata/buildtag/buildtag.go": "Yes",
+    "src/cmd/go/internal/work/build.go": "No",
+    "src/go/build/constraint/vers.go": "No",
+    "src/go/build/constraint/constraint.go": "No",
+    "src/go/printer/gobuild.go": "Yes",
+    "src/go/build/constraint/expr.go": "Yes",
+    "src/cmd/vet/main.go": "No",
+    "src/cmd/vet/testdata/buildtag/buildtag2.go": "Yes",
+    "src/cmd/compile/internal/syntax/parser.go": "No",
+    "src/cmd/fix/buildtag.go": "Yes",
+    "src/cmd/go/internal/work/exec.go": "No",
+    "src/go/printer/printer.go": "No"
+  },
+  "48866.md": {
+    "src/mime/mediatype_test.go": "Yes",
+    "src/mime/mediatype.go": "Yes"
+  },
+  "50332.md": {
+    "src/cmd/go/internal/work/build.go": "No",
+    "src/cmd/go/main.go": "Yes",
+    "src/cmd/go/internal/base/flag.go": "Yes",
+    "src/cmd/go/internal/base/base.go": "No"
+  },
+  "53466.md": {
+    "src/syscall/zsyscall_freebsd_riscv64.go": "Yes",
+    "src/cmd/compile/internal/riscv64/gsubr.go": "No",
+    "src/internal/syscall/unix/sysnum_freebsd.go": "No",
+    "src/cmd/compile/internal/riscv64/galign.go": "Yes",
+    "src/cmd/asm/internal/arch/riscv64.go": "Yes",
+    "src/internal/goarch/goarch_riscv64.go": "No",
+    "src/vendor/golang.org/x/sys/unix/syscall_freebsd_riscv64.go": "No",
+    "src/syscall/zerrors_freebsd_riscv64.go": "Yes",
+    "src/internal/goarch/zgoarch_riscv64.go": "No",
+    "src/syscall/syscall_freebsd_riscv64.go": "Yes",
+    "src/syscall/zsysnum_freebsd_riscv64.go": "Yes",
+    "src/cmd/compile/internal/riscv64/ggen.go": "Yes",
+    "src/runtime/signal_freebsd_riscv64.go": "Yes",
+    "src/runtime/os_freebsd_riscv64.go": "Yes",
+    "src/vendor/golang.org/x/sys/unix/zsysnum_freebsd_riscv64.go": "No",
+    "src/cmd/compile/internal/riscv64/ssa.go": "Yes",
+    "src/syscall/ztypes_freebsd_riscv64.go": "Yes",
+    "src/internal/cpu/cpu_riscv64_other.go": "No",
+    "src/internal/cpu/cpu_riscv64_linux.go": "No",
+    "src/internal/goos/zgoos_freebsd.go": "No",
+    "src/internal/cpu/cpu_riscv64.go": "Yes",
+    "src/cmd/link/internal/ld/outbuf_freebsd.go": "No",
+    "src/runtime/defs_freebsd_riscv64.go": "Yes",
+    "src/vendor/golang.org/x/sys/unix/zsyscall_freebsd_riscv64.go": "No",
+    "src/vendor/golang.org/x/sys/unix/zerrors_freebsd_riscv64.go": "No",
+    "src/vendor/golang.org/x/sys/unix/ztypes_freebsd_riscv64.go": "No",
+    "src/internal/abi/abi_riscv64.go": "Yes"
+  },
+  "49097.md": {
+    "src/net/dial_test.go": "No",
+    "src/net/dial.go": "Yes"
+  },
+  "49390.md": {
+    "src/internal/testenv/noopt.go": "Yes",
+    "src/internal/testenv/opt.go": "Yes",
+    "src/cmd/compile/internal/base/flag.go": "No",
+    "src/cmd/compile/internal/base/debug.go": "No",
+    "src/internal/testenv/testenv.go": "Yes"
+  },
+  "39351.md": {
+    "test/atomicload.go": "No",
+    "src/sync/atomic/value_test.go": "Yes",
+    "src/sync/atomic/value.go": "Yes"
+  },
+  "47142.md": {
+    "src/database/sql/driver/types.go": "No",
+    "src/database/sql/sql_test.go": "No",
+    "src/database/sql/driver/driver.go": "No",
+    "src/database/sql/sql.go": "Yes",
+    "src/database/sql/driver/types_test.go": "No"
+  },
+  "46742.md": {
+    "test/unsafe_slice_data.go": "No",
+    "test/unsafe_string_data.go": "No",
+    "src/runtime/slice.go": "No",
+    "src/unsafe/unsafe.go": "Yes",
+    "test/unsafe_string.go": "No",
+    "src/runtime/unsafe.go": "Yes",
+    "src/cmd/compile/internal/types2/slice.go": "No",
+    "src/cmd/compile/internal/test/testdata/unsafe_test.go": "No",
+    "test/unsafebuiltins.go": "No"
+  },
+  "46505.md": {
+    "test/fixedbugs/issue39505.go": "No",
+    "test/fixedbugs/issue39505b.go": "No"
+  },
+  "52376.md": {
+    "src/reflect/all_test.go": "No",
+    "test/clear.go": "No",
+    "src/reflect/value.go": "Yes",
+    "src/reflect/export_test.go": "No",
+    "src/reflect/type.go": "No"
+  },
+  "44815.md": {
+    "src/bufio/bufio.go": "Yes",
+    "src/bufio/bufio_test.go": "Yes"
+  },
+  "45033.md": {
+    "text/template/parse/lex.go": "No",
+    "src/strconv/quote_test.go": "No",
+    "reflect/type.go": "No",
+    "fmt/scan.go": "No",
+    "src/fmt/scan.go": "Yes",
+    "src/strconv/quote.go": "Yes",
+    "src/reflect/type.go": "Yes",
+    "src/text/template/parse/lex.go": "Yes"
+  },
+  "48218.md": {
+    "src/reflect/value.go": "Yes"
+  },
+  "47066.md": {
+    "src/reflect/type.go": "No",
+    "src/reflect/value.go": "Yes"
+  },
+  "51572.md": {
+    "src/cmd/go/internal/imports/tags.go": "No",
+    "src/syscall/exec_unix.go": "No",
+    "src/time/sys_unix.go": "No",
+    "src/syscall/mmap_unix_test.go": "No",
+    "src/syscall/syscall_unix_test.go": "No",
+    "src/syscall/sockcmsg_unix_other.go": "No",
+    "src/syscall/env_unix.go": "No",
+    "src/syscall/exec_unix_test.go": "No",
+    "src/cmd/go/internal/imports/build.go": "Yes",
+    "src/cmd/go/internal/imports/scan.go": "No",
+    "src/cmd/go/build.go": "No",
+    "src/go/build/build_test.go": "Yes",
+    "src/syscall/sockcmsg_unix.go": "No",
+    "src/syscall/syscall_unix.go": "No",
+    "src/syscall/linkname_unix.go": "No",
+    "src/time/zoneinfo_unix.go": "No",
+    "src/time/zoneinfo_unix_test.go": "No",
+    "src/go/build/build.go": "Yes"
+  },
+  "39057.md": {
+    "src/log/log.go": "Yes"
+  },
+  "38781.md": {
+    "src/testing/iotest/reader.go": "Yes",
+    "src/testing/iotest/reader_test.go": "Yes",
+    "src/testing/iotest/example_test.go": "Yes"
+  },
+  "36771.md": {
+    "src/strconv/atoc.go": "Yes",
+    "src/strconv/export_test.go": "No",
+    "src/strconv/example_test.go": "No",
+    "src/strconv/fp_test.go": "No",
+    "src/strconv/atoc_test.go": "Yes",
+    "src/strconv/ftoa.go": "No",
+    "src/strconv/atof_test.go": "No",
+    "src/strconv/atoi.go": "No",
+    "src/strconv/strconv.go": "No",
+    "src/strconv/ctoa_test.go": "No",
+    "src/strconv/atof.go": "Yes",
+    "src/strconv/strconv_test.go": "No",
+    "src/strconv/itoa.go": "No",
+    "src/strconv/doc.go": "No",
+    "src/strconv/ctoa.go": "Yes",
+    "src/strconv/ftoa_test.go": "No",
+    "src/strconv/quote.go": "No",
+    "src/strconv/atoi_test.go": "No",
+    "src/strconv/isprint.go": "No",
+    "src/strconv/quote_test.go": "No"
+  },
+  "44435.md": {
+    "src/cmd/go/internal/modload/load.go": "No",
+    "src/cmd/go/internal/modcmd/download.go": "Yes"
+  },
+  "50101.md": {
+    "src/net/dnsclient_unix.go": "Yes",
+    "src/net/dnsconfig_windows.go": "Yes",
+    "src/net/lookup_windows_test.go": "Yes",
+    "src/net/lookup_unix.go": "Yes",
+    "src/net/dnsconfig.go": "No",
+    "src/net/lookup_test.go": "Yes",
+    "src/net/dnsclient_unix_test.go": "No",
+    "src/net/lookup_plan9.go": "No",
+    "src/net/lookup_windows.go": "Yes",
+    "src/net/dnsconfig_unix.go": "No",
+    "src/net/dnsclient.go": "No",
+    "src/net/dnsconfig_unix_test.go": "No",
+    "src/syscall/net.go": "No",
+    "src/syscall/syscall_windows.go": "No",
+    "src/net/lookup.go": "Yes"
+  },
+  "29770.md": {
+    "src/text/template/parse/lex_test.go": "No",
+    "src/text/template/parse/parse_test.go": "No",
+    "test/fixedbugs/issue29770.md": "No",
+    "src/text/template/parse/parse.go": "No",
+    "src/text/template/parse/lex.go": "Yes"
+  },
+  "51566.md": {
+    "src/io/io.go": "Yes",
+    "src/io/io_test.go": "Yes"
+  },
+  "37196.md": {
+    "src/time/tick.go": "Yes",
+    "src/time/time.go": "No",
+    "src/time/sleep.go": "Yes"
+  },
+  "38079.md": {
+    "src/net/http/httputil/reverseproxy_test.go": "Yes",
+    "src/net/http/httputil/reverseproxy.go": "Yes"
+  },
+  "51682.md": {
+    "src/go/types/object.go": "Yes",
+    "src/go/types/object_test.go": "No"
+  },
+  "39214.md": {
+    "src/internal/cpu/cpu_linux_arm64.go": "No",
+    "src/internal/cpu/cpu_linux_loong64.go": "No",
+    "src/testing/benchmark.go": "Yes",
+    "src/internal/cpu/cpu_arm64_openbsd.go": "No",
+    "src/internal/cpu/cpu_linux_arm.go": "No",
+    "src/internal/cpu/cpu_arm64_darwin.go": "Yes",
+    "src/internal/cpu/cpu_x86_test.go": "No",
+    "src/internal/cpu/cpu_arm.go": "No",
+    "src/internal/cpu/cpu_arm64_linux.go": "No",
+    "src/internal/cpu/cpu_arm64_other.go": "No",
+    "src/internal/cpu/cpu_loong64.go": "No",
+    "src/internal/cpu/cpu.go": "Yes",
+    "src/internal/cpu/cpu_ppc64x_aix.go": "No",
+    "src/internal/cpu/cpu_darwin_x86.go": "No",
+    "src/internal/cpu/cpu_mipsle.go": "No",
+    "src/internal/cpu/cpu_arm64.go": "Yes",
+    "src/internal/cpu/runtime_auxv.go": "No",
+    "src/internal/cpu/cpu_linux_riscv64.go": "No",
+    "src/internal/cpu/cpu_x86.go": "Yes",
+    "src/internal/cpu/cpu_mips.go": "No",
+    "src/internal/cpu/export_test.go": "No",
+    "src/internal/cpu/cpu_loong64_linux.go": "No",
+    "src/internal/cpu/cpu_wasm.go": "No",
+    "src/internal/cpu/cpu_ppc64x.go": "Yes",
+    "src/internal/cpu/cpu_linux_ppc64x.go": "No",
+    "src/internal/cpu/cpu_linux_s390x.go": "No",
+    "src/internal/cpu/cpu_no_name.go": "Yes",
+    "src/internal/cpu/cpu_loong64_hwcap.go": "No",
+    "src/internal/cpu/cpu_riscv64_other.go": "No",
+    "src/internal/cpu/cpu_s390x_test.go": "No",
+    "src/internal/cpu/cpu_aix.go": "No",
+    "src/internal/cpu/cpu_riscv64_linux.go": "No",
+    "src/internal/cpu/cpu_test.go": "No",
+    "src/internal/cpu/cpu_riscv64.go": "No",
+    "src/internal/cpu/cpu_linux.go": "No",
+    "src/internal/cpu/export_x86_test.go": "No",
+    "src/internal/cpu/cpu_mipsx.go": "No",
+    "src/internal/cpu/cpu_arm64_freebsd.go": "No",
+    "src/internal/cpu/proc_cpuinfo_linux.go": "No",
+    "src/internal/cpu/cpu_amd64.go": "No",
+    "src/internal/cpu/cpu_arm64_hwcap.go": "No",
+    "src/internal/cpu/cpu_linux_mips64x.go": "No",
+    "src/internal/cpu/cpu_arm64_android.go": "No",
+    "src/internal/cpu/cpu_ppc64x_other.go": "No",
+    "src/internal/cpu/cpu_s390x.go": "No",
+    "src/internal/cpu/cpu_ppc64x_linux.go": "No",
+    "src/internal/cpu/cpu_mips64x.go": "No"
+  },
+  "30715.md": {
+    "src/net/http/request.go": "Yes"
+  },
+  "51972.md": {
+    "src/sync/mutex.go": "No",
+    "src/sync/map_test.go": "Yes",
+    "src/sync/hashtriemap_bench_test.go": "No",
+    "src/sync/map.go": "Yes",
+    "src/sync/export_test.go": "No",
+    "src/sync/hashtriemap_test.go": "No",
+    "src/sync/runtime.go": "No",
+    "src/sync/hashtriemap.go": "Yes"
+  },
+  "50859.md": {
+    "src/sync/mutex.go": "Yes",
+    "src/sync/atomic/doc.go": "Yes",
+    "src/sync/rwmutex.go": "Yes",
+    "src/sync/pool.go": "No",
+    "src/sync/waitgroup.go": "No",
+    "src/sync/atomic/type.go": "Yes",
+    "src/runtime/mbarrier.go": "No",
+    "src/sync/doc.go": "No",
+    "src/sync/once.go": "No",
+    "src/sync/cond.go": "No",
+    "src/sync/atomic/value.go": "Yes",
+    "src/runtime/mem.go": "No"
+  },
+  "32406.md": {
+    "src/crypto/tls/conn_test.go": "No",
+    "src/crypto/tls/common.go": "Yes",
+    "src/crypto/tls/conn.go": "Yes",
+    "src/crypto/tls/handshake_client.go": "Yes",
+    "src/net/http/server.go": "Yes",
+    "src/crypto/tls/handshake_server_test.go": "No",
+    "src/crypto/tls/handshake_client_test.go": "No",
+    "src/crypto/tls/handshake_server.go": "Yes"
+  },
+  "35044.md": {
+    "src/crypto/x509/cert_pool_test.go": "No",
+    "src/crypto/x509/cert_pool.go": "Yes"
+  },
+  "45899.md": {
+    "src/io/io.go": "Yes",
+    "src/io/io_test.go": "Yes"
+  },
+  "33232.md": {
+    "src/builtin/builtin.go": "Yes"
+  },
+  "47658.md": {
+    "src/reflect/value.go": "Yes",
+    "src/reflect/type.go": "No"
+  },
+  "47609.md": {
+    "src/runtime/utf8.go": "No",
+    "src/unicode/utf8/utf8_test.go": "Yes",
+    "src/unicode/utf8/example_test.go": "Yes",
+    "test/utf.go": "No",
+    "src/unicode/utf8/utf8.go": "Yes"
+  },
+  "38776.md": {
+    "src/hash/maphash/maphash.go": "Yes",
+    "src/crypto/sha1/sha1.go": "Yes",
+    "src/hash/fnv/fnv.go": "Yes",
+    "src/hash/adler32/adler32.go": "Yes",
+    "src/hash/crc64/crc64.go": "Yes",
+    "src/crypto/sha256/sha256.go": "Yes",
+    "src/crypto/sha512/sha512.go": "Yes",
+    "src/hash/crc32/crc32.go": "Yes"
+  }
+}

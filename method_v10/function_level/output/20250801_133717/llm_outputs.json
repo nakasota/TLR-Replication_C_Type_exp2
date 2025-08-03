@@ -1,0 +1,7258 @@
+{
+  "selected_file_level_output": "20250801_084015",
+  "45428.md": {
+    "src/crypto/tls/defaults.go": [
+      "defaultCipherSuites",
+      "supportedCipherSuites"
+    ],
+    "src/crypto/tls/tls.go": [
+      "Server",
+      "Client",
+      "Dial",
+      "DialWithDialer",
+      "(*Dialer) Dial",
+      "(*Dialer) DialContext"
+    ],
+    "src/crypto/tls/auth.go": [],
+    "src/crypto/tls/handshake_server.go": [
+      "serverHandshake",
+      "readClientHello",
+      "processClientHello",
+      "pickCipherSuite",
+      "cipherSuiteOk"
+    ],
+    "src/crypto/tls/conn.go": [
+      "Handshake",
+      "HandshakeContext",
+      "ConnectionState",
+      "Config.MinVersion"
+    ],
+    "src/crypto/tls/handshake_client.go": [
+      "pickTLSVersion",
+      "clientHandshake",
+      "handshake",
+      "doFullHandshake"
+    ],
+    "src/crypto/tls/cipher_suites.go": [
+      "CipherSuites",
+      "InsecureCipherSuites",
+      "selectCipherSuite",
+      "cipherRC4",
+      "cipher3DES",
+      "macSHA1",
+      "macSHA256",
+      "tls10MAC"
+    ],
+    "src/crypto/tls/common.go": [
+      "defaultConfig",
+      "supportedVersionsFromMax",
+      "(*Config) supportedVersions",
+      "(*Config) maxSupportedVersion",
+      "(*Config) mutualVersion",
+      "(*Config) cipherSuites",
+      "(*Config) supportedCipherSuites"
+    ],
+    "src/crypto/tls/alert.go": []
+  },
+  "48801.md": {
+    "src/time/time_test.go": [
+      "TestParse",
+      "TestDate",
+      "TestUnmarshalInvalidTimes",
+      "TestMarshalInvalidTimes"
+    ],
+    "src/time/time.go": [
+      "Date",
+      "Year",
+      "Month",
+      "Day",
+      "AddDate",
+      "Unix",
+      "UnixMilli",
+      "UnixMicro",
+      "UnixNano",
+      "MarshalText",
+      "UnmarshalText"
+    ],
+    "src/time/format.go": [
+      "Parse",
+      "ParseInLocation",
+      "Format",
+      "AppendFormat",
+      "appendFormat"
+    ],
+    "src/time/format_test.go": [
+      "TestParse",
+      "TestFormat",
+      "TestFormatAndParse"
+    ]
+  },
+  "34875.md": {
+    "src/net/http/doc.go": [],
+    "src/go/doc/doc.go": [
+      "Markdown",
+      "HTML",
+      "Text"
+    ],
+    "src/go/doc/comment.go": [
+      "ToHTML",
+      "ToText"
+    ]
+  },
+  "32716.md": {
+    "src/crypto/tls/tls_test.go": [
+      "TestCipherSuites",
+      "TestVersionName"
+    ],
+    "src/crypto/tls/tls.go": [
+      "Server",
+      "Client",
+      "NewListener",
+      "Listen",
+      "DialWithDialer",
+      "Dial",
+      "(*Dialer) Dial",
+      "(*Dialer) DialContext"
+    ],
+    "src/crypto/tls/handshake_server.go": [
+      "serverHandshake",
+      "readClientHello",
+      "processClientHello"
+    ],
+    "src/crypto/tls/conn.go": [
+      "Handshake",
+      "HandshakeContext",
+      "connectionStateLocked",
+      "readRecord",
+      "writeRecordLocked",
+      "writeHandshakeRecord",
+      "readHandshake",
+      "sendAlert"
+    ],
+    "src/crypto/tls/prf.go": [
+      "prfForVersion",
+      "prfAndHashForVersion"
+    ],
+    "src/crypto/tls/prf_test.go": [],
+    "src/crypto/tls/auth_test.go": [],
+    "src/crypto/tls/cipher_suites.go": [
+      "CipherSuites",
+      "InsecureCipherSuites",
+      "selectCipherSuite",
+      "cipherRC4",
+      "cipher3DES",
+      "cipherAES",
+      "mutualCipherSuite",
+      "cipherSuiteByID"
+    ],
+    "src/crypto/tls/key_agreement.go": [
+      "generateServerKeyExchange",
+      "processClientKeyExchange",
+      "processServerKeyExchange",
+      "generateClientKeyExchange"
+    ],
+    "src/crypto/tls/common.go": [
+      "supportedVersions",
+      "maxSupportedVersion",
+      "supportedVersionsFromMax"
+    ],
+    "src/crypto/tls/handshake_server_test.go": [
+      "TestHandshakeServerRSARC4",
+      "TestHandshakeServerRSA3DES",
+      "TestHandshakeServerRSAAES",
+      "TestHandshakeServerAESGCM",
+      "TestHandshakeServerAES256GCMSHA384",
+      "TestHandshakeServerAES128SHA256",
+      "TestHandshakeServerAES256SHA384",
+      "TestHandshakeServerCHACHA20SHA256",
+      "TestHandshakeServerECDHEECDSAAES",
+      "TestHandshakeServerX25519",
+      "TestHandshakeServerP256",
+      "TestHandshakeServerHelloRetryRequest",
+      "TestHandshakeServerKeySharePreference",
+      "TestHandshakeServerALPN",
+      "TestHandshakeServerALPNNoMatch",
+      "TestHandshakeServerALPNNotConfigured",
+      "TestHandshakeServerALPNFallback",
+      "TestHandshakeServerSNI",
+      "TestHandshakeServerSNIGetCertificate",
+      "TestHandshakeServerSNIGetCertificateNotFound",
+      "TestHandshakeServerGetCertificateExtensions",
+      "TestHandshakeServerSNIGetCertificateError",
+      "TestHandshakeServerEmptyCertificates",
+      "TestServerResumption",
+      "TestServerResumptionDisabled",
+      "TestFallbackSCSV",
+      "TestHandshakeServerExportKeyingMaterial",
+      "TestHandshakeServerRSAPKCS1v15",
+      "TestHandshakeServerRSAPSS",
+      "TestHandshakeServerEd25519"
+    ]
+  },
+  "51777.md": {
+    "src/net/netip/netip.go": [
+      "IPv6Loopback",
+      "AddrFrom16",
+      "IsLoopback"
+    ]
+  },
+  "47164.md": {
+    "src/log/log_test.go": [
+      "TestDiscard",
+      "BenchmarkDiscard"
+    ],
+    "src/log/log.go": [
+      "SetOutput",
+      "Print",
+      "Printf",
+      "Println",
+      "Fatal",
+      "Fatalf",
+      "Fatalln",
+      "Panic",
+      "Panicf",
+      "Panicln",
+      "Output",
+      "Flags",
+      "SetFlags",
+      "Prefix",
+      "SetPrefix",
+      "Writer"
+    ]
+  },
+  "42710.md": {
+    "src/hash/maphash/maphash_test.go": [
+      "TestHashBytesVsString",
+      "BenchmarkHash"
+    ],
+    "src/hash/maphash/maphash.go": [
+      "Bytes",
+      "String",
+      "MakeSeed",
+      "(*Hash) Write",
+      "(*Hash) WriteString",
+      "(*Hash) Sum64"
+    ]
+  },
+  "46259.md": {
+    "src/syscall/exec_bsd.go": [
+      "forkAndExecInChild"
+    ],
+    "src/os/exec/exec.go": [
+      "Command",
+      "CommandContext",
+      "Run",
+      "Start",
+      "Wait"
+    ],
+    "src/syscall/syscall_freebsd_test.go": [],
+    "src/syscall/syscall_freebsd.go": [
+      "Syscall",
+      "Syscall6",
+      "RawSyscall",
+      "RawSyscall6"
+    ],
+    "src/syscall/exec_freebsd.go": [
+      "runtime_AfterForkInChild",
+      "forkAndExecInChild"
+    ]
+  },
+  "47257.md": {
+    "src/cmd/dist/buildtag_test.go": [],
+    "src/cmd/dist/build_test.go": [],
+    "src/net/http/client.go": [
+      "Get",
+      "Post",
+      "PostForm",
+      "Head",
+      "Do",
+      "CloseIdleConnections"
+    ],
+    "src/net/http/transport.go": [
+      "CancelRequest",
+      "CloseIdleConnections",
+      "dial",
+      "dialConn",
+      "getConn",
+      "queueForDial",
+      "connectMethodForRequest",
+      "useRegisteredProtocol",
+      "RegisterProtocol"
+    ],
+    "src/cmd/dist/build.go": [
+      "cmdinstall",
+      "goInstall",
+      "dopack",
+      "clean"
+    ],
+    "src/net/http/cookiejar/jar.go": [],
+    "src/net/http/response.go": [],
+    "src/net/http/httputil/httputil.go": [],
+    "src/cmd/dist/buildgo.go": [
+      "writeHeader",
+      "mkzdefaultcc",
+      "defaultCCFunc",
+      "mktzdata",
+      "quote"
+    ],
+    "src/net/http/responsecontroller.go": [],
+    "src/runtime/cgo.go": [
+      "cgoUse",
+      "cgoKeepAlive",
+      "cgoNoCallback"
+    ],
+    "src/net/http/request.go": [
+      "NewRequest",
+      "NewRequestWithContext",
+      "ParseForm",
+      "ParseMultipartForm",
+      "FormValue",
+      "PostFormValue",
+      "FormFile"
+    ],
+    "src/net/http/pprof/pprof.go": [
+      "Profile",
+      "Handler",
+      "ServeHTTP"
+    ],
+    "src/net/http/server.go": [
+      "ListenAndServe",
+      "ListenAndServeTLS",
+      "Serve",
+      "ServeTLS",
+      "ServeHTTP",
+      "Hijack",
+      "CloseNotify",
+      "Flush",
+      "Write",
+      "WriteHeader",
+      "Header"
+    ],
+    "src/cmd/dist/buildtag.go": [],
+    "src/net/http/cookie.go": [],
+    "src/syscall/net.go": [],
+    "src/cmd/dist/test.go": [
+      "run",
+      "buildArgs",
+      "registerCgoTests",
+      "internalLink",
+      "externalLinkPIE"
+    ],
+    "src/net/http/httptest/httptest.go": [
+      "NewRequest",
+      "NewRequestWithContext"
+    ],
+    "src/cmd/dist/buildruntime.go": [
+      "mkbuildcfg",
+      "mkobjabi"
+    ]
+  },
+  "47216.md": {
+    "src/runtime/metrics/description_test.go": [],
+    "src/runtime/metrics/description.go": [
+      "GOMAXPROCS",
+      "NumCgoCall",
+      "TotalGCCPUTime"
+    ],
+    "src/runtime/metrics/value.go": [
+      "Uint64",
+      "Float64",
+      "Float64Histogram"
+    ],
+    "src/runtime/metrics/histogram.go": [],
+    "src/runtime/metrics_test.go": [
+      "TestCPUMetricsSleep",
+      "TestCPUStats"
+    ],
+    "src/runtime/metrics/doc.go": [
+      "GOMAXPROCS",
+      "NumCgoCall",
+      "TotalGCCPUTime"
+    ],
+    "src/runtime/metrics/sample.go": [
+      "runtime_readMetrics",
+      "Read"
+    ],
+    "src/runtime/metrics.go": [
+      "readMetrics",
+      "readMetricsLocked"
+    ],
+    "src/runtime/runtime.go": [
+      "GOMAXPROCS",
+      "NumCgoCall",
+      "Version",
+      "NumCPU"
+    ]
+  },
+  "53747.md": {
+    "src/flag/flag.go": [
+      "Func",
+      "BoolFunc",
+      "IsBoolFlag"
+    ],
+    "src/flag/flag_test.go": [
+      "TestUserDefinedBoolFunc",
+      "IsBoolFlag"
+    ]
+  },
+  "34974.md": {
+    "src/archive/zip/zip_test.go": [
+      "TestFileHeaderRoundTrip",
+      "TestFileHeaderRoundTrip64",
+      "TestHeaderInvalidTagAndSize",
+      "TestHeaderIgnoredSize",
+      "TestZeroLengthHeader"
+    ],
+    "src/archive/zip/reader.go": [
+      "OpenRaw",
+      "Open",
+      "DataOffset"
+    ],
+    "src/archive/zip/writer.go": [
+      "CreateHeader",
+      "CreateHeaderRaw",
+      "Copy"
+    ]
+  },
+  "34626.md": {
+    "src/testing/testing_test.go": [
+      "TestBenchmarkBLoopIterationCorrect",
+      "TestBenchmarkBNIterationCorrect",
+      "BenchmarkBLoopPrint",
+      "BenchmarkBNPrint"
+    ],
+    "src/testing/benchmark_test.go": [
+      "TestPrettyPrint",
+      "TestResultString",
+      "TestReportMetric",
+      "ExampleB_ReportMetric"
+    ],
+    "src/testing/testing.go": [
+      "report",
+      "Run",
+      "RunTests",
+      "writeProfiles"
+    ],
+    "src/testing/benchmark.go": [
+      "prettyPrint",
+      "RunBenchmarks",
+      "Run",
+      "ReportMetric",
+      "BenchmarkResult.String",
+      "BenchmarkResult.NsPerOp"
+    ]
+  },
+  "48530.md": {
+    "src/net/net.go": [
+      "WriteTo",
+      "ReadFrom",
+      "noWriteTo",
+      "genericWriteTo",
+      "genericReadFrom"
+    ],
+    "src/net/splice_linux.go": [
+      "spliceFrom",
+      "spliceTo"
+    ]
+  },
+  "50102.md": {
+    "src/archive/tar/stat_unix.go": [
+      "statUnix"
+    ],
+    "src/archive/tar/common.go": [
+      "FileInfoHeader"
+    ]
+  },
+  "50062.md": {
+    "src/time/time.go": [
+      "ZoneBounds",
+      "IsDST",
+      "Zone",
+      "LookupZone"
+    ],
+    "lib/time/mkzip.go": [],
+    "src/runtime/time_test.go": [],
+    "src/runtime/time.go": [
+      "ZoneBounds"
+    ],
+    "src/time/zoneinfo.go": [
+      "lookup",
+      "lookupFirstZone",
+      "firstZoneUsed",
+      "lookupName"
+    ]
+  },
+  "46731.md": {
+    "src/runtime/mmap.go": [
+      "mmap",
+      "munmap"
+    ],
+    "src/runtime/cgo.go": [
+      "cgoUse",
+      "cgoKeepAlive",
+      "cgoNoCallback"
+    ],
+    "src/runtime/runtime_test.go": [],
+    "src/runtime/cgo/cgo.go": [
+      "Incomplete"
+    ],
+    "src/runtime/runtime.go": []
+  },
+  "33184.md": {
+    "src/time/tick.go": [
+      "NewTicker",
+      "Stop",
+      "Reset"
+    ],
+    "lib/time/mkzip.go": [],
+    "src/time/tick_test.go": [
+      "TestTickerResetLtZeroDuration",
+      "Reset",
+      "TestTicker",
+      "BenchmarkTickerReset"
+    ]
+  },
+  "50489.md": {
+    "src/math/big/rat_test.go": [
+      "TestRatSetFrac64Rat",
+      "TestSetFloat64NonFinite"
+    ],
+    "src/math/big/rat.go": [
+      "FloatPrec",
+      "SetString",
+      "FloatString"
+    ]
+  },
+  "47342.md": {
+    "src/runtime/map_fast64_noswiss.go": [
+      "mapaccess1_fast64",
+      "mapaccess2_fast64",
+      "mapassign_fast64",
+      "mapassign_fast64ptr",
+      "mapdelete_fast64",
+      "growWork_fast64",
+      "evacuate_fast64"
+    ],
+    "src/hash/maphash/maphash_purego.go": [
+      "rthash",
+      "rthashString",
+      "randUint64",
+      "wyhash",
+      "r3",
+      "r4",
+      "r8",
+      "mix",
+      "comparableHash",
+      "writeComparable",
+      "appendT",
+      "float64"
+    ],
+    "src/runtime/hash64.go": [
+      "memhashFallback",
+      "memhash32Fallback",
+      "memhash64Fallback",
+      "mix",
+      "r4",
+      "r8"
+    ],
+    "src/runtime/map_noswiss.go": [
+      "makemap",
+      "makemap64",
+      "mapaccess1",
+      "mapaccess2",
+      "mapassign",
+      "mapdelete",
+      "mapiterinit",
+      "mapiternext",
+      "mapclear",
+      "hashGrow"
+    ],
+    "src/runtime/map_swiss_test.go": [],
+    "src/runtime/map_fast32_noswiss.go": [
+      "mapaccess1_fast32",
+      "mapaccess2_fast32",
+      "mapassign_fast32",
+      "mapassign_fast32ptr",
+      "mapdelete_fast32",
+      "growWork_fast32",
+      "evacuate_fast32"
+    ],
+    "src/runtime/map_test.go": [
+      "computeHash",
+      "TestMemHashGlobalSeed"
+    ],
+    "src/runtime/hash32.go": [
+      "memhash32Fallback",
+      "memhash64Fallback",
+      "memhashFallback",
+      "mix32"
+    ],
+    "src/hash/maphash/maphash_test.go": [
+      "TestUnseededHash",
+      "TestSeededHash",
+      "TestHashGrouping",
+      "TestHashBytesVsString",
+      "TestHashHighBytes",
+      "TestSeedFromSum64",
+      "TestSeedFromSeed",
+      "TestSeedFromFlush",
+      "TestSeedFromReset",
+      "TestComparable",
+      "TestWriteComparable",
+      "TestComparableShouldPanic",
+      "TestHashInterface",
+      "BenchmarkHash",
+      "benchmarkComparable"
+    ],
+    "src/runtime/map_faststr_swiss.go": [
+      "mapaccess1_faststr",
+      "mapaccess2_faststr",
+      "mapassign_faststr",
+      "mapdelete_faststr"
+    ],
+    "src/runtime/map_swiss.go": [
+      "makemap64",
+      "makemap_small",
+      "makemap",
+      "mapaccess1",
+      "mapaccess2",
+      "mapassign",
+      "mapdelete",
+      "mapIterStart",
+      "mapIterNext",
+      "mapclear",
+      "mapclone"
+    ],
+    "src/hash/maphash/maphash.go": [
+      "Bytes",
+      "String",
+      "MakeSeed",
+      "Hash",
+      "WriteByte",
+      "Write",
+      "WriteString",
+      "Seed",
+      "SetSeed",
+      "Reset",
+      "Sum64",
+      "Sum",
+      "Size",
+      "BlockSize",
+      "Clone",
+      "Comparable",
+      "WriteComparable"
+    ],
+    "src/runtime/map_fast64_swiss.go": [
+      "mapaccess1_fast64",
+      "mapaccess2_fast64",
+      "mapassign_fast64",
+      "mapassign_fast64ptr",
+      "mapdelete_fast64"
+    ],
+    "src/runtime/map_fast32_swiss.go": [
+      "mapaccess1_fast32",
+      "mapaccess2_fast32",
+      "mapassign_fast32",
+      "mapassign_fast32ptr",
+      "mapdelete_fast32"
+    ],
+    "src/runtime/map_faststr_noswiss.go": [
+      "mapaccess1_faststr",
+      "mapaccess2_faststr",
+      "mapassign_faststr",
+      "mapdelete_faststr",
+      "growWork_faststr",
+      "evacuate_faststr"
+    ],
+    "src/runtime/map_noswiss_test.go": [
+      "TestHmapSize",
+      "TestLoadFactor",
+      "TestMapIterOrder",
+      "TestMapBuckets"
+    ],
+    "src/runtime/map_benchmark_test.go": [
+      "BenchmarkHashStringSpeed",
+      "BenchmarkHashBytesSpeed",
+      "BenchmarkHashInt32Speed",
+      "BenchmarkHashInt64Speed",
+      "BenchmarkMapStringKeysEight_16",
+      "BenchmarkMapStringKeysEight_32",
+      "BenchmarkMapStringKeysEight_64",
+      "BenchmarkMapStringKeysEight_128",
+      "BenchmarkMapStringKeysEight_256",
+      "BenchmarkMapStringKeysEight_1M",
+      "BenchmarkMapFirst",
+      "BenchmarkMapMid",
+      "BenchmarkMapLast",
+      "BenchmarkMapIter",
+      "BenchmarkMapAccessHit",
+      "BenchmarkMapAccessMiss",
+      "BenchmarkMapAssignExists",
+      "BenchmarkMapAssignFillNoHint",
+      "BenchmarkMapAssignGrowLatency",
+      "BenchmarkMapDelete",
+      "BenchmarkMapAccessZero",
+      "BenchmarkMapAccessEmpty"
+    ],
+    "src/runtime/hash_test.go": [
+      "TestMemHash32Equality",
+      "TestMemHash64Equality",
+      "TestSmhasherSanity",
+      "TestSmhasherAppendedZeros",
+      "TestSmhasherSmallKeys",
+      "TestSmhasherZeros",
+      "TestSmhasherTwoNonzero",
+      "TestSmhasherCyclic",
+      "TestSmhasherSparse",
+      "TestSmhasherPermutation",
+      "TestSmhasherAvalanche",
+      "TestSmhasherWindowed",
+      "TestSmhasherText",
+      "TestSmhasherSeed",
+      "TestIssue66841",
+      "benchmarkHash",
+      "BenchmarkHash5",
+      "BenchmarkHash16",
+      "BenchmarkHash64",
+      "BenchmarkHash1024",
+      "BenchmarkHash65536",
+      "TestArrayHash",
+      "TestStructHash",
+      "TestCollisions"
+    ]
+  },
+  "37255.md": {
+    "src/context/context.go": [
+      "WithCancel",
+      "WithDeadline",
+      "WithTimeout",
+      "WithValue"
+    ],
+    "src/syscall/syscall.go": [],
+    "src/context/context_test.go": [
+      "XTestCancelRemoves"
+    ],
+    "src/os/signal/signal.go": [
+      "NotifyContext"
+    ]
+  },
+  "42502.md": {
+    "src/runtime/pprof/pprof_test.go": [
+      "TestCPUProfile",
+      "TestCPUProfileRateAdjust",
+      "TestCPUProfileWithFork",
+      "TestCPUProfileLabel"
+    ],
+    "src/runtime/pprof/pprof.go": [
+      "StartCPUProfile",
+      "StopCPUProfile"
+    ],
+    "src/runtime/pprof/mprof_test.go": []
+  },
+  "42782.md": {
+    "src/reflect/type.go": [
+      "NumField",
+      "Field",
+      "FieldByIndex",
+      "FieldByName",
+      "FieldByNameFunc",
+      "StructField"
+    ],
+    "src/reflect/visiblefields.go": [
+      "VisibleFields",
+      "walk"
+    ],
+    "src/reflect/visiblefields_test.go": [
+      "TestFields",
+      "TestFieldByIndexErr"
+    ]
+  },
+  "38248.md": {
+    "src/runtime/runtime.go": [
+      "syscall_Exit"
+    ]
+  },
+  "46279.md": {
+    "src/syscall/rlimit.go": [
+      "Setrlimit"
+    ],
+    "src/runtime/select.go": [
+      "selectsetpc",
+      "sellock",
+      "selunlock",
+      "selparkcommit",
+      "block",
+      "selectgo",
+      "reflect_rselect"
+    ],
+    "src/runtime/cgo/linux.go": [],
+    "src/runtime/cgo/cgo.go": [],
+    "src/runtime/cgo/callbacks_traceback.go": [],
+    "src/runtime/cgo/callbacks.go": [],
+    "src/runtime/cgo/callbacks_aix.go": [],
+    "src/syscall/rlimit_test.go": [
+      "TestOpenFileLimit"
+    ]
+  },
+  "40724.md": {
+    "test/abi/f_ret_z_not.go": [],
+    "test/abi/fibish_closure.go": [],
+    "src/runtime/cgocallback.go": [],
+    "test/abi/return_stuff.go": [],
+    "src/internal/abi/abi_arm64.go": [
+      "ABI0",
+      "ABIInternal",
+      "ABIWrapper",
+      "RegEntryTmp"
+    ],
+    "src/internal/abi/abi_riscv64.go": [],
+    "test/abi/defer_recover_results.go": [],
+    "src/runtime/cgo_sigaction.go": [
+      "sigaction",
+      "callCgoSigaction"
+    ],
+    "test/abi/spills4.go": [
+      "spills",
+      "F",
+      "main"
+    ],
+    "test/abi/convT64_criteria.go": [],
+    "src/internal/abi/abi_loong64.go": [],
+    "test/abi/struct_lower_1.go": [
+      "passStruct6",
+      "main"
+    ],
+    "test/abi/map.go": [],
+    "test/abi/defer_aggregate.go": [
+      "callee",
+      "main"
+    ],
+    "test/abi/double_nested_addressed_struct.go": [],
+    "src/runtime/trace.go": [],
+    "src/internal/abi/abi_ppc64x.go": [],
+    "src/runtime/cgo.go": [
+      "cgoUse",
+      "cgoKeepAlive",
+      "cgoNoCallback"
+    ],
+    "test/abi/method_wrapper.go": [
+      "M",
+      "main"
+    ],
+    "test/abi/store_reg_args.go": [
+      "F",
+      "main"
+    ],
+    "test/abi/double_nested_struct.go": [
+      "H",
+      "G",
+      "main",
+      "gotVsWant"
+    ],
+    "src/runtime/cgocall.go": [
+      "syscall_cgocaller",
+      "cgocall",
+      "callbackUpdateSystemStack",
+      "cgocallbackg",
+      "cgocallbackg1",
+      "cgounimpl",
+      "cgoCheckPointer",
+      "cgoCheckArg",
+      "cgoCheckUnknownPointer",
+      "cgoIsGoPointer",
+      "cgoInRange",
+      "cgoCheckResult"
+    ],
+    "src/internal/abi/abi.go": [
+      "Dump",
+      "IntRegArgAddr",
+      "Set",
+      "Get"
+    ],
+    "src/runtime/cgocheck.go": [
+      "cgoCheckMemmove"
+    ],
+    "src/internal/abi/abi_generic.go": [],
+    "test/abi/convF_criteria.go": [],
+    "src/runtime/abi_test.go": [
+      "regFinalizerPointer",
+      "regFinalizerIface",
+      "m",
+      "TestFinalizerRegisterABI"
+    ],
+    "test/abi/spills3.go": [
+      "spills",
+      "F",
+      "main"
+    ],
+    "src/runtime/cgo_ppc64x.go": [],
+    "test/abi/fibish.go": [],
+    "test/abi/bad_internal_offsets.go": [],
+    "src/internal/abi/abi_amd64.go": [
+      "ABI0",
+      "ABIInternal",
+      "ABIWrapper",
+      "RegEntryTmp",
+      "RegABI",
+      "funcPC",
+      "funcABI"
+    ]
+  },
+  "51914.md": {
+    "src/net/http/httputil/httputil.go": [
+      "ReverseProxy"
+    ],
+    "src/net/http/httputil/reverseproxy.go": [
+      "NewSingleHostReverseProxy",
+      "ServeHTTP",
+      "modifyResponse",
+      "handleUpgradeResponse",
+      "Forward103Responses"
+    ],
+    "src/net/http/httptest/server.go": [
+      "NewServer",
+      "NewUnstartedServer",
+      "Start",
+      "StartTLS",
+      "Close",
+      "CloseClientConnections",
+      "goServe"
+    ],
+    "src/net/http/server.go": [
+      "WriteHeader",
+      "Write",
+      "Flush",
+      "Hijack",
+      "ServeHTTP",
+      "Header"
+    ],
+    "src/net/http/httptest/httptest.go": [
+      "NewRequest",
+      "NewRequestWithContext"
+    ],
+    "src/net/http/httptest/recorder.go": [
+      "NewRecorder",
+      "WriteHeader",
+      "writeHeader",
+      "Write",
+      "WriteString"
+    ],
+    "src/net/http/http.go": [
+      "WriteHeader"
+    ],
+    "src/net/http/response.go": [
+      "Write"
+    ]
+  },
+  "40481.md": {
+    "src/unsafe/unsafe.go": [
+      "Add"
+    ],
+    "src/cmd/internal/objfile/goobj.go": [],
+    "src/cmd/internal/objfile/plan9obj.go": [],
+    "src/cmd/internal/objabi/flag_test.go": [],
+    "src/cmd/internal/objfile/objfile.go": [],
+    "src/cmd/internal/objfile/xcoff.go": [],
+    "src/cmd/internal/objfile/macho.go": [],
+    "src/cmd/internal/objabi/flag.go": [],
+    "src/cmd/internal/objfile/pe.go": [],
+    "src/cmd/internal/objfile/elf.go": [],
+    "src/runtime/unsafe.go": [
+      "unsafeslice",
+      "reflect_unsafeslice"
+    ]
+  },
+  "46552.md": {
+    "src/runtime/syscall_windows.go": [
+      "syscall_SyscallN",
+      "syscall_Syscall18",
+      "syscall_syscalln"
+    ],
+    "src/syscall/syscall_windows.go": [
+      "SyscallN",
+      "Syscall21",
+      "Syscall24"
+    ],
+    "src/syscall/mksyscall_windows.go": [
+      "SyscallN"
+    ],
+    "src/runtime/syscall_windows_test.go": [
+      "TestSyscallN"
+    ]
+  },
+  "33136.md": {
+    "src/reflect/type.go": [
+      "TypeOf",
+      "Zero",
+      "Set",
+      "Elem",
+      "SetZero"
+    ],
+    "src/encoding/json/decode_test.go": [
+      "TestUnmarshal",
+      "TestUnmarshalNulls",
+      "TestUnmarshalPtrPtr",
+      "TestUnmarshalMapWithTextUnmarshalerStringKey"
+    ],
+    "src/encoding/json/internal/jsonwire/decode_test.go": [],
+    "src/encoding/json/decode.go": [
+      "Unmarshal",
+      "(*decodeState) unmarshal",
+      "(*decodeState) value",
+      "(*decodeState) valueInterface",
+      "(*decodeState) array",
+      "(*decodeState) object"
+    ],
+    "src/encoding/json/internal/jsonwire/decode.go": [
+      "ConsumeNull",
+      "ConsumeFalse",
+      "ConsumeTrue",
+      "ConsumeString",
+      "ConsumeNumber"
+    ],
+    "src/reflect/value.go": [
+      "Set",
+      "SetZero",
+      "Zero",
+      "typedmemmove",
+      "typedmemclr"
+    ],
+    "src/encoding/json/encode.go": [
+      "isEmptyValue",
+      "reflectValue",
+      "valueEncoder",
+      "typeEncoder",
+      "invalidValueEncoder",
+      "structEncoder",
+      "mapEncoder",
+      "sliceEncoder",
+      "ptrEncoder"
+    ],
+    "src/encoding/json/encode_test.go": [
+      "TestOmitZero",
+      "TestOmitZeroMap",
+      "TestMarshalErrorAndReuseEncodeState",
+      "TestMarshalPanic"
+    ]
+  },
+  "52221.md": {
+    "src/crypto/ecdh/ecdh.go": [
+      "ECDH",
+      "Bytes",
+      "Equal",
+      "Curve",
+      "PublicKey",
+      "Public"
+    ],
+    "src/crypto/ecdh/ecdh_test.go": [
+      "TestGenerateKey",
+      "TestNewPrivateKey",
+      "TestNewPublicKey",
+      "TestECDH",
+      "BenchmarkECDH"
+    ],
+    "src/crypto/ecdh/nist.go": [
+      "GenerateKey",
+      "NewPrivateKey",
+      "NewPublicKey",
+      "ecdh",
+      "P256",
+      "P384",
+      "P521"
+    ],
+    "src/crypto/ecdh/x25519.go": [
+      "X25519",
+      "(*x25519Curve) GenerateKey",
+      "(*x25519Curve) NewPrivateKey",
+      "(*x25519Curve) NewPublicKey",
+      "(*x25519Curve) ecdh",
+      "x25519ScalarMult"
+    ]
+  },
+  "44853.md": {
+    "src/runtime/asan.go": [
+      "ASanRead",
+      "ASanWrite",
+      "asanread",
+      "asanwrite",
+      "doasanread",
+      "doasanwrite",
+      "asanunpoison",
+      "asanpoison",
+      "asanregisterglobals",
+      "lsanregisterrootregion",
+      "lsanunregisterrootregion",
+      "lsandoleakcheck"
+    ],
+    "src/runtime/msan/msan.go": [],
+    "src/internal/asan/asan.go": [
+      "Read",
+      "Write"
+    ],
+    "src/runtime/asan/asan.go": [
+      "asanInit",
+      "asanCheck",
+      "asanReport",
+      "asanFree",
+      "asanMalloc",
+      "asanRealloc",
+      "asanCalloc",
+      "asanPoison",
+      "asanUnpoison"
+    ],
+    "src/runtime/malloc.go": [
+      "mallocgc",
+      "mallocgcTiny",
+      "mallocgcSmallNoscan",
+      "mallocgcSmallScanNoHeader",
+      "mallocgcSmallScanHeader",
+      "mallocgcLarge",
+      "newobject",
+      "newarray"
+    ]
+  },
+  "50599.md": {
+    "src/syscall/exec_linux.go": [
+      "forkAndExecInChild"
+    ],
+    "src/syscall/exec_linux_test.go": [],
+    "src/os/exec/exec.go": [
+      "Command",
+      "CommandContext",
+      "Run",
+      "Start",
+      "Wait",
+      "Output",
+      "CombinedOutput",
+      "Environ"
+    ],
+    "src/os/exec/exec_test.go": [
+      "TestCommandRelativeName",
+      "TestEnvNULCharacter",
+      "TestDedupEnvEcho",
+      "cmdEchoEnv",
+      "cmdCat"
+    ],
+    "src/syscall/exec_unix_test.go": [
+      "TestExec"
+    ],
+    "src/syscall/exec_unix.go": [
+      "forkExec",
+      "StartProcess",
+      "Exec"
+    ]
+  },
+  "42537.md": {
+    "src/strings/strings.go": [
+      "TrimPrefix",
+      "TrimSuffix",
+      "Cut",
+      "CutPrefix",
+      "CutSuffix"
+    ],
+    "src/strings/replace.go": [],
+    "src/testing/fstest/mapfs.go": [],
+    "src/mime/mediatype.go": [],
+    "src/testing/benchmark_test.go": [],
+    "src/cmd/go/internal/modload/load.go": [],
+    "src/cmd/go/proxy_test.go": [
+      "proxyHandler"
+    ],
+    "src/strings/compare.go": [
+      "TrimPrefix",
+      "TrimSuffix"
+    ],
+    "src/testing/benchmark.go": [],
+    "src/testing/fstest/mapfs_test.go": []
+  },
+  "40995.md": {
+    "src/net/tcpsockopt_openbsd.go": [],
+    "src/cmd/dist/build_test.go": [],
+    "src/cmd/dist/build.go": [
+      "cmdbootstrap",
+      "cmdinstall",
+      "cmdclean",
+      "cmdversion",
+      "cmdlist"
+    ],
+    "src/internal/goos/zgoos_openbsd.go": [],
+    "src/syscall/syscall_openbsd_mips64.go": [
+      "setTimespec",
+      "setTimeval",
+      "SetKevent",
+      "SetLen"
+    ],
+    "src/cmd/dist/util.go": [
+      "run",
+      "runEnv",
+      "bginit",
+      "bghelper",
+      "bgrun",
+      "bgwait",
+      "xmkdir",
+      "xmkdirall",
+      "xremove",
+      "xremoveall",
+      "xreaddir",
+      "xworkdir",
+      "fatalf",
+      "xexit",
+      "xatexit",
+      "xprintf",
+      "errprintf"
+    ],
+    "src/cmd/dist/sys_default.go": [
+      "sysinit"
+    ],
+    "src/internal/cpu/cpu_mips.go": [],
+    "src/cmd/dist/sys_windows.go": [],
+    "src/runtime/os_openbsd_mips64.go": [
+      "cputicks"
+    ],
+    "src/runtime/signal_openbsd_mips64.go": [
+      "regs",
+      "r0",
+      "r1",
+      "r2",
+      "r3",
+      "r4",
+      "r5",
+      "r6",
+      "r7",
+      "r8",
+      "r9",
+      "r10",
+      "r11",
+      "r12",
+      "r13",
+      "r14",
+      "r15",
+      "r16",
+      "r17",
+      "r18",
+      "r19",
+      "r20",
+      "r21",
+      "r22",
+      "r23",
+      "r24",
+      "r25",
+      "r26",
+      "r27",
+      "r28",
+      "r29",
+      "r30",
+      "r31",
+      "sp",
+      "pc",
+      "link",
+      "lo",
+      "hi",
+      "sigcode",
+      "sigaddr",
+      "set_r28",
+      "set_r30",
+      "set_pc",
+      "set_sp",
+      "set_link",
+      "set_sigcode",
+      "set_sigaddr"
+    ],
+    "src/net/cgo_openbsd.go": [],
+    "src/cmd/dist/test.go": [
+      "cmdtest",
+      "run",
+      "buildArgs",
+      "registerCgoTests"
+    ],
+    "src/runtime/defs_openbsd_mips64.go": [],
+    "src/os/dirent_openbsd.go": [],
+    "src/cmd/dist/buildruntime.go": []
+  },
+  "39034.md": {
+    "src/time/time_test.go": [
+      "BenchmarkGoString",
+      "TestDate",
+      "TestTimeIsDST"
+    ],
+    "src/time/time.go": [
+      "Date",
+      "Location",
+      "GoString"
+    ],
+    "src/fmt/format.go": [
+      "fmtS",
+      "fmtQ"
+    ],
+    "src/runtime/time_test.go": [],
+    "src/fmt/print.go": [
+      "Fprintf",
+      "Printf",
+      "Sprintf",
+      "Print",
+      "Sprint",
+      "fmtString",
+      "fmtPointer",
+      "handleMethods",
+      "printValue"
+    ],
+    "src/runtime/time.go": [],
+    "lib/time/mkzip.go": []
+  },
+  "45100.md": {
+    "src/net/url/url_test.go": [
+      "TestQueryValues",
+      "TestParseQuery"
+    ],
+    "src/net/url/url.go": [
+      "Has",
+      "Get",
+      "Set",
+      "Add",
+      "Del",
+      "ParseQuery",
+      "Encode"
+    ]
+  },
+  "47005.md": {
+    "src/net/url/url_test.go": [
+      "TestJoinPath"
+    ],
+    "src/net/url/url.go": [
+      "Parse",
+      "JoinPath",
+      "ResolveReference"
+    ]
+  },
+  "53482.md": {
+    "src/net/interface_linux.go": [
+      "linkFlags"
+    ],
+    "src/net/interface.go": [
+      "Flags.String",
+      "Interface.Addrs",
+      "Interface.MulticastAddrs",
+      "Interfaces",
+      "InterfaceAddrs",
+      "InterfaceByIndex",
+      "InterfaceByName"
+    ],
+    "src/syscall/netlink_linux.go": [],
+    "src/syscall/zerrors_linux_amd64.go": [
+      "IFF_RUNNING"
+    ]
+  },
+  "37112.md": {
+    "src/runtime/metrics/sample.go": [
+      "runtime_readMetrics",
+      "Read"
+    ],
+    "src/runtime/metrics/value.go": [
+      "Kind",
+      "Uint64",
+      "Float64",
+      "Float64Histogram"
+    ],
+    "src/expvar/expvar.go": [
+      "Publish",
+      "Get",
+      "NewInt",
+      "NewFloat",
+      "NewMap",
+      "NewString"
+    ],
+    "src/runtime/metrics/description_test.go": [
+      "runtime_readMetricNames",
+      "TestNames",
+      "wrap",
+      "formatDesc",
+      "TestDocs"
+    ],
+    "src/runtime/metrics/doc.go": [
+      "NewMetric",
+      "Read",
+      "Register",
+      "Histogram",
+      "Float64Histogram",
+      "TimeHistogram",
+      "GetMetrics",
+      "GetMetricMetadata"
+    ],
+    "src/runtime/metrics/histogram.go": [
+      "NewHistogram",
+      "Add",
+      "Record",
+      "Value",
+      "Reset",
+      "Merge",
+      "Histogram",
+      "Get",
+      "Set"
+    ],
+    "src/runtime/metrics_test.go": [
+      "TestReadMetrics",
+      "TestReadMetricsConsistency",
+      "BenchmarkReadMetricsLatency",
+      "TestReadMetricsCumulative",
+      "TestCPUMetricsSleep",
+      "TestSchedPauseMetrics",
+      "TestRuntimeLockMetricsAndProfile",
+      "TestCPUStats",
+      "TestMetricHeapUnusedLargeObjectOverflow"
+    ],
+    "src/expvar/expvar_test.go": [],
+    "src/runtime/metrics/description.go": [
+      "init",
+      "All"
+    ],
+    "src/runtime/metrics/example_test.go": [
+      "ExampleRead_readingOneMetric",
+      "ExampleRead_readingAllMetrics",
+      "medianBucket"
+    ],
+    "src/runtime/metrics.go": [
+      "initMetrics",
+      "godebug_registerMetric",
+      "readMetricNames",
+      "readMetrics",
+      "readMetricsLocked",
+      "compute",
+      "float64HistOrInit"
+    ],
+    "src/runtime/runtime.go": []
+  },
+  "46771.md": {
+    "src/mime/multipart/multipart.go": [
+      "parseContentDisposition",
+      "populateHeaders",
+      "NewReader",
+      "NextPart",
+      "NextRawPart"
+    ],
+    "src/mime/multipart/writer.go": [
+      "CreateFormFile",
+      "CreateFormFileWithContentType",
+      "FileContentDisposition",
+      "CreatePart",
+      "CreateFormField"
+    ],
+    "src/mime/multipart/formdata.go": [
+      "CreateFormFile",
+      "CreateFormFileWithContentType",
+      "FileContentDisposition"
+    ]
+  },
+  "48424.md": {
+    "src/maps/maps.go": [
+      "EqualFunc",
+      "Clone"
+    ],
+    "src/maps/maps_test.go": [
+      "TestEqualFunc",
+      "TestClone"
+    ]
+  },
+  "46485.md": {
+    "src/go/parser/parser.go": [
+      "parseFile",
+      "parseIdent",
+      "parseIdentList",
+      "parseExprList",
+      "parseType",
+      "parseQualifiedIdent",
+      "parseTypeName",
+      "parseFieldDecl",
+      "parseFuncDecl",
+      "parseDecl"
+    ],
+    "src/go/parser/resolver_test.go": [
+      "TestResolution",
+      "declsFromParser",
+      "declsFromComments",
+      "positionMarkers",
+      "annotatedObj"
+    ],
+    "src/go/parser/parser_test.go": [
+      "TestParseFile",
+      "TestObjects",
+      "TestUnresolved"
+    ],
+    "src/go/parser/resolver.go": [
+      "resolveFile",
+      "resolve",
+      "declare",
+      "declareList"
+    ]
+  },
+  "34652.md": {
+    "src/html/template/template_test.go": [
+      "TestSkipEscapeComments"
+    ],
+    "src/text/template/parse/parse.go": [
+      "Parse",
+      "parse",
+      "parseDefinition",
+      "add"
+    ],
+    "src/text/template/parse/lex_test.go": [
+      "TestLex",
+      "parseLexer"
+    ],
+    "src/text/template/parse/lex.go": [
+      "lexComment",
+      "lex",
+      "nextItem",
+      "emitItem"
+    ],
+    "src/text/template/parse/node.go": [
+      "newComment",
+      "String",
+      "writeTo",
+      "tree",
+      "Copy"
+    ],
+    "src/html/template/template.go": [
+      "Parse",
+      "AddParseTree"
+    ],
+    "src/text/template/parse/parse_test.go": [
+      "TestParseWithComments"
+    ]
+  },
+  "42098.md": {
+    "src/os/exec/exec_windows.go": [
+      "StartProcess",
+      "CreateProcess",
+      "funcLiteral"
+    ],
+    "src/os/exec/exec_windows_test.go": [
+      "TestNoInheritHandles"
+    ],
+    "src/syscall/syscall_windows.go": [
+      "CreateProcess",
+      "CreateProcessAsUser",
+      "GetStartupInfo"
+    ],
+    "src/syscall/syscall_windows_test.go": [],
+    "src/syscall/exec_windows.go": [
+      "StartProcess",
+      "Exec"
+    ]
+  },
+  "35998.md": {
+    "src/io/ioutil/tempfile.go": [
+      "TempFile",
+      "TempDir"
+    ],
+    "src/testing/testing_test.go": [
+      "TestTempDirInCleanup",
+      "TestTempDirInBenchmark",
+      "TestTempDir",
+      "testTempDir"
+    ],
+    "src/testing/testing.go": [
+      "Cleanup",
+      "TempDir",
+      "Setenv",
+      "Chdir",
+      "Parallel",
+      "Run"
+    ],
+    "src/io/ioutil/tempfile_test.go": [
+      "TestTempDir"
+    ]
+  },
+  "43698.md": {
+    "src/cmd/vet/doc.go": [
+      "Vet",
+      "Check",
+      "checkGoComments"
+    ],
+    "src/cmd/vet/main.go": [],
+    "src/cmd/vet/vet_test.go": [
+      "TestVet",
+      "errorCheck"
+    ]
+  },
+  "51414.md": {
+    "src/time/time_test.go": [
+      "TestDurationAbs",
+      "TestSub"
+    ],
+    "src/time/time.go": [
+      "Abs",
+      "Sub",
+      "Compare"
+    ],
+    "src/runtime/time_test.go": [],
+    "src/runtime/time.go": [],
+    "lib/time/mkzip.go": []
+  },
+  "37023.md": {
+    "src/runtime/runtime_test.go": [
+      "TestSetPanicOnFault",
+      "testSetPanicOnFault"
+    ],
+    "src/runtime/debug/stack.go": [
+      "PrintStack",
+      "Stack",
+      "SetCrashOutput"
+    ],
+    "src/runtime/debug/garbage_test.go": [],
+    "src/runtime/debug/panic_test.go": [
+      "TestPanicOnFault"
+    ],
+    "src/runtime/debug/garbage.go": [
+      "SetPanicOnFault"
+    ],
+    "src/runtime/signal_unix.go": [
+      "sigpanic",
+      "dieFromSignal",
+      "crash"
+    ],
+    "src/runtime/panic.go": [
+      "panicmem",
+      "panicmemAddr",
+      "throw",
+      "gopanic",
+      "gorecover"
+    ],
+    "src/runtime/runtime.go": [
+      "panicmem",
+      "throw",
+      "sigpanic"
+    ]
+  },
+  "46258.md": {
+    "src/runtime/os_freebsd.go": [
+      "newosproc",
+      "newosproc0",
+      "setProcessCPUProfiler",
+      "setThreadCPUProfiler",
+      "sysSigaction",
+      "asmSigaction"
+    ],
+    "src/os/exec/exec_unix.go": [
+      "Start",
+      "StartProcess",
+      "Pdeathsig"
+    ],
+    "src/syscall/syscall_freebsd_test.go": [],
+    "src/syscall/syscall_freebsd.go": [
+      "Syscall",
+      "Syscall6",
+      "RawSyscall",
+      "RawSyscall6"
+    ],
+    "src/syscall/exec_freebsd.go": [
+      "forkAndExecInChild"
+    ],
+    "src/os/dirent_freebsd.go": [],
+    "src/os/signal/signal_unix.go": [],
+    "src/os/exec/exec_test.go": [
+      "TestContext",
+      "TestContextCancel"
+    ],
+    "src/os/signal/signal_test.go": [
+      "TestSignal",
+      "TestNotifyContextCancelParent",
+      "TestNotifyContextStop"
+    ]
+  },
+  "51430.md": {
+    "src/cmd/cover/testdata/pkgcfg/a/a_test.go": [
+      "TestA"
+    ],
+    "src/testing/cover.go": [
+      "RegisterCover"
+    ],
+    "src/cmd/cover/func.go": [
+      "funcOutput",
+      "findFuncs",
+      "(*FuncVisitor).Visit",
+      "(*FuncExtent).coverage",
+      "findPkgs",
+      "findFile",
+      "percent"
+    ],
+    "src/runtime/coverage/coverage.go": [
+      "WriteMetaDir",
+      "WriteMeta",
+      "WriteCountersDir",
+      "WriteCounters",
+      "ClearCounters"
+    ],
+    "src/cmd/cover/cover_test.go": [
+      "TestCover",
+      "TestCoverWithToolExec",
+      "TestDirectives",
+      "TestCoverFunc"
+    ],
+    "src/cmd/cover/pkgname_test.go": [
+      "TestPackageName"
+    ],
+    "src/cmd/cover/testdata/html/html_test.go": [
+      "TestAll"
+    ],
+    "src/runtime/covermeta.go": [
+      "addCovMeta"
+    ],
+    "src/cmd/cover/html.go": [
+      "htmlOutput",
+      "percentCovered",
+      "htmlGen"
+    ],
+    "src/cmd/cover/testdata/pkgcfg/a/a2.go": [
+      "A2"
+    ],
+    "src/cmd/cover/testdata/pkgcfg/noFuncsNoTests/nfnt.go": [],
+    "src/cmd/cover/cover.go": [
+      "main",
+      "parseFlags",
+      "readOutFileList",
+      "readPackageConfig",
+      "annotate",
+      "setCounterStmt",
+      "incCounterStmt",
+      "atomicCounterStmt",
+      "newCounter",
+      "addCounters",
+      "emitMetaData",
+      "emitMetaFile"
+    ],
+    "src/cmd/cover/testdata/html/html.go": [],
+    "src/cmd/cover/doc.go": [
+      "Cover",
+      "Merge",
+      "WriteProfile",
+      "Emit",
+      "OpenCoverageOutputFile"
+    ],
+    "src/cmd/cover/testdata/pkgcfg/a/a.go": [
+      "Set",
+      "Get",
+      "A"
+    ],
+    "src/cmd/cover/testdata/pkgcfg/yesFuncsNoTests/yfnt.go": [],
+    "src/runtime/covercounter.go": [
+      "coverage_getCovCounterList"
+    ]
+  },
+  "46308.md": {
+    "src/crypto/tls/tls_test.go": [
+      "TestVersionName"
+    ],
+    "src/crypto/tls/tls.go": [
+      "VersionName"
+    ]
+  },
+  "37033.md": {
+    "src/runtime/cgo/cgo.go": [
+      "NewHandle",
+      "Delete",
+      "Value",
+      "MustDelete",
+      "MustValue"
+    ],
+    "src/runtime/cgo/handle_test.go": [
+      "TestHandle",
+      "TestInvalidHandle",
+      "BenchmarkHandle"
+    ],
+    "src/runtime/cgocallback.go": [],
+    "src/runtime/cgo.go": [
+      "cgoUse",
+      "cgoKeepAlive",
+      "cgoNoCallback"
+    ],
+    "src/runtime/cgocheck.go": [],
+    "src/runtime/cgo/handle.go": [
+      "NewHandle",
+      "Value",
+      "Delete"
+    ]
+  },
+  "51766.md": {
+    "src/net/netip/netip.go": [
+      "IPv6LinkLocalAllRouters",
+      "AddrFrom16"
+    ],
+    "src/net/net.go": [
+      "IPv6LinkLocalAllRouters"
+    ]
+  },
+  "51684.md": {
+    "src/regexp/regexp.go": [
+      "Compile",
+      "MustCompile",
+      "Match",
+      "MatchString",
+      "Find",
+      "FindString",
+      "FindAll",
+      "expand"
+    ],
+    "src/regexp/syntax/parse.go": [
+      "checkHeight",
+      "checkLimits",
+      "newRegexp",
+      "parse",
+      "parseRepeat"
+    ]
+  },
+  "51896.md": {
+    "src/unicode/utf16/utf16.go": [
+      "AppendRune",
+      "EncodeInto",
+      "Count"
+    ],
+    "src/unicode/utf16/utf16_test.go": [
+      "AppendRune",
+      "EncodeInto",
+      "Count",
+      "TestAppendRune",
+      "BenchmarkAppendRuneValidASCII",
+      "BenchmarkAppendRuneValidJapaneseChars"
+    ]
+  },
+  "19367.md": {
+    "src/runtime/slice_test.go": [
+      "BenchmarkMakeSlice",
+      "BenchmarkAppend",
+      "BenchmarkAppendSlice",
+      "BenchmarkAppendInPlace"
+    ],
+    "src/runtime/unsafe.go": [
+      "unsafeslice",
+      "unsafestring",
+      "reflect_unsafeslice"
+    ],
+    "src/runtime/slice.go": [
+      "makeslice",
+      "makeslice64",
+      "growslice",
+      "reflect_growslice"
+    ],
+    "src/unsafe/unsafe.go": [
+      "Slice",
+      "String"
+    ]
+  },
+  "37168.md": {
+    "src/math/big/internal/asmgen/mips.go": [
+      "mipsMulWide"
+    ],
+    "src/crypto/hmac/hmac.go": [
+      "New",
+      "Equal"
+    ],
+    "src/math/big/internal/asmgen/riscv64.go": [],
+    "src/crypto/dsa/dsa.go": [
+      "GenerateParameters",
+      "GenerateKey",
+      "Sign",
+      "Verify"
+    ],
+    "src/math/big/internal/asmgen/amd64.go": [
+      "amd64JmpADX",
+      "amd64Add",
+      "x86Op3",
+      "x86Hint",
+      "x86Suffix",
+      "x86MulWide"
+    ],
+    "src/crypto/sha512/sha512.go": [
+      "New",
+      "New512_224",
+      "New512_256",
+      "New384",
+      "Sum512",
+      "Sum384",
+      "Sum512_224",
+      "Sum512_256"
+    ],
+    "src/math/big/float.go": [
+      "SetPrec",
+      "SetMode",
+      "Prec",
+      "MinPrec",
+      "Mode",
+      "Acc",
+      "Sign",
+      "MantExp",
+      "SetMantExp",
+      "SetUint64",
+      "SetInt64",
+      "SetFloat64",
+      "SetInt",
+      "SetRat",
+      "SetInf",
+      "Set",
+      "Copy",
+      "Add",
+      "Sub",
+      "Mul",
+      "Quo",
+      "Cmp"
+    ],
+    "src/math/big/sqrt.go": [
+      "Sqrt",
+      "sqrtInverse"
+    ],
+    "src/math/big/rat.go": [],
+    "src/math/big/nat.go": [
+      "add",
+      "sub",
+      "mulRange",
+      "expNN",
+      "expNNMontgomery",
+      "expNNWindowed",
+      "expNNMontgomeryEven",
+      "sqrt",
+      "setBytes",
+      "bytes"
+    ],
+    "src/crypto/ed25519/ed25519.go": [
+      "GenerateKey",
+      "Sign",
+      "Verify"
+    ],
+    "src/crypto/cipher/gcm.go": [
+      "NewGCM",
+      "NewGCMWithNonceSize",
+      "NewGCMWithTagSize",
+      "NewGCMWithRandomNonce",
+      "Seal",
+      "Open",
+      "gcmCounterCryptGeneric",
+      "gcmAuth"
+    ],
+    "src/math/big/internal/asmgen/arm64.go": [
+      "arm64LoadIncN",
+      "arm64LoadDecN",
+      "arm64StoreIncN",
+      "arm64StoreDecN"
+    ],
+    "src/math/big/float_test.go": [
+      "TestFloatAdd",
+      "TestFloatMul",
+      "TestFloatQuo",
+      "BenchmarkFloatAdd",
+      "BenchmarkFloatSub"
+    ],
+    "src/crypto/cipher/cbc.go": [
+      "NewCBCEncrypter",
+      "NewCBCDecrypter",
+      "CryptBlocks",
+      "BlockSize",
+      "SetIV"
+    ],
+    "src/crypto/des/block.go": [
+      "cryptBlock",
+      "feistel",
+      "permuteBlock",
+      "initFeistelBox",
+      "permuteInitialBlock",
+      "permuteFinalBlock",
+      "ksRotate",
+      "generateSubkeys",
+      "unpack"
+    ],
+    "src/crypto/elliptic/elliptic.go": [
+      "P224",
+      "P256",
+      "P384",
+      "P521"
+    ],
+    "src/crypto/sha256/sha256.go": [
+      "New",
+      "New224",
+      "Sum256",
+      "Sum224"
+    ],
+    "src/math/big/int_test.go": [
+      "TestGcd",
+      "TestModInverse",
+      "BenchmarkModInverse",
+      "BenchmarkSqrt"
+    ],
+    "src/math/big/internal/asmgen/mips64.go": [
+      "mips64MulWide"
+    ],
+    "src/math/big/sqrt_test.go": [
+      "TestFloatSqrt64",
+      "TestFloatSqrt",
+      "TestFloatSqrtSpecial",
+      "BenchmarkFloatSqrt"
+    ],
+    "src/crypto/ecdsa/ecdsa.go": [
+      "GenerateKey",
+      "Sign",
+      "VerifyASN1"
+    ],
+    "src/math/big/internal/asmgen/ppc64.go": [],
+    "src/crypto/sha1/sha1.go": [
+      "New",
+      "Size",
+      "BlockSize",
+      "Write",
+      "Sum",
+      "checkSum",
+      "ConstantTimeSum",
+      "constSum"
+    ],
+    "src/crypto/aes/aes.go": [
+      "NewCipher"
+    ],
+    "src/math/big/rat_test.go": [],
+    "src/math/big/internal/asmgen/arm.go": [
+      "armMulWide",
+      "armLoadIncN",
+      "armLoadDecN",
+      "armStoreIncN",
+      "armStoreDecN"
+    ],
+    "src/math/big/int.go": [
+      "SetInt64",
+      "SetUint64",
+      "SetBits",
+      "Abs",
+      "Neg",
+      "Add",
+      "Sub",
+      "Mul",
+      "Quo",
+      "Rem",
+      "Div",
+      "Mod",
+      "DivMod",
+      "Cmp",
+      "BitLen",
+      "ModInverse",
+      "ModSqrt"
+    ],
+    "src/crypto/rsa/rsa.go": [
+      "GenerateKey",
+      "GenerateMultiPrimeKey",
+      "Sign",
+      "Decrypt",
+      "Validate"
+    ],
+    "src/math/big/internal/asmgen/s390x.go": [
+      "s390xSetup",
+      "s390xOp3",
+      "s390xHint",
+      "s390MulWide"
+    ],
+    "src/math/big/nat_test.go": [
+      "TestNatMul",
+      "TestNatSqr",
+      "TestModW",
+      "TestExpNN",
+      "FuzzExpMont"
+    ],
+    "src/crypto/cipher/ctr.go": [
+      "NewCTR",
+      "XORKeyStream",
+      "refill"
+    ],
+    "src/math/big/arith_amd64.go": []
+  },
+  "29062.md": {
+    "src/testing/testing_test.go": [
+      "TestMain",
+      "TestRunningTests",
+      "TestRunningTestsInCleanup"
+    ],
+    "src/testing/testing.go": [
+      "SetPanicOnExit0",
+      "Main",
+      "Run",
+      "report"
+    ]
+  },
+  "43823.md": {
+    "src/time/time_test.go": [
+      "TestParseDuration",
+      "TestParseDurationErrors",
+      "TestParseDurationRoundTrip",
+      "TestTimeGob",
+      "TestUnmarshalInvalidTimes",
+      "TestMarshalInvalidTimes",
+      "TestTimeJSON",
+      "TestDate"
+    ],
+    "src/time/time.go": [
+      "Parse",
+      "UnmarshalText",
+      "UnmarshalJSON",
+      "MarshalText",
+      "MarshalJSON",
+      "Date",
+      "Second",
+      "Nanosecond",
+      "Unix",
+      "UnixMilli",
+      "UnixMicro"
+    ],
+    "src/time/format.go": [
+      "stdFracSecond",
+      "Parse",
+      "ParseInLocation",
+      "parse",
+      "leadingFraction",
+      "commaOrPeriod"
+    ],
+    "src/time/format_test.go": [
+      "TestFormatFractionalSecondSeparators",
+      "TestParseFractionalSecondsLongerThanNineDigits"
+    ]
+  },
+  "48157.md": {
+    "src/testing/testing_test.go": [
+      "TestContext",
+      "TestRunningTests",
+      "TestRunningTestsInCleanup",
+      "TestConcurrentRun"
+    ],
+    "src/testing/testing.go": [
+      "SetTimeout",
+      "Deadline",
+      "Run"
+    ]
+  },
+  "32779.md": {
+    "src/encoding/json/decode_test.go": [
+      "UnmarshalJSON",
+      "Unmarshal",
+      "TestUnmarshal",
+      "TestUnmarshalMapWithTextUnmarshalerStringKey"
+    ],
+    "src/encoding/json/encode.go": [
+      "newEncodeState",
+      "(*encodeState) marshal",
+      "(*encodeState) error",
+      "(*encodeState) reflectValue",
+      "(*encodeState) valueEncoder",
+      "(*encodeState) typeEncoder",
+      "(*encodeState) invalidValueEncoder",
+      "(*encodeState) interfaceEncoder",
+      "(*encodeState) stringEncoder",
+      "(*mapEncoder) encode",
+      "newMapEncoder"
+    ],
+    "src/encoding/json/decode.go": [
+      "Unmarshal",
+      "unmarshal",
+      "literalStore",
+      "object",
+      "objectInterface"
+    ],
+    "src/encoding/json/encode_test.go": [
+      "TestMarshalErrorAndReuseEncodeState",
+      "TestEncodeString",
+      "TestOmitZeroMap",
+      "TestMarshalFloat",
+      "TestTextMarshalerMapKeysAreSorted",
+      "TestNilMarshalerTextMapKey"
+    ]
+  },
+  "46131.md": {
+    "src/reflect/iter.go": [
+      "SetKey",
+      "SetValue"
+    ],
+    "src/reflect/map_swiss.go": [
+      "MapIter",
+      "SetIterKey",
+      "SetIterValue"
+    ],
+    "src/reflect/map_noswiss_test.go": [],
+    "src/reflect/map_swiss_test.go": [],
+    "src/runtime/map_test.go": [
+      "TestMapIterDeleteReplace"
+    ],
+    "src/sync/map.go": [
+      "Load",
+      "Store",
+      "LoadOrStore",
+      "LoadAndDelete",
+      "Delete",
+      "Range"
+    ],
+    "test/map.go": [],
+    "src/sync/map_test.go": [
+      "applyMap",
+      "TestMapRangeNoAllocations"
+    ],
+    "src/sync/map_bench_test.go": [
+      "BenchmarkMapRange"
+    ],
+    "src/runtime/map_benchmark_test.go": [
+      "benchmarkMapIter",
+      "BenchmarkMapIter"
+    ],
+    "src/reflect/iter_test.go": [
+      "Seq",
+      "NonSeq",
+      "Seq2",
+      "NonSeq2"
+    ],
+    "src/reflect/map_noswiss.go": [
+      "MapIter",
+      "SetKey",
+      "SetValue",
+      "Key",
+      "Value",
+      "Next",
+      "Reset"
+    ]
+  },
+  "51225.md": {
+    "src/go/build/build.go": [
+      "Import",
+      "ImportDir",
+      "matchFile",
+      "shouldBuild",
+      "eval"
+    ],
+    "src/runtime/compiler.go": [],
+    "src/go/build/build_test.go": [
+      "TestImportCmd"
+    ]
+  },
+  "40025.md": {
+    "src/io/ioutil/ioutil_test.go": [],
+    "src/io/ioutil/ioutil.go": [
+      "ReadAll",
+      "NopCloser"
+    ],
+    "src/io/io.go": [
+      "NopCloser",
+      "ReadAll",
+      "discard"
+    ]
+  },
+  "47527.md": {
+    "src/strconv/strconv_test.go": [],
+    "src/bufio/bufio_test.go": [
+      "TestWriter",
+      "TestWriterAppend",
+      "TestWriterReadFrom",
+      "TestWriterReadFromWithBufferedData",
+      "TestWriterSize",
+      "TestWriterReset"
+    ],
+    "src/bufio/bufio.go": [
+      "NewWriterSize",
+      "NewWriter",
+      "Available",
+      "AvailableBuffer",
+      "Write"
+    ]
+  },
+  "37974.md": {
+    "src/go/doc/doc.go": [
+      "New",
+      "collectFuncs",
+      "collectTypes",
+      "collectValues",
+      "lookupSym",
+      "lookupPackage",
+      "Parser",
+      "Printer",
+      "HTML",
+      "Markdown",
+      "Text"
+    ],
+    "src/cmd/internal/objabi/stack.go": [],
+    "src/cmd/internal/objabi/symkind.go": [],
+    "src/cmd/internal/objabi/reloctype_string.go": [],
+    "src/cmd/internal/objabi/symkind_string.go": [],
+    "src/cmd/internal/objabi/path.go": [],
+    "src/cmd/internal/objfile/goobj.go": [],
+    "src/cmd/internal/objfile/plan9obj.go": [],
+    "src/cmd/internal/objfile/xcoff.go": [],
+    "src/cmd/internal/objfile/objfile.go": [],
+    "src/go/doc/comment_test.go": [
+      "TestComment"
+    ],
+    "src/cmd/internal/objfile/macho.go": [],
+    "src/cmd/internal/objabi/line.go": [],
+    "src/cmd/internal/objabi/flag.go": [],
+    "src/cmd/internal/objabi/reloctype.go": [],
+    "src/cmd/internal/objfile/pe.go": [],
+    "src/cmd/internal/objfile/elf.go": [],
+    "src/cmd/internal/objabi/funcid.go": [],
+    "src/net/http/doc.go": [],
+    "src/cmd/internal/objabi/util.go": [],
+    "src/cmd/internal/objabi/head.go": [],
+    "src/go/doc/comment.go": [
+      "ToHTML",
+      "ToText"
+    ]
+  },
+  "37776.md": {
+    "src/net/url/url_test.go": [
+      "TestParse",
+      "TestURLString",
+      "TestResolveReference",
+      "TestShouldEscape"
+    ],
+    "src/net/url/url.go": [
+      "setFragment",
+      "EscapedFragment",
+      "RawFragment",
+      "setPath",
+      "EscapedPath"
+    ]
+  },
+  "39557.md": {
+    "src/flag/flag.go": [
+      "Func",
+      "Callback",
+      "Var",
+      "Set",
+      "PrintDefaults"
+    ],
+    "src/cmd/internal/objabi/flag.go": [
+      "Flagfn1",
+      "Set",
+      "String"
+    ],
+    "src/flag/example_flagset_test.go": [
+      "ExampleFlagSet"
+    ],
+    "src/flag/example_func_test.go": [
+      "ExampleFunc",
+      "ExampleBoolFunc"
+    ],
+    "src/testing/flag_test.go": [],
+    "src/flag/example_value_test.go": [
+      "String",
+      "Set"
+    ],
+    "src/flag/flag_test.go": [
+      "TestUserDefinedFunc",
+      "TestUserDefinedBoolFunc"
+    ],
+    "src/net/http/httptest/httptest.go": [],
+    "src/net/http/request.go": [
+      "NewRequest",
+      "NewRequestWithContext",
+      "ParseForm",
+      "ParseMultipartForm",
+      "FormValue",
+      "PostFormValue",
+      "SetBasicAuth"
+    ],
+    "src/net/http/http.go": [],
+    "src/flag/example_textvar_test.go": [
+      "ExampleTextVar"
+    ],
+    "src/flag/example_test.go": [
+      "Set",
+      "String"
+    ],
+    "src/net/http/response.go": []
+  },
+  "35804.md": {
+    "src/database/sql/sql_test.go": [
+      "TestQueryRow",
+      "TestRowErr",
+      "QueryRowContext"
+    ],
+    "src/database/sql/sql.go": [
+      "QueryRowContext",
+      "QueryRow",
+      "Err",
+      "Scan"
+    ]
+  },
+  "53003.md": {
+    "src/runtime/string.go": [
+      "slicebytetostring",
+      "stringtoslicebyte",
+      "gostring",
+      "gostringnocopy"
+    ],
+    "src/runtime/unsafe.go": [
+      "unsafestring",
+      "unsafeslice"
+    ],
+    "src/runtime/slice.go": [
+      "makeslice",
+      "makeslicecopy",
+      "growslice",
+      "reflect_growslice"
+    ],
+    "src/unsafe/unsafe.go": [
+      "String",
+      "StringData",
+      "Slice",
+      "SliceData"
+    ]
+  },
+  "40281.md": {
+    "src/encoding/json/tags.go": [
+      "parseTag"
+    ],
+    "src/cmd/internal/objfile/goobj.go": [],
+    "src/cmd/internal/objfile/plan9obj.go": [],
+    "src/cmd/internal/objabi/flag_test.go": [],
+    "src/cmd/internal/objfile/objfile.go": [],
+    "src/cmd/internal/objfile/xcoff.go": [],
+    "src/encoding/json/tags_test.go": [
+      "TestTagParsing"
+    ],
+    "src/cmd/internal/objfile/macho.go": [],
+    "src/cmd/internal/objabi/flag.go": [],
+    "src/cmd/internal/objfile/pe.go": [],
+    "src/cmd/internal/objfile/elf.go": []
+  },
+  "41563.md": {
+    "src/reflect/type.go": [
+      "IsExported",
+      "Method",
+      "NumMethod",
+      "Field",
+      "NumField",
+      "PkgPath"
+    ],
+    "src/reflect/value.go": [
+      "Field",
+      "NumField",
+      "Method",
+      "NumMethod"
+    ]
+  },
+  "46121.md": {
+    "src/text/template/exec.go": [
+      "ExecuteTemplate",
+      "Execute",
+      "execute",
+      "DefinedTemplates"
+    ],
+    "src/html/template/template_test.go": [],
+    "src/text/template/template.go": [
+      "Funcs"
+    ],
+    "src/html/template/template.go": [
+      "Funcs"
+    ]
+  },
+  "43947.md": {
+    "src/os/exec/exec_windows.go": [
+      "LookPath"
+    ],
+    "src/syscall/exec_windows.go": [
+      "StartProcess",
+      "Exec"
+    ],
+    "src/cmd/internal/objfile/goobj.go": [],
+    "src/cmd/internal/objfile/plan9obj.go": [],
+    "src/cmd/internal/objfile/xcoff.go": [],
+    "src/cmd/internal/objfile/objfile.go": [],
+    "src/cmd/internal/objfile/macho.go": [],
+    "src/cmd/internal/objfile/pe.go": [],
+    "src/syscall/exec_windows_test.go": [],
+    "src/cmd/internal/objfile/elf.go": [],
+    "src/os/exec/exec_windows_test.go": []
+  },
+  "50860.md": {
+    "src/sync/atomic/value.go": [
+      "Load",
+      "Store",
+      "Swap",
+      "CompareAndSwap"
+    ],
+    "src/sync/atomic/value_test.go": [
+      "TestValue",
+      "TestValueLarge",
+      "TestValuePanic",
+      "TestValueConcurrent",
+      "BenchmarkValueRead",
+      "TestValue_Swap",
+      "TestValueSwapConcurrent",
+      "TestValue_CompareAndSwap",
+      "TestValueCompareAndSwapConcurrent"
+    ],
+    "src/sync/atomic/doc.go": [
+      "SwapInt32",
+      "SwapUint32",
+      "SwapUintptr",
+      "SwapPointer",
+      "CompareAndSwapInt32",
+      "CompareAndSwapUint32",
+      "CompareAndSwapUintptr",
+      "CompareAndSwapPointer",
+      "AddInt32",
+      "AddUint32",
+      "AddUintptr",
+      "LoadInt32",
+      "LoadUint32",
+      "LoadUintptr",
+      "LoadPointer",
+      "StoreInt32",
+      "StoreUint32",
+      "StoreUintptr",
+      "StorePointer"
+    ],
+    "src/sync/atomic/type.go": [
+      "Load",
+      "Store",
+      "Swap",
+      "CompareAndSwap",
+      "Add"
+    ],
+    "src/sync/atomic/atomic_test.go": [
+      "TestSwapInt32",
+      "TestSwapUint32",
+      "TestSwapInt64",
+      "TestSwapUint64",
+      "TestSwapPointer",
+      "TestAddInt32",
+      "TestAddUint32",
+      "TestAddInt64",
+      "TestAddUint64",
+      "TestCompareAndSwapInt32",
+      "TestCompareAndSwapUint32",
+      "TestCompareAndSwapInt64",
+      "TestCompareAndSwapUint64",
+      "TestCompareAndSwapPointer",
+      "TestLoadInt32",
+      "TestLoadUint32",
+      "TestLoadInt64",
+      "TestLoadUint64",
+      "TestLoadPointer",
+      "TestStoreInt32",
+      "TestStoreUint32",
+      "TestStoreInt64",
+      "TestStoreUint64",
+      "TestStorePointer"
+    ]
+  },
+  "52444.md": {
+    "src/crypto/x509/x509.go": [
+      "CreateCertificate",
+      "CreateCertificateRequest",
+      "CreateRevocationList",
+      "(*Certificate) CreateCRL",
+      "(*Certificate) CheckSignature",
+      "(*Certificate) CheckSignatureFrom",
+      "(*Certificate) Equal",
+      "(*Certificate) hasSANExtension",
+      "(*Certificate) hasNameConstraints",
+      "(*Certificate) getSANExtension"
+    ],
+    "src/crypto/x509/pem_decrypt_test.go": [],
+    "src/crypto/x509/parser_test.go": [],
+    "src/crypto/x509/parser.go": [],
+    "src/crypto/x509/x509_test.go": [
+      "TestCreateNegativeSerial",
+      "TestParseNegativeSerial"
+    ],
+    "src/crypto/x509/pem_decrypt.go": []
+  },
+  "43724.md": {
+    "src/cmd/internal/pathcache/lookpath.go": [
+      "LookPath"
+    ],
+    "src/os/exec/dot_test.go": [
+      "TestLookPath"
+    ],
+    "src/os/exec/exec.go": [
+      "Command",
+      "CommandContext",
+      "Run",
+      "Start",
+      "Output",
+      "CombinedOutput"
+    ],
+    "src/os/exec_test.go": [
+      "LookPath",
+      "Command",
+      "CommandContext"
+    ],
+    "src/os/exec/exec_test.go": [
+      "TestCommandRelativeName",
+      "TestNoExistExecutable",
+      "TestPathRace"
+    ],
+    "src/os/exec.go": [
+      "LookPath",
+      "Command",
+      "CommandContext"
+    ]
+  },
+  "51668.md": {
+    "src/fmt/state_test.go": [
+      "Write",
+      "Width",
+      "Precision",
+      "Flag",
+      "TestFormatString"
+    ],
+    "src/fmt/format.go": [
+      "FormatString"
+    ],
+    "src/fmt/print.go": [
+      "FormatString",
+      "(*pp) Flag",
+      "(*pp) Width",
+      "(*pp) Precision",
+      "(*pp) Write",
+      "(*pp) WriteString",
+      "Fprintf",
+      "Printf",
+      "Sprintf",
+      "Sprint"
+    ]
+  },
+  "41980.md": {
+    "test/interface/convert1.go": [],
+    "src/testing/run_example.go": [
+      "runExample"
+    ],
+    "test/interface/convert2.go": [],
+    "src/cmp/cmp.go": [
+      "Compare"
+    ],
+    "test/interface/convert.go": [],
+    "test/interface/assertinline.go": []
+  },
+  "41792.md": {
+    "src/flag/flag.go": [
+      "Var",
+      "Parse",
+      "BoolVar",
+      "IntVar",
+      "StringVar",
+      "Float64Var",
+      "DurationVar",
+      "TextVar",
+      "Func",
+      "BoolFunc"
+    ],
+    "src/cmd/internal/objabi/flag.go": [
+      "Flagparse"
+    ],
+    "src/testing/flag_test.go": [
+      "TestFlag",
+      "testFlagHelper"
+    ],
+    "src/cmd/internal/objabi/flag_test.go": [],
+    "src/flag/flag_test.go": [
+      "TestInvalidFlags",
+      "TestRedefinedFlags"
+    ]
+  },
+  "45453.md": {
+    "src/runtime/asan/asan.go": [],
+    "src/runtime/race/race.go": [],
+    "src/runtime/race/race_darwin_amd64.go": [],
+    "src/runtime/race/race_v3_amd64.go": []
+  },
+  "42322.md": {
+    "src/embed/example_test.go": [],
+    "src/io/fs/sub_test.go": [
+      "TestSub"
+    ],
+    "src/embed/embed.go": [
+      "Open",
+      "ReadDir",
+      "ReadFile"
+    ],
+    "src/io/fs/sub.go": [
+      "Sub",
+      "Open",
+      "ReadDir",
+      "ReadFile",
+      "ReadLink",
+      "Lstat",
+      "Glob",
+      "Sub"
+    ],
+    "src/net/http/fs.go": [
+      "FileServer",
+      "FileServerFS",
+      "ServeFile",
+      "ServeFileFS",
+      "Open"
+    ],
+    "src/io/fs/fs.go": [
+      "Sub",
+      "SubFS"
+    ],
+    "src/net/http/http.go": []
+  },
+  "42100.md": {
+    "src/syscall/zsysnum_darwin_arm64.go": [],
+    "src/syscall/zsysnum_darwin_amd64.go": [],
+    "src/runtime/signal_darwin_amd64.go": [],
+    "src/syscall/syscall_darwin_amd64.go": [],
+    "src/syscall/syscall_darwin_arm64.go": [],
+    "src/cmd/internal/objfile/goobj.go": [
+      "goobjName",
+      "goarch",
+      "loadAddress"
+    ],
+    "src/cmd/internal/objfile/plan9obj.go": [],
+    "src/syscall/rlimit_darwin.go": [],
+    "src/cmd/internal/objfile/xcoff.go": [],
+    "src/cmd/internal/objfile/objfile.go": [
+      "GOARCH"
+    ],
+    "misc/ios/go_ios_exec.go": [
+      "runOnSimulator",
+      "runSimulator"
+    ],
+    "src/runtime/os_darwin.go": [],
+    "src/cmd/internal/objfile/macho.go": [
+      "openMacho",
+      "goarch"
+    ],
+    "src/syscall/route_darwin.go": [],
+    "src/runtime/defs_darwin.go": [],
+    "src/cmd/internal/objfile/pe.go": [],
+    "src/runtime/defs_darwin_amd64.go": [],
+    "misc/ios/detect.go": [],
+    "src/cmd/internal/objfile/elf.go": [
+      "goarch"
+    ],
+    "src/syscall/types_darwin.go": []
+  },
+  "37475.md": {
+    "src/cmd/go/internal/work/exec.go": [
+      "(*Builder) link",
+      "(*Builder) writeLinkImportcfg",
+      "(*Builder) build",
+      "(*Builder) cleanup",
+      "(*Builder) installHeader"
+    ],
+    "src/runtime/debug_test.go": [],
+    "src/runtime/debug.go": [
+      "ReadBuildInfo",
+      "ReadBuildInfoFrom",
+      "ReadBuildInfoFromFile"
+    ],
+    "src/cmd/go/internal/modfetch/codehost/git.go": [
+      "newGitRepo",
+      "(*gitRepo) loadLocalTags",
+      "(*gitRepo) loadRefs",
+      "(*gitRepo) Tags",
+      "(*gitRepo) RecentTag",
+      "(*gitRepo) runGit"
+    ],
+    "src/cmd/go/internal/load/pkg.go": [
+      "setBuildInfo",
+      "LoadPackage",
+      "loadPackageData"
+    ]
+  },
+  "39567.md": {
+    "src/net/http/server.go": [
+      "MaxBytesHandler",
+      "(*Server) maxHeaderBytes",
+      "(*Server) initialReadLimitSize",
+      "(*Server) ListenAndServe",
+      "(*Server) Serve",
+      "(*Server) ServeTLS",
+      "(*Server) Shutdown"
+    ],
+    "src/net/http/request.go": [
+      "MaxBytesReader"
+    ],
+    "src/net/http/response.go": []
+  },
+  "44808.md": {
+    "src/image/image.go": [
+      "RGBA64At",
+      "SetRGBA64",
+      "NewRGBA64",
+      "RGBA64At",
+      "SetRGBA64",
+      "NewNRGBA64",
+      "RGBA64At",
+      "SetRGBA64",
+      "NewAlpha16",
+      "RGBA64At",
+      "SetRGBA64",
+      "NewGray",
+      "RGBA64At",
+      "SetRGBA64",
+      "NewCMYK",
+      "RGBA64At",
+      "SetRGBA64",
+      "NewPaletted"
+    ],
+    "src/image/color/color.go": [
+      "RGBA",
+      "RGBA64",
+      "NRGBA",
+      "NRGBA64",
+      "Alpha",
+      "Alpha16",
+      "Gray",
+      "Gray16"
+    ],
+    "src/image/draw/draw.go": [
+      "drawRGBA64ImageMaskOver",
+      "SetRGBA64",
+      "RGBA64At"
+    ]
+  },
+  "45754.md": {
+    "src/flag/flag.go": [
+      "TextVar",
+      "Var",
+      "Func",
+      "BoolVar",
+      "IntVar",
+      "StringVar",
+      "Float64Var",
+      "DurationVar"
+    ],
+    "src/time/time.go": [
+      "UnmarshalText",
+      "MarshalText"
+    ],
+    "src/time/time_test.go": [
+      "BenchmarkUnmarshalText",
+      "TestTimeJSON",
+      "TestMarshalText"
+    ],
+    "src/testing/flag_test.go": [
+      "TestFlag",
+      "testFlagHelper"
+    ],
+    "src/math/big/int.go": [
+      "NewInt",
+      "SetString",
+      "SetBytes",
+      "Bytes",
+      "FillBytes"
+    ],
+    "src/math/big/float.go": [
+      "NewFloat",
+      "SetInt",
+      "SetFloat64",
+      "SetRat",
+      "SetUint64",
+      "SetInf",
+      "Set",
+      "Copy",
+      "Abs",
+      "Neg"
+    ],
+    "src/flag/flag_test.go": [
+      "TestUserDefined",
+      "TestUserDefinedFunc",
+      "TestUserDefinedForCommandLine",
+      "TestUserDefinedBool",
+      "TestUserDefinedBoolUsage"
+    ],
+    "src/net/ip.go": [
+      "UnmarshalText",
+      "MarshalText"
+    ],
+    "src/flag/example_textvar_test.go": [
+      "ExampleTextVar"
+    ],
+    "src/math/big/rat.go": [
+      "NewRat",
+      "SetFrac",
+      "SetFrac64",
+      "SetInt",
+      "SetInt64",
+      "SetUint64",
+      "Set"
+    ]
+  },
+  "47651.md": {
+    "src/reflect/iter.go": [],
+    "src/reflect/type.go": [
+      "PtrTo",
+      "PointerTo",
+      "ptrTo"
+    ],
+    "src/unsafe/unsafe.go": [],
+    "src/weak/pointer_test.go": [
+      "TestPointer",
+      "TestPointerEquality",
+      "TestPointerFinalizer",
+      "TestPointerCleanup",
+      "TestPointerSize"
+    ],
+    "src/weak/pointer.go": [
+      "Make",
+      "Value",
+      "runtime_registerWeakPointer",
+      "runtime_makeStrongFromWeak"
+    ],
+    "src/reflect/abi.go": [
+      "dumpPtrBitMap"
+    ],
+    "src/reflect/value.go": [
+      "Pointer",
+      "SetPointer",
+      "UnsafePointer"
+    ]
+  },
+  "48052.md": {
+    "src/syscall/syscall_plan9.go": [],
+    "src/debug/elf/elf.go": [
+      "ErrNoSymbols"
+    ],
+    "src/debug/plan9obj/file.go": [
+      "Open",
+      "Section",
+      "Symbols",
+      "walksymtab"
+    ]
+  },
+  "33920.md": {
+    "src/io/ioutil/tempfile_test.go": [
+      "TestTempFile",
+      "TestTempFile_pattern",
+      "TestTempFile_BadPattern",
+      "TestTempDir",
+      "TestTempDir_BadDir",
+      "TestTempDir_BadPattern"
+    ],
+    "src/io/ioutil/tempfile.go": [
+      "TempFile",
+      "TempDir"
+    ]
+  },
+  "47209.md": {
+    "src/path/filepath/path_unix.go": [
+      "SkipDir"
+    ],
+    "src/path/filepath/path.go": [
+      "Walk",
+      "WalkDir",
+      "walk",
+      "walkDir"
+    ],
+    "src/path/filepath/path_test.go": [
+      "TestWalkSkipAllOnFile",
+      "TestWalkSkipDirOnFile",
+      "TestWalk"
+    ],
+    "src/path/filepath/path_windows_test.go": [],
+    "src/path/filepath/path_plan9.go": [],
+    "src/path/filepath/match.go": [],
+    "src/path/filepath/symlink_unix.go": [],
+    "src/io/fs/walk_test.go": [
+      "TestWalkDir",
+      "TestWalkDirSymlink",
+      "TestIssue51617"
+    ],
+    "src/path/filepath/example_test.go": [
+      "SkipDir",
+      "SkipAll"
+    ],
+    "src/path/filepath/export_test.go": [
+      "SkipDir",
+      "SkipAll"
+    ],
+    "src/path/filepath/symlink_windows.go": [],
+    "src/path/filepath/example_unix_test.go": [],
+    "src/path/filepath/symlink_plan9.go": [],
+    "src/io/fs/walk.go": [
+      "walkDir",
+      "WalkDir"
+    ],
+    "src/path/filepath/match_test.go": [],
+    "src/path/filepath/path_windows.go": [],
+    "src/path/filepath/symlink.go": [],
+    "src/path/filepath/example_unix_walk_test.go": [
+      "ExampleWalk"
+    ]
+  },
+  "48152.md": {
+    "src/crypto/tls/tls_test.go": [
+      "TestVerifyCertificates",
+      "testVerifyCertificates",
+      "CertificateVerificationError"
+    ],
+    "src/crypto/tls/handshake_messages.go": [
+      "unmarshalCertificate",
+      "marshalCertificate",
+      "(*certificateMsg) unmarshal",
+      "(*certificateMsg) marshal",
+      "(*certificateMsgTLS13) unmarshal",
+      "(*certificateMsgTLS13) marshal",
+      "(*certificateRequestMsg) unmarshal",
+      "(*certificateRequestMsg) marshal",
+      "(*certificateRequestMsgTLS13) unmarshal",
+      "(*certificateRequestMsgTLS13) marshal",
+      "(*clientKeyExchangeMsg) unmarshal",
+      "(*clientKeyExchangeMsg) marshal"
+    ],
+    "src/crypto/x509/x509.go": [
+      "CheckSignatureFrom",
+      "CheckSignature",
+      "CheckCRLSignature",
+      "CreateCertificate",
+      "CreateCertificateRequest",
+      "CheckSignature"
+    ],
+    "src/crypto/tls/tls.go": [
+      "Error",
+      "DialWithDialer",
+      "Dial",
+      "(*Dialer) Dial",
+      "(*Dialer) DialContext"
+    ],
+    "src/crypto/x509/verify_test.go": [
+      "TestVerify",
+      "TestSystemVerify",
+      "TestUnknownAuthorityError",
+      "TestSystemRootsError",
+      "TestSystemRootsErrorUnwrap"
+    ],
+    "src/crypto/tls/handshake_client_test.go": [
+      "TestVerifyPeerCertificate",
+      "VerifyPeerCertificate",
+      "TestVerifyConnection",
+      "VerifyConnection",
+      "CertificateVerificationError"
+    ],
+    "src/crypto/tls/handshake_server.go": [
+      "processCertsFromClient",
+      "serverHandshake",
+      "handshake",
+      "readClientHello"
+    ],
+    "src/crypto/x509/verify.go": [
+      "Verify",
+      "VerifyHostname",
+      "CertificateInvalidError",
+      "HostnameError",
+      "UnknownAuthorityError",
+      "SystemRootsError"
+    ],
+    "src/crypto/tls/handshake_client.go": [
+      "verifyServerCertificate",
+      "clientHandshake"
+    ],
+    "src/crypto/x509/x509_test.go": [
+      "TestVerifyCertificateWithDSASignature",
+      "TestParseCertificateWithDSASignatureAlgorithm",
+      "TestParseCertificateWithDsaPublicKey",
+      "TestParsePKIXPublicKey",
+      "TestCertificateParse",
+      "TestMatchHostnames",
+      "TestMatchIP",
+      "TestCreateSelfSignedCertificate",
+      "TestCreateCertificateRequest",
+      "TestParseCertificateRequest",
+      "TestVerifyEmptyCertificate"
+    ],
+    "src/crypto/tls/handshake_server_test.go": [
+      "TestClientHelloFailure",
+      "TestHandshakeServerSNIGetCertificateError",
+      "TestMultipleCertificates",
+      "TestClientAuth"
+    ],
+    "src/crypto/tls/handshake_messages_test.go": [
+      "Generate",
+      "Error"
+    ]
+  },
+  "41682.md": {
+    "src/crypto/x509/verify.go": [
+      "Verify",
+      "isValid"
+    ],
+    "src/crypto/x509/x509_test.go": [
+      "TestSHA1",
+      "TestDisableSHA1ForCertOnly"
+    ],
+    "src/crypto/x509/x509.go": [
+      "CheckSignature",
+      "CheckSignatureFrom",
+      "CheckCRLSignature",
+      "checkSignature"
+    ],
+    "src/crypto/x509/parser.go": [
+      "parseCertificate",
+      "ParseCertificate",
+      "ParseCertificates"
+    ],
+    "src/crypto/x509/verify_test.go": [
+      "testVerify",
+      "TestGoVerify",
+      "TestSystemVerify",
+      "TestVerifyEKURootAsLeaf",
+      "TestVerifyNilPubKey"
+    ],
+    "src/crypto/x509/parser_test.go": []
+  },
+  "53200.md": {
+    "src/go/token/token.go": [
+      "AddFile",
+      "RemoveFile"
+    ],
+    "src/go/token/position.go": [
+      "RemoveFile",
+      "AddFile",
+      "File",
+      "Position"
+    ],
+    "src/go/token/token_test.go": [],
+    "src/go/token/position_test.go": [
+      "TestRemoveFile",
+      "TestFileSet_AddExistingFiles"
+    ]
+  },
+  "40082.md": {
+    "src/database/sql/sql_test.go": [
+      "TestNullInt16Param",
+      "TestNullInt32Param",
+      "TestNullInt64Param"
+    ],
+    "src/database/sql/driver/types.go": [
+      "ConvertValue"
+    ],
+    "src/database/sql/sql.go": [
+      "NullInt16",
+      "Scan",
+      "Value",
+      "NullInt32",
+      "NullInt64",
+      "NullByte"
+    ],
+    "src/database/sql/driver/driver.go": [],
+    "src/database/sql/driver/types_test.go": [
+      "TestValueConverters",
+      "Scan",
+      "Value"
+    ]
+  },
+  "45963.md": {
+    "src/cmd/vet/doc.go": [
+      "Vet",
+      "Run",
+      "main",
+      "checkers"
+    ],
+    "src/cmd/vet/main.go": [
+      "main"
+    ]
+  },
+  "46518.md": {
+    "src/net/netip/export_test.go": [
+      "MakeAddrDetail",
+      "MkAddr",
+      "IPv4",
+      "IsZero",
+      "Compare"
+    ],
+    "src/net/netip/netip.go": [
+      "AddrFrom4",
+      "AddrFrom16",
+      "ParseAddr",
+      "MustParseAddr",
+      "AddrPortFrom",
+      "ParseAddrPort",
+      "MustParseAddrPort",
+      "PrefixFrom",
+      "ParsePrefix",
+      "MustParsePrefix",
+      "Addr.String",
+      "Addr.AppendTo",
+      "Addr.MarshalText",
+      "Addr.UnmarshalText",
+      "AddrPort.String",
+      "AddrPort.AppendTo",
+      "AddrPort.MarshalText",
+      "AddrPort.UnmarshalText",
+      "Prefix.String",
+      "Prefix.AppendTo",
+      "Prefix.MarshalText",
+      "Prefix.UnmarshalText"
+    ],
+    "src/net/net.go": [
+      "LookupNetAddr",
+      "TCPAddrPort",
+      "UDPAddrPort",
+      "ReadMsgUDPAddrPort",
+      "WriteToUDPAddrPort",
+      "WriteMsgUDPAddrPort"
+    ],
+    "src/net/netip/netip_test.go": [
+      "TestParseAddr",
+      "TestAddrFromSlice",
+      "TestAddrAppendText",
+      "TestAddrMarshalUnmarshalBinary",
+      "TestAddrMarshalUnmarshal",
+      "TestAddrFrom16",
+      "TestIPProperties",
+      "TestAddrLessCompare",
+      "TestAddrPortCompare",
+      "TestPrefixCompare",
+      "TestPrefixIsSingleIP",
+      "TestPrefixOverlaps",
+      "TestAddrStringAllocs",
+      "TestAddrPortString",
+      "TestAsSlice"
+    ]
+  },
+  "40337.md": {
+    "src/crypto/x509/x509.go": [
+      "ParsePKIXPublicKey",
+      "CheckSignatureFrom",
+      "CheckSignature",
+      "CreateCertificate",
+      "CreateCertificateRequest",
+      "CheckSignature"
+    ],
+    "src/crypto/dsa/dsa.go": [
+      "GenerateParameters",
+      "GenerateKey",
+      "Sign",
+      "Verify"
+    ],
+    "src/crypto/x509/parser.go": [
+      "parsePublicKey",
+      "parseCertificate",
+      "ParseCertificate",
+      "ParseCertificates"
+    ],
+    "src/crypto/x509/verify.go": [
+      "(*Certificate) Verify",
+      "(*Certificate) checkNameConstraints",
+      "(*Certificate) isValid",
+      "(*Certificate) buildChains",
+      "checkChainForKeyUsage"
+    ],
+    "src/crypto/x509/x509_test.go": [
+      "TestParseCertificateWithDsaPublicKey",
+      "TestParseCertificateWithDSASignatureAlgorithm",
+      "TestVerifyCertificateWithDSASignature"
+    ]
+  },
+  "45973.md": {
+    "src/net/http/server.go": [
+      "AllowQuerySemicolons",
+      "ServeHTTP"
+    ],
+    "src/net/http/request.go": [
+      "NewRequest",
+      "NewRequestWithContext",
+      "ParseForm",
+      "ParseMultipartForm",
+      "FormValue",
+      "PostFormValue",
+      "PathValue",
+      "SetPathValue"
+    ],
+    "src/net/http/http.go": [
+      "AllowQuerySemicolons"
+    ],
+    "src/net/http/response.go": []
+  },
+  "49471.md": {
+    "src/runtime/proc.go": [
+      "switchToCrashStack",
+      "switchToCrashStack0",
+      "dumpgstatus",
+      "syscall_runtime_BeforeFork",
+      "syscall_runtime_AfterFork",
+      "syscall_runtime_AfterForkInChild",
+      "syscall_runtime_BeforeExec",
+      "syscall_runtime_AfterExec"
+    ],
+    "src/runtime/trace.go": [],
+    "src/runtime/stack.go": [
+      "stackalloc",
+      "stackfree",
+      "newstack"
+    ],
+    "src/syscall/security_windows.go": [],
+    "src/syscall/syscall_windows.go": [
+      "CreateFile",
+      "Getpid",
+      "Getppid",
+      "GetQueuedCompletionStatus",
+      "PostQueuedCompletionStatus",
+      "MiniDumpWriteDump"
+    ],
+    "src/runtime/syscall_windows.go": [
+      "syscall_loadsystemlibrary",
+      "syscall_loadlibrary",
+      "syscall_getprocaddress"
+    ],
+    "src/runtime/debug/stack.go": [
+      "PrintStack",
+      "Stack",
+      "SetCrashOutput",
+      "runtime_setCrashFD"
+    ],
+    "src/runtime/runtime.go": [
+      "setCrashFD"
+    ]
+  },
+  "52746.md": {
+    "src/time/time_test.go": [
+      "BenchmarkFormat",
+      "BenchmarkFormatRFC3339",
+      "BenchmarkParse",
+      "BenchmarkParseRFC3339UTC",
+      "BenchmarkParseRFC3339TZ"
+    ],
+    "src/time/time.go": [
+      "Date",
+      "Year",
+      "Month",
+      "Day",
+      "Weekday",
+      "ISOWeek",
+      "Clock",
+      "Hour",
+      "Minute",
+      "Second",
+      "Nanosecond",
+      "Add",
+      "Sub",
+      "AddDate",
+      "UTC",
+      "Local",
+      "In",
+      "Location",
+      "Zone",
+      "Unix",
+      "UnixMilli",
+      "UnixMicro",
+      "UnixNano",
+      "Parse"
+    ],
+    "lib/time/mkzip.go": [],
+    "src/runtime/time_test.go": [],
+    "src/runtime/time.go": [],
+    "src/time/format.go": [
+      "Parse",
+      "Format",
+      "AppendFormat"
+    ],
+    "src/time/format_test.go": [
+      "TestFormat",
+      "TestParse",
+      "TestFormatAndParse",
+      "FuzzFormatRFC3339",
+      "FuzzParseRFC3339"
+    ]
+  },
+  "34293.md": {
+    "src/net/http/doc.go": [],
+    "src/go/doc/doc.go": [
+      "New",
+      "NewFromFiles",
+      "collectValues",
+      "collectTypes",
+      "collectFuncs",
+      "HTML",
+      "Markdown",
+      "Text"
+    ],
+    "src/go/doc/comment_test.go": [
+      "TestComment"
+    ],
+    "src/cmd/go/internal/doc/doc.go": [
+      "runDoc"
+    ],
+    "src/go/doc/synopsis.go": [
+      "Synopsis",
+      "(*Package) Synopsis"
+    ],
+    "src/go/doc/exports.go": [
+      "fileExports"
+    ],
+    "src/go/doc/comment.go": [
+      "ToHTML",
+      "ToText"
+    ]
+  },
+  "31804.md": {
+    "src/crypto/ed25519/ed25519.go": [
+      "Sign",
+      "Verify",
+      "VerifyWithOptions"
+    ],
+    "src/crypto/ed25519/ed25519_test.go": [
+      "TestSignVerifyHashed",
+      "TestSignVerifyContext"
+    ]
+  },
+  "43744.md": {
+    "src/encoding/json/bench_test.go": [
+      "BenchmarkCodeEncoder",
+      "BenchmarkCodeMarshal",
+      "BenchmarkMarshalBytes",
+      "BenchmarkCodeUnmarshal",
+      "BenchmarkUnmarshalString",
+      "BenchmarkUnmarshalFloat64",
+      "BenchmarkUnmarshalInt64",
+      "BenchmarkUnmarshalMap"
+    ],
+    "src/testing/benchmark_test.go": [
+      "TestReportMetric",
+      "ExampleB_ReportMetric",
+      "ExampleB_ReportMetric_parallel"
+    ],
+    "src/encoding/json/v2/bench_test.go": [
+      "BenchmarkUnmarshal",
+      "BenchmarkMarshal",
+      "BenchmarkTestdata",
+      "BenchmarkSlowStreamingDecode",
+      "BenchmarkTextValue"
+    ],
+    "src/testing/testing.go": [
+      "Run",
+      "RunTests",
+      "report",
+      "Log",
+      "Logf",
+      "Error",
+      "Errorf",
+      "Fatal",
+      "Fatalf",
+      "Skip",
+      "Skipf",
+      "SkipNow",
+      "Helper",
+      "Cleanup",
+      "TempDir"
+    ],
+    "src/testing/benchmark.go": [
+      "ReportMetric",
+      "Run",
+      "Benchmark"
+    ]
+  },
+  "47916.md": {
+    "src/go/types/call.go": [
+      "funcInst",
+      "instantiateSignature",
+      "callExpr",
+      "genericExprList",
+      "arguments"
+    ],
+    "src/go/types/sizes.go": [],
+    "src/go/types/example_test.go": [
+      "ExampleInfo"
+    ],
+    "src/go/types/alias.go": [
+      "NewAlias",
+      "TypeParams",
+      "SetTypeParams",
+      "TypeArgs"
+    ],
+    "src/go/types/gotype.go": [],
+    "src/go/types/termlist_test.go": [],
+    "src/go/types/map.go": [
+      "NewMap",
+      "Key",
+      "Elem",
+      "Underlying",
+      "String"
+    ],
+    "src/go/types/recording.go": [
+      "recordInstance",
+      "recordTypeAndValue",
+      "recordUse"
+    ],
+    "src/go/types/context_test.go": [
+      "TestContextHashCollisions"
+    ],
+    "src/go/types/const.go": [],
+    "src/go/types/operand.go": [
+      "assignableTo"
+    ],
+    "src/go/types/pointer.go": [],
+    "src/go/types/typestring.go": [
+      "TypeString",
+      "WriteType",
+      "WriteSignature",
+      "newTypeWriter",
+      "newTypeHasher",
+      "(*typeWriter).typ",
+      "(*typeWriter).signature"
+    ],
+    "src/go/types/main_test.go": [],
+    "src/go/types/infer.go": [
+      "infer",
+      "renameTParams",
+      "isParameterized"
+    ],
+    "src/go/types/sizes_test.go": [],
+    "src/go/types/struct.go": [
+      "NewStruct",
+      "NumFields",
+      "Field",
+      "Tag",
+      "Underlying",
+      "String"
+    ],
+    "src/go/types/generate_test.go": [
+      "generate",
+      "fixInferSig"
+    ],
+    "src/go/types/unify.go": [
+      "newUnifier",
+      "unify",
+      "join",
+      "asBoundTypeParam",
+      "inferred"
+    ],
+    "src/go/types/lookup.go": [
+      "LookupSelection",
+      "LookupFieldOrMethod",
+      "lookupFieldOrMethod",
+      "lookupFieldOrMethodImpl",
+      "lookupType",
+      "(*Checker) missingMethod",
+      "(*Checker) hasAllMethods",
+      "isInterfacePtr",
+      "(*Checker) interfacePtrError"
+    ],
+    "src/go/types/check_test.go": [
+      "TestCheck",
+      "TestSpec",
+      "TestExamples"
+    ],
+    "src/go/types/exprstring_test.go": [
+      "TestExprString"
+    ],
+    "src/go/types/hilbert_test.go": [
+      "TestHilbert",
+      "program",
+      "p",
+      "hilbert",
+      "inverse",
+      "product",
+      "verify",
+      "printProduct",
+      "binomials",
+      "factorials"
+    ],
+    "src/go/types/builtins.go": [
+      "builtin",
+      "applyTypeFunc",
+      "makeSig"
+    ],
+    "src/go/types/stmt.go": [],
+    "src/go/types/iter.go": [
+      "TypeParams",
+      "Types"
+    ],
+    "src/go/types/decl.go": [
+      "collectTypeParams",
+      "declareTypeParam",
+      "isImportedConstraint",
+      "collectMethods"
+    ],
+    "src/go/types/type.go": [
+      "NewSignatureType",
+      "Constraint",
+      "SetConstraint",
+      "Instantiate",
+      "TypeParams",
+      "TypeArgs",
+      "RecvTypeParams",
+      "Origin",
+      "Info.Instances",
+      "Info.Inferred"
+    ],
+    "src/go/types/termlist.go": [],
+    "src/go/types/generate.go": [
+      "NewSignatureType",
+      "TypeParams",
+      "SetConstraint",
+      "Constraint",
+      "Instantiate"
+    ],
+    "src/go/types/under.go": [
+      "under",
+      "underIs",
+      "typeset",
+      "typeErrorf",
+      "commonUnder"
+    ],
+    "src/go/types/version.go": [],
+    "src/go/types/tuple.go": [
+      "NewTuple",
+      "Len",
+      "At",
+      "Underlying",
+      "String"
+    ],
+    "src/go/types/self_test.go": [],
+    "src/go/types/eval_test.go": [
+      "TestEvalBasic",
+      "TestEvalComposite",
+      "TestEvalArith",
+      "TestEvalPos",
+      "TestCheckExpr",
+      "TestIssue65898"
+    ],
+    "src/go/types/resolver.go": [],
+    "src/go/types/return.go": [],
+    "src/go/types/index.go": [],
+    "src/go/types/slice.go": [
+      "NewSlice",
+      "Elem",
+      "Underlying",
+      "String"
+    ],
+    "src/go/types/range.go": [
+      "rangeStmt",
+      "rangeKeyVal"
+    ],
+    "src/go/types/builtins_test.go": [
+      "TestBuiltinSignatures",
+      "testBuiltinSignature"
+    ],
+    "src/go/types/stdlib_test.go": [],
+    "src/go/types/selection.go": [
+      "Kind",
+      "Recv",
+      "Obj",
+      "Type",
+      "Index",
+      "Indirect",
+      "String",
+      "SelectionString"
+    ],
+    "src/go/types/mono.go": [
+      "monomorph",
+      "reportInstanceLoop",
+      "recordCanon",
+      "recordInstance",
+      "assign",
+      "localNamedVertex",
+      "typeParamVertex",
+      "addEdge"
+    ],
+    "src/go/types/initorder.go": [],
+    "src/go/types/gcsizes.go": [],
+    "src/go/types/methodset.go": [
+      "NewMethodSet",
+      "Lookup"
+    ],
+    "src/go/types/badlinkname.go": [
+      "badlinkname_Checker_infer"
+    ],
+    "src/go/types/array.go": [],
+    "src/go/types/expr.go": [
+      "genericExpr",
+      "exprOrType"
+    ],
+    "src/go/types/errorcalls_test.go": [],
+    "src/go/types/context.go": [
+      "NewContext"
+    ],
+    "src/go/types/assignments.go": [],
+    "src/go/types/typelists.go": [
+      "Len",
+      "At",
+      "list",
+      "bindTParams"
+    ],
+    "src/go/types/universe.go": [],
+    "src/go/types/validtype.go": [
+      "validType",
+      "validType0"
+    ],
+    "src/go/types/resolver_test.go": [
+      "Import",
+      "ImportFrom",
+      "TestResolveIdents"
+    ],
+    "src/go/types/typeterm.go": [],
+    "src/go/types/typeparam.go": [
+      "NewTypeParam",
+      "newTypeParam",
+      "Constraint",
+      "SetConstraint",
+      "Index"
+    ],
+    "src/go/types/labels.go": [],
+    "src/go/types/union.go": [],
+    "src/go/types/instantiate_test.go": [
+      "TestInstantiateEquality",
+      "TestInstantiateNonEquality",
+      "TestMethodInstantiation",
+      "TestImmutableSignatures"
+    ],
+    "src/go/types/scope2_test.go": [
+      "TestScopeLookupParent"
+    ],
+    "src/go/types/typeset_test.go": [
+      "TestInvalidTypeSet",
+      "TestTypeSetString"
+    ],
+    "src/go/types/eval.go": [
+      "Eval",
+      "CheckExpr"
+    ],
+    "src/go/types/literals.go": [],
+    "src/go/types/subst.go": [
+      "makeSubstMap",
+      "makeRenameMap",
+      "subst",
+      "typ",
+      "typOrNil",
+      "var_",
+      "tuple",
+      "func_",
+      "term",
+      "replaceRecvType"
+    ],
+    "src/go/types/format.go": [],
+    "src/go/types/gccgosizes.go": [],
+    "src/go/types/lookup_test.go": [],
+    "src/go/types/token_test.go": [],
+    "src/go/types/signature.go": [
+      "NewSignature",
+      "NewSignatureType",
+      "RecvTypeParams",
+      "TypeParams"
+    ],
+    "src/go/types/commentMap_test.go": [
+      "commentMap",
+      "TestCommentMap"
+    ],
+    "src/go/types/issues_test.go": [],
+    "src/go/types/scope.go": [
+      "NewScope",
+      "Insert",
+      "Lookup"
+    ],
+    "src/go/types/typeterm_test.go": [
+      "TestTermString",
+      "TestTermEqual",
+      "TestTermUnion",
+      "TestTermIntersection",
+      "TestTermIncludes",
+      "TestTermSubsetOf",
+      "TestTermDisjoint"
+    ],
+    "src/go/types/instantiate.go": [
+      "Instantiate",
+      "instance",
+      "validateTArgLen",
+      "verify",
+      "implements"
+    ],
+    "src/go/types/basic.go": [],
+    "src/go/types/typestring_test.go": [
+      "TestTypeString",
+      "TestQualifiedTypeString"
+    ],
+    "src/go/types/object_test.go": [
+      "lookupTypeParamObj"
+    ],
+    "src/go/types/check.go": [
+      "NewChecker",
+      "checkFiles",
+      "processDelayed",
+      "recordTypeAndValueInSyntax",
+      "recordCommaOkTypesInSyntax"
+    ],
+    "src/go/types/util_test.go": [],
+    "src/go/types/typexpr.go": [
+      "genericType",
+      "instantiatedType"
+    ],
+    "src/go/types/scope2.go": [],
+    "src/go/types/typeset.go": [
+      "IsMethodSet",
+      "NumMethods",
+      "Method",
+      "LookupMethod"
+    ],
+    "src/go/types/predicates.go": [
+      "isTypeParam",
+      "isGeneric",
+      "Comparable",
+      "comparableType"
+    ],
+    "src/go/types/util.go": [],
+    "src/go/types/exprstring.go": [],
+    "src/go/types/api_test.go": [
+      "TestGenericMethodInfo",
+      "TestInstantiate",
+      "TestInstantiateConcurrent",
+      "TestInstantiateErrors",
+      "TestInstantiatedObjects",
+      "TestLookupFieldOrMethod_RecursiveGeneric"
+    ],
+    "src/go/types/interface.go": [
+      "NewInterface",
+      "NewInterfaceType",
+      "IsMethodSet",
+      "interfaceType"
+    ],
+    "src/go/types/named_test.go": [
+      "mustInstantiate",
+      "TestFiniteTypeExpansion",
+      "TestMethodOrdering"
+    ],
+    "src/go/types/methodset_test.go": [
+      "TestNewMethodSet",
+      "TestNewMethodSet_RecursiveGeneric",
+      "TestIssue60634"
+    ],
+    "src/go/types/errors.go": [],
+    "src/go/types/errsupport.go": [],
+    "src/go/types/package.go": [],
+    "src/go/types/api.go": [
+      "TypeOf",
+      "ObjectOf",
+      "PkgNameOf",
+      "recordTypes",
+      "Check"
+    ],
+    "src/go/types/objset.go": [],
+    "src/go/types/named.go": [
+      "NewNamed",
+      "TypeParams",
+      "SetTypeParams",
+      "TypeArgs",
+      "NumMethods",
+      "Method",
+      "AddMethod",
+      "Underlying"
+    ],
+    "src/go/types/mono_test.go": [
+      "checkMono",
+      "TestMonoGood",
+      "TestMonoBad"
+    ],
+    "src/go/types/conversions.go": [],
+    "src/go/types/chan.go": [],
+    "src/go/types/object.go": [
+      "NewTypeName",
+      "NewParam",
+      "NewVar",
+      "NewFunc",
+      "(*Func) Signature",
+      "(*Func) Origin",
+      "(*Var) Origin"
+    ],
+    "src/go/types/errors_test.go": []
+  },
+  "40356.md": {
+    "src/errors/errors.go": [
+      "Is",
+      "As",
+      "Unwrap"
+    ],
+    "src/cmd/vet/testdata/tagtest/file2.go": [],
+    "src/cmd/vet/testdata/testingpkg/tests.go": [],
+    "src/cmd/vet/testdata/slog/slog.go": [],
+    "src/cmd/vet/testdata/assign/assign.go": [],
+    "src/cmd/vet/testdata/shift/shift.go": [],
+    "src/cmd/vet/main.go": [
+      "checkErrorMethods",
+      "checkIsMethod",
+      "checkAsMethod",
+      "checkUnwrapMethod"
+    ],
+    "src/cmd/vet/testdata/stdversion/stdversion.go": [],
+    "src/cmd/vet/testdata/unsafeptr/unsafeptr.go": [],
+    "src/cmd/vet/testdata/lostcancel/lostcancel.go": [],
+    "src/cmd/vet/vet_test.go": [
+      "errorCheck"
+    ],
+    "src/cmd/vet/testdata/atomic/atomic.go": [],
+    "src/cmd/vet/testdata/print/print.go": [
+      "Error",
+      "Errorer"
+    ],
+    "src/cmd/vet/doc.go": [
+      "checkErrorMethods",
+      "checkAsMethod",
+      "checkIsMethod",
+      "checkUnwrapMethod"
+    ],
+    "src/cmd/vet/testdata/structtag/structtag.go": [],
+    "src/cmd/vet/testdata/copylock/copylock.go": [],
+    "src/cmd/vet/testdata/cgo/cgo.go": [],
+    "src/cmd/vet/testdata/nilfunc/nilfunc.go": [],
+    "src/cmd/vet/testdata/rangeloop/rangeloop.go": [],
+    "src/cmd/vet/testdata/tagtest/file1.go": [],
+    "src/cmd/vet/testdata/unmarshal/unmarshal.go": [],
+    "src/cmd/vet/testdata/waitgroup/waitgroup.go": [],
+    "src/cmd/vet/testdata/bool/bool.go": [],
+    "src/cmd/vet/testdata/hostport/hostport.go": [],
+    "src/cmd/vet/testdata/appends/appends.go": [],
+    "src/cmd/vet/testdata/directive/directive.go": [],
+    "src/cmd/vet/testdata/deadcode/deadcode.go": [],
+    "src/cmd/vet/testdata/unused/unused.go": [],
+    "src/cmd/vet/testdata/method/method.go": [],
+    "src/cmd/vet/testdata/buildtag/buildtag.go": [],
+    "src/cmd/vet/testdata/httpresponse/httpresponse.go": [],
+    "src/cmd/vet/testdata/composite/composite.go": [
+      "As",
+      "Is",
+      "Unwrap"
+    ],
+    "src/errors/errors_test.go": [
+      "TestErrorMethod"
+    ],
+    "src/runtime/error.go": [
+      "Error"
+    ]
+  },
+  "40034.md": {
+    "src/net/smtp/smtp_test.go": [
+      "TestSendMail",
+      "TestSendMailWithAuth",
+      "TestNewClient",
+      "TestNewClientWithTLS",
+      "Client.SendMail",
+      "Client.StartTLS"
+    ],
+    "src/net/smtp/smtp.go": [
+      "Dial",
+      "NewClient",
+      "StartTLS",
+      "SendMail",
+      "Client.SendMail"
+    ]
+  },
+  "53002.md": {
+    "src/net/http/httputil/reverseproxy_test.go": [
+      "TestReverseProxyRewriteStripsForwarded",
+      "TestReverseProxyRewriteReplacesOut",
+      "SetURL",
+      "SetXForwarded",
+      "AppendXForwarded"
+    ],
+    "src/net/http/httputil/httputil.go": [
+      "ReverseProxy",
+      "SetURL",
+      "SetXForwarded",
+      "AppendXForwarded"
+    ],
+    "src/net/http/httputil/reverseproxy.go": [
+      "SetURL",
+      "SetXForwarded",
+      "NewSingleHostReverseProxy",
+      "ServeHTTP"
+    ]
+  },
+  "44196.md": {
+    "src/time/time_test.go": [
+      "UnixMilli",
+      "UnixMicro",
+      "TestUnixMilli",
+      "TestUnixMicro"
+    ],
+    "src/time/time.go": [
+      "UnixMilli",
+      "UnixMicro",
+      "Unix",
+      "UnixNano"
+    ],
+    "lib/time/mkzip.go": []
+  },
+  "50465.md": {
+    "src/net/http/httputil/reverseproxy_test.go": [
+      "TestXForwardedFor",
+      "TestXForwardedFor_Omit",
+      "TestReverseProxyModifyResponse",
+      "TestReverseProxyRewriteStripsForwarded"
+    ],
+    "src/net/http/httputil/reverseproxy.go": [
+      "SetXForwarded",
+      "ServeHTTP"
+    ]
+  },
+  "41696.md": {
+    "src/go/build/build.go": [
+      "Import",
+      "ImportDir",
+      "shouldBuild"
+    ],
+    "src/cmd/go/internal/modcmd/vendor.go": [],
+    "src/cmd/go/internal/modcmd/init.go": [],
+    "src/go/build/build_test.go": [
+      "TestImportCmd"
+    ],
+    "src/cmd/go/internal/modcmd/edit.go": []
+  },
+  "46336.md": {
+    "src/strings/strings.go": [
+      "Index",
+      "IndexByte",
+      "IndexRune",
+      "SplitN",
+      "Cut"
+    ],
+    "src/strings/replace.go": [],
+    "src/strings/builder.go": [],
+    "src/strings/compare.go": [],
+    "src/bytes/bytes.go": [
+      "Index",
+      "IndexByte",
+      "IndexRune",
+      "SplitN",
+      "Cut",
+      "CutPrefix",
+      "CutSuffix"
+    ],
+    "src/strings/search.go": [
+      "Index",
+      "IndexByte",
+      "IndexRune",
+      "SplitN",
+      "LastIndex",
+      "LastIndexByte"
+    ]
+  },
+  "44011.md": {
+    "src/os/exec/internal/fdtest/exists_test.go": [],
+    "src/os/exec/internal/fdtest/exists_plan9.go": [],
+    "src/os/exec/exec_windows.go": [
+      "StartProcess",
+      "syscallStartProcess",
+      "setSysProcAttr",
+      "setAdditionalInheritedHandles",
+      "setParentProcessHandle"
+    ],
+    "src/syscall/exec_windows.go": [
+      "StartProcess",
+      "Exec"
+    ],
+    "src/syscall/syscall.go": [],
+    "src/os/exec/internal/fdtest/exists_windows.go": [],
+    "src/syscall/syscall_windows.go": [
+      "CreateFile",
+      "GetStartupInfo",
+      "newProcThreadAttributeList",
+      "(*procThreadAttributeListContainer) update",
+      "(*procThreadAttributeListContainer) delete",
+      "(*procThreadAttributeListContainer) list"
+    ],
+    "src/os/exec/exec_test.go": [
+      "TestPipes",
+      "TestExtraFiles",
+      "TestExtraFilesRace"
+    ],
+    "src/runtime/syscall_windows.go": [],
+    "src/os/exec/internal/fdtest/exists_unix.go": []
+  },
+  "43620.md": {
+    "src/testing/benchmark_test.go": [
+      "TestReportMetric",
+      "ExampleB_ReportMetric",
+      "ExampleB_ReportMetric_parallel"
+    ],
+    "src/testing/benchmark.go": [
+      "Elapsed",
+      "StopTimer",
+      "ReportMetric"
+    ]
+  },
+  "48256.md": {
+    "src/cmd/internal/script/cmds_unix.go": [],
+    "src/cmd/internal/script/cmds_nonunix.go": [],
+    "src/cmd/internal/script/cmds.go": [
+      "DefaultCmds",
+      "Command",
+      "Help"
+    ]
+  },
+  "38017.md": {
+    "src/time/tzdata/tzdata.go": [
+      "registerLoadFromEmbeddedTZData",
+      "init",
+      "loadFromEmbeddedTZData"
+    ],
+    "src/runtime/time_test.go": [],
+    "src/runtime/time.go": [],
+    "lib/time/mkzip.go": []
+  },
+  "50601.md": {
+    "src/encoding/binary/binary_test.go": [
+      "BenchmarkPutUint16",
+      "BenchmarkAppendUint16",
+      "BenchmarkPutUint32",
+      "BenchmarkAppendUint32",
+      "BenchmarkPutUint64",
+      "BenchmarkAppendUint64",
+      "BenchmarkLittleEndianPutUint16",
+      "BenchmarkLittleEndianAppendUint16",
+      "BenchmarkLittleEndianPutUint32",
+      "BenchmarkLittleEndianAppendUint32",
+      "BenchmarkLittleEndianPutUint64",
+      "BenchmarkLittleEndianAppendUint64"
+    ],
+    "src/encoding/binary/binary.go": [
+      "AppendUint16",
+      "AppendUint32",
+      "AppendUint64",
+      "String"
+    ]
+  },
+  "50842.md": {
+    "src/io/multi.go": [
+      "MultiReader",
+      "WriteTo",
+      "writeToWithBuffer"
+    ],
+    "src/io/multi_test.go": [
+      "TestMultiReaderAsWriterTo",
+      "TestMultiReaderCopy",
+      "TestMultiReaderFlatten"
+    ]
+  },
+  "41790.md": {
+    "src/database/sql/sql.go": [
+      "Close",
+      "finalClose",
+      "closeDBLocked",
+      "Conn",
+      "grabConn",
+      "close",
+      "closemuRUnlockCondReleaseConn",
+      "closemuRUnlockRelease"
+    ],
+    "src/database/sql/driver/driver.go": []
+  },
+  "5901.md": {
+    "src/syscall/js/js_test.go": [],
+    "src/archive/tar/writer.go": [],
+    "src/archive/tar/reader.go": [],
+    "src/syscall/js/js.go": [],
+    "src/archive/zip/reader.go": [],
+    "src/encoding/json/encode.go": [
+      "Marshal",
+      "MarshalIndent",
+      "RegisterFunc",
+      "Register",
+      "(*encodeState) marshal",
+      "(*encodeState) error",
+      "(*encodeState) reflectValue",
+      "valueEncoder",
+      "typeEncoder",
+      "newTypeEncoder",
+      "marshalerEncoder",
+      "addrMarshalerEncoder",
+      "textMarshalerEncoder",
+      "addrTextMarshalerEncoder"
+    ],
+    "src/encoding/json/decode.go": [
+      "Unmarshal",
+      "(*decodeState) unmarshal",
+      "(*decodeState) valueInterface",
+      "(*decodeState) objectInterface",
+      "(*decodeState) arrayInterface"
+    ],
+    "src/encoding/json/jsontext/decode.go": [
+      "NewDecoder",
+      "RegisterFunc",
+      "Register"
+    ],
+    "src/encoding/json/jsontext/encode.go": [
+      "NewEncoder",
+      "RegisterEncoder",
+      "RegisterDecoder",
+      "WriteValue"
+    ],
+    "src/archive/zip/writer.go": []
+  },
+  "52792.md": {
+    "src/cmd/go/internal/modinfo/info.go": [
+      "UnmarshalJSON",
+      "String"
+    ],
+    "src/cmd/go/internal/modload/list.go": [
+      "ListModules",
+      "listModules",
+      "modinfoError"
+    ]
+  },
+  "28308.md": {
+    "src/net/dial.go": [
+      "Dial",
+      "DialTimeout",
+      "Dialer.Dial",
+      "Dialer.DialContext"
+    ],
+    "src/net/net.go": [
+      "Dial",
+      "JoinHostPort",
+      "SplitHostPort"
+    ]
+  },
+  "44006.md": {
+    "src/syscall/js/js.go": [
+      "ValueOf",
+      "JSValue"
+    ]
+  },
+  "53021.md": {
+    "src/crypto/subtle/xor.go": [
+      "XORBytes"
+    ],
+    "src/bytes/bytes.go": []
+  },
+  "49580.md": {
+    "src/io/fs/readlink_test.go": [
+      "TestReadLink",
+      "TestLstat"
+    ],
+    "src/path/filepath/symlink_unix.go": [
+      "evalSymlinks"
+    ],
+    "src/archive/zip/reader.go": [
+      "OpenReader",
+      "NewReader",
+      "(*Reader) Open",
+      "(*File) Open",
+      "(*File) OpenRaw"
+    ],
+    "src/path/filepath/symlink.go": [
+      "walkSymlinks"
+    ],
+    "src/path/filepath/symlink_windows.go": [
+      "evalSymlinks"
+    ],
+    "src/io/fs/readlink.go": [
+      "ReadLink"
+    ],
+    "src/io/fs/fs.go": [
+      "ReadLink",
+      "ReadLinkFS"
+    ],
+    "src/archive/zip/writer.go": [
+      "AddFS"
+    ]
+  },
+  "53015.md": {
+    "src/text/template/exec.go": [
+      "ExecuteTemplate",
+      "Execute",
+      "execute",
+      "walkIfOrWith",
+      "walkTemplate"
+    ],
+    "src/html/template/template_test.go": [
+      "mustExecute"
+    ],
+    "src/text/template/exec_test.go": [
+      "TestExecute",
+      "TestExecuteError",
+      "TestExecError",
+      "TestExecuteGivesExecError",
+      "TestBlock"
+    ],
+    "src/text/template/template.go": [
+      "Funcs",
+      "Parse",
+      "Lookup"
+    ],
+    "src/html/template/template.go": [
+      "Execute",
+      "ExecuteTemplate",
+      "Funcs"
+    ]
+  },
+  "41048.md": {
+    "src/net/http/transport.go": [
+      "GetProxyConnectHeader",
+      "ProxyConnectHeader",
+      "roundTrip"
+    ],
+    "src/net/http/transport_test.go": [
+      "TestTransportProxyConnectHeader",
+      "TestTransportProxyGetConnectHeader"
+    ]
+  },
+  "48409.md": {
+    "src/runtime/debug.go": [
+      "SetMemoryLimit"
+    ],
+    "src/runtime/mgcpacer.go": [
+      "setMemoryLimit",
+      "setGCPercent",
+      "memoryLimitHeapGoal",
+      "readGOMEMLIMIT"
+    ],
+    "src/runtime/mgcmark.go": [
+      "gcDrain",
+      "gcDrainN",
+      "gcAssistAlloc",
+      "gcAssistAlloc1",
+      "gcMarkTinyAllocs"
+    ],
+    "src/runtime/debug/garbage_test.go": [
+      "TestFreeOSMemory",
+      "TestSetGCPercent"
+    ],
+    "src/runtime/mheap.go": [
+      "runtime_debug_freeOSMemory",
+      "(*mheap) reclaim",
+      "(*mheap) reclaimChunk",
+      "(*mheap) alloc",
+      "(*mheap) freeSpan",
+      "(*mheap) scavengeAll"
+    ],
+    "src/runtime/mgcscavenge.go": [
+      "gcPaceScavenger",
+      "bgscavenge",
+      "heapRetained",
+      "(*scavengerState) run",
+      "(*scavengerState) init"
+    ],
+    "src/runtime/debug/garbage.go": [
+      "SetMemoryLimit",
+      "SetGCPercent",
+      "FreeOSMemory"
+    ],
+    "src/runtime/mgclimit.go": [
+      "limiting",
+      "startGCTransition",
+      "finishGCTransition",
+      "needUpdate",
+      "addAssistTime",
+      "addIdleTime",
+      "update",
+      "updateLocked",
+      "accumulate",
+      "tryLock",
+      "unlock",
+      "resetCapacity",
+      "makeLimiterEventStamp",
+      "duration",
+      "typ",
+      "start",
+      "consume",
+      "stop"
+    ],
+    "src/runtime/mgc.go": [
+      "GC",
+      "gcenable",
+      "gcStart",
+      "gcMark",
+      "gcSweep"
+    ]
+  },
+  "42102.md": {
+    "src/time/time_test.go": [
+      "TestTimeIsDST",
+      "IsDST",
+      "lookup",
+      "tzset"
+    ],
+    "src/time/time.go": [
+      "IsDST",
+      "Location",
+      "Zone"
+    ],
+    "src/time/zoneinfo.go": [
+      "lookup",
+      "tzset"
+    ]
+  },
+  "39904.md": {
+    "src/testing/match.go": [
+      "splitRegexp",
+      "matches",
+      "verify"
+    ],
+    "src/testing/testing_test.go": [
+      "TestRunningTests",
+      "TestParentRun",
+      "parseRunningTests"
+    ],
+    "src/testing/testing.go": [
+      "Run",
+      "RunTests",
+      "listTests",
+      "MatchString"
+    ],
+    "src/testing/match_test.go": [
+      "TestSplitRegexp",
+      "TestMatcher"
+    ]
+  },
+  "42027.md": {
+    "src/path/filepath/path_unix.go": [],
+    "src/path/filepath/path.go": [
+      "walkDir",
+      "WalkDir",
+      "Walk",
+      "walk"
+    ],
+    "src/path/filepath/path_test.go": [
+      "TestWalk",
+      "TestWalkDir",
+      "testWalk",
+      "TestWalkSkipDirOnFile",
+      "TestWalkFileError",
+      "TestWalkSymlink"
+    ],
+    "src/path/filepath/path_windows_test.go": [
+      "TestWalkDirectoryJunction",
+      "TestWalkDirectorySymlink"
+    ],
+    "src/path/filepath/path_plan9.go": [],
+    "src/path/filepath/match.go": [],
+    "src/path/filepath/symlink_unix.go": [],
+    "src/path/filepath/example_test.go": [],
+    "src/path/filepath/export_test.go": [
+      "WalkDir",
+      "WalkDirFunc"
+    ],
+    "src/path/filepath/symlink_windows.go": [],
+    "src/path/filepath/example_unix_test.go": [],
+    "src/path/filepath/symlink_plan9.go": [],
+    "src/io/fs/walk.go": [
+      "walkDir",
+      "WalkDir"
+    ],
+    "src/path/filepath/match_test.go": [],
+    "src/path/filepath/path_windows.go": [],
+    "src/path/filepath/export_windows_test.go": [],
+    "src/path/filepath/symlink.go": [
+      "walkSymlinks"
+    ],
+    "src/path/filepath/example_unix_walk_test.go": [
+      "ExampleWalk"
+    ]
+  },
+  "51868.md": {
+    "src/debug/pe/section.go": [
+      "COFFSymbolReadSectionDefAux"
+    ],
+    "src/debug/pe/symbol.go": [
+      "COFFSymbolReadSectionDefAux"
+    ],
+    "src/debug/pe/file.go": [
+      "COFFSymbolReadSectionDefAux"
+    ],
+    "src/debug/pe/pe.go": [
+      "COFFSymbolReadSectionDefAux"
+    ]
+  },
+  "28089.md": {
+    "src/go/ast/ast.go": [
+      "IsGenerated"
+    ],
+    "src/go/parser/parser.go": [
+      "parseFile",
+      "consumeComment",
+      "consumeCommentGroup"
+    ],
+    "src/go/ast/ast_test.go": [
+      "TestCommentText",
+      "TestIsDirective"
+    ],
+    "src/go/parser/parser_test.go": [
+      "TestParseFile",
+      "TestCommentGroups",
+      "TestLeadAndLineComments"
+    ]
+  },
+  "41773.md": {
+    "src/net/http/server.go": [
+      "serverHandler.ServeHTTP",
+      "globalOptionsHandler.ServeHTTP",
+      "(*Server).ListenAndServe",
+      "(*Server).Serve",
+      "(*Server).ServeTLS"
+    ]
+  },
+  "50674.md": {
+    "src/crypto/x509/pkix/pkix.go": [
+      "ParseCRL",
+      "ParseDERCRL",
+      "CheckCRLSignature",
+      "CertificateList"
+    ],
+    "src/crypto/x509/x509.go": [
+      "ParseRevocationList",
+      "ParseCRL",
+      "ParseDERCRL",
+      "CheckCRLSignature",
+      "CheckSignatureFrom",
+      "CreateRevocationList"
+    ]
+  },
+  "26535.md": {
+    "src/compress/lzw/reader.go": [
+      "NewReader",
+      "Reset",
+      "Close",
+      "Read"
+    ],
+    "src/compress/lzw/writer_test.go": [
+      "TestWriterReset",
+      "TestWriterReturnValues",
+      "BenchmarkEncoder"
+    ],
+    "src/compress/lzw/writer.go": [
+      "NewWriter",
+      "Reset",
+      "Write",
+      "Close"
+    ],
+    "src/compress/lzw/reader_test.go": [
+      "TestReaderReset"
+    ]
+  },
+  "45964.md": {
+    "src/syscall/exec_linux.go": [
+      "forkAndExecInChild",
+      "forkAndExecInChild1",
+      "forkAndExecFailureCleanup"
+    ],
+    "src/syscall/syscall_linux_test.go": [
+      "TestFaccessat",
+      "TestFchmodat",
+      "TestPrlimitSelf",
+      "TestPrlimitOtherProcess",
+      "TestPrlimitFileLimit"
+    ],
+    "src/internal/poll/sockopt_linux.go": [
+      "SetsockoptIPMreqn"
+    ],
+    "src/internal/poll/sock_cloexec.go": [],
+    "src/internal/poll/splice_linux.go": [],
+    "src/syscall/syscall_linux.go": [
+      "Mmap",
+      "Munmap",
+      "Getrlimit",
+      "setrlimit",
+      "prlimit"
+    ]
+  },
+  "39444.md": {
+    "src/syscall/syscall_unix.go": [
+      "Signal"
+    ],
+    "src/os/signal/signal_unix.go": [],
+    "src/os/exec_unix.go": [
+      "signal",
+      "pidSignal"
+    ],
+    "src/os/exec/exec_unix.go": [
+      "signal"
+    ]
+  },
+  "45430.md": {
+    "src/crypto/tls/tls.go": [
+      "Server",
+      "Client",
+      "Dial",
+      "DialWithDialer",
+      "(*Dialer) Dial",
+      "(*Dialer) DialContext"
+    ],
+    "src/crypto/tls/handshake_server.go": [
+      "pickCipherSuite",
+      "cipherSuiteOk"
+    ],
+    "src/crypto/tls/handshake_client.go": [
+      "clientHandshakeState.pickCipherSuite"
+    ],
+    "src/crypto/tls/cipher_suites.go": [
+      "CipherSuites",
+      "InsecureCipherSuites",
+      "selectCipherSuite",
+      "cipher3DES",
+      "cipherAES",
+      "mutualCipherSuite",
+      "cipherSuiteByID"
+    ]
+  },
+  "37533.md": {
+    "src/flag/flag.go": [
+      "usage",
+      "Parse",
+      "NewFlagSet"
+    ],
+    "src/cmd/internal/objabi/flag.go": [
+      "Flagparse"
+    ],
+    "test/fixedbugs/issue8011.go": [],
+    "src/cmd/internal/objabi/flag_test.go": [],
+    "src/flag/flag_test.go": [
+      "TestHelp",
+      "TestExitCode"
+    ],
+    "src/os/exec/exec.go": [],
+    "src/os/exec/exec_test.go": [
+      "TestExitStatus",
+      "TestExitCode"
+    ]
+  },
+  "47781.md": {
+    "src/go/ast/ast.go": [
+      "FuncType",
+      "IndexListExpr",
+      "MultiIndexExpr",
+      "FuncDecl"
+    ],
+    "src/go/token/token.go": [],
+    "src/go/ast/ast_test.go": [],
+    "src/go/token/token_test.go": []
+  },
+  "46057.md": {
+    "src/crypto/x509/cert_pool_test.go": [
+      "TestCertPoolEqual"
+    ],
+    "src/crypto/x509/example_test.go": [],
+    "src/crypto/x509/cert_pool.go": [
+      "Equal",
+      "AddCert",
+      "Subjects"
+    ]
+  },
+  "43401.md": {
+    "src/encoding/csv/writer.go": [],
+    "src/encoding/csv/reader_test.go": [],
+    "src/encoding/csv/reader.go": [
+      "InputOffset",
+      "Read",
+      "ReadAll",
+      "readLine",
+      "readRecord"
+    ],
+    "src/encoding/csv/writer_test.go": []
+  },
+  "40728.md": {
+    "src/cmd/go/internal/modget/get.go": [
+      "runGet",
+      "updateTools",
+      "parseArgs",
+      "newResolver",
+      "(*resolver) checkAllowedOr",
+      "(*resolver) performLocalQueries",
+      "(*resolver) performToolQueries",
+      "(*resolver) resolve"
+    ]
+  },
+  "43993.md": {
+    "src/reflect/deepequal.go": [
+      "DeepEqual",
+      "deepValueEqual"
+    ]
+  },
+  "50770.md": {
+    "src/time/time_test.go": [
+      "TestSub",
+      "TestAddDate"
+    ],
+    "src/time/time.go": [
+      "After",
+      "Before",
+      "Equal",
+      "Compare"
+    ],
+    "src/runtime/time_test.go": [],
+    "src/runtime/time.go": [],
+    "lib/time/mkzip.go": []
+  },
+  "44221.md": {
+    "src/encoding/csv/writer.go": [],
+    "src/encoding/csv/reader_test.go": [
+      "TestRead",
+      "firstError",
+      "errorWithPosition",
+      "makePositions"
+    ],
+    "src/runtime/pprof/pprof_test.go": [],
+    "src/encoding/csv/reader.go": [
+      "FieldPos",
+      "Read",
+      "ParseError"
+    ],
+    "src/encoding/csv/writer_test.go": [],
+    "src/runtime/pprof/pprof.go": [],
+    "src/runtime/trace/trace.go": [],
+    "src/runtime/trace/trace_test.go": []
+  },
+  "44143.md": {
+    "src/context/context_test.go": [
+      "XTestParentFinishesChild",
+      "XTestChildFinishesFirst",
+      "XTestCancelRemoves",
+      "XTestCustomContextGoroutines"
+    ],
+    "src/context/context.go": [
+      "Background",
+      "TODO"
+    ]
+  },
+  "43931.md": {
+    "src/cmd/internal/objfile/objfile.go": [
+      "Open",
+      "Close",
+      "Entries",
+      "Symbols",
+      "PCLineTable",
+      "Text",
+      "GOARCH",
+      "LoadAddress",
+      "DWARF",
+      "Name"
+    ],
+    "src/cmd/internal/objabi/flag.go": [
+      "Flagparse",
+      "AddVersionFlag",
+      "IsBoolFlag",
+      "Get",
+      "String",
+      "Set"
+    ],
+    "src/cmd/internal/objfile/goobj.go": [
+      "openGoFile",
+      "goobjName",
+      "symbols",
+      "pcln",
+      "PCToLine",
+      "text",
+      "goarch",
+      "loadAddress",
+      "dwarf"
+    ],
+    "src/cmd/internal/objfile/macho.go": [],
+    "src/cmd/internal/objfile/xcoff.go": [
+      "openXcoff",
+      "symbols",
+      "pcln",
+      "text",
+      "findXCOFFSymbol",
+      "loadXCOFFTable",
+      "goarch",
+      "loadAddress",
+      "dwarf"
+    ],
+    "src/cmd/internal/objfile/pe.go": [],
+    "src/cmd/internal/objfile/elf.go": [
+      "openElf",
+      "symbols",
+      "pcln",
+      "text",
+      "goarch",
+      "loadAddress",
+      "dwarf",
+      "symbolData"
+    ],
+    "src/go/types/typeparam.go": [
+      "NewTypeParam",
+      "newTypeParam",
+      "Constraint",
+      "SetConstraint",
+      "Underlying",
+      "String",
+      "iface",
+      "is",
+      "typeset"
+    ],
+    "src/cmd/internal/objfile/plan9obj.go": [],
+    "src/cmd/internal/objabi/flag_test.go": []
+  },
+  "48294.md": {
+    "src/reflect/iter.go": [
+      "SetKey",
+      "SetValue",
+      "SetMapIndex"
+    ],
+    "src/runtime/map_test.go": [
+      "TestMapIterDeleteReplace"
+    ],
+    "src/reflect/value.go": [
+      "SetKey",
+      "SetValue",
+      "Set",
+      "SetMapIndex"
+    ],
+    "src/reflect/iter_test.go": []
+  },
+  "51428.md": {
+    "src/net/dial.go": [
+      "DialContext",
+      "Dial",
+      "DialTimeout",
+      "Dialer.Dial",
+      "Dialer.DialContext"
+    ],
+    "src/net/net.go": [
+      "canceledError",
+      "Is",
+      "(*OpError).Unwrap",
+      "(*OpError).Error"
+    ],
+    "src/syscall/net.go": [
+      "DialContext",
+      "errCanceled",
+      "errTimeout",
+      "Is",
+      "Unwrap"
+    ],
+    "src/context/context.go": [
+      "Err",
+      "Done",
+      "Err"
+    ],
+    "src/context/context_test.go": [
+      "XTestCancelRemoves"
+    ],
+    "src/net/net_test.go": [
+      "TestErrors"
+    ]
+  },
+  "52463.md": {
+    "src/go/ast/ast.go": [
+      "Object",
+      "Scope"
+    ],
+    "src/go/parser/parser.go": [
+      "parseIdent",
+      "parseIdentList",
+      "parseExprList",
+      "parseType",
+      "parseQualifiedIdent",
+      "parseTypeName",
+      "parseFieldDecl",
+      "parseParamDecl",
+      "parseParameters",
+      "parseFuncType",
+      "parseStmtList",
+      "parseBody",
+      "parseDecl",
+      "parseFile"
+    ],
+    "src/go/ast/scope.go": [
+      "NewObj",
+      "Lookup",
+      "Insert"
+    ],
+    "src/go/ast/walk.go": [
+      "Walk",
+      "Inspect"
+    ],
+    "src/go/ast/ast_test.go": [],
+    "src/go/ast/resolve.go": [
+      "resolve"
+    ],
+    "src/go/ast/import.go": [],
+    "src/go/ast/print.go": [],
+    "src/go/ast/filter.go": []
+  },
+  "51115.md": {
+    "src/io/io_test.go": [],
+    "src/net/http/request.go": [
+      "MaxBytesReader",
+      "maxBytesReader.Read",
+      "maxBytesReader.Close"
+    ],
+    "src/io/io.go": [
+      "LimitReader",
+      "Read"
+    ],
+    "src/net/http/http.go": [],
+    "src/net/http/response.go": []
+  },
+  "35567.md": {
+    "src/testing/testing_test.go": [
+      "TestBenchmarkRace",
+      "TestBenchmarkRaceBLoop",
+      "BenchmarkRacy",
+      "BenchmarkBLoopRacy",
+      "TestBenchmarkSubRace",
+      "BenchmarkSubRacy",
+      "TestBenchmarkBLoopIterationCorrect",
+      "TestBenchmarkBNIterationCorrect",
+      "BenchmarkBLoopPrint",
+      "BenchmarkBNPrint"
+    ],
+    "src/testing/testing.go": [
+      "InternalBenchmark",
+      "InternalExample",
+      "InternalTest",
+      "(*T) Run",
+      "(*T) Parallel"
+    ]
+  },
+  "40255.md": {
+    "src/syscall/ztypes_linux_386.go": [],
+    "src/runtime/defs_linux_arm.go": [],
+    "src/runtime/defs_openbsd_amd64.go": [],
+    "src/runtime/defs_linux.go": [],
+    "src/runtime/defs_solaris.go": [],
+    "src/runtime/defs_linux_ppc64le.go": [],
+    "src/runtime/defs_openbsd_386.go": [],
+    "src/runtime/defs_windows_amd64.go": [],
+    "src/runtime/defs1_solaris_amd64.go": [],
+    "src/runtime/defs_linux_ppc64.go": [],
+    "src/runtime/defs_linux_mipsx.go": [],
+    "src/runtime/signal_openbsd_386.go": [],
+    "src/runtime/defs_netbsd_amd64.go": [],
+    "src/syscall/syscall_linux_386.go": [],
+    "src/syscall/zerrors_linux_386.go": [],
+    "src/runtime/defs_linux_amd64.go": [],
+    "src/runtime/defs_windows_arm64.go": [],
+    "src/runtime/defs_linux_loong64.go": [],
+    "src/runtime/defs1_netbsd_386.go": [],
+    "src/runtime/defs_linux_s390x.go": [],
+    "src/runtime/defs_plan9_386.go": [],
+    "src/runtime/defs_solaris_amd64.go": [],
+    "src/syscall/syscall_openbsd_386.go": [],
+    "src/runtime/defs_windows_arm.go": [],
+    "src/runtime/defs_linux_arm64.go": [],
+    "src/runtime/defs_linux_386.go": [],
+    "src/runtime/defs_openbsd.go": [],
+    "src/syscall/zsysnum_linux_386.go": [],
+    "src/runtime/defs1_netbsd_arm.go": [],
+    "src/runtime/defs_plan9_arm.go": [],
+    "src/runtime/defs_netbsd.go": [],
+    "src/runtime/defs_openbsd_ppc64.go": [],
+    "src/runtime/signal_freebsd_386.go": [],
+    "src/syscall/syscall_freebsd_386.go": [],
+    "src/runtime/defs_openbsd_arm64.go": [],
+    "src/runtime/signal_386.go": [
+      "dumpregs",
+      "sigpc",
+      "sigsp",
+      "siglr",
+      "fault",
+      "preparePanic",
+      "pushCall"
+    ],
+    "src/runtime/signal_linux_386.go": [],
+    "src/runtime/defs_netbsd_arm.go": [],
+    "src/runtime/defs1_linux.go": [],
+    "src/runtime/defs_windows.go": [],
+    "src/runtime/defs_linux_riscv64.go": [],
+    "src/runtime/defs1_netbsd_arm64.go": [],
+    "src/runtime/defs_openbsd_arm.go": [],
+    "src/runtime/defs_openbsd_mips64.go": [],
+    "src/runtime/defs_linux_mips64x.go": [],
+    "src/runtime/signal_netbsd_386.go": [],
+    "src/runtime/defs_windows_386.go": [],
+    "src/syscall/types_windows_386.go": [],
+    "src/runtime/defs_netbsd_386.go": [],
+    "src/runtime/defs_openbsd_riscv64.go": [],
+    "src/runtime/defs1_netbsd_amd64.go": [],
+    "src/runtime/defs_plan9_amd64.go": []
+  },
+  "46648.md": {
+    "src/go/types/call.go": [],
+    "src/go/types/sizes.go": [
+      "Config",
+      "alignof",
+      "offsetsof",
+      "offsetof",
+      "sizeof"
+    ],
+    "src/go/types/example_test.go": [],
+    "src/go/types/alias.go": [
+      "NewAlias",
+      "Obj",
+      "String",
+      "Underlying",
+      "Origin",
+      "TypeParams",
+      "SetTypeParams",
+      "TypeArgs",
+      "Rhs",
+      "Unalias",
+      "unalias",
+      "asNamed",
+      "newAlias",
+      "newAliasInstance",
+      "cleanup"
+    ],
+    "src/go/types/gotype.go": [
+      "initParserMode",
+      "parse",
+      "checkPkgFiles"
+    ],
+    "src/go/types/termlist_test.go": [],
+    "src/go/types/map.go": [],
+    "src/go/types/recording.go": [],
+    "src/go/types/context_test.go": [],
+    "src/go/types/const.go": [],
+    "src/go/types/operand.go": [],
+    "src/go/types/pointer.go": [],
+    "src/go/types/typestring.go": [],
+    "src/go/types/main_test.go": [],
+    "src/go/types/infer.go": [],
+    "src/go/types/sizes_test.go": [],
+    "src/go/types/struct.go": [],
+    "src/go/types/generate_test.go": [],
+    "src/go/types/unify.go": [],
+    "src/go/types/lookup.go": [],
+    "src/go/types/check_test.go": [
+      "TestCheck",
+      "TestSpec",
+      "TestExamples"
+    ],
+    "src/go/types/exprstring_test.go": [],
+    "src/go/types/hilbert_test.go": [],
+    "src/go/types/builtins.go": [],
+    "src/go/types/stmt.go": [
+      "funcBody",
+      "stmt",
+      "stmtList",
+      "openScope",
+      "closeScope"
+    ],
+    "src/go/types/iter.go": [],
+    "src/go/types/sizeof_test.go": [],
+    "src/go/types/decl.go": [
+      "declare",
+      "walkDecls",
+      "walkDecl",
+      "constDecl",
+      "varDecl",
+      "typeDecl",
+      "funcDecl"
+    ],
+    "src/go/types/type.go": [
+      "Config",
+      "Check",
+      "TypeOf",
+      "Type",
+      "Func",
+      "Named",
+      "Interface",
+      "Var",
+      "Const",
+      "Package",
+      "Scope",
+      "New",
+      "Error",
+      "funcLiteral"
+    ],
+    "src/go/types/termlist.go": [],
+    "src/go/types/generate.go": [
+      "Config",
+      "SetGoVersion",
+      "GetGoVersion"
+    ],
+    "src/go/types/under.go": [],
+    "src/go/types/version.go": [
+      "asGoVersion",
+      "isValid",
+      "cmp",
+      "allowVersion",
+      "verifyVersionf"
+    ],
+    "src/go/types/tuple.go": [],
+    "src/go/types/self_test.go": [],
+    "src/go/types/eval_test.go": [
+      "TestCheckExpr"
+    ],
+    "src/go/types/resolver.go": [],
+    "src/go/types/return.go": [],
+    "src/go/types/index.go": [],
+    "src/go/types/slice.go": [],
+    "src/go/types/range.go": [],
+    "src/go/types/builtins_test.go": [],
+    "src/go/types/stdlib_test.go": [],
+    "src/go/types/selection.go": [],
+    "src/go/types/mono.go": [],
+    "src/go/types/initorder.go": [],
+    "src/go/types/gcsizes.go": [],
+    "src/go/types/methodset.go": [],
+    "src/go/types/badlinkname.go": [],
+    "src/go/types/array.go": [],
+    "src/go/types/expr.go": [
+      "updateExprType",
+      "updateExprVal",
+      "implicitTypeAndValue",
+      "comparison",
+      "matchTypes",
+      "genericExpr",
+      "exprWithHint",
+      "exprOrType"
+    ],
+    "src/go/types/errorcalls_test.go": [],
+    "src/go/types/context.go": [],
+    "src/go/types/assignments.go": [
+      "assignment",
+      "initConst",
+      "initVar",
+      "lhsVar",
+      "assignVar",
+      "typesSummary",
+      "assignError",
+      "returnError",
+      "initVars",
+      "assignVars",
+      "shortVarDecl"
+    ],
+    "src/go/types/typelists.go": [],
+    "src/go/types/universe.go": [],
+    "src/go/types/validtype.go": [
+      "validType",
+      "validType0"
+    ],
+    "src/go/types/resolver_test.go": [],
+    "src/go/types/typeterm.go": [],
+    "src/go/types/typeparam.go": [],
+    "src/go/types/labels.go": [],
+    "src/go/types/union.go": [],
+    "src/go/types/instantiate_test.go": [],
+    "src/go/types/scope2_test.go": [],
+    "src/go/types/typeset_test.go": [],
+    "src/go/types/eval.go": [
+      "Eval",
+      "CheckExpr"
+    ],
+    "src/go/types/literals.go": [
+      "langCompat",
+      "basicLit",
+      "funcLit",
+      "compositeLit",
+      "indexedElts"
+    ],
+    "src/go/types/subst.go": [],
+    "src/go/types/format.go": [],
+    "src/go/types/gccgosizes.go": [],
+    "src/go/types/lookup_test.go": [],
+    "src/go/types/token_test.go": [],
+    "src/go/types/signature.go": [
+      "NewSignature",
+      "NewSignatureType",
+      "Params",
+      "Results",
+      "Recv",
+      "TypeParams",
+      "RecvTypeParams",
+      "Variadic",
+      "Underlying",
+      "String"
+    ],
+    "src/go/types/commentMap_test.go": [],
+    "src/go/types/issues_test.go": [],
+    "src/go/types/scope.go": [],
+    "src/go/types/typeterm_test.go": [],
+    "src/go/types/instantiate.go": [
+      "Instantiate",
+      "instance",
+      "validateTArgLen",
+      "verify",
+      "implements"
+    ],
+    "src/go/types/basic.go": [],
+    "src/go/types/typestring_test.go": [],
+    "src/go/types/object_test.go": [],
+    "src/go/types/check.go": [
+      "NewChecker",
+      "checkFiles",
+      "Files"
+    ],
+    "src/go/types/util_test.go": [],
+    "src/go/types/typexpr.go": [
+      "typ",
+      "varType",
+      "validVarType",
+      "definedType",
+      "genericType",
+      "typInternal",
+      "instantiatedType"
+    ],
+    "src/go/types/scope2.go": [],
+    "src/go/types/typeset.go": [],
+    "src/go/types/predicates.go": [
+      "isGeneric",
+      "isTypeParam",
+      "isTyped",
+      "isUntyped"
+    ],
+    "src/go/types/util.go": [],
+    "src/go/types/exprstring.go": [],
+    "src/go/types/api_test.go": [
+      "typecheck",
+      "mustTypecheck",
+      "TestTooNew",
+      "TestVersionIssue69477"
+    ],
+    "src/go/types/interface.go": [
+      "NewInterface",
+      "NewInterfaceType",
+      "interfaceType"
+    ],
+    "src/go/types/named_test.go": [],
+    "src/go/types/methodset_test.go": [
+      "TestNewMethodSet",
+      "TestNewMethodSet_RecursiveGeneric",
+      "TestIssue60634"
+    ],
+    "src/go/types/errors.go": [
+      "error",
+      "errorf",
+      "softErrorf",
+      "versionErrorf"
+    ],
+    "src/go/types/errsupport.go": [],
+    "src/go/types/package.go": [
+      "GoVersion"
+    ],
+    "src/go/types/api.go": [
+      "Check"
+    ],
+    "src/go/types/objset.go": [],
+    "src/go/types/named.go": [
+      "NewNamed",
+      "newNamed",
+      "newNamedInstance"
+    ],
+    "src/go/types/mono_test.go": [],
+    "src/go/types/conversions.go": [],
+    "src/go/types/chan.go": [],
+    "src/go/types/object.go": [
+      "NewPkgName",
+      "NewConst",
+      "NewTypeName",
+      "NewVar",
+      "NewParam",
+      "NewField",
+      "NewFunc"
+    ],
+    "src/go/types/errors_test.go": []
+  },
+  "53346.md": {
+    "src/encoding/xml/xml.go": [
+      "Flush",
+      "EncodeToken",
+      "Close"
+    ],
+    "src/encoding/xml/marshal_test.go": [
+      "TestEncodeToken",
+      "TestClose"
+    ],
+    "src/encoding/xml/marshal.go": [
+      "NewEncoder",
+      "EncodeToken",
+      "Flush",
+      "Close"
+    ]
+  },
+  "40127.md": {
+    "src/encoding/json/internal/jsonwire/encode_test.go": [],
+    "src/encoding/json/jsontext/encode_test.go": [
+      "TestEncoder",
+      "testEncoder",
+      "TestFaultyEncoder",
+      "testFaultyEncoder",
+      "TestEncoderErrors",
+      "testEncoderErrors"
+    ],
+    "src/encoding/json/jsontext/encode.go": [
+      "NewEncoder",
+      "WriteToken",
+      "WriteValue"
+    ],
+    "src/encoding/json/internal/jsonwire/wire_test.go": [],
+    "src/encoding/json/jsontext/token.go": [
+      "Bool",
+      "String",
+      "Float",
+      "Int",
+      "Uint",
+      "Token.Clone",
+      "Token.Bool",
+      "Token.String",
+      "Token.Float",
+      "Token.Int",
+      "Token.Uint",
+      "Token.Kind"
+    ],
+    "src/encoding/json/internal/jsontest/testdata.go": [
+      "MarshalJSON",
+      "UnmarshalJSON"
+    ],
+    "src/encoding/json/internal/jsontest/testcase.go": [],
+    "src/encoding/json/internal/jsonwire/encode.go": [
+      "AppendFloat",
+      "ReformatNumber"
+    ],
+    "src/encoding/json/internal/jsonwire/decode_test.go": [],
+    "src/encoding/json/internal/jsonwire/decode.go": [
+      "ConsumeNumber",
+      "ConsumeSimpleNumber",
+      "ConsumeString",
+      "ConsumeLiteral"
+    ],
+    "src/encoding/json/internal/jsonopts/options.go": [],
+    "src/encoding/json/jsontext/token_test.go": [],
+    "src/encoding/json/internal/jsonwire/wire.go": [],
+    "src/encoding/json/encode.go": [
+      "newEncodeState",
+      "(*encodeState) marshal",
+      "(*encodeState) error",
+      "(*encodeState) reflectValue",
+      "(*encodeState) ClosingToken",
+      "(*encodeState) EncodeToken"
+    ],
+    "src/encoding/json/encode_test.go": [
+      "MarshalJSON",
+      "UnmarshalJSON",
+      "MarshalText",
+      "EncodeToken",
+      "ClosingToken"
+    ],
+    "src/encoding/json/internal/jsonflags/flags.go": []
+  },
+  "51082.md": {
+    "src/go/doc/doc.go": [
+      "New",
+      "NewFromFiles",
+      "Parser",
+      "Printer",
+      "HTML",
+      "Markdown",
+      "Text"
+    ],
+    "src/runtime/pprof/pprof_test.go": [
+      "TestCPUProfile",
+      "TestCPUProfileMultithreaded",
+      "TestCPUProfileInlining",
+      "TestBlockProfile",
+      "TestMutexProfile",
+      "TestGoroutineProfileConcurrency",
+      "TestGoroutineProfileCoro",
+      "TestCPUProfileLabel",
+      "TestLabelRace",
+      "TestGoroutineProfileLabelRace"
+    ],
+    "src/strconv/strconv_test.go": [],
+    "src/sync/atomic/doc.go": [],
+    "src/cmd/internal/objfile/goobj.go": [],
+    "src/cmd/internal/objfile/plan9obj.go": [],
+    "src/cmd/internal/objfile/xcoff.go": [],
+    "src/runtime/trace/trace.go": [],
+    "src/cmd/internal/objfile/macho.go": [],
+    "src/go/doc/comment/markdown.go": [
+      "Markdown",
+      "block",
+      "text",
+      "rawText",
+      "escape"
+    ],
+    "src/strings/strings.go": [],
+    "src/cmd/internal/objfile/pe.go": [],
+    "src/sync/cond.go": [],
+    "src/go/doc/comment/print.go": [
+      "headingLevel",
+      "headingID",
+      "docLinkURL",
+      "DefaultURL",
+      "DefaultID",
+      "Comment"
+    ],
+    "src/cmd/internal/objfile/elf.go": [],
+    "src/sync/cond_test.go": [],
+    "src/strconv/doc.go": [],
+    "src/sync/atomic/atomic_test.go": [],
+    "src/net/http/doc.go": [],
+    "src/go/doc/comment/parse.go": [
+      "Parse",
+      "heading",
+      "list",
+      "docLink",
+      "parseLinkedText",
+      "parseText"
+    ],
+    "src/go/doc/comment/doc.go": [
+      "Parse",
+      "Format",
+      "DocLink",
+      "NewComment"
+    ],
+    "src/runtime/pprof/pprof.go": [
+      "WriteHeapProfile",
+      "writeHeap",
+      "writeAlloc",
+      "writeGoroutine",
+      "writeRuntimeProfile"
+    ],
+    "src/runtime/trace/trace_test.go": [],
+    "src/strings/strings_test.go": [],
+    "src/go/printer/printer.go": [
+      "writeComment",
+      "writeCommentSuffix",
+      "writeCommentPrefix",
+      "commentsHaveNewline",
+      "nextComment",
+      "getDoc"
+    ]
+  },
+  "35833.md": {
+    "src/math/big/int.go": [
+      "Bytes",
+      "FillBytes",
+      "SetBytes"
+    ],
+    "src/math/big/int_test.go": [
+      "TestFillBytes",
+      "Bytes",
+      "FillBytes"
+    ]
+  },
+  "45460.md": {
+    "src/net/http/transport.go": [
+      "ProxyFromEnvironment",
+      "ProxyURL",
+      "connectMethodForRequest",
+      "proxyAuth",
+      "roundTrip"
+    ],
+    "src/net/http/request.go": [
+      "NewRequest",
+      "NewRequestWithContext",
+      "ReadRequest",
+      "WriteProxy"
+    ]
+  },
+  "42387.md": {
+    "src/os/file.go": [
+      "ReadDir",
+      "Stat",
+      "Lstat"
+    ],
+    "src/io/fs/readdir.go": [
+      "ReadDir",
+      "FileInfoToDirEntry",
+      "IsDir",
+      "Type",
+      "Info",
+      "Name",
+      "String"
+    ],
+    "src/os/stat.go": [
+      "Stat",
+      "Lstat"
+    ],
+    "src/io/fs/fs.go": [
+      "FileInfoToDirEntry"
+    ],
+    "src/io/fs/stat.go": [
+      "Stat"
+    ],
+    "src/os/dir.go": [
+      "ReadDir",
+      "Readdir",
+      "Readdirnames"
+    ]
+  },
+  "45454.md": {
+    "src/cmd/link/internal/ld/testdata/deadcode/reflectcall.go": [],
+    "src/cmd/link/internal/amd64/asm.go": [],
+    "src/runtime/defs_linux_ppc64.go": [],
+    "src/runtime/defs_netbsd_amd64.go": [],
+    "src/runtime/defs_linux_amd64.go": [],
+    "src/cmd/internal/objabi/flag.go": [
+      "Flagparse",
+      "expandArgs"
+    ],
+    "src/runtime/defs_darwin_arm64.go": [],
+    "src/cmd/link/internal/ld/testdata/deadcode/ifacemethod5.go": [],
+    "src/cmd/dist/buildtag_test.go": [
+      "TestBuildParser"
+    ],
+    "src/runtime/defs_linux_ppc64le.go": [],
+    "src/cmd/internal/telemetry/telemetry_bootstrap.go": [],
+    "src/cmd/internal/objfile/goobj.go": [
+      "goarch",
+      "loadAddress"
+    ],
+    "src/cmd/internal/objfile/macho.go": [
+      "goarch"
+    ],
+    "src/runtime/defs_solaris_amd64.go": [],
+    "src/runtime/defs_windows_arm.go": [],
+    "src/runtime/defs_linux_arm64.go": [],
+    "src/go/build/build_test.go": [
+      "TestAllTags",
+      "TestDirectives"
+    ],
+    "src/cmd/internal/sys/arch.go": [
+      "InFamily"
+    ],
+    "src/runtime/defs_netbsd_arm.go": [],
+    "src/cmd/link/internal/s390x/asm.go": [],
+    "src/cmd/dist/buildtag.go": [
+      "validtag"
+    ],
+    "src/cmd/internal/objabi/util.go": [],
+    "src/cmd/link/internal/ld/testdata/deadcode/ifacemethod4.go": [],
+    "src/cmd/link/internal/ld/testdata/deadcode/typedesc.go": [],
+    "src/cmd/link/internal/arm/asm.go": [],
+    "src/cmd/link/internal/ld/testdata/deadcode/ifacemethod.go": [],
+    "src/runtime/defs_linux_riscv64.go": [],
+    "src/runtime/defs_freebsd_arm.go": [],
+    "src/go/build/build.go": [
+      "matchTag",
+      "goodOSArchFile"
+    ],
+    "src/runtime/defs_openbsd_amd64.go": [],
+    "src/cmd/link/internal/ld/testdata/deadcode/ifacemethod2.go": [],
+    "src/runtime/defs_windows_amd64.go": [],
+    "src/cmd/link/internal/ld/testdata/deadcode/globalmap.go": [],
+    "src/cmd/internal/telemetry/telemetry.go": [],
+    "src/cmd/link/internal/arm64/asm.go": [],
+    "src/cmd/internal/objfile/xcoff.go": [
+      "goarch"
+    ],
+    "src/runtime/defs_freebsd_amd64.go": [],
+    "src/cmd/link/internal/ld/testdata/deadcode/ifacemethod6.go": [],
+    "src/cmd/internal/objfile/pe.go": [
+      "goarch"
+    ],
+    "src/cmd/internal/objfile/elf.go": [
+      "goarch"
+    ],
+    "src/runtime/defs_openbsd_arm64.go": [],
+    "src/runtime/defs_freebsd_arm64.go": [],
+    "src/runtime/defs_openbsd_arm.go": [],
+    "src/runtime/defs_plan9_amd64.go": [],
+    "src/runtime/defs_linux_arm.go": [],
+    "src/cmd/link/internal/ppc64/asm.go": [],
+    "src/cmd/link/internal/x86/asm.go": [],
+    "src/runtime/defs_windows_arm64.go": [],
+    "src/cmd/internal/objabi/flag_test.go": [],
+    "src/cmd/internal/sys/args.go": [],
+    "src/cmd/link/internal/riscv64/asm.go": [],
+    "src/cmd/link/internal/ld/testdata/deadcode/ifacemethod3.go": [],
+    "src/runtime/defs_darwin_amd64.go": [],
+    "src/runtime/defs_plan9_arm.go": [],
+    "src/cmd/link/internal/ld/testdata/deadcode/structof_funcof.go": []
+  },
+  "50436.md": {
+    "src/internal/testenv/testenv.go": [],
+    "src/os/exec_windows.go": [
+      "wait",
+      "signal"
+    ],
+    "src/os/exec_windows_test.go": [],
+    "src/os/exec_linux.go": [],
+    "src/os/exec_unix_test.go": [],
+    "src/os/exec/exec.go": [
+      "Command",
+      "CommandContext",
+      "Start",
+      "Wait",
+      "Run",
+      "Output",
+      "CombinedOutput",
+      "StdinPipe",
+      "StdoutPipe",
+      "StderrPipe"
+    ],
+    "src/cmd/go/script_test.go": [],
+    "src/os/exec/exec_test.go": [
+      "TestContext",
+      "TestContextCancel",
+      "TestWaitInterrupt"
+    ],
+    "src/os/exec_unix.go": [
+      "wait",
+      "signal"
+    ]
+  },
+  "44167.md": {
+    "src/runtime/mgcpacer_test.go": [
+      "TestGcPacer",
+      "goalRatio",
+      "runway",
+      "triggerRatio",
+      "TestIdleMarkWorkerCount"
+    ],
+    "src/runtime/proc.go": [
+      "forcegchelper",
+      "stopTheWorldGC",
+      "startTheWorldGC",
+      "gcstopm",
+      "gcEffectiveGrowthRatio",
+      "gcSetTriggerRatio",
+      "setGCPercent",
+      "gcControllerState"
+    ],
+    "src/runtime/mgcpacer.go": [
+      "init",
+      "startCycle",
+      "revise",
+      "endCycle",
+      "addScannableStack",
+      "addGlobals",
+      "heapGoal",
+      "memoryLimitHeapGoal",
+      "trigger",
+      "setGCPercent",
+      "setMemoryLimit"
+    ],
+    "src/runtime/debug/garbage_test.go": [
+      "TestSetGCPercent"
+    ],
+    "src/runtime/debug/garbage.go": [
+      "SetGCPercent",
+      "SetMemoryLimit"
+    ],
+    "src/runtime/mgc.go": [
+      "GC",
+      "gcStart",
+      "gcMark",
+      "gcSweep",
+      "gcResetMarkState"
+    ]
+  },
+  "39178.md": {
+    "src/net/http/client.go": [
+      "Get",
+      "(*Client) Get",
+      "Do",
+      "(*Client) Do"
+    ],
+    "src/net/http/transport.go": [
+      "roundTrip",
+      "dial",
+      "setError",
+      "mapRoundTripError"
+    ],
+    "src/net/lookup.go": [
+      "LookupIPAddr",
+      "lookupIPAddr",
+      "LookupIP",
+      "LookupHost",
+      "LookupCNAME",
+      "LookupMX",
+      "LookupNS",
+      "LookupTXT",
+      "LookupAddr",
+      "dial"
+    ]
+  },
+  "46287.md": {
+    "src/crypto/x509/x509.go": [
+      "CheckSignatureFrom",
+      "CheckSignature",
+      "CheckCRLSignature",
+      "CreateCertificate",
+      "CreateCertificateRequest",
+      "CreateRevocationList",
+      "SystemCertPool"
+    ],
+    "src/crypto/x509/verify_test.go": [
+      "TestSystemVerify",
+      "TestSystemRootsError",
+      "TestNameConstraints",
+      "TestEKUEnforcement",
+      "TestVerifyEKURootAsLeaf"
+    ],
+    "src/crypto/x509/internal/macos/corefoundation.go": [],
+    "src/crypto/x509/cert_pool_test.go": [
+      "TestCertPoolEqual"
+    ],
+    "src/crypto/x509/verify.go": [
+      "Verify",
+      "VerifyHostname",
+      "buildChains"
+    ],
+    "src/crypto/x509/example_test.go": [
+      "ExampleCertificate_Verify",
+      "ExampleParsePKIXPublicKey"
+    ],
+    "src/crypto/x509/x509_test.go": [
+      "TestSystemCertPool",
+      "TestVerifyCertificateWithDSASignature",
+      "TestMatchHostnames",
+      "TestMatchIP",
+      "TestEmptyNameConstraints",
+      "TestCertificateEqualOnNil"
+    ],
+    "src/crypto/x509/cert_pool.go": [
+      "SystemCertPool",
+      "Subjects",
+      "Equal",
+      "AddCertWithConstraint"
+    ],
+    "src/crypto/x509/internal/macos/security.go": [
+      "SecTrustCreateWithCertificates",
+      "SecTrustEvaluate",
+      "SecTrustEvaluateWithError",
+      "SecTrustCopyCertificateChain"
+    ]
+  },
+  "46293.md": {
+    "src/reflect/iter.go": [
+      "MapIter",
+      "Reset"
+    ],
+    "src/runtime/map_test.go": [
+      "TestMapIterDeleteReplace",
+      "TestMapNanGrowIterator",
+      "TestMapSparseIterOrder"
+    ],
+    "src/reflect/map_swiss.go": [
+      "MapIter.Reset",
+      "MapIter.Next",
+      "MapIter.Key",
+      "MapIter.Value",
+      "Value.MapRange"
+    ],
+    "test/map.go": [],
+    "src/reflect/map_noswiss.go": [
+      "MapIter.Reset",
+      "MapRange",
+      "Next",
+      "Key",
+      "Value"
+    ]
+  },
+  "42026.md": {
+    "src/os/file_test.go": [],
+    "src/io/ioutil/tempfile.go": [
+      "TempFile",
+      "TempDir"
+    ],
+    "src/os/file.go": [
+      "ReadFile",
+      "WriteFile",
+      "Mkdir",
+      "Create"
+    ],
+    "src/os/tempfile_test.go": [
+      "TestCreateTemp",
+      "TestCreateTempPattern",
+      "TestCreateTempBadPattern",
+      "TestMkdirTemp",
+      "TestMkdirTempBadDir",
+      "TestMkdirTempBadPattern"
+    ],
+    "src/io/fs/readdir.go": [
+      "ReadDir",
+      "FileInfoToDirEntry"
+    ],
+    "src/os/os_test.go": [
+      "TestFileReadDir",
+      "TestFileReaddir",
+      "testReadDir",
+      "testReaddir",
+      "testReaddirnames",
+      "TestFileReaddirnames"
+    ],
+    "src/io/ioutil/ioutil.go": [
+      "ReadFile",
+      "WriteFile",
+      "ReadDir"
+    ],
+    "src/os/exec/exec.go": [],
+    "src/os/exec/exec_test.go": [],
+    "src/os/tempfile.go": [
+      "CreateTemp",
+      "MkdirTemp"
+    ],
+    "src/io/fs/readfile.go": [
+      "ReadFile"
+    ],
+    "src/io/fs/stat.go": []
+  },
+  "45435.md": {
+    "src/net/http/h2_bundle.go": [
+      "CanTakeNewRequest",
+      "ReserveNewRequest",
+      "addConnIfNeeded",
+      "addConnLocked",
+      "getClientConn",
+      "getStartDialLocked",
+      "closeIdleConnections",
+      "processFrame",
+      "processResetStream",
+      "processWindowUpdate",
+      "processSettings",
+      "processGoAway",
+      "processData",
+      "processHeaders",
+      "processPing",
+      "processPriority",
+      "newStream",
+      "newWriterAndRequest",
+      "newResponseWriter",
+      "writeFrame",
+      "writeHeaders",
+      "writeData",
+      "writeDataPadded",
+      "writePing",
+      "writeGoAway",
+      "writeSettings",
+      "writeRSTStream",
+      "writeContinuation",
+      "writePushPromise"
+    ],
+    "src/sync/rwmutex_test.go": [
+      "TestRWMutex",
+      "HammerRWMutex"
+    ],
+    "src/sync/mutex_test.go": [
+      "TestMutex",
+      "TestMutexMisuse",
+      "TestMutexFairness"
+    ],
+    "src/sync/rwmutex.go": [
+      "TryLock",
+      "TryRLock"
+    ],
+    "src/sync/mutex.go": [
+      "Lock",
+      "TryLock",
+      "Unlock"
+    ]
+  },
+  "48187.md": {
+    "src/debug/buildinfo/buildinfo_test.go": [
+      "TestReadFile",
+      "TestNotGo",
+      "TestIssue54968"
+    ],
+    "src/cmd/link/internal/ld/ar.go": [
+      "hostArchive",
+      "readArmap"
+    ],
+    "src/go/version/version.go": [
+      "stripGo",
+      "Lang",
+      "Compare",
+      "IsValid"
+    ],
+    "src/debug/buildinfo/buildinfo.go": [
+      "ReadFile",
+      "Read",
+      "readRawBuildInfo",
+      "readData",
+      "readDataInto",
+      "(*elfExe) DataReader",
+      "(*peExe) DataReader",
+      "(*machoExe) DataReader",
+      "(*xcoffExe) DataReader",
+      "(*plan9objExe) DataReader"
+    ],
+    "src/cmd/go/internal/version/version.go": [
+      "runVersion",
+      "isGoBinaryCandidate",
+      "scanFile"
+    ]
+  },
+  "38627.md": {
+    "src/text/template/parse/lex.go": [
+      "lex",
+      "lexText",
+      "lexComment",
+      "lexLeftDelim",
+      "lexRightDelim",
+      "lexInsideAction",
+      "lexIdentifier",
+      "lexField",
+      "lexVariable",
+      "lexFieldOrVariable"
+    ],
+    "src/html/template/template_test.go": [
+      "mustParse",
+      "mustNotParse",
+      "mustExecute"
+    ],
+    "src/text/template/parse/parse.go": [
+      "Parse",
+      "hasFunction",
+      "parse",
+      "checkPipeline"
+    ],
+    "src/text/template/parse/lex_test.go": [
+      "TestLex",
+      "TestDelims",
+      "TestDelimsAlphaNumeric",
+      "TestDelimsAndMarkers",
+      "TestPos",
+      "parseLexer"
+    ],
+    "src/html/template/template.go": [
+      "Parse",
+      "ParseFiles",
+      "ParseGlob",
+      "ParseFS",
+      "Funcs",
+      "Option"
+    ],
+    "src/text/template/parse/parse_test.go": [
+      "TestSkipFuncCheck",
+      "TestParseWithComments",
+      "TestParse"
+    ]
+  },
+  "41260.md": {
+    "src/os/env_test.go": [
+      "TestUnsetenv",
+      "TestClearenv",
+      "TestLookupEnv"
+    ],
+    "src/os/exec_test.go": [],
+    "src/testing/testing_test.go": [
+      "TestSetenv",
+      "TestSetenvWithParallelAfter",
+      "TestSetenvWithParallelBefore",
+      "TestSetenvWithParallelParentBefore",
+      "TestSetenvWithParallelGrandParentBefore",
+      "tSetenv"
+    ],
+    "src/testing/testing.go": [
+      "Setenv",
+      "Cleanup"
+    ]
+  },
+  "50429.md": {
+    "src/go/ast/ast.go": [
+      "RangeStmt",
+      "Pos",
+      "End"
+    ],
+    "src/go/ast/ast_test.go": []
+  },
+  "53573.md": {
+    "src/crypto/x509/x509.go": [
+      "CreateRevocationList",
+      "ParseCRL",
+      "ParseDERCRL",
+      "(*RevocationList) CheckSignatureFrom"
+    ],
+    "src/crypto/x509/pkix/pkix.go": []
+  },
+  "46059.md": {
+    "src/net/url/url_test.go": [
+      "TestParse",
+      "TestURLString",
+      "TestURLHostnameAndPort"
+    ],
+    "src/net/url/url.go": [
+      "Parse",
+      "String",
+      "Hostname",
+      "OmitHost"
+    ]
+  },
+  "42681.md": {
+    "src/runtime/runtime_test.go": [],
+    "src/runtime/defs_darwin.go": [],
+    "src/runtime/defs_darwin_amd64.go": [],
+    "src/runtime/race.go": [],
+    "src/runtime/defs_darwin_arm64.go": [],
+    "src/cmd/internal/objabi/util.go": [
+      "Fieldtrack_enabled",
+      "Preemptibleloops_enabled",
+      "Staticlockranking_enabled",
+      "Regabi_enabled"
+    ],
+    "src/runtime/runtime.go": [
+      "godebug_setUpdate",
+      "godebug_setNewIncNonDefault",
+      "godebugNotify"
+    ]
+  },
+  "40592.md": {
+    "src/reflect/type.go": [
+      "PointerTo",
+      "ptrTo",
+      "Elem",
+      "Field",
+      "FieldByIndex",
+      "FieldByName",
+      "FieldByNameFunc",
+      "NumField",
+      "Addr"
+    ],
+    "src/reflect/value.go": [
+      "Pointer",
+      "UnsafeAddr",
+      "UnsafePointer",
+      "Addr"
+    ]
+  },
+  "51644.md": {
+    "src/encoding/binary/varint.go": [
+      "AppendUvarint",
+      "AppendVarint"
+    ],
+    "src/encoding/binary/varint_test.go": [
+      "TestVarint",
+      "TestUvarint",
+      "testVarint",
+      "testUvarint",
+      "BenchmarkPutUvarint32",
+      "BenchmarkPutUvarint64"
+    ],
+    "src/encoding/binary/binary_test.go": [
+      "BenchmarkAppendUint64",
+      "BenchmarkAppendUint32",
+      "BenchmarkAppendInts"
+    ],
+    "src/encoding/binary/binary.go": [
+      "AppendUint32"
+    ]
+  },
+  "45628.md": {
+    "src/encoding/xml/xml.go": [
+      "NewDecoder",
+      "InputOffset",
+      "InputPos",
+      "Token"
+    ],
+    "src/encoding/xml/xml_test.go": [
+      "TestInputLinePos",
+      "TestSyntaxErrorLineNum"
+    ],
+    "src/runtime/pprof/pprof_test.go": [],
+    "src/runtime/pprof/pprof.go": []
+  },
+  "46746.md": {
+    "src/reflect/value.go": [
+      "Convert",
+      "CanConvert",
+      "Comparable",
+      "Equal"
+    ]
+  },
+  "44940.md": {
+    "src/unicode/utf16/utf16.go": [
+      "RuneLen"
+    ],
+    "src/unicode/utf16/utf16_test.go": [
+      "TestRuneLen"
+    ]
+  },
+  "41066.md": {
+    "src/crypto/tls/defaults.go": [],
+    "src/crypto/tls/alert.go": [],
+    "src/crypto/tls/tls.go": [
+      "Dial",
+      "DialWithDialer",
+      "DialContext"
+    ],
+    "src/net/net.go": [
+      "Close",
+      "Error",
+      "Is"
+    ],
+    "src/crypto/tls/auth.go": [],
+    "src/crypto/tls/handshake_server.go": [],
+    "src/crypto/tls/conn.go": [
+      "Close",
+      "CloseWrite",
+      "handshakeContext",
+      "Handshake",
+      "Read",
+      "write",
+      "writeRecordLocked",
+      "writeHandshakeRecord",
+      "writeChangeCipherRecord",
+      "readRecord",
+      "readHandshake",
+      "readRecordOrCCS",
+      "retryReadRecord"
+    ],
+    "src/crypto/tls/handshake_client.go": [],
+    "src/crypto/tls/cipher_suites.go": [],
+    "src/crypto/tls/common.go": [
+      "errClosed"
+    ],
+    "src/net/http/http.go": [],
+    "src/crypto/tls/cache.go": []
+  },
+  "41184.md": {
+    "src/cmd/dist/buildtag_test.go": [
+      "TestBuildParser"
+    ],
+    "src/go/build/build.go": [
+      "isGoBuildComment",
+      "shouldBuild",
+      "matchTag"
+    ],
+    "src/runtime/defs_linux.go": [],
+    "src/runtime/defs_windows_amd64.go": [],
+    "src/cmd/fix/buildtag.go": [
+      "buildtag"
+    ],
+    "src/go/build/constraint/expr.go": [
+      "Parse",
+      "IsGoBuild",
+      "splitGoBuild",
+      "parseExpr",
+      "IsPlusBuild",
+      "splitPlusBuild",
+      "parsePlusBuildExpr"
+    ],
+    "src/runtime/defs_linux_amd64.go": [],
+    "src/runtime/defs_windows_arm64.go": [],
+    "src/go/build/constraint/expr_test.go": [
+      "TestParsePlusBuildExpr",
+      "TestPlusBuildLines"
+    ],
+    "src/runtime/defs_linux_arm64.go": [],
+    "src/go/build/constraint/vers_test.go": [
+      "TestGoVersion"
+    ],
+    "src/runtime/defs_darwin.go": [],
+    "src/runtime/defs_darwin_amd64.go": [],
+    "src/go/build/build_test.go": [
+      "TestShouldBuild",
+      "TestAllTags",
+      "TestDirectives"
+    ],
+    "src/runtime/race.go": [],
+    "src/cmd/fix/buildtag_test.go": [],
+    "src/runtime/defs_windows.go": [],
+    "src/runtime/defs_darwin_arm64.go": [],
+    "src/cmd/dist/buildtag.go": [
+      "validtag",
+      "matchexpr",
+      "parse",
+      "not",
+      "paren",
+      "next"
+    ],
+    "src/go/build/constraint/vers.go": [
+      "GoVersion",
+      "minVersion",
+      "andVersion",
+      "orVersion"
+    ]
+  },
+  "48866.md": {
+    "src/mime/mediatype_test.go": [
+      "TestParseMediaType",
+      "TestParseMediaTypeBogus"
+    ],
+    "src/net/http/http.go": [],
+    "src/mime/mediatype.go": [
+      "ParseMediaType",
+      "consumeMediaParam"
+    ],
+    "src/net/http/http_test.go": []
+  },
+  "53466.md": {
+    "src/internal/goarch/goarch_riscv64.go": [
+      "init",
+      "Arch",
+      "ArchType",
+      "IsLittleEndian",
+      "IsBigEndian"
+    ],
+    "src/internal/goos/zgoos_freebsd.go": [],
+    "src/runtime/defs_freebsd_riscv64.go": [
+      "setNsec",
+      "set_usec"
+    ],
+    "src/runtime/os_freebsd_riscv64.go": [
+      "osArchInit"
+    ],
+    "src/runtime/vdso_freebsd_riscv64.go": [
+      "getCntxct",
+      "getTimecounter"
+    ],
+    "src/syscall/zerrors_freebsd_riscv64.go": [],
+    "src/os/stat_freebsd.go": [
+      "fillFileStatFromSys",
+      "atime"
+    ],
+    "src/runtime/cgo/freebsd.go": [],
+    "src/syscall/zsyscall_freebsd_riscv64.go": [
+      "getgroups",
+      "setgroups",
+      "wait4",
+      "accept",
+      "bind",
+      "connect",
+      "socket",
+      "getsockopt",
+      "setsockopt",
+      "getpeername",
+      "getsockname",
+      "Shutdown",
+      "socketpair",
+      "recvfrom",
+      "sendto",
+      "recvmsg",
+      "sendmsg",
+      "kevent",
+      "utimes",
+      "futimes",
+      "fcntl",
+      "fcntlPtr",
+      "ioctl",
+      "ioctlPtr",
+      "pipe2",
+      "Access",
+      "Chdir",
+      "Chflags",
+      "Chmod",
+      "Chown",
+      "Chroot",
+      "Close",
+      "Dup",
+      "Dup2",
+      "Fchdir",
+      "Fchflags",
+      "Fchmod",
+      "Fchown",
+      "Flock",
+      "Fpathconf",
+      "Fstat",
+      "Fstatat",
+      "Fstatfs",
+      "Fsync",
+      "Ftruncate",
+      "getdirentries",
+      "Getdtablesize",
+      "Getegid",
+      "Geteuid",
+      "Getgid",
+      "Getpgid",
+      "Getpgrp",
+      "Getpid",
+      "Getppid",
+      "Getpriority",
+      "Getrlimit",
+      "Getrusage",
+      "Getsid",
+      "Gettimeofday",
+      "Getuid",
+      "Issetugid",
+      "Kill",
+      "Kqueue",
+      "Lchown",
+      "Link",
+      "Listen",
+      "Mkdir",
+      "Mkfifo",
+      "mknodat",
+      "Nanosleep",
+      "Open",
+      "Pathconf",
+      "pread",
+      "pwrite",
+      "read",
+      "Readlink",
+      "Rename",
+      "Revoke",
+      "Rmdir",
+      "Seek",
+      "Select",
+      "Setegid",
+      "Seteuid",
+      "Setgid",
+      "Setlogin",
+      "Setpgid",
+      "Setpriority",
+      "Setregid",
+      "Setreuid",
+      "setrlimit",
+      "Setsid",
+      "Settimeofday",
+      "Setuid",
+      "Statfs",
+      "Symlink",
+      "Sync",
+      "Truncate",
+      "Umask",
+      "Undelete",
+      "Unlink",
+      "Unmount",
+      "write",
+      "mmap",
+      "munmap",
+      "readlen",
+      "accept4",
+      "utimensat",
+      "getcwd",
+      "sysctl"
+    ],
+    "src/os/dirent_freebsd.go": [
+      "direntIno",
+      "direntReclen",
+      "direntNamlen",
+      "direntType"
+    ],
+    "src/syscall/syscall_freebsd_riscv64.go": [
+      "setTimespec",
+      "setTimeval",
+      "SetKevent",
+      "sendfile",
+      "Syscall9"
+    ],
+    "src/runtime/signal_freebsd_riscv64.go": [
+      "regs",
+      "ra",
+      "sp",
+      "gp",
+      "tp",
+      "t0",
+      "t1",
+      "t2",
+      "s0",
+      "s1",
+      "a0",
+      "a1",
+      "a2",
+      "a3",
+      "a4",
+      "a5",
+      "a6",
+      "a7",
+      "s2",
+      "s3",
+      "s4",
+      "s5",
+      "s6",
+      "s7",
+      "s8",
+      "s9",
+      "s10",
+      "s11",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "pc",
+      "sigcode",
+      "sigaddr",
+      "set_pc",
+      "set_ra",
+      "set_sp",
+      "set_gp",
+      "set_sigcode",
+      "set_sigaddr"
+    ]
+  },
+  "49097.md": {
+    "src/net/netip/netip.go": [
+      "AddrPortFrom",
+      "ParseAddrPort",
+      "MustParseAddrPort",
+      "AddrPort",
+      "AddrPort.String",
+      "AddrPort.AppendTo"
+    ],
+    "src/net/dial.go": [
+      "Dial",
+      "DialTimeout",
+      "DialContext",
+      "Dialer.Dial",
+      "Dialer.DialContext"
+    ],
+    "src/net/net.go": [
+      "DialTCP",
+      "DialTCPContext",
+      "DialUDP",
+      "DialUDPContext",
+      "DialIP",
+      "DialIPContext"
+    ],
+    "src/net/ip.go": [
+      "ParseIP",
+      "ParseCIDR"
+    ]
+  },
+  "49390.md": {
+    "src/runtime/runtime_test.go": [
+      "TestStopCPUProfilingWithProfilerOff",
+      "TestSetPanicOnFault",
+      "TestEqString",
+      "TestTimediv"
+    ],
+    "src/syscall/net.go": [],
+    "src/syscall/syscall.go": [],
+    "src/syscall/syscall_test.go": [],
+    "src/cmd/compile/doc.go": [
+      "Compile",
+      "Optimize",
+      "SetFlags",
+      "CheckFlags"
+    ],
+    "src/runtime/runtime.go": []
+  },
+  "39351.md": {
+    "src/sync/atomic/value.go": [
+      "Load",
+      "Store",
+      "Swap",
+      "CompareAndSwap"
+    ],
+    "src/sync/atomic/atomic_test.go": [
+      "TestSwapPointer",
+      "TestCompareAndSwapPointer"
+    ]
+  },
+  "47142.md": {
+    "src/database/sql/sql.go": [
+      "PingContext",
+      "Ping",
+      "ExecContext",
+      "Exec",
+      "QueryContext",
+      "Query",
+      "QueryRowContext",
+      "QueryRow",
+      "PrepareContext",
+      "Prepare",
+      "Close",
+      "Conn",
+      "Driver",
+      "retry",
+      "validateConnection"
+    ],
+    "src/database/sql/driver/driver.go": []
+  },
+  "46742.md": {
+    "src/runtime/slice.go": [
+      "makeslice",
+      "makeslice64",
+      "growslice"
+    ],
+    "src/unsafe/unsafe.go": [
+      "Slice"
+    ],
+    "src/runtime/slice_test.go": [
+      "BenchmarkMakeSlice",
+      "BenchmarkAppend",
+      "BenchmarkAppendSlice",
+      "TestAppendOverlap"
+    ],
+    "src/cmd/internal/objfile/plan9obj.go": [],
+    "src/cmd/internal/objfile/xcoff.go": [],
+    "src/cmd/internal/objfile/objfile.go": [],
+    "src/runtime/debug/garbage.go": [],
+    "src/cmd/internal/objfile/macho.go": [],
+    "src/cmd/internal/objabi/flag.go": [],
+    "src/cmd/internal/objfile/pe.go": [],
+    "src/cmd/internal/objfile/elf.go": [],
+    "src/runtime/asan/asan.go": [],
+    "src/runtime/unsafe.go": [
+      "unsafeslice",
+      "panicunsafeslicenilptr",
+      "panicunsafeslicelen"
+    ]
+  },
+  "46505.md": {
+    "src/runtime/slice_test.go": [
+      "BenchmarkCopy"
+    ],
+    "src/runtime/slice.go": []
+  },
+  "52376.md": {
+    "src/reflect/value.go": [
+      "SetZero",
+      "Zero",
+      "Set",
+      "SetNil"
+    ]
+  },
+  "44815.md": {
+    "src/net/http/transfer.go": [
+      "newTransferWriter",
+      "(*transferWriter) writeBody",
+      "(*transferWriter) doBodyCopy"
+    ],
+    "src/net/http/request.go": [
+      "Write",
+      "WriteProxy",
+      "write",
+      "ReadRequest",
+      "readRequest"
+    ],
+    "src/net/http/http.go": [
+      "WriteTo"
+    ],
+    "src/bufio/bufio_test.go": [
+      "TestWriterReadFrom",
+      "TestWriterReadFromErrors",
+      "TestWriterReadFromCounts",
+      "TestWriterReadFromWhileFull",
+      "TestWriterReadFromUntilEOF",
+      "TestWriterReadFromErrNoProgress",
+      "TestWriterReadFromWithBufferedData",
+      "ReadFrom"
+    ],
+    "src/bufio/bufio.go": [
+      "ReadFrom",
+      "Flush",
+      "WriteTo"
+    ],
+    "src/net/http/response.go": [
+      "Write"
+    ]
+  },
+  "45033.md": {
+    "src/text/template/parse/lex.go": [
+      "lexQuote",
+      "lexRawQuote"
+    ],
+    "src/fmt/scan.go": [
+      "quotedString"
+    ],
+    "src/text/template/parse/lex_test.go": [
+      "TestLex"
+    ],
+    "src/reflect/type.go": [
+      "QuotedPrefix",
+      "QuotedPrefixLen"
+    ],
+    "src/strconv/quote.go": [
+      "Unquote",
+      "QuotedPrefix"
+    ],
+    "src/strconv/quote_test.go": [
+      "Unquote",
+      "TestUnquote",
+      "TestUnquoteInvalidUTF8",
+      "testUnquote"
+    ],
+    "src/bufio/scan.go": [
+      "ScanBytes",
+      "ScanWords"
+    ],
+    "src/strconv/atoi.go": [],
+    "src/strconv/strconv_test.go": [
+      "Unquote",
+      "QuotedPrefix"
+    ],
+    "src/strconv/atoi_test.go": []
+  },
+  "48218.md": {
+    "src/reflect/value.go": [
+      "FieldByIndex",
+      "FieldByIndexErr",
+      "Field"
+    ]
+  },
+  "47066.md": {
+    "src/reflect/value.go": [
+      "Bytes",
+      "SetBytes",
+      "Slice"
+    ],
+    "src/runtime/race/testdata/reflect_test.go": []
+  },
+  "51572.md": {
+    "src/cmd/dist/buildtag_test.go": [
+      "TestBuildParser"
+    ],
+    "src/cmd/go/internal/imports/tags.go": [
+      "Tags",
+      "loadTags",
+      "AnyTags"
+    ],
+    "src/go/build/testdata/multi/file.go": [],
+    "src/go/build/build.go": [
+      "Import",
+      "ImportDir",
+      "shouldBuild",
+      "matchTag",
+      "goodOSArchFile"
+    ],
+    "src/go/build/testdata/directives/a.go": [],
+    "src/net/http/client.go": [],
+    "src/cmd/go/internal/telemetrystats/version_unix.go": [],
+    "src/go/build/testdata/directives/c_test.go": [],
+    "src/archive/tar/stat_unix.go": [
+      "statUnix"
+    ],
+    "src/go/build/constraint/expr.go": [
+      "IsGoBuild",
+      "IsPlusBuild",
+      "isValidTag"
+    ],
+    "src/syscall/syscall_unix.go": [
+      "Mmap",
+      "Munmap",
+      "Error",
+      "Is",
+      "Temporary",
+      "Timeout",
+      "Signal",
+      "String",
+      "Bind",
+      "Connect",
+      "Recvfrom",
+      "Sendto",
+      "Socket",
+      "Socketpair"
+    ],
+    "src/go/build/testdata/directives/b_test.go": [],
+    "src/syscall/sockcmsg_unix.go": [
+      "UnixRights",
+      "ParseUnixRights"
+    ],
+    "src/net/http/httputil/httputil.go": [],
+    "src/go/build/testdata/other/file/file.go": [],
+    "src/syscall/env_unix.go": [
+      "Unsetenv",
+      "Getenv",
+      "Setenv",
+      "Clearenv",
+      "Environ"
+    ],
+    "src/go/build/testdata/non_source_tags/non_source_tags.go": [],
+    "src/go/build/constraint/expr_test.go": [],
+    "src/go/build/testdata/cgo_disabled/empty.go": [],
+    "src/cmd/go/internal/work/build_test.go": [],
+    "src/syscall/exec_unix_test.go": [
+      "TestExec",
+      "TestInvalidExec",
+      "TestForkExecNilArgv"
+    ],
+    "src/time/sys_unix.go": [
+      "interrupt",
+      "open",
+      "read",
+      "closefd",
+      "preadn"
+    ],
+    "src/net/http/http.go": [],
+    "src/syscall/exec_unix.go": [
+      "ForkExec",
+      "StartProcess",
+      "Exec"
+    ],
+    "src/time/zoneinfo_unix.go": [],
+    "src/go/build/testdata/directives/a_test.go": [],
+    "src/net/http/http_test.go": [],
+    "src/go/build/build_test.go": [
+      "TestAllTags",
+      "TestAllTagsNonSourceFile"
+    ],
+    "src/net/http/server.go": [
+      "ListenAndServe",
+      "ListenAndServeTLS",
+      "Serve",
+      "ServeTLS",
+      "newConn",
+      "hijackLocked",
+      "Hijack",
+      "CloseNotify",
+      "closeNotify",
+      "ServeHTTP"
+    ],
+    "src/go/build/testdata/cgo_disabled/cgo_disabled.go": [],
+    "src/cmd/go/internal/work/build.go": [
+      "AddBuildFlags",
+      "runBuild",
+      "runInstall"
+    ],
+    "src/cmd/go/internal/modload/stat_unix.go": [
+      "hasWritePerm"
+    ],
+    "src/go/build/testdata/multi/file_appengine.go": [],
+    "src/cmd/go/internal/toolchain/path_unix.go": [],
+    "src/syscall/sockcmsg_unix_other.go": [],
+    "src/runtime/sys_openbsd.go": [],
+    "src/time/zoneinfo_unix_test.go": [],
+    "src/cmd/dist/buildtag.go": [
+      "validtag"
+    ],
+    "src/syscall/syscall_unix_test.go": [
+      "TestUnixRightsRoundtrip"
+    ],
+    "src/net/http/server_test.go": [],
+    "src/go/build/testdata/directives/d_test.go": [],
+    "src/go/build/testdata/alltags/x_netbsd_arm.go": [],
+    "src/go/build/testdata/alltags/alltags.go": [],
+    "src/net/http/client_test.go": [],
+    "src/net/http/httptest/httptest.go": [],
+    "src/runtime/os_unix.go": [
+      "closeonexec"
+    ],
+    "src/go/build/testdata/other/main.go": []
+  },
+  "39057.md": {
+    "src/log/log.go": [
+      "Default",
+      "SetOutput",
+      "Flags",
+      "SetFlags",
+      "Prefix",
+      "SetPrefix",
+      "Writer",
+      "Print",
+      "Printf",
+      "Println",
+      "Fatal",
+      "Fatalf",
+      "Fatalln",
+      "Panic",
+      "Panicf",
+      "Panicln",
+      "Output"
+    ]
+  },
+  "38781.md": {
+    "src/io/io.go": [
+      "Read",
+      "ReadAtLeast",
+      "ReadFull",
+      "CopyN",
+      "Copy",
+      "CopyBuffer",
+      "LimitReader",
+      "TeeReader",
+      "ReadAll"
+    ],
+    "src/testing/iotest/reader.go": [
+      "ErrReader",
+      "(*errReader) Read"
+    ],
+    "src/testing/iotest/reader_test.go": [
+      "TestErrReader"
+    ],
+    "src/io/io_test.go": [
+      "TestCopyReadErrWriteErr",
+      "zeroErrReader",
+      "errWriter",
+      "wantedAndErrReader"
+    ]
+  },
+  "36771.md": {
+    "src/strconv/atoc.go": [
+      "ParseComplex"
+    ],
+    "src/strconv/atob_test.go": [],
+    "src/strconv/internal_test.go": [
+      "ParseFloatPrefix"
+    ],
+    "src/strconv/strconv_test.go": [
+      "ParseComplex",
+      "FormatComplex"
+    ],
+    "src/archive/tar/strconv_test.go": [],
+    "src/fmt/scan.go": [
+      "complexTokens",
+      "scanComplex"
+    ],
+    "src/strconv/itoa_test.go": [],
+    "src/strconv/quote_test.go": [],
+    "src/strconv/atof_test.go": [
+      "TestParseFloatPrefix",
+      "TestParseFloatIncorrectBitSize"
+    ],
+    "src/strconv/ftoa_test.go": [],
+    "src/strconv/atoi_test.go": [
+      "TestParseInt",
+      "TestParseUint",
+      "TestParseIntBase",
+      "TestParseUintBase"
+    ],
+    "src/archive/tar/strconv.go": [],
+    "src/strconv/ftoa.go": [
+      "FormatFloat"
+    ],
+    "src/strconv/quote.go": [],
+    "src/strconv/atoc_test.go": [
+      "TestParseComplex",
+      "TestParseComplexIncorrectBitSize"
+    ],
+    "src/fmt/print.go": [
+      "fmtComplex"
+    ],
+    "src/strconv/atoi.go": [
+      "ParseUint",
+      "ParseInt",
+      "Atoi"
+    ],
+    "src/strconv/atof.go": [
+      "ParseFloat"
+    ],
+    "src/strconv/atob.go": [
+      "ParseComplex",
+      "FormatComplex"
+    ],
+    "src/strconv/itoa.go": []
+  },
+  "50101.md": {
+    "src/net/lookup_windows.go": [
+      "lookupCNAME",
+      "resolveCNAME"
+    ],
+    "src/net/lookup_unix.go": [
+      "lookupCNAME"
+    ],
+    "src/net/lookup.go": [
+      "LookupCNAME",
+      "LookupCNAME"
+    ]
+  },
+  "29770.md": {
+    "src/text/template/parse/lex.go": [
+      "lex",
+      "lexInsideAction",
+      "lexLeftDelim",
+      "lexRightDelim",
+      "lexSpace",
+      "isSpace"
+    ],
+    "src/html/template/template_test.go": [
+      "TestTemplateClone",
+      "TestRedefineNonEmptyAfterExecution",
+      "TestRedefineEmptyAfterExecution",
+      "TestRedefineAfterNonExecution",
+      "TestRedefineAfterNamedExecution",
+      "TestRedefineNestedByNameAfterExecution",
+      "TestRedefineNestedByTemplateAfterExecution",
+      "TestRedefineSafety",
+      "TestRedefineTopUse",
+      "TestRedefineOtherParsers",
+      "TestNumbers",
+      "TestStringsInScriptsWithJsonContentTypeAreCorrectlyEscaped",
+      "TestSkipEscapeComments",
+      "newTestCase",
+      "(*testCase)lookup",
+      "(*testCase)mustParse",
+      "(*testCase)mustNotParse",
+      "(*testCase)mustExecute"
+    ],
+    "src/text/template/parse/parse.go": [
+      "Parse",
+      "action",
+      "pipeline",
+      "checkPipeline"
+    ],
+    "src/text/template/parse/lex_test.go": [
+      "TestLex",
+      "TestDelims",
+      "TestDelimsAlphaNumeric",
+      "TestDelimsAndMarkers"
+    ],
+    "src/html/template/template.go": [
+      "Parse",
+      "ParseFiles",
+      "ParseGlob",
+      "ParseFS",
+      "Execute",
+      "ExecuteTemplate"
+    ],
+    "src/text/template/parse/parse_test.go": [
+      "TestParse",
+      "TestParseWithComments",
+      "BenchmarkParseLarge",
+      "BenchmarkVariableString",
+      "BenchmarkListString"
+    ]
+  },
+  "51566.md": {
+    "src/bytes/bytes_test.go": [
+      "nopCloserSimple",
+      "nopCloserForward"
+    ],
+    "src/bytes/reader.go": [
+      "WriteTo"
+    ],
+    "src/bytes/reader_test.go": [
+      "TestReaderWriteTo"
+    ],
+    "src/runtime/pprof/pprof_test.go": [],
+    "src/runtime/pprof/testdata/mappingtest/main.go": [],
+    "src/runtime/pprof/pprof.go": [
+      "WriteTo"
+    ],
+    "src/io/io.go": [
+      "NopCloser",
+      "Close",
+      "Copy",
+      "WriteTo"
+    ],
+    "src/bytes/bytes.go": [
+      "nopCloser",
+      "nopCloserSimple",
+      "nopCloserForward"
+    ],
+    "src/io/io_test.go": [
+      "TestNopCloserWriterToForwarding",
+      "WriteTo"
+    ]
+  },
+  "37196.md": {
+    "src/time/sleep.go": [
+      "NewTimer",
+      "(*Timer) Stop",
+      "(*Timer) Reset",
+      "stopTimer",
+      "resetTimer"
+    ],
+    "src/time/tick.go": [
+      "NewTicker",
+      "Stop",
+      "Reset"
+    ],
+    "src/time/time.go": [
+      "NewTimer",
+      "Stop",
+      "Reset",
+      "Ticker"
+    ],
+    "src/time/time_test.go": [
+      "TestConcurrentTimerReset",
+      "TestConcurrentTimerResetStop"
+    ]
+  },
+  "38079.md": {
+    "src/net/http/httputil/reverseproxy_test.go": [
+      "TestXForwardedFor",
+      "TestXForwardedFor_Omit"
+    ],
+    "src/net/http/httputil/reverseproxy.go": [
+      "NewSingleHostReverseProxy",
+      "ServeHTTP",
+      "SetXForwarded"
+    ]
+  },
+  "51682.md": {
+    "src/go/types/signature.go": [],
+    "src/go/types/scope.go": [
+      "NewScope",
+      "(*Scope) Lookup",
+      "(*Scope) Insert",
+      "(*lazyObject) Type",
+      "(*lazyObject) Name"
+    ],
+    "src/go/types/builtins.go": [],
+    "src/go/types/alias.go": [
+      "Origin"
+    ],
+    "src/go/types/gotype.go": [],
+    "src/go/types/decl.go": [
+      "varDecl",
+      "funcDecl"
+    ],
+    "src/go/types/expr.go": [],
+    "src/go/types/type.go": [
+      "Var",
+      "Func",
+      "Origin"
+    ],
+    "src/go/types/api_predicates.go": [],
+    "src/go/types/interface.go": [],
+    "src/go/types/typeparam.go": [],
+    "src/go/types/errors.go": [],
+    "src/go/types/api.go": [
+      "ObjectOf",
+      "TypeOf"
+    ],
+    "src/go/types/named.go": [
+      "Origin"
+    ],
+    "src/go/types/object.go": [
+      "NewVar",
+      "NewFunc",
+      "Origin"
+    ]
+  },
+  "39214.md": {
+    "src/runtime/os_linux_arm.go": [
+      "archauxv"
+    ],
+    "src/runtime/cpuflags.go": [],
+    "src/runtime/defs_linux_arm.go": [],
+    "src/internal/cpu/cpu_riscv64.go": [],
+    "src/runtime/defs_linux.go": [],
+    "src/runtime/defs_linux_ppc64le.go": [],
+    "src/runtime/cpuflags_arm64.go": [],
+    "src/syscall/syscall_linux_amd64.go": [],
+    "src/syscall/syscall_linux_s390x.go": [],
+    "src/syscall/syscall_linux_riscv64.go": [],
+    "src/internal/cpu/cpu_arm64.go": [
+      "getMIDR"
+    ],
+    "src/runtime/defs_linux_ppc64.go": [],
+    "src/syscall/syscall_linux_arm.go": [],
+    "src/runtime/defs_linux_amd64.go": [],
+    "src/runtime/defs_linux_s390x.go": [],
+    "src/runtime/os_linux_x86.go": [],
+    "src/syscall/syscall_linux.go": [],
+    "src/runtime/cpuflags_amd64.go": [],
+    "src/runtime/cgo/cgo.go": [],
+    "src/runtime/defs_linux_arm64.go": [],
+    "src/internal/cpu/cpu_mips.go": [],
+    "src/internal/cpu/cpu_s390x.go": [],
+    "src/internal/cpu/cpu_ppc64x.go": [
+      "Name"
+    ],
+    "src/syscall/syscall_linux_ppc64x.go": [],
+    "src/syscall/syscall_linux_arm64.go": [],
+    "src/runtime/os_linux_riscv64.go": [
+      "osArchInit",
+      "internal_cpu_riscvHWProbe"
+    ],
+    "src/internal/cpu/cpu_arm.go": [],
+    "src/runtime/os_linux.go": [
+      "sysauxv"
+    ],
+    "src/internal/cpu/cpu_x86.go": [
+      "Name"
+    ],
+    "src/runtime/debug/example_monitor_test.go": [],
+    "src/runtime/os_linux_arm64.go": [
+      "archauxv",
+      "osArchInit",
+      "cputicks"
+    ],
+    "src/internal/cpu/cpu_loong64.go": [],
+    "src/runtime/defs_linux_riscv64.go": [],
+    "src/internal/cpu/cpu.go": [],
+    "src/runtime/os_linux_ppc64x.go": [
+      "archauxv",
+      "osArchInit"
+    ]
+  },
+  "30715.md": {
+    "src/net/http/request_test.go": [
+      "TestIssue10884_MaxBytesEOF",
+      "TestMaxBytesReaderStickyError",
+      "TestMaxBytesReaderDifferentLimits"
+    ],
+    "src/net/http/request.go": [
+      "MaxBytesReader",
+      "(*maxBytesReader) Read",
+      "(*maxBytesReader) Close",
+      "(*MaxBytesError) Error"
+    ]
+  },
+  "51972.md": {
+    "src/sync/export_test.go": [],
+    "src/sync/map.go": [
+      "LoadAndStore",
+      "Swap",
+      "CompareAndSwap",
+      "CompareAndDelete"
+    ],
+    "src/sync/map_test.go": [
+      "TestCompareAndSwap_NonExistingKey"
+    ],
+    "src/sync/hashtriemap.go": [
+      "LoadAndStore",
+      "Swap",
+      "CompareAndSwap",
+      "CompareAndDelete"
+    ],
+    "src/sync/mutex.go": []
+  },
+  "50859.md": {
+    "src/runtime/race/race_test.go": [
+      "TestRace",
+      "TestIssue8102",
+      "TestIssue9137"
+    ],
+    "src/runtime/runtime_test.go": [
+      "TestSetPanicOnFault",
+      "TestMutexContention"
+    ],
+    "src/sync/atomic/atomic_test.go": [
+      "TestSwapInt32",
+      "TestSwapUint32",
+      "TestSwapInt64",
+      "TestSwapUint64",
+      "TestAddInt32",
+      "TestAddUint32",
+      "TestAddInt64",
+      "TestAddUint64",
+      "TestCompareAndSwapInt32",
+      "TestCompareAndSwapUint32",
+      "TestCompareAndSwapInt64",
+      "TestCompareAndSwapUint64",
+      "TestLoadInt32",
+      "TestLoadUint32",
+      "TestLoadInt64",
+      "TestLoadUint64",
+      "TestStoreInt32",
+      "TestStoreUint32",
+      "TestStoreInt64",
+      "TestStoreUint64",
+      "TestStoreLoadSeqCst32",
+      "TestStoreLoadSeqCst64",
+      "TestStoreLoadRelAcq32",
+      "TestStoreLoadRelAcq64"
+    ],
+    "src/runtime/race/race.go": [
+      "Acquire",
+      "Release",
+      "Read",
+      "Write",
+      "func raceEnable",
+      "func raceAcquire",
+      "func raceRelease",
+      "func raceRead",
+      "func raceWrite"
+    ],
+    "src/runtime/runtime.go": []
+  },
+  "32406.md": {
+    "src/crypto/tls/tls.go": [
+      "DialContext",
+      "HandshakeContext"
+    ],
+    "src/net/http/server.go": [
+      "Serve",
+      "ServeTLS",
+      "tlsHandshakeTimeout",
+      "BaseContext",
+      "ConnContext",
+      "newConn",
+      "serve"
+    ],
+    "src/crypto/tls/conn.go": [
+      "Handshake",
+      "HandshakeContext",
+      "ConnectionState"
+    ],
+    "src/net/http/request.go": [
+      "WithContext",
+      "Context",
+      "NewRequestWithContext"
+    ],
+    "src/net/http/response.go": []
+  },
+  "35044.md": {
+    "src/crypto/x509/cert_pool_test.go": [
+      "TestCertPoolEqual"
+    ],
+    "src/crypto/x509/cert_pool.go": [
+      "Clone",
+      "Equal",
+      "AddCert",
+      "AppendCertsFromPEM"
+    ]
+  },
+  "45899.md": {
+    "src/io/io.go": [
+      "NewOffsetWriter",
+      "Write",
+      "WriteAt",
+      "Seek"
+    ],
+    "src/io/fs/fs.go": []
+  },
+  "33232.md": {
+    "src/encoding/json/v2/arshal_any.go": [
+      "marshalValueAny",
+      "unmarshalValueAny",
+      "marshalObjectAny",
+      "unmarshalObjectAny",
+      "marshalArrayAny",
+      "unmarshalArrayAny"
+    ]
+  },
+  "47658.md": {
+    "src/reflect/value.go": [
+      "CanInt",
+      "Int",
+      "CanUint",
+      "Uint",
+      "CanFloat",
+      "Float",
+      "CanComplex",
+      "Complex"
+    ]
+  },
+  "47609.md": {
+    "src/unicode/utf8/utf8.go": [
+      "EncodeRune",
+      "AppendRune"
+    ],
+    "src/unicode/utf8/utf8_test.go": [
+      "TestEncodeRune",
+      "TestAppendRune",
+      "BenchmarkAppendASCIIRune"
+    ]
+  },
+  "38776.md": {
+    "src/crypto/hmac/hmac.go": [],
+    "src/crypto/rand/rand.go": [],
+    "src/crypto/sha512/sha512.go": [
+      "New",
+      "Sum512",
+      "Sum384",
+      "Sum512_224",
+      "Sum512_256"
+    ],
+    "src/crypto/sha256/sha256_test.go": [
+      "TestExtraMethods"
+    ],
+    "src/crypto/rsa/rsa_test.go": [],
+    "src/crypto/rand/rand_test.go": [],
+    "src/crypto/sha512/sha512_test.go": [
+      "TestExtraMethods"
+    ],
+    "src/crypto/md5/md5.go": [
+      "Write",
+      "Size",
+      "BlockSize"
+    ],
+    "src/crypto/sha256/sha256.go": [
+      "New",
+      "Sum256"
+    ],
+    "src/crypto/md5/md5_test.go": [
+      "TestExtraMethods"
+    ],
+    "src/hash/crc32/crc32.go": [
+      "Write",
+      "Sum32",
+      "Sum"
+    ],
+    "src/hash/crc64/crc64.go": [
+      "New",
+      "(*digest) Write",
+      "(*digest) Reset",
+      "(*digest) Size",
+      "(*digest) BlockSize"
+    ],
+    "src/hash/fnv/fnv.go": [
+      "Write",
+      "Sum",
+      "Size",
+      "BlockSize"
+    ],
+    "src/crypto/sha1/sha1_test.go": [
+      "TestExtraMethods"
+    ],
+    "src/crypto/hmac/hmac_test.go": [
+      "TestExtraMethods"
+    ],
+    "src/crypto/sha1/sha1.go": [
+      "Write",
+      "Size",
+      "BlockSize"
+    ],
+    "src/hash/maphash/maphash.go": [
+      "WriteByte",
+      "Write",
+      "WriteString"
+    ],
+    "src/hash/adler32/adler32.go": [
+      "Write",
+      "Reset",
+      "Size",
+      "BlockSize",
+      "Sum32",
+      "Sum"
+    ],
+    "src/crypto/sha3/sha3_test.go": [],
+    "src/crypto/rsa/rsa.go": [],
+    "src/crypto/sha3/sha3.go": [
+      "Write",
+      "Sum",
+      "Reset",
+      "Size",
+      "BlockSize"
+    ]
+  }
+}

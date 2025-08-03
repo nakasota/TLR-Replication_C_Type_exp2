@@ -1,0 +1,199 @@
+{
+  "selected_file_level_output": "20250730_150154",
+  "29951.md": {
+    "src/math/big/nat.go": [
+      "setUint64",
+      "add",
+      "sub",
+      "cmp"
+    ],
+    "src/math/big/int.go": [
+      "NewInt",
+      "Add",
+      "Sub",
+      "Cmp",
+      "SetInt64",
+      "SetUint64",
+      "Int64",
+      "Uint64",
+      "IsInt64",
+      "IsUint64"
+    ],
+    "src/math/big/arith.go": [
+      "addVV_g",
+      "subVV_g",
+      "addVW",
+      "subVW"
+    ]
+  },
+  "44412.md": {
+    "src/runtime/time_test.go": [],
+    "src/time/time_test.go": [
+      "TestUnixMilli",
+      "TestUnixMicro",
+      "BenchmarkNowUnixMilli",
+      "BenchmarkNowUnixMicro"
+    ],
+    "src/runtime/time.go": [
+      "time_runtimeNow",
+      "time_runtimeNano"
+    ],
+    "src/time/time.go": [
+      "UnixMilli",
+      "UnixMicro",
+      "Unix",
+      "unixTime",
+      "UnixNano"
+    ]
+  },
+  "34593.md": {
+    "src/database/sql/sql.go": [
+      "NullString",
+      "NullInt64",
+      "NullInt32",
+      "NullInt16",
+      "NullByte",
+      "NullFloat64",
+      "NullBool",
+      "NullTime",
+      "Scan",
+      "Value"
+    ],
+    "src/database/sql/driver/types.go": [
+      "IsValue",
+      "IsScanValue",
+      "ConvertValue"
+    ]
+  },
+  "52157.md": {
+    "src/runtime/map_test.go": [
+      "TestIgnoreBogusMapHint"
+    ],
+    "src/runtime/map_swiss_test.go": [
+      "TestHmapSize"
+    ],
+    "src/runtime/map_fast64_swiss.go": [
+      "mapaccess1_fast64",
+      "mapaccess2_fast64",
+      "mapassign_fast64",
+      "mapassign_fast64ptr",
+      "mapdelete_fast64"
+    ],
+    "src/runtime/map_noswiss_test.go": [
+      "TestHmapSize",
+      "TestLoadFactor",
+      "TestMapBuckets"
+    ],
+    "src/runtime/map_faststr_swiss.go": [
+      "mapaccess1_faststr",
+      "mapaccess2_faststr",
+      "mapassign_faststr",
+      "mapdelete_faststr"
+    ],
+    "src/cmd/compile/internal/reflectdata/map_swiss.go": [
+      "SwissMapType",
+      "swissTableType"
+    ],
+    "src/runtime/map_benchmark_test.go": [
+      "BenchmarkMakeMap",
+      "BenchmarkNewEmptyMapHintLessThan8",
+      "BenchmarkNewEmptyMapHintGreaterThan8",
+      "BenchmarkMapAssignFillHint",
+      "BenchmarkMapAssignFillNoHint",
+      "BenchmarkMapAssignGrowLatency"
+    ],
+    "src/runtime/map_fast32_swiss.go": [
+      "mapaccess1_fast32",
+      "mapaccess2_fast32",
+      "mapassign_fast32",
+      "mapassign_fast32ptr",
+      "mapdelete_fast32"
+    ],
+    "src/runtime/map_swiss.go": [
+      "makemap",
+      "makemap64",
+      "makemap_small",
+      "mapclear",
+      "reflect_makemap",
+      "reflect_mapclear"
+    ],
+    "src/runtime/map_noswiss.go": [
+      "makemap",
+      "makemap_small",
+      "makemap64",
+      "makeBucketArray",
+      "overLoadFactor",
+      "tooManyOverflowBuckets",
+      "hashGrow",
+      "mapassign",
+      "mapdelete",
+      "mapclear"
+    ],
+    "src/runtime/map_faststr_noswiss.go": [
+      "growWork_faststr",
+      "evacuate_faststr"
+    ],
+    "test/maplinear.go": [
+      "main",
+      "checkLinear"
+    ],
+    "test/mapclear.go": [
+      "main"
+    ],
+    "test/map.go": [
+      "main",
+      "testbasic"
+    ],
+    "test/makemap.go": [
+      "main"
+    ],
+    "test/map1.go": [
+      "main"
+    ],
+    "src/runtime/map_fast64_noswiss.go": [
+      "growWork_fast64",
+      "evacuate_fast64"
+    ],
+    "src/runtime/map_fast32_noswiss.go": [
+      "growWork_fast32",
+      "evacuate_fast32"
+    ],
+    "src/cmd/compile/internal/reflectdata/map_noswiss.go": [
+      "OldMapType"
+    ]
+  },
+  "51039.md": {
+    "src/strings/strings.go": [
+      "Split",
+      "SplitAfter",
+      "Fields",
+      "FieldsFunc",
+      "Cut",
+      "TrimSuffix",
+      "ReplaceAll"
+    ],
+    "src/strings/strings_test.go": [
+      "TestLines",
+      "TestSplit",
+      "TestSplitAfter",
+      "TestFields",
+      "TestFieldsFunc",
+      "TestCut",
+      "TestTrimSpace"
+    ]
+  },
+  "42099.md": {
+    "src/reflect/type.go": [
+      "String",
+      "NumMethod",
+      "Method",
+      "PkgPath",
+      "Name"
+    ],
+    "src/reflect/value.go": [
+      "NumMethod",
+      "String",
+      "QualifiedString"
+    ]
+  }
+}

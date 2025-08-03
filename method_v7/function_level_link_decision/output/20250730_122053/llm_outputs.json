@@ -1,0 +1,63 @@
+{
+  "selected_function_level_output": "20250730_121948",
+  "47459.md": {
+    "src/go/types/methodset.go": {
+      "String": "No",
+      "Len": "No",
+      "At": "No",
+      "Lookup": "No",
+      "add": "No",
+      "addOne": "No"
+    },
+    "src/cmd/compile/internal/types2/type.go": {},
+    "src/cmd/compile/internal/types2/typeset.go": {
+      "IsEmpty": "No",
+      "IsAll": "No",
+      "IsMethodSet": "No",
+      "IsComparable": "No",
+      "NumMethods": "No",
+      "Method": "No",
+      "LookupMethod": "No",
+      "String": "No",
+      "hasTerms": "No",
+      "subsetOf": "No",
+      "typeset": "No",
+      "is": "No"
+    },
+    "src/go/types/typeparam.go": {
+      "NewTypeParam": "No",
+      "Obj": "No",
+      "Index": "No",
+      "Constraint": "No",
+      "SetConstraint": "No",
+      "Underlying": "No",
+      "String": "No"
+    },
+    "src/cmd/compile/internal/types2/instantiate.go": {
+      "Instantiate": "No",
+      "instance": "No",
+      "validateTArgLen": "No",
+      "verify": "No",
+      "mentions": "No"
+    },
+    "src/go/types/methodset_test.go": {
+      "TestNewMethodSet": "No",
+      "TestNewMethodSet_RecursiveGeneric": "No",
+      "TestIssue60634": "No"
+    },
+    "src/cmd/compile/internal/types2/typeparam.go": {
+      "NewTypeParam": "No",
+      "newTypeParam": "No",
+      "Obj": "No",
+      "Index": "No",
+      "Constraint": "No",
+      "SetConstraint": "No",
+      "Underlying": "No",
+      "String": "No",
+      "cleanup": "No",
+      "iface": "No",
+      "is": "No",
+      "typeset": "No"
+    }
+  }
+}

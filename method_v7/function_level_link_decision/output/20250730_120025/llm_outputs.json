@@ -1,0 +1,97 @@
+{
+  "selected_function_level_output": "20250730_115900",
+  "47459.md": {
+    "src/go/types/methodset.go": {
+      "String": "No",
+      "Len": "No",
+      "At": "No",
+      "Lookup": "No",
+      "add": "No",
+      "addOne": "No"
+    },
+    "src/cmd/compile/internal/types2/typeset_test.go": {},
+    "src/cmd/compile/internal/types2/typeset.go": {
+      "IsEmpty": "No",
+      "IsAll": "No",
+      "IsMethodSet": "No",
+      "IsComparable": "No",
+      "NumMethods": "No",
+      "Method": "No",
+      "LookupMethod": "No",
+      "String": "No",
+      "hasTerms": "No",
+      "subsetOf": "No",
+      "typeset": "No",
+      "is": "No"
+    },
+    "src/go/types/methodset_test.go": {
+      "TestNewMethodSet": "No",
+      "TestNewMethodSet_RecursiveGeneric": "No"
+    },
+    "src/cmd/compile/internal/types2/typeparam.go": {
+      "NewTypeParam": "No",
+      "newTypeParam": "No",
+      "Obj": "No",
+      "Index": "No",
+      "Constraint": "No",
+      "SetConstraint": "No",
+      "Underlying": "No",
+      "String": "No",
+      "cleanup": "No",
+      "iface": "No",
+      "is": "No",
+      "typeset": "No"
+    }
+  },
+  "29951.md": {
+    "src/math/big/arith_amd64.go": {
+      "addVV": "No",
+      "subVV": "No",
+      "addVW": "No",
+      "subVW": "No",
+      "shlVU": "No",
+      "shrVU": "No"
+    },
+    "src/math/big/int.go": {
+      "NewInt": "Yes",
+      "Add": "Yes",
+      "Sub": "No",
+      "Cmp": "No",
+      "SetInt64": "Yes",
+      "SetUint64": "No",
+      "Int64": "No",
+      "Uint64": "No",
+      "IsInt64": "No",
+      "IsUint64": "No"
+    },
+    "src/math/big/arith.go": {
+      "addVV_g": "No",
+      "subVV_g": "No",
+      "addVW": "No",
+      "addVW_ref": "No",
+      "subVW": "No",
+      "subVW_ref": "No"
+    },
+    "src/math/big/nat.go": {
+      "setUint64": "No",
+      "add": "No",
+      "sub": "No",
+      "cmp": "No"
+    }
+  },
+  "44412.md": {
+    "src/time/time.go": {
+      "UnixMilli": "Yes",
+      "UnixMicro": "Yes",
+      "Unix": "Yes",
+      "unixTime": "Yes",
+      "UnixNano": "No"
+    },
+    "src/time/time_test.go": {
+      "TestUnixMilli": "Yes",
+      "TestUnixMicro": "Yes",
+      "BenchmarkNowUnixMilli": "No",
+      "BenchmarkNowUnixMicro": "No"
+    }
+  }
+}

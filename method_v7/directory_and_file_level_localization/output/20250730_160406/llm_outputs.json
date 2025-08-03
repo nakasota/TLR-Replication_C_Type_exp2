@@ -1,0 +1,47 @@
+{
+  "40239.md": {
+    "granularity": "file",
+    "found_files": [
+      "src/net/url/url.go",
+      "src/net/url/url_test.go"
+    ]
+  },
+  "47459.md": {
+    "granularity": "function",
+    "found_files": [
+      "src/cmd/compile/internal/types2/typeset_test.go",
+      "src/cmd/compile/internal/types2/typeparam.go",
+      "src/go/types/instantiate_test.go",
+      "src/cmd/compile/internal/types2/typeset.go",
+      "src/go/types/typeparam.go",
+      "src/go/types/instantiate.go",
+      "src/go/types/types.go"
+    ]
+  },
+  "29951.md": {
+    "granularity": "function",
+    "found_files": [
+      "src/math/big/int.go",
+      "src/math/big/nat.go",
+      "math/big/int.go",
+      "src/math/big/arith.go"
+    ]
+  },
+  "39528.md": {
+    "granularity": "directory",
+    "found_directories": [
+      "src/reflect"
+    ],
+    "found_files": [
+      "src/reflect/type.go",
+      "src/reflect/value.go"
+    ]
+  },
+  "44412.md": {
+    "granularity": "function",
+    "found_files": [
+      "src/time/time.go",
+      "src/time/time_test.go"
+    ]
+  }
+}

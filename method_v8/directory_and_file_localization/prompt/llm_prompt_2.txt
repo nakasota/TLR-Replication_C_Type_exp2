@@ -1,0 +1,1455 @@
+
+You are analyzing a Go proposal and repository to identify which files are **most relevant** to the given proposal.
+
+### Proposal Content ###
+# Proposal: 47164.md
+==== [Issue Title] ====
+log: optimize SetOutput(io.Discard)
+
+==== [Issue Body] ====
+**_Edit_**: as discussed in the comments, the proposal is not anymore about using a `nil` receiver. It is still about making it cheaper to call a disabled (muted) Logger.
+
+
+## What
+
+Make this `nil` pointer variable
+```
+var nilLogger *log.Logger
+```
+a valid [Logger](https://pkg.go.dev/log#Logger), where all the calls to `nilLogger.Print`, etc. are valid (do not crash), and do not produce any actual logs.
+
+This would serve as an adequate replacement of, and almost equivalent to:
+```
+var discardLogger = log.New(io.Discard, "", 0)
+```
+
+## Why
+
+Performance.
+
+This is an important concern because logging is often expensive, and it is a reasonable expectation that it becomes free (or very cheap) when logging is turned off. Currently, `discardLogger` comes with a quite expensive overhead:
+1. all of the `discardLogger.Print` variadic arguments are evaluated, even if they are not really needed;
+2. a non-inlined function call to `(*Logger).Print`is executed
+3. `fmt.Sprint` is called, which incurs some memory allocation, and some work to use the variadic arguments in order to produce a string `s`;
+4. the mutex `discardLogger.mu` is `Lock`ed, then later `Unlock`ed;
+5. `s` is copied to the internal buffer `discardLogger.buf`;
+6. a dynamic function dispatch is executed for `discardLogger.out.Write`, which resolves to `io.discard.Write`.
+
+The proposed implementation consists of checking for nil receiver inside all of the exported methods and returning immediately, thus avoiding steps 3, 4, 5, 6.
+
+In the proposed implementation, the steps 1, 2 still happen, as the arguments are still evaluated. In theory this could be mitigated in some side-effect-free cases, with advanced escape analysis and inlining. This mitigation is out of reach of the current inlining system, and out of scope of the current proposal.
+
+## Benefits
+
+In a [sample benchmark](https://gist.github.com/Deleplace/7b1d8798e64422926f5fc286674861a0), `nilLogger.Printf` is **35x faster** with an `int` arg, and **320x faster** with a `map` arg, than `discardLogger.Printf`.
+
+The speedup would be higher with more arguments, or more complex arguments.
+
+As a side effect, the zero value for the pointer type `*log.Logger` becomes useful and safe, without initialization.
+
+## Backwards compatibility
+
+- No changes to all the non-`nil` *log.Logger instances.
+- `log.New(io.Discard, "", 0)` still works.
+- `nilLogger.Print` would not panic anymore. A program relying on the panic behavior would break. It is however not a promise (no guarantee) from the log package to have `nilLogger.Print` panic.
+- `nilLogger.Print` would not call `fmt.Sprint` anymore, resulting in some custom `String` methods to not be called. A program relying the side effects of custom String methods would break. It is however not a promise (no guarantee) from the log package to have valid Loggers always call `fmt.Sprint`.
+- A program may expect `l.SetOutput(w)` to always succeeds for any valid logger `l`. Such a program would break.
+- A program may expect `l.SetPrefix(prefix)` to force the subsequent value returned by `l.Prefix()`, for any valid logger `l`. Such a program would break.
+- A program may expect `l.SetFlags(flag)` to force the subsequent value returned by `l.Flags()`, for any valid logger `l`. Such a program would break.
+
+## Concurrency
+
+It is my understanding that the proposed implementation does not introduce any new risks of data races.
+
+For a `nil` receiver, all of the `Print` methods are thread-safe, and do not require a mutex.
+
+## Detailed behavior of each method
+
+When the receiver `l` is `nil`:
+- **`(l *Logger).Fatal(v ...interface{})`**
+- **`(l *Logger).Fatalf(format string, v ...interface{})`**
+- **`(l *Logger).Fatalln(v ...interface{})`**: 
+  - don't log anything. Call `os.Exit(1)`.
+- **`(l *Logger).Flags() int`**: 
+  - return `0`.
+- **`(l *Logger).Output(calldepth int, s string) error`**: 
+  - do nothing. Return `nil`.
+- **`(l *Logger).Panic(v ...interface{})`**
+- **`(l *Logger).Panicf(format string, v ...interface{})`**
+- **`(l *Logger).Panicln(v ...interface{})`**: 
+  - don't log anything. Build the string `s` and call `panic(s)`.
+- **`(l *Logger).Prefix() string`**: 
+  - return `""`.
+- **`(l *Logger).Print(v ...interface{})`**
+- **`(l *Logger).Printf(format string, v ...interface{})`**
+- **`(l *Logger).Println(v ...interface{})`**: 
+  - do nothing.
+- **`(l *Logger).SetFlags(flag int)`**: 
+  - do nothing.
+- **`(l *Logger).SetOutput(w io.Writer)`**: 
+  - panic. The caller would expect `w` to be subsequently used, which is not possible.
+- **`(l *Logger).SetPrefix(prefix string)`**:
+  - do nothing.
+- **`(l *Logger).Writer() io.Writer`**: 
+  - return `nil`.
+
+
+==== [Comments] ====
+
+--- Comment #1 by Deleplace ---
+There are in GitHub ~10K [occurrences](https://github.com/search?q=%22log.New%28ioutil.Discard%22&type=code) of `log.New(ioutil.Discard, ..., ...)` and just a few [occurrences](https://github.com/search?q=%22log.New%28io.Discard%22&type=code) of `log.New(io.Discard, ..., ...)`.
+
+--- Comment #2 by Deleplace ---
+I had considered a sentinel value `log.nopLogger` of type `*log.Logger`, non-nil.
+
+I don't think it offers much benefits, compared to the `nil` proposal.
+
+--- Comment #3 by seankhliao ---
+cc @robpike 
+
+--- Comment #4 by rittneje ---
+I feel like people usually have some threshold-based logger (i.e., debug, info, warn, error, etc.) surrounding the actual log.Logger method calls, in which case the entire log call is skipped by the threshold test in the event that logging is disabled. In those cases, using a nil log.Logger to mean "discard" wouldn't increase performance.
+
+Also, while calling methods on nil is technically permissible, I think it would just lead to subtle bugs where for example someone forgets to assign to a struct field, and unless they go and check their logs they won't notice that nothing is happening, whereas if the code panics (the current behavior), it's pretty clear what's wrong.
+
+Another possible solution to your problem would be to make an interface around log.Logger (or at least the subset of methods you care about), and then define another implementation that no-ops all the methods. There would still be some overhead of the method dispatch, but it might still be enough of a performance gain for you.
+
+The other possibility is to just surround the calls to the log.Logger method with an `if logger != nil` check.
+
+--- Comment #5 by seankhliao ---
+I think a better option would be for `log.Logger` to detect that output is set to `io.Discard` and short circuit as necessary. This wouldn't break anything and would speed up existing programs.
+
+--- Comment #6 by Deleplace ---
+@seankhliao Unfortunately in the current design, checking `(*Logger).out==io.Discard` would require first `(*Logger).mu.Lock`ing, then `(*Logger).mu.Unlock`ing before calling the exported method `(*Logger).Output`.
+
+This would still bear an expensive synchronization cost (the mutex) in the Discard case, and would actually make existing programs slower in the general non-Discard case, because of the extra mutex cost.
+
+One substantial advantage of `nil` is that it can't hold any state, thus it's unlikely to cause data races, and does not require any mutex overhead.
+
+--- Comment #7 by rittneje ---
+> This would still bear an expensive synchronization cost (the mutex) in the Discard case, and would actually make existing programs slower in the general non-Discard case, because of the extra mutex cost.
+
+I wonder how the performance would compare if `log.Logger` used sync/atomic for its fields instead of a mutex?
+
+--- Comment #8 by mengzhuo ---
+@Deleplace you can try build `debug` flag and the compiler will elide those "deadcode".
+
+log.go
+
+```go
+package main
+
+func main() {
+        Debug("it's expensive")
+	if Dev {
+		log.Println("we are in develop mode")
+	}
+}
+```
+
+log_debug.go
+```go
+//+build debug
+
+package main
+
+import (
+        "log"
+)
+
+const Dev = true
+
+func Debug(a ...interface{}) {
+        log.Println(a...)
+}
+```
+
+log_release.go
+```go
+//+build !debug
+
+package main
+
+const Dev = false
+func Debug(a ...interface{}) {}
+```
+
+If you want to debug code `go build -tags "debug"`.
+ref (Chinese): https://mzh.io/golang-build-tags-for-debug/
+
+--- Comment #9 by vatine ---
+@mengzhuo Unfortunately, disabling debug logs at compile-time pretty much makes it impossible to quickly enable debug log verbosity for troubleshooting a production problem. As a general rule, it is quicker to change a flag for a deployment than it is to build a new binary, package it for release, then get it up and running.
+
+--- Comment #10 by Deleplace ---
+Some interesting considerations are out of scope of the current proposal:
+- compile-time flipping OFF/ON of the logging (or level value)
+- what we can achieve by wrapping (*log).Logger in other value types or interface types
+
+--- Comment #11 by Deleplace ---
+In my proposal, `myLogger = nil` would be equivalent to `myLogger = log.New(io.Discard, "", 0)`.
+
+As a possible gotcha, and data race hazard, I realize that
+```
+myLogger = nil
+```
+would **not** be equivalent to
+```
+myLogger.SetOutput(io.Discard)
+```
+
+* If several copies of the `myLogger` pointer are passed around, the latter (SetOutput) disables them all, while the former disables only one of them;
+* The latter (SetOutput) is always thread-safe (protected by `myLogger.mu`), while the former needs extra external synchronization if several goroutines are using `myLogger`;
+* The latter (SetOutput) keeps the flags and prefix intact, while the former "forgets" about them (which is easy to fix if needed)
+
+--- Comment #12 by rsc ---
+
+This proposal has been added to the [active column](https://golang.org/s/proposal-status#active) of the proposals project
+and will now be reviewed at the weekly proposal review meetings.
+— rsc for the proposal review group
+
+
+--- Comment #13 by rsc ---
+
+Based on the discussion above, this proposal seems like a **[likely accept](https://golang.org/s/proposal-status#likely-accept)**.
+— rsc for the proposal review group
+
+
+--- Comment #14 by rittneje ---
+@rsc I'd like to suggest a boolean field on `Logger` rather than allowing the receiver to be `nil`.
+
+```go
+type Logger struct {
+    isDiscard bool
+    ...
+}
+
+var Discard = &Logger{isDiscard: true}
+
+func (l *Logger) Output(calldepth int, s string) error {
+    if l.isDiscard {
+        return nil
+    }
+    ...
+}
+```
+
+This should give the same performance benefit as allowing the receiver to be `nil`, without the concern that someone unintentionally left a struct field `nil`. And since that field is immutable, you don't have to worry about any  thread-safety while reading it.
+
+It also leads to, I think, clearer code on the client side. Otherwise people will have to know that a `nil` Logger is valid (which, while valid Go, is fairly unusual).
+
+You could also invert the bool if you want the struct's zero value to be the no-op Logger.
+
+--- Comment #15 by robpike ---
+I like that idea, @rittneje. If made available through the interface, not just at construction time, one could disable logging dynamically, which could be handy when debugging a program that uses libraries that log too much but are not the problem.
+
+One small point: Prefer positive names over negative true. I suggest calling this Enable, defaulting to true. That works because Logger does not have a useful zero value. (However, Discard is a known name, so that has advantages as well.)
+
+--- Comment #16 by Deleplace ---
+An important note about what happens in `(*Logger).Output`: it is okay to check a condition in the body of Output (as it's an exported method, we should at least consider it). But for the performance concern, when Output is called it is already too late as (3) `fmt.Sprint` has already been called, has already allocated memory, and has possibly called the custom expensive `String` method of its arguments.
+
+It is crucial to check the condition early inside `(*Logger).Printf`, `(*Logger).Print`, `(*Logger).Println`.
+
+--- Comment #17 by Deleplace ---
+We have a few strong candidates here, which don't have the exact same costs in performance gain and in burden on the client code:
+
+A) a valid `nil` pointer
+B) a sentinel value `log.nopLogger` of type `*log.Logger`
+C) a bool field `Logger.isDiscard`, immutable
+D) a bool field `Logger.isDiscard`, mutable, where `(*Logger).SetDiscard(bool)` is thread-safe by calling `(*Logger).mu.Lock`
+E) a bool field `Logger.isDiscard`, mutable, where `(*Logger).SetDiscard(bool)` is not thread-safe
+
+It is important to be able to disable logging dynamically, however (D) would incur a performance penalty by requiring **_all calls to (*Logger).Print_** to also call `(*Logger).mu.Lock`. The point of the proposal is to avoid as much unnecessary work and sync as possible in the disabled case.
+
+(E) would cause a burden on the user to do some external synchronization, which is unexpected because all other methods are thread-safe via `(*Locker).mu`.
+
+(A), (B), (C) are performant and it is more obvious for the user that they only need proper synchronization on their `(*Logger)` pointer variable itself. E.g.:
+
+**Turn logger off**
+`mylogger = log.Discard`
+
+**Turn logger on, by creation**
+`myLogger = log.New(w, prefix, flag)`
+
+**Turn logger on, by reuse**
+`myLogger = savedLogger`
+
+--- Comment #18 by rittneje ---
+@Deleplace I just wanted to point out that for (D), you could also have a `uint32` flag that is accessed via `atomic.LoadUint32` and `atomic.StoreUint32`, similar to how `sync.Once` works.
+
+--- Comment #19 by rsc ---
+It does seem like not reusing nil would help catch some mistakes. As @rittneje points out, the flag can be an atomic boolean, so then the overhead on the printing path (and the discarding path) is a single atomic word read. That seems like it is probably cheap enough.
+
+Being able to toggle the whole logger has the benefit of not having to find all the different places you might have passed the logger and overwrite them all.
+
+I wonder if SetOutput(io.Discard) should be the discard signal? 
+(Instead of a separate new API call. That would work for old versions too, just not as fast, so it would be safe to use in newer code without breaking older code.)
+
+
+
+--- Comment #20 by rsc ---
+Retitled, will leave for a week but seems headed for likely accept with the new scoping.
+
+
+--- Comment #21 by Deleplace ---
+Here is a summary of the performance delta between "initial scoping" vs "new scoping"
+
+### Original proposal:
+
+- save the expensive calls to `fmt.Sprint` and `fmt.Sprintf`
+- save the expensive synchronization costs of calling `(*Logger).mu.Lock` and  `(*Logger).mu.Unlock`
+
+### New scoping:
+
+- save the expensive calls to `fmt.Sprint` and `fmt.Sprintf`
+- replace the expensive synchronization costs of `(*Logger).mu.Lock` and  `(*Logger).mu.Unlock` with cheaper calls to `atomic.LoadUint32` and `atomic.StoreUint32`
+
+As I'm not very familiar with atomics, could we please agree on these list of concerns for the new scoping?
+1. The new scoping would automagically bring performance benefits to the thousands of projects already using ioutil.Discard/io.Discard for muting a *Logger  (that would be fantastic!)
+2. Atomics are cheaper for our use case than the general-purpose sync.Mutex already contained in log.Logger
+3. Zero change will be needed in the exported API of the `log` package
+4. We are reasonably confident in our ability to mix 2 synchronization devices (Mutex + Atomics) in the log package implementation without introducing new data race hazards
+5. In the usual **non-muted** case, we are not introducing too much of overhead (maybe 1 extra call to `atomic.LoadUint32`?)
+6. The advantages of the new scoping overweight the cost of still paying some synchronization cost in the muted case. The target goal shifts from "Calling a muted logger is essentially free" to "Calling muted logger is cheap".
+7. The "is muted" check would be implemented as `l.out == io.Discard` or as `l.isDiscard`  (to be determined)
+
+I'm very happy with the "likely accept" prospect for some form of this proposal. Thank you all for the support.
+
+--- Comment #22 by rsc ---
+@deleplace, in 7, the SetOutput call would check out == io.Discard and then set an atomic boolean (in an int32), which the 'is muted' check would use in calls like log.Printf.
+
+
+
+
+--- Comment #23 by rsc ---
+
+Based on the discussion above, this proposal seems like a **[likely accept](https://golang.org/s/proposal-status#likely-accept)**.
+— rsc for the proposal review group
+
+
+--- Comment #24 by bcmills ---
+> 2. Atomics are cheaper for our use case than the general-purpose sync.Mutex already contained in log.Logger
+
+Yes. Way cheaper, as the number of CPU cores in use grows: acquiring a `sync.Mutex` invalidates the cache line containing the mutex, whereas an atomic load (that does not modify the value) doesn't invalidate anything in the steady state.
+
+> 4. We are reasonably confident in our ability to mix 2 synchronization devices (Mutex + Atomics) in the log package implementation without introducing new data race hazards
+
+`sync.Map` already aggressively mixes synchronization primitives. It's fine. 😅
+
+--- Comment #25 by rsc ---
+
+No change in consensus, so **[accepted](https://golang.org/s/proposal-status#accepted)**. 🎉
+
+
+### Go Repository Directory Structure ###
+```
+test/
+    fixedbugs/
+        issue7867.go
+        issue7884.go
+        issue7921.go
+        issue7944.go
+        issue7995.go
+        issue7995b.go
+        issue7996.go
+        issue7997.go
+        issue7998.go
+        issue8004.go
+        issue8011.go
+        issue8017.go
+        issue8028.go
+        issue8036.go
+        issue8039.go
+        issue8042.go
+        issue8047.go
+        issue8047b.go
+        issue8048.go
+        issue8060.go
+        issue8073.go
+        issue8074.go
+        issue8076.go
+        issue8079.go
+        issue8132.go
+        issue8139.go
+        issue8154.go
+        issue8155.go
+        issue8158.go
+        issue8183.go
+        issue8280.go
+        issue8311.go
+        issue8325.go
+        issue8336.go
+        issue8347.go
+        issue8385.go
+        issue8438.go
+        issue8440.go
+        issue8475.go
+        issue8501.go
+        issue8507.go
+        issue8606.go
+        issue8606b.go
+        issue8612.go
+        issue8613.go
+        issue8620.go
+        issue8745.go
+        issue8761.go
+        issue8836.go
+        issue887.go
+        issue8947.go
+        issue8961.go
+        issue9006.go
+        issue9017.go
+        issue9036.go
+        issue9076.go
+        issue9083.go
+        issue9110.go
+        issue9321.go
+        issue9355.go
+        issue9370.go
+        issue9432.go
+        issue9521.go
+        issue9537.go
+        issue9604.go
+        issue9604b.go
+        issue9608.go
+        issue9634.go
+        issue9691.go
+        issue9731.go
+        issue9738.go
+        issue9862.go
+        issue9862_run.go
+        notinheap.go
+        notinheap2.go
+        notinheap3.go
+    import2.dir/
+        import2.go
+        import3.go
+    import4.dir/
+        empty.go
+        import4.go
+    interface/
+        embed1.dir/
+            embed0.go
+            embed1.go
+        embed3.dir/
+            embed0.go
+            embed1.go
+        private.dir/
+            private1.go
+            prog.go
+        recursive1.dir/
+            recursive1.go
+            recursive2.go
+        assertinline.go
+        bigdata.go
+        convert.go
+        convert1.go
+        convert2.go
+        embed.go
+        embed1.go
+        embed2.go
+        embed3.go
+        explicit.go
+        fail.go
+        fake.go
+        noeq.go
+        pointer.go
+        private.go
+        receiver.go
+        receiver1.go
+        recursive.go
+        recursive1.go
+        returntype.go
+        struct.go
+    internal/
+        runtime/
+            sys/
+                inlinegcpc.go
+    intrinsic.dir/
+        main.go
+    ken/
+        array.go
+        chan.go
+        chan1.go
+        complit.go
+        convert.go
+        cplx0.go
+        cplx1.go
+        cplx2.go
+        cplx3.go
+        cplx4.go
+        cplx5.go
+        divconst.go
+        divmod.go
+        embed.go
+        for.go
+        interbasic.go
+        interfun.go
+        intervar.go
+        label.go
+        litfun.go
+        mfunc.go
+        modconst.go
+        ptrfun.go
+        ptrvar.go
+        range.go
+        rob1.go
+        rob2.go
+        robfor.go
+        robfunc.go
+        shift.go
+        simparray.go
+        simpbool.go
+        simpconv.go
+        simpfun.go
+        simpswitch.go
+        simpvar.go
+        slicearray.go
+        sliceslice.go
+        string.go
+        strvar.go
+    linkname.dir/
+        linkname1.go
+        linkname2.go
+        linkname3.go
+    linknameasm.dir/
+        x.go
+    method4.dir/
+        method4a.go
+        prog.go
+    retjmp.dir/
+        main.go
+    stress/
+        maps.go
+        parsego.go
+        runstress.go
+    syntax/
+        chan.go
+        chan1.go
+        composite.go
+        ddd.go
+        else.go
+        if.go
+        import.go
+        initvar.go
+        semi1.go
+        semi2.go
+        semi3.go
+        semi4.go
+        semi5.go
+        semi6.go
+        semi7.go
+        topexpr.go
+        typesw.go
+        vareq.go
+        vareq1.go
+    typeparam/
+        absdiffimp.dir/
+            a.go
+            main.go
+        absdiffimp2.dir/
+            a.go
+            main.go
+        aliasimp.dir/
+            a.go
+            main.go
+        chansimp.dir/
+            a.go
+            main.go
+        dedup.dir/
+            a.go
+            b.go
+            c.go
+            main.go
+        factimp.dir/
+            a.go
+            main.go
+        gencrawler.dir/
+            a.go
+            main.go
+        geninline.dir/
+            a.go
+            main.go
+        issue46461b.dir/
+            a.go
+            b.go
+        issue47514c.dir/
+            a.go
+            main.go
+        issue47775.dir/
+            b.go
+            main.go
+        issue47892.dir/
+            a.go
+            main.go
+        issue47892b.dir/
+            a.go
+            main.go
+        issue48094.dir/
+            a.go
+            main.go
+        issue48094b.dir/
+            a.go
+            b.go
+        issue48185a.dir/
+            p.go
+            p_test.go
+        issue48185b.dir/
+            a.go
+            main.go
+        issue48280.dir/
+            a.go
+            main.go
+        issue48306.dir/
+            a.go
+            main.go
+        issue48337a.dir/
+            a.go
+            main.go
+        issue48337b.dir/
+            a.go
+            main.go
+        issue48454.dir/
+            a.go
+            b.go
+            main.go
+        issue48462.dir/
+            a.go
+            main.go
+        issue48716.dir/
+            a.go
+            main.go
+        issue48962.dir/
+            a.go
+            b.go
+        issue49027.dir/
+            a.go
+            main.go
+        issue49241.dir/
+            a.go
+            b.go
+            c.go
+            main.go
+        issue49246.dir/
+            a.go
+            b.go
+        issue49497.dir/
+            a.go
+            main.go
+        issue49524.dir/
+            a.go
+            main.go
+        issue49536.dir/
+            a.go
+            b.go
+        issue49659.dir/
+            a.go
+            b.go
+        issue49667.dir/
+            a.go
+            b.go
+            main.go
+        issue49893.dir/
+            a.go
+            b.go
+            main.go
+        issue50121.dir/
+            a.go
+            main.go
+        issue50121b.dir/
+            a.go
+            b.go
+            c.go
+            d.go
+            main.go
+        issue50437.dir/
+            a.go
+            b.go
+        issue50481b.dir/
+            b.go
+            main.go
+        issue50481c.dir/
+            a.go
+            main.go
+        issue50485.dir/
+            a.go
+            main.go
+        issue50486.dir/
+            goerror_fp.go
+            main.go
+        issue50552.dir/
+            a.go
+            main.go
+        issue50561.dir/
+            diameter.go
+            main.go
+        issue50598.dir/
+            a0.go
+            a1.go
+            a2.go
+            main.go
+        issue50841.dir/
+            a.go
+            b.go
+        issue51219.dir/
+            a.go
+            main.go
+        issue51219b.dir/
+            a.go
+            b.go
+            p.go
+        issue51250a.dir/
+            a.go
+            b.go
+            main.go
+        issue51367.dir/
+            a.go
+            main.go
+        issue51423.dir/
+            a.go
+            b.go
+        issue51836.dir/
+            a.go
+            aa.go
+            p.go
+        issue52117.dir/
+            a.go
+            b.go
+        issue54302.dir/
+            a.go
+            main.go
+        listimp.dir/
+            a.go
+            main.go
+        listimp2.dir/
+            a.go
+            main.go
+        mapimp.dir/
+            a.go
+            main.go
+        mapsimp.dir/
+            a.go
+            main.go
+        mdempsky/
+            1.dir/
+                a.go
+                b.go
+            10.dir/
+                a.go
+                b.go
+            12.dir/
+                a.go
+                main.go
+            3.dir/
+                a.go
+                b.go
+            4.dir/
+                a.go
+                b.go
+            7.dir/
+                a.go
+                b.go
+            8.dir/
+                a.go
+                b.go
+            1.go
+            10.go
+            12.go
+            13.go
+            14.go
+            15.go
+            16.go
+            17.go
+            18.go
+            19.go
+            2.go
+            20.go
+            21.go
+            3.go
+            4.go
+            5.go
+            6.go
+            7.go
+            8.go
+            9.go
+        mincheck.dir/
+            a.go
+            main.go
+        minimp.dir/
+            a.go
+            main.go
+        mutualimp.dir/
+            a.go
+            b.go
+        orderedmapsimp.dir/
+            a.go
+            main.go
+        pairimp.dir/
+            a.go
+            main.go
+        recoverimp.dir/
+            a.go
+            main.go
+        select.dir/
+            a.go
+            main.go
+        setsimp.dir/
+            a.go
+            main.go
+        sliceimp.dir/
+            a.go
+            main.go
+        stringerimp.dir/
+            a.go
+            main.go
+        structinit.dir/
+            a.go
+            b.go
+            main.go
+        valimp.dir/
+            a.go
+            main.go
+        absdiff.go
+        absdiff2.go
+        absdiff3.go
+        absdiffimp.go
+        absdiffimp2.go
+        adder.go
+        aliasimp.go
+        append.go
+        boundmethod.go
+        builtins.go
+        chans.go
+        chansimp.go
+        combine.go
+        cons.go
+        dedup.go
+        devirtualize1.go
+        devirtualize2.go
+        dictionaryCapture-noinline.go
+        dictionaryCapture.go
+        dottype.go
+        double.go
+        eface.go
+        equal.go
+        fact.go
+        factimp.go
+        gencrawler.go
+        genembed.go
+        genembed2.go
+        geninline.go
+        graph.go
+        ifaceconv.go
+        importtest.go
+        index.go
+        index2.go
+        interfacearg.go
+        issue23536.go
+        issue376214.go
+        issue39755.go
+        issue42758.go
+        issue44688.go
+        issue45547.go
+        issue45722.go
+        issue45738.go
+        issue45817.go
+        issue46461.go
+        issue46461b.go
+        issue46472.go
+        issue46591.go
+        issue47258.go
+        issue47272.go
+        issue47514.go
+        issue47514b.go
+        issue47514c.go
+        issue47631.go
+        issue47676.go
+        issue47684.go
+        issue47684b.go
+        issue47684c.go
+        issue47708.go
+        issue47710.go
+        issue47713.go
+        issue47716.go
+        issue47723.go
+        issue47740.go
+        issue47740b.go
+        issue47775.go
+        issue47775b.go
+        issue47797.go
+        issue47877.go
+        issue47878.go
+        issue47892.go
+        issue47892b.go
+        issue47896.go
+        issue47901.go
+        issue47924.go
+        issue47925.go
+        issue47925b.go
+        issue47925c.go
+        issue47925d.go
+        issue47929.go
+        issue47948.go
+        issue47966.go
+        issue48013.go
+        issue48016.go
+        issue48030.go
+        issue48042.go
+        issue48047.go
+        issue48049.go
+        issue48056.go
+        issue48094.go
+        issue48094b.go
+        issue48137.go
+        issue48185a.go
+        issue48185b.go
+        issue48191.go
+        issue48198.go
+        issue48225.go
+        issue48253.go
+        issue48276a.go
+        issue48276b.go
+        issue48280.go
+        issue48306.go
+        issue48317.go
+        issue48318.go
+        issue48337a.go
+        issue48337b.go
+        issue48344.go
+        issue48424.go
+        issue48453.go
+        issue48454.go
+        issue48462.go
+        issue48537.go
+        issue48538.go
+        issue48598.go
+        issue48602.go
+        issue48604.go
+        issue48609.go
+        issue48617.go
+        issue48645a.go
+        issue48645b.go
+        issue48711.go
+        issue48716.go
+        issue48838.go
+        issue48962.go
+        issue49027.go
+        issue49049.go
+        issue49241.go
+        issue49246.go
+        issue49295.go
+        issue49309.go
+        issue49421.go
+        issue49432.go
+        issue49497.go
+        issue49516.go
+        issue49524.go
+        issue49536.go
+        issue49538.go
+        issue49547.go
+        issue49611.go
+        issue49659.go
+        issue49659b.go
+        issue49667.go
+        issue49875.go
+        issue49893.go
+        issue50002.go
+        issue50109.go
+        issue50109b.go
+        issue50121.go
+        issue50121b.go
+        issue50147.go
+        issue50177.go
+        issue50193.go
+        issue50259.go
+        issue50264.go
+        issue50317.go
+        issue50417.go
+        issue50417b.go
+        issue50419.go
+        issue50437.go
+        issue50481b.go
+        issue50481c.go
+        issue50485.go
+        issue50486.go
+        issue50552.go
+        issue50561.go
+        issue50598.go
+        issue50642.go
+        issue50690a.go
+        issue50690b.go
+        issue50690c.go
+        issue50833.go
+        issue50841.go
+        issue50993.go
+        issue51219.go
+        issue51219b.go
+        issue51232.go
+        issue51233.go
+        issue51236.go
+        issue51245.go
+        issue51250a.go
+        issue51303.go
+        issue51355.go
+        issue51367.go
+        issue51423.go
+        issue51521.go
+        issue51522a.go
+        issue51522b.go
+        issue51700.go
+        issue51765.go
+        issue51832.go
+        issue51836.go
+        issue51840.go
+        issue51909.go
+        issue51925.go
+        issue52026.go
+        issue52117.go
+        issue52124.go
+        issue52228.go
+        issue52241.go
+        issue53087.go
+        issue53254.go
+        issue53390.go
+        issue53406.go
+        issue53419.go
+        issue53477.go
+        issue53762.go
+        issue54135.go
+        issue54225.go
+        issue54302.go
+        issue54456.go
+        issue54497.go
+        issue54535.go
+        issue54537.go
+        issue54765.go
+        issue55101.go
+        issue58513.go
+        list.go
+        list2.go
+        listimp.go
+        listimp2.go
+        lockable.go
+        map.go
+        mapimp.go
+        maps.go
+        mapsimp.go
+        metrics.go
+        min.go
+        mincheck.go
+        minimp.go
+        mutualimp.go
+        nested.go
+        ordered.go
+        orderedmap.go
+        orderedmapsimp.go
+        pair.go
+        pairimp.go
+        pragma.go
+        recoverimp.go
+        select.go
+        sets.go
+        setsimp.go
+        settable.go
+        shape1.go
+        sliceimp.go
+        slices.go
+        smallest.go
+        smoketest.go
+        stringable.go
+        stringer.go
+        stringerimp.go
+        struct.go
+        structinit.go
+        subdict.go
+        sum.go
+        tparam1.go
+        typelist.go
+        typeswitch1.go
+        typeswitch2.go
+        typeswitch3.go
+        typeswitch4.go
+        typeswitch5.go
+        typeswitch6.go
+        typeswitch7.go
+        valimp.go
+        value.go
+    uintptrescapes.dir/
+        a.go
+        main.go
+    wasmmemsize.dir/
+        main.go
+    235.go
+    64bit.go
+    alg.go
+    alias.go
+    alias1.go
+    alias2.go
+    alias3.go
+    align.go
+    append.go
+    append1.go
+    args.go
+    armimm.go
+    asmhdr.go
+    assign.go
+    assign1.go
+    atomicload.go
+    bigalg.go
+    bigmap.go
+    blank.go
+    blank1.go
+    bom.go
+    bombad.go
+    bounds.go
+    cannotassign.go
+    chancap.go
+    chanlinear.go
+    char_lit.go
+    char_lit1.go
+    checkbce.go
+    clear.go
+    clearfat.go
+    closedchan.go
+    closure.go
+    closure1.go
+    closure2.go
+    closure3.go
+    closure4.go
+    closure5.go
+    closure6.go
+    closure7.go
+    cmp.go
+    cmp6.go
+    cmplx.go
+    cmplxdivide.go
+    cmplxdivide1.go
+    complit.go
+    complit1.go
+    compos.go
+    const.go
+    const1.go
+    const2.go
+    const3.go
+    const4.go
+    const5.go
+    const6.go
+    const7.go
+    const8.go
+    convT2X.go
+    convert.go
+    convert1.go
+    convert2.go
+    convert3.go
+    convert4.go
+    convinline.go
+    convlit.go
+    convlit1.go
+    copy.go
+    copy1.go
+    crlf.go
+    ddd.go
+    ddd1.go
+    ddd2.go
+    decl.go
+    declbad.go
+    defer.go
+    defererrcheck.go
+    deferfin.go
+    defernil.go
+    deferprint.go
+    devirt.go
+    directive.go
+    directive2.go
+    divide.go
+    divmod.go
+    embedfunc.go
+    embedvers.go
+    empty.go
+    env.go
+    eof.go
+    eof1.go
+    escape.go
+    escape2.go
+    escape2n.go
+    escape3.go
+    escape4.go
+    escape5.go
+    escape6.go
+    escape_array.go
+    escape_calls.go
+    escape_closure.go
+    escape_field.go
+    escape_goto.go
+    escape_hash_maphash.go
+    escape_iface.go
+    escape_iface_data.go
+    escape_indir.go
+    escape_level.go
+    escape_make_non_const.go
+    escape_map.go
+    escape_mutations.go
+    escape_param.go
+    escape_reflect.go
+    escape_runtime_atomic.go
+    escape_selfassign.go
+    escape_slice.go
+    escape_struct_param1.go
+    escape_struct_param2.go
+    escape_struct_return.go
+    escape_sync_atomic.go
+    escape_unique.go
+    escape_unsafe.go
+    fibo.go
+    finprofiled.go
+    float_lit.go
+    float_lit2.go
+    float_lit3.go
+    floatcmp.go
+    for.go
+    func.go
+    func1.go
+    func2.go
+    func3.go
+    func4.go
+    func5.go
+    func6.go
+    func7.go
+    func8.go
+    funcdup.go
+    funcdup2.go
+    fuse.go
+    gc.go
+    gc1.go
+    gc2.go
+    gcgort.go
+    gcstring.go
+    goprint.go
+    goto.go
+    heapsampling.go
+    helloworld.go
+    if.go
+    import.go
+    import1.go
+    import2.go
+    import4.go
+    import5.go
+    import6.go
+    index.go
+    index0.go
+    index1.go
+    index2.go
+    indirect.go
+    indirect1.go
+    init.go
+    init1.go
+    initcomma.go
+    initexp.go
+    initialize.go
+    initializerr.go
+    initloop.go
+    inline.go
+    inline_big.go
+    inline_caller.go
+    inline_callers.go
+    inline_endian.go
+    inline_literal.go
+    inline_math_bits_rotate.go
+    inline_sync.go
+    inline_testingbloop.go
+    inline_variadic.go
+    int_lit.go
+    intcvt.go
+    intrinsic.go
+    intrinsic_atomic.go
+    iota.go
+    label.go
+    label1.go
+    linkmain.go
+    linkmain_run.go
+    linkname.go
+    linkname3.go
+    linknameasm.go
+    linkobj.go
+    linkx.go
+    linkx_run.go
+    literal.go
+    literal2.go
+    live.go
+    live1.go
+    live2.go
+    live_regabi.go
+    live_uintptrkeepalive.go
+    loopbce.go
+    mainsig.go
+    makechan.go
+    makemap.go
+    makenew.go
+    makeslice.go
+    mallocfin.go
+    map.go
+    map1.go
+    mapclear.go
+    maplinear.go
+    maymorestack.go
+    mergemul.go
+    method.go
+    method1.go
+    method2.go
+    method3.go
+    method4.go
+    method5.go
+    method6.go
+    method7.go
+    named.go
+    named1.go
+    newinline.go
+    nil.go
+    nilcheck.go
+    nilptr.go
+    nilptr2.go
+    nilptr3.go
+    nilptr4.go
+    nilptr5.go
+    nilptr5_aix.go
+    nilptr5_wasm.go
+    nilptr_aix.go
+    noinit.go
+    nosplit.go
+    nowritebarrier.go
+    nul1.go
+    opt_branchlikely.go
+    parentype.go
+    peano.go
+    phiopt.go
+    print.go
+    printbig.go
+    prove.go
+    prove_constant_folding.go
+    prove_invert_loop_with_unused_iterators.go
+    prove_popcount.go
+    range.go
+    range2.go
+    range3.go
+    range4.go
+    rangegen.go
+    recover.go
+    recover1.go
+    recover2.go
+    recover3.go
+    recover4.go
+    recover5.go
+    reflectmethod1.go
+    reflectmethod2.go
+    reflectmethod3.go
+    reflectmethod4.go
+    reflectmethod5.go
+    reflectmethod6.go
+    reflectmethod7.go
+    reflectmethod8.go
+    rename.go
+    rename1.go
+    reorder.go
+    reorder2.go
+    retjmp.go
+    return.go
+    rotate.go
+    rotate0.go
+    rotate1.go
+    rotate2.go
+    rotate3.go
+    rune.go
+    runtime.go
+    shift1.go
+    shift2.go
+    shift3.go
+    sieve.go
+    sigchld.go
+    simassign.go
+    sizeof.go
+    slice3.go
+    slice3err.go
+    slicecap.go
+    sliceopt.go
+    solitaire.go
+    stack.go
+    stackobj.go
+    stackobj2.go
+    stackobj3.go
+    strcopy.go
+    strength.go
+    string_lit.go
+    stringrange.go
+    struct0.go
+    switch.go
+    switch2.go
+    switch3.go
+    switch4.go
+    switch5.go
+    switch6.go
+    switch7.go
+    tailcall.go
+    tighten.go
+    tinyfin.go
+    torture.go
+    turing.go
+    typecheck.go
+    typecheckloop.go
+    typeswitch.go
+    typeswitch1.go
+    typeswitch2.go
+    typeswitch2b.go
+    typeswitch3.go
+    uintptrescapes.go
+    uintptrescapes2.go
+    uintptrescapes3.go
+    uintptrkeepalive.go
+    undef.go
+    unsafe_slice_data.go
+    unsafe_string.go
+    unsafe_string_data.go
+    unsafebuiltins.go
+    used.go
+    utf.go
+    varerr.go
+    varinit.go
+    wasmexport.go
+    wasmexport2.go
+    wasmmemsize.go
+    weak.go
+    winbatch.go
+    writebarrier.go
+    zerodivide.go
+    zerosize.go
+```
+
+**CRITICAL INSTRUCTION:** 
+You can ONLY select files that are explicitly shown in the repository structure above. 
+If the proposal discusses topics not covered by the files in this structure, return an empty list.
+
+**Step-by-step process:**
+1. Read the proposal title and content.  
+2. Scan the repository structure above for matching file paths.  
+3. Include only those files you actually see listed.  
+4. If none match, return an empty list (`[]`).
+
+Please output your answer in the following format:
+Return a JSON object with the following format.
+The response MUST:
+- Be a valid JSON block.
+- Contain a key `found_files` with a list of file paths.
+- Output ONLY the raw JSON object. Do NOT include any markdown formatting (no ```json or ```).
+- Do NOT add any explanations or additional text.
+- If you are unsure which files apply, return an empty list.
+
+Example of correct output when files are found:
+{
+  "found_files": [
+    "src/crypto/dsa/dsa.go",
+    "src/net/http/server.go"
+  ]
+}
+
+Example of correct output when files are not found:
+{
+  "found_files": []
+}

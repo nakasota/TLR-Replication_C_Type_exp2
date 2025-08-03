@@ -1,0 +1,47 @@
+{
+  "selected_file_level_output": "20250801_151759",
+  "29951.md": {
+    "src/math/big/nat.go": [
+      "setUint64",
+      "add",
+      "sub",
+      "cmp"
+    ],
+    "src/math/big/int.go": [
+      "NewInt",
+      "SetInt64",
+      "SetUint64",
+      "Add",
+      "Sub",
+      "Cmp"
+    ],
+    "src/math/big/arith.go": [
+      "addVV_g",
+      "subVV_g",
+      "addVW",
+      "addVW_ref",
+      "subVW",
+      "subVW_ref"
+    ]
+  },
+  "44412.md": {
+    "src/time/time_test.go": [
+      "TestUnixMilli",
+      "TestUnixMicro",
+      "BenchmarkNowUnixMilli",
+      "BenchmarkNowUnixMicro"
+    ],
+    "src/time/time.go": [
+      "UnixMilli",
+      "UnixMicro",
+      "Unix",
+      "unixTime",
+      "UnixNano"
+    ],
+    "src/runtime/time_test.go": [],
+    "src/runtime/time.go": [
+      "time_runtimeNow",
+      "time_runtimeNano"
+    ]
+  }
+}

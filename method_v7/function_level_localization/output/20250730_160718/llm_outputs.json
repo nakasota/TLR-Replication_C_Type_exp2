@@ -1,0 +1,92 @@
+{
+  "selected_file_level_output": "20250730_160406",
+  "47459.md": {
+    "src/cmd/compile/internal/types2/typeset_test.go": [],
+    "src/cmd/compile/internal/types2/typeparam.go": [
+      "NewTypeParam",
+      "Obj",
+      "Index",
+      "Constraint",
+      "SetConstraint",
+      "Underlying",
+      "String",
+      "cleanup",
+      "iface",
+      "is",
+      "typeset"
+    ],
+    "src/go/types/instantiate_test.go": [
+      "TestMethodInstantiation"
+    ],
+    "src/cmd/compile/internal/types2/typeset.go": [
+      "IsEmpty",
+      "IsAll",
+      "IsMethodSet",
+      "IsComparable",
+      "NumMethods",
+      "Method",
+      "LookupMethod",
+      "String",
+      "hasTerms",
+      "subsetOf",
+      "typeset",
+      "is"
+    ],
+    "src/go/types/typeparam.go": [
+      "NewTypeParam",
+      "newTypeParam",
+      "Obj",
+      "Index",
+      "Constraint",
+      "SetConstraint",
+      "Underlying",
+      "String"
+    ],
+    "src/go/types/instantiate.go": [
+      "Instantiate",
+      "instance",
+      "validateTArgLen",
+      "verify",
+      "mentions"
+    ]
+  },
+  "29951.md": {
+    "src/math/big/int.go": [
+      "NewInt",
+      "SetInt64",
+      "SetUint64",
+      "Add",
+      "Sub",
+      "Cmp"
+    ],
+    "src/math/big/nat.go": [
+      "setUint64",
+      "add",
+      "sub",
+      "cmp"
+    ],
+    "src/math/big/arith.go": [
+      "addVV_g",
+      "subVV_g",
+      "addVW",
+      "addVW_ref",
+      "subVW",
+      "subVW_ref"
+    ]
+  },
+  "44412.md": {
+    "src/time/time.go": [
+      "UnixMilli",
+      "UnixMicro",
+      "Unix",
+      "unixTime",
+      "UnixNano"
+    ],
+    "src/time/time_test.go": [
+      "TestUnixMilli",
+      "TestUnixMicro",
+      "BenchmarkNowUnixMilli",
+      "BenchmarkNowUnixMicro"
+    ]
+  }
+}

@@ -1,0 +1,1481 @@
+
+You are analyzing a Go proposal and repository to identify which files are **most relevant** to the given proposal.
+
+### Proposal Content ###
+# Proposal: 45428.md
+=== Fetching Proposal: MDU6SXNzdWU4NTI0Mzg0Njk= ===
+Issue URL: https://github.com/golang/go/issues/45428
+
+==== [Issue Title] ====
+crypto/tls: disable client-side TLS 1.0 and TLS 1.1
+
+==== [Issue Body] ====
+TLS 1.0 and TLS 1.1 are legacy versions of TLS with significant robustness and complexity issues. They use SHA-1 in the handshake and they don't support AEAD cipher suites, meaning they require Encrypt-then-MAC CBC cipher suites that are vulnerable to side channel attacks. TLS 1.0 requires clunky countermeasures for attacks against CBC cipher suites.
+
+TLS 1.2 was standardized in 2008. RFC 8996 strongly deprecated TLS 1.0 and TLS 1.1. All modern browsers removed support for TLS 1.0 and TLS 1.1 in 2020. PCI compliance has required TLS 1.2 since 2018. NIST guidelines require TLS 1.1 since 2014 and TLS 1.2 since 2019.
+
+In terms of how the real world looks like, [SSL Pulse](https://www.ssllabs.com/ssl-pulse/) says that only 0.7% of surveyed sites only support TLS 1.0. No websites supports TLS 1.1 but not TLS 1.2. Note that this data is not weighted by popularity. Since browsers removed TLS 1.0 and TLS 1.1 support, there are no connections numbers, but it was significantly lower before turndown.
+
+On the client side the landscape is not as bright. [Can I use](https://caniuse.com/tls1-2) says only 98.16% of web clients support TLS 1.2. I remember server-side connection numbers to be a little better, but not as good as client-side numbers.
+
+There is also generally a qualitative difference between TLS 1.0 clients and TLS 1.0 servers. The former imply an outdated device, which can be expensive to replace, but possibly still serviceable. The latter implies a catastrophically out of date server which is not safe to use and must be updated.
+
+Based on this, I propose a multi-stage plan for turning off and eventually removing TLS 1.0 and TLS 1.1.
+
+**I am requesting approval for the first stage, and will go through the proposal process again for each successive stage.**
+
+## Stage 1
+
+When zero, `Config.MinVersion` is changed to default to `VersionTLS12` on the client side.
+
+This can be overridden by setting `Config.MinVersion` (or with a temporary GODEBUG value).
+
+Pre-announce this in Go 1.17, implement it in Go 1.18, remove the GODEBUG switch in Go 1.19.
+
+## Stage 2
+
+When zero, `Config.MinVersion` is changed to default to `VersionTLS12` on the server side.
+
+This can be overridden by setting `Config.MinVersion` (or with a temporary GODEBUG value).
+
+Pre-announce this in TBD, implement it in TBD+1, remove the GODEBUG switch in TBD+2.
+
+(Stage 2, whenever it comes, might also be a good time to disable by default TLS 1.0-correlated ciphersuites like 3DES.)
+
+## Stage 3
+
+TLS 1.0 and TLS 1.1 are turned off.
+
+This can be temporarily overridden by both setting `Config.MinVersion` and a GODEBUG value simultaneously.
+
+Pre-announce this in TBD, implement it in TBD+1, remove the GODEBUG switch and all TLS 1.0 and TLS 1.1 code in TBD+2.
+
+(Stage 3, whenever it comes, might also be a good time to remove other off-by-default things like RC4 and 3DES.)
+
+==== [Comments] ====
+
+--- Comment #1 by tmthrgd ---
+Stage 3 seems like a copy-paste typo. If the protocols have been removed (code yeeted), then I don’t see how they could possibly be re-enabled
+at run-time.
+
+--- Comment #2 by FiloSottile ---
+> Stage 3 seems like a copy-paste typo. If the protocols have been removed (code yeeted), then I don’t see how they could possibly be re-enabled at run-time.
+
+The code will be yeeted at TBD+2, in TBD+1 it will behave as if it was removed unless GODEBUG is set. The difference is that Config.MinVersion will stop working.
+
+--- Comment #3 by tmthrgd ---
+> > Stage 3 seems like a copy-paste typo. If the protocols have been removed (code yeeted), then I don’t see how they could possibly be re-enabled at run-time.
+> 
+> The code will be yeeted at TBD+2, in TBD+1 it will behave as if it was removed unless GODEBUG is set. The difference is that Config.MinVersion will stop working.
+
+Ah I see, I see. That makes sense. It might help to clarify that in “This can be temporarily overridden with both Config.MinVersion and a GODEBUG value.” because that seems to state they’d both keep working during the transition.
+
+--- Comment #4 by rsc ---
+Retitled to be clear this proposal discussion and potential approval is only for "Stage 1".
+
+--- Comment #5 by rsc ---
+
+This proposal has been added to the [active column](https://golang.org/s/proposal-status#active) of the proposals project
+and will now be reviewed at the weekly proposal review meetings.
+— rsc for the proposal review group
+
+
+--- Comment #6 by ucirello ---
+I'd like to oppose this proposal - both its first stage and in its entirety. With the caveat that I would be OK to replace the code I use with an extended library version of the packages (`golang.org/x`).
+
+The data you put forward assumes publicly visible servers. In private networking the mentality that says "if it is not broken, don't fix it" creates a dramatically different reality. The fact is that I still need to interface with a lot of software with broken crypto (SSLv3, TLS1.0 etc). 
+
+The introduction and adoption of this proposal would create me a very big problem - in order to keep interfacing with old software, I would have to keep my own go installation frozen in time, or bear the cost of keeping a fork.
+
+Please, reconsider this proposal - either don't proceed with it, or offer an extended library that I could keep using. 
+
+Thanks @FiloSottile @rsc 
+
+--- Comment #7 by FiloSottile ---
+> The fact is that I still need to interface with a lot of software with broken crypto (SSLv3, TLS1.0 etc).
+
+If you need SSLv3 I assume you are already using a fork?
+
+Since this is a proposal for approval of Stage 1, are you saying you need to connect to servers which don't support TLS 1.2? That would imply no modern browsers can connect to them either, so could you share what kind of software that is? How does that software get security updates? What timeline would you estimate for that software to get TLS 1.2 support?
+
+--- Comment #8 by ucirello ---
+> If you need SSLv3 I assume you are already using a fork?
+
+Or in my case, I have at least some deployments running an old version of the code. So these customers are stuck with older versions.
+
+> Since this is a proposal for approval of Stage 1, are you saying you need to connect to servers which don't support TLS 1.2?
+
+Correct
+
+> That would imply no modern browsers can connect to them either, so could you share what kind of software that is? 
+
+Database Protocols Software and ancient deployments of remote desktop sharing software.
+
+> How does that software get security updates? What timeline would you estimate for that software to get TLS 1.2 support?
+
+I don't believe they do. And the timeline is none. Because, "if it is not broken, don't fix it". Sad, I know.
+
+
+
+
+--- Comment #9 by FiloSottile ---
+> > How does that software get security updates? What timeline would you estimate for that software to get TLS 1.2 support?
+> 
+> I don't believe they do. And the timeline is none. Because, "if it is not broken, don't fix it". Sad, I know.
+
+I feel for who has to maintain those systems, but making modern well-run systems pay (because remember that complexity has a security cost, in more ways than one) for systems that decided to be permanently insecure is not an option, sorry.
+
+Anyway, it sounds like you wouldn't be affected by this change until Stage 3. Do you have any objections to Stage 1? Why?
+
+--- Comment #10 by mvdan ---
+Presumably, systems insisting on sticking to deprecated versions of TLS could also just stay on an older version of Go? I get that upgrading Go has other benefits, but I'm fully with @FiloSottile that keeping that use case working for a long time seems like the wrong tradeoff.
+
+--- Comment #11 by ucirello ---
+> Do you have any objections to Stage 1? Why?
+
+It depends on how the Stage 1 shows ups. If it is a parameter (`Config.MinVersion` override), then it is fine. Adjusting the behavior through env vars (like GODEBUG) is a way harder sell - I'd have to either ask my customers to deploy a configuration change (tough sell - "it is working, why do you want me to change it?").
+
+> I feel for who has to maintain those systems, but making modern well-run systems pay (because remember that complexity has a security cost, in more ways than one) for systems that decided to be permanently insecure is not an option, sorry.
+
+I agree with you, and that's why I suggested keeping the deprecated software under golang.org/x. But perhaps it doesn't make sense? I defer to you. 
+
+> systems insisting on sticking to deprecated versions of TLS could also just stay on an older version of Go? 
+
+I tried it - it works well. As long as my dependencies decide their minimum go versions is as old or older than the old Go version I'd need to keep around, plus manually back-porting other Go changes (non-crypto changes) into the old Go version. If possible, I'd like to avoid this situation. 
+
+
+
+--- Comment #12 by FiloSottile ---
+> > Do you have any objections to Stage 1? Why?
+> 
+> It depends on how the Stage 1 shows ups. If it is a parameter (`Config.MinVersion` override), then it is fine. Adjusting the behavior through env vars (like GODEBUG) is a way harder sell - I'd have to either ask my customers to deploy a configuration change (tough sell - "it is working, why do you want me to change it?").
+
+Stage 1 and 2 just change the default `MinVersion` value. `GODEBUG` is never a long term setting, it's just a way to easily triage a failure by setting something in the environment without going around rebuilding everything involved.
+
+Edit: clarified in the proposal that Stage 1 and 2 effectively change the default `Config.MinVersion`.
+
+> > I feel for who has to maintain those systems, but making modern well-run systems pay (because remember that complexity has a security cost, in more ways than one) for systems that decided to be permanently insecure is not an option, sorry.
+> 
+> I agree with you, and that's why I suggested keeping the deprecated software under golang.org/x. But perhaps it doesn't make sense? I defer to you.
+
+Unfortunately the TLS stack is not easy to swap in and out: #21753. It would be nice to make it easier and is something we keep in mind as we plan larger changes. In general, we also can't maintain forks for everyone's custom requirements, so it would have to be a community project.
+
+--- Comment #13 by ucirello ---
+> Unfortunately the TLS stack is not easy to swap in and out: #21753. It would be nice to make it easier and is something we keep in mind as we plan larger changes. In general, we also can't maintain forks for everyone's custom requirements, so it would have to be a community project.
+
+In any case, thanks for caring @FiloSottile 
+
+
+--- Comment #14 by antichris ---
+> If it ain't broke, don't fix it
+
+I think this is an opportunity to educate your customers on the costs of disaster recovery (or, rather, costs of scrimping on that).
+
+Because "it" actually _is_ broken, even when it may seem to be kind of working for now, outdated un-upgradable infrastructure is destined to break _irreparably_, and the longer the mitigation is delayed, the costlier it will end up. Unless your customers count on going bankrupt faster than something bad can happen, they _will_ have to grit the teeth and cough up the funds for an upgrade sooner or later. Liken it to cancer: here they have the wonderful rare opportunity to act on an early(-ish) detection, but the longer they sit on this knowledge waiting, the iffier their chance of survival becomes. We're talking security here, after all.
+
+--- Comment #15 by FiloSottile ---
+@antichris I think we all agree that keeping systems updated is important and the better choice, but the decision makers at some organizations are often not reading GitHub issues. Discussing how we should (or shouldn't) cater to those customers in the standard library is on topic, discussing the error of their ways not that much :)
+
+--- Comment #16 by antichris ---
+@FiloSottile Sure, I concur with you on all those points. What I meant was that maybe it is up to people like you, me and @ucirello to give the financial decision makers a bit of poke from time to time, reminding, that all those news headlines on multi-million-costing security breaches are not happening in some fictional or parallel universe, but is a harsh reality that can set in for anyone, especially those that feel complacent with cutting down on security spending. Maybe the executives need a personalized reminder from their friendly security specialist, that the headlines are real and not just a marketing ploy.
+
+--- Comment #17 by liuxingbaoyu ---
+I know that many users are using 512m memory servers to run their software, XP win 2003, win7 systems, WINAPI does not support TLS1.2 (win7 can be supported by an update patch), so some server also needs to retain TLS1.2.
+So I am not opposed to modifying `Config.MinVersion`, but I think the old version of TLS code should be retained and can be enabled, otherwise some service providers can only use the old version of golang on the server for customers, which will bring greater risks and a lot of inconvenience.
+
+--- Comment #18 by ghost ---
+> I know that many users are using 512m memory servers to run their software, XP win 2003, win7 systems, WINAPI does not support TLS1.2 (win7 can be supported by an update patch), so some server also needs to retain TLS1.2.
+> So I am not opposed to modifying `Config.MinVersion`, but I think the old version of TLS code should be retained and can be enabled, otherwise some service providers can only use the old version of golang on the server for customers, which will bring greater risks and a lot of inconvenience.
+
+Let's say a programmer who doesn't know about this flaw implements this into their code, and they work for a bank and makes it into production, than they are screwed, I say we remove it from the standard package and maybe add it to another package. (non-standard one) and if they really want to use it they still have the option to import it from another package.
+
+--- Comment #19 by liuxingbaoyu ---
+> > I know that many users are using 512m memory servers to run their software, XP win 2003, win7 systems, WINAPI does not support TLS1.2 (win7 can be supported by an update patch), so some server also needs to retain TLS1.2.
+> > So I am not opposed to modifying `Config.MinVersion`, but I think the old version of TLS code should be retained and can be enabled, otherwise some service providers can only use the old version of golang on the server for customers, which will bring greater risks and a lot of inconvenience.
+> 
+> Let's say a programmer who doesn't know about this flaw implements this into their code, and they work for a bank and makes it into production, than they are screwed, I say we remove it from the standard package and maybe add it to another package. (non-standard one) and if they really want to use it they still have the option to import it from another package.
+
+Yeah, as long as there is an easy way to enable it. In fact, `Config.MinVersion` is a reminder, and we can even raise a warning when MinVersion<=TLS1.2.
+Regarding moving out of the standard library, it seems difficult.
+
+> Unfortunately the TLS stack is not easy to swap in and out: #21753. It would be nice to make it easier and is something we keep in mind as we plan larger changes. In general, we also can't maintain forks for everyone's custom requirements, so it would have to be a community project.
+
+https://github.com/golang/go/issues/45428#issuecomment-815274951
+
+--- Comment #20 by rsc ---
+Again, this issue is about disabling support for connecting to ancient _servers_.
+Serving (talking to) an ancient _client_ is not affected by this issue.
+
+It sounds like a few people are concerned about disabling by default but are OK with setting Config.MinVersion to opt out. 
+They would be less happy with GODEBUG, but it's fine to have as well for debugging purposes.
+
+Do I have that right?
+
+
+--- Comment #21 by ucirello ---
+> It sounds like a few people are concerned about disabling by default but are OK with setting Config.MinVersion to opt out.
+They would be less happy with GODEBUG, but it's fine to have as well for debugging purposes.
+>
+> Do I have that right?
+
+Yes. I can live with Config.MinVersion changes. GODEBUG would create actual problems that are way harder to solve (and probably involves `func init() + os.Setenv()` hacks to inject changes to GODEBUG).
+
+--- Comment #22 by rsc ---
+
+Based on the discussion above, this proposal seems like a **[likely accept](https://golang.org/s/proposal-status#likely-accept)**.
+— rsc for the proposal review group
+
+
+--- Comment #23 by rsc ---
+
+No change in consensus, so **[accepted](https://golang.org/s/proposal-status#accepted)**. 🎉
+This issue now tracks the work of implementing the proposal.
+— rsc for the proposal review group
+
+
+--- Comment #24 by ucirello ---
+@rsc could you please provide a clarification on what is made here? config.MinVersion or GODEBUG env var?
+
+--- Comment #25 by FiloSottile ---
+@ucirello this is the final text of the proposal as accepted, above.
+
+> **I am requesting approval for the first stage, and will go through the proposal process again for each successive stage.**
+> 
+> ## Stage 1
+> When zero, `Config.MinVersion` is changed to default to `VersionTLS12` on the client side.
+> 
+> This can be overridden by setting `Config.MinVersion` (or with a temporary GODEBUG value).
+> 
+> Pre-announce this in Go 1.17, implement it in Go 1.18, remove the GODEBUG switch in Go 1.19.
+
+--- Comment #26 by ucirello ---
+I apologize - I missed. 
+
+Thanks for pointing it out @FiloSottile 
+
+--- Comment #27 by gopherbot ---
+Change https://golang.org/cl/327811 mentions this issue: `doc/go1.17: add Go 1.18 pre-announcements`
+
+--- Comment #28 by gopherbot ---
+Change https://golang.org/cl/359779 mentions this issue: `crypto/tls: set default minimum client version to TLS 1.2`
+
+--- Comment #29 by pedroalbanese ---
+Greetings!
+
+Which version of TLS is this? 1.1, 1.2?
+
+```go
+		if *tcpip == "listen" {
+			cert, err := tls.X509KeyPair(certPEM, privPEM)
+			cfg := tls.Config{Certificates: []tls.Certificate{cert}, ClientAuth: tls.RequireAnyClientCert}
+			cfg.Rand = rand.Reader
+
+			port := "8081"
+			if *public != "" {
+				port = *public
+			}
+
+			ln, err := tls.Listen("tcp", ":"+port, &cfg)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			fmt.Fprintln(os.Stderr, "Server(TLS) up and listening on port "+port)
+
+			conn, err := ln.Accept()
+			if err != nil {
+				log.Println(err)
+			}
+			defer ln.Close()
+
+			fmt.Println("Connection accepted")
+
+			for {
+				message, err := bufio.NewReader(conn).ReadString('\n')
+				if err != nil {
+					fmt.Println(err)
+					os.Exit(3)
+				}
+				fmt.Print("Received: ", string(message))
+
+				newmessage := strings.ToUpper(message)
+				conn.Write([]byte(newmessage + "\n"))
+			}
+		}
+
+		if *tcpip == "dial" {
+			cert, err := tls.X509KeyPair(certPEM, privPEM)
+			cfg := tls.Config{Certificates: []tls.Certificate{cert}, InsecureSkipVerify: true}
+
+			ipport := "127.0.0.1:8081"
+			if *public != "" {
+				ipport = *public
+			}
+
+			conn, err := tls.Dial("tcp", ipport, &cfg)
+			if err != nil {
+				log.Fatal(err)
+			}
+			certs := conn.ConnectionState().PeerCertificates
+			for _, cert := range certs {
+				fmt.Printf("Issuer Name: %s\n", cert.Issuer)
+				fmt.Printf("Expiry: %s \n", cert.NotAfter.Format("Monday, 02-Jan-06 15:04:05 MST"))
+				fmt.Printf("Common Name: %s \n", cert.Issuer.CommonName)
+				fmt.Printf("IP Address: %s \n", cert.IPAddresses)
+			}
+			if err != nil {
+				log.Fatal(err)
+			}
+			defer conn.Close()
+
+			for {
+				reader := bufio.NewReader(os.Stdin)
+				fmt.Print("Text to be sent: ")
+				text, err := reader.ReadString('\n')
+				if err != nil {
+					fmt.Println(err)
+					os.Exit(3)
+				}
+				fmt.Fprintf(conn, text+"\n")
+
+				message, err := bufio.NewReader(conn).ReadString('\n')
+				if err != nil {
+					fmt.Println(err)
+					os.Exit(3)
+				}
+				fmt.Print("Server response: " + message)
+			}
+		}
+```
+
+Thanks in advance!
+
+--- Comment #30 by seankhliao ---
+@pedroalbanese 
+
+Unlike many projects, the Go project does not use GitHub Issues for general discussion or asking questions. GitHub Issues are used for tracking bugs and proposals only.
+
+For questions please refer to https://github.com/golang/go/wiki/Questions
+
+
+### Go Repository Directory Structure ###
+```
+lib/
+    time/
+        mkzip.go
+misc/
+    cgo/
+        gmp/
+            fib.go
+            gmp.go
+            pi.go
+    go_android_exec/
+        exitcode_test.go
+        main.go
+    ios/
+        detect.go
+        go_ios_exec.go
+src/
+    archive/
+        tar/
+            example_test.go
+            reader_test.go
+            stat_actime2.go
+            stat_unix.go
+            writer.go
+        zip/
+            reader.go
+            reader_test.go
+            register.go
+            writer_test.go
+            zip_test.go
+    arena/
+        arena.go
+        arena_test.go
+    bufio/
+        bufio_test.go
+        export_test.go
+        net_test.go
+        scan.go
+        scan_test.go
+    builtin/
+        builtin.go
+    bytes/
+        boundary_test.go
+        buffer.go
+        bytes_test.go
+        iter.go
+        reader.go
+    cmd/
+        addr2line/
+            addr2line_test.go
+            main.go
+        api/
+            testdata/
+                src/
+                    issue21181/
+                        dep/
+                            p.go
+                            p_amd64.go
+                        indirect/
+                            p.go
+                        p/
+                            p.go
+                            p_amd64.go
+                            p_generic.go
+                    issue64958/
+                        p/
+                            p.go
+                    pkg/
+                        p1/
+                            p1.go
+                        p2/
+                            p2.go
+                        p3/
+                            p3.go
+                        p4/
+                            p4.go
+            api_test.go
+            boring_test.go
+            main_test.go
+        asm/
+            internal/
+                arch/
+                    arch.go
+                    arm.go
+                    ppc64.go
+                    riscv64.go
+                    s390x.go
+                asm/
+                    asm.go
+                    endtoend_test.go
+                    expr_test.go
+                    line_test.go
+                    parse.go
+                flags/
+                    flags.go
+                lex/
+                    input.go
+                    lex.go
+                    slice.go
+                    stack.go
+                    tokenizer.go
+            doc.go
+            main.go
+        buildid/
+            buildid.go
+            doc.go
+        cgo/
+            internal/
+                cgotest/
+                    overlaydir.go
+                swig/
+                    testdata/
+                        callback/
+                            main.go
+                        stdio/
+                            main.go
+                    swig_test.go
+                test/
+                    gcc68255/
+                        a.go
+                    issue23555a/
+                        a.go
+                    issue23555b/
+                        a.go
+                    issue24161arg/
+                        def.go
+                        use.go
+                    issue24161e0/
+                        main.go
+                    issue24161e1/
+                        main.go
+                    issue24161e2/
+                        main.go
+                    issue24161res/
+                        restype.go
+                    issue26213/
+                        test26213.go
+                    issue26430/
+                        a.go
+                        b.go
+                    issue26743/
+                        a.go
+                        b.go
+                    issue27054/
+                        test27054.go
+                    issue27340/
+                        a.go
+                    issue29563/
+                        weak.go
+                    issue30527/
+                        a.go
+                        b.go
+                    issue41761a/
+                        a.go
+                    issue43639/
+                        a.go
+                    issue52611a/
+                        a.go
+                        b.go
+                    issue52611b/
+                        a.go
+                        b.go
+                    issue8756/
+                        issue8756.go
+                    issue8828/
+                        trivial.go
+                    issue9026/
+                        issue9026.go
+                    issue9400/
+                        gccgo.go
+                        stubs.go
+                    issue9510a/
+                        a.go
+                    issue9510b/
+                        b.go
+                    cgo_stubs_android_test.go
+                    issue20266.go
+                    issue43639.go
+                    linux_ppc64le_test.go
+                    typeparam.go
+                testcarchive/
+                    testdata/
+                        libgo/
+                            libgo.go
+                        libgo10/
+                            a.go
+                        libgo2/
+                            libgo2.go
+                        libgo3/
+                            libgo3.go
+                        libgo4/
+                            libgo4.go
+                        libgo6/
+                            sigprof.go
+                        libgo7/
+                            sink.go
+                        libgo8/
+                            a.go
+                        libgo9/
+                            a.go
+                        p/
+                            p.go
+                    carchive_test.go
+                testcshared/
+                    testdata/
+                        go2c2go/
+                            go/
+                                shlib.go
+                            m1/
+                                main.go
+                            m2/
+                                main.go
+                        issue36233/
+                            issue36233.go
+                        issue68411/
+                            issue68411.go
+                        libgo/
+                            libgo.go
+                        libgo2/
+                            dup2.go
+                            dup3.go
+                            libgo2.go
+                        libgo4/
+                            libgo4.go
+                        libgo5/
+                            libgo5.go
+                        p/
+                            p.go
+                    cshared_test.go
+                testerrors/
+                    testdata/
+                        issue11097b.go
+                        issue28721.go
+                        issue67517.go
+                        issue67699a.go
+                        long_double_size.go
+                    argposition_test.go
+                    badsym_test.go
+                    errors_test.go
+                    ptr_test.go
+                testfortran/
+                    testdata/
+                        testprog/
+                            fortran.go
+                    fortran_test.go
+                testgodefs/
+                    testdata/
+                        fieldtypedef.go
+                        issue37479.go
+                        issue38649.go
+                        issue8478.go
+                        main.go
+                    testgodefs_test.go
+                testlife/
+                    testdata/
+                        life.go
+                        main.go
+                    life_test.go
+                testnocgo/
+                    nocgo.go
+                    nocgo_test.go
+                testplugin/
+                    altpath/
+                        testdata/
+                            common/
+                                common.go
+                            plugin-mismatch/
+                                main.go
+                    testdata/
+                        checkdwarf/
+                            main.go
+                        common/
+                            common.go
+                        forkexec/
+                            main.go
+                        host/
+                            host.go
+                        iface/
+                            main.go
+                        iface_a/
+                            a.go
+                        iface_b/
+                            b.go
+                        iface_i/
+                            i.go
+                        issue18584/
+                            main.go
+                            plugin.go
+                        issue18676/
+                            dynamodbstreamsevt/
+                                definition.go
+                            main.go
+                            plugin.go
+                        issue19418/
+                            main.go
+                            plugin.go
+                        issue19529/
+                            plugin.go
+                        issue19534/
+                            main.go
+                            plugin.go
+                        issue22175/
+                            main.go
+                            plugin1.go
+                            plugin2.go
+                        issue22295.pkg/
+                            main.go
+                            plugin.go
+                        issue24351/
+                            main.go
+                            plugin.go
+                        issue25756/
+                            plugin/
+                                life.go
+                            main.go
+                        issue44956/
+                            base/
+                                base.go
+                            main.go
+                            plugin1.go
+                            plugin2.go
+                        issue52937/
+                            main.go
+                        issue53989/
+                            p/
+                                p.go
+                            main.go
+                            plugin.go
+                        issue62430/
+                            main.go
+                            plugin.go
+                        issue67976/
+                            plugin.go
+                        mangle/
+                            plugin.go
+                        method/
+                            main.go
+                            plugin.go
+                        method2/
+                            p/
+                                p.go
+                            main.go
+                            plugin.go
+                        method3/
+                            p/
+                                p.go
+                            main.go
+                            plugin.go
+                        plugin1/
+                            plugin1.go
+                        plugin2/
+                            plugin2.go
+                        sub/
+                            plugin1/
+                                plugin1.go
+                        unnamed1/
+                            main.go
+                        unnamed2/
+                            main.go
+                    plugin_test.go
+                testsanitizers/
+                    testdata/
+                        asan_linkerx/
+                            p/
+                                p.go
+                            main.go
+                        asan1_fail.go
+                        asan_global3_fail.go
+                        msan3.go
+                        tsan.go
+                        tsan10.go
+                    cshared_test.go
+                    empty_test.go
+                    lsan_test.go
+                    msan_test.go
+                    tsan_test.go
+                testshared/
+                    testdata/
+                        dep2/
+                            dep2.go
+                        dep3/
+                            dep3.go
+                        depBase/
+                            dep.go
+                            gccgo.go
+                            stubs.go
+                        depBaseInternal/
+                            dep.go
+                        division/
+                            division.go
+                        exe/
+                            exe.go
+                        exe2/
+                            exe2.go
+                        exe3/
+                            exe3.go
+                        execgo/
+                            exe.go
+                        explicit/
+                            explicit.go
+                        gcdata/
+                            main/
+                                main.go
+                            p/
+                                p.go
+                        global/
+                            main.go
+                        globallib/
+                            global.go
+                        iface/
+                            main.go
+                        iface_a/
+                            a.go
+                        iface_b/
+                            b.go
+                        iface_i/
+                            i.go
+                        implicit/
+                            implicit.go
+                        implicitcmd/
+                            implicitcmd.go
+                        issue25065/
+                            a.go
+                        issue30768/
+                            issue30768lib/
+                                lib.go
+                            x_test.go
+                        issue39777/
+                            a/
+                                a.go
+                            b/
+                                b.go
+                        issue44031/
+                            a/
+                                a.go
+                            b/
+                                b.go
+                            main/
+                                main.go
+                        issue47837/
+                            a/
+                                a.go
+                            main/
+                                main.go
+                        issue58966/
+                            main.go
+                        issue62277/
+                            p/
+                                p.go
+                            issue62277_test.go
+                        trivial/
+                            trivial.go
+                    shared_test.go
+                testso/
+                    testdata/
+                        so/
+                            cgoso.go
+                            cgoso_unix.go
+                            main.go
+                        sovar/
+                            cgoso.go
+                            main.go
+                    so_test.go
+                teststdio/
+                    testdata/
+                        stdio/
+                            file.go
+                            stdio.go
+                        chain.go
+                        fib.go
+                        hello.go
+                    stdio_test.go
+                testtls/
+                    tls.go
+                    tls_none.go
+                    tls_test.go
+            ast_go1.go
+            ast_go118.go
+            godefs.go
+            main.go
+            out.go
+        compile/
+            internal/
+                abi/
+                    abiutils.go
+                abt/
+                    avlint32.go
+                    avlint32_test.go
+                amd64/
+                    galign.go
+                    ggen.go
+                    ssa.go
+                    versions_test.go
+                arm/
+                    galign.go
+                    ggen.go
+                    ssa.go
+                arm64/
+                    galign.go
+                    ggen.go
+                    ssa.go
+                base/
+                    base.go
+                    bootstrap_true.go
+                    hashdebug_test.go
+                    mapfile_mmap.go
+                    mapfile_read.go
+                bitvec/
+                    bv.go
+                compare/
+                    compare.go
+                    compare_test.go
+                coverage/
+                    cover.go
+                deadlocals/
+                    deadlocals.go
+                devirtualize/
+                    devirtualize.go
+                    pgo.go
+                    pgo_test.go
+                dwarfgen/
+                    dwarf.go
+                    dwinl.go
+                    marker.go
+                    scope.go
+                    scope_test.go
+                escape/
+                    assign.go
+                    call.go
+                    expr.go
+                    graph.go
+                    solve.go
+                gc/
+                    compile.go
+                    export.go
+                    main.go
+                    obj.go
+                    util.go
+                importer/
+                    testdata/
+                        versions/
+                            test.go
+                        a.go
+                        b.go
+                        issue25301.go
+                        issue69912.go
+                        p.go
+                    gcimporter.go
+                    gcimporter_test.go
+                    support.go
+                    ureader.go
+                inline/
+                    inlheur/
+                        testdata/
+                            props/
+                                acrosscall.go
+                                calls.go
+                                funcflags.go
+                                params.go
+                                returns2.go
+                            dumpscores.go
+                        analyze_func_returns.go
+                        cspropbits_string.go
+                        dumpscores_test.go
+                        scoreadjusttyp_string.go
+                        serialize.go
+                    interleaved/
+                        interleaved.go
+                    inl.go
+                ir/
+                    check_reassign_yes.go
+                    const.go
+                    name.go
+                    type.go
+                    visit.go
+                liveness/
+                    arg.go
+                    intervals.go
+                    intervals_test.go
+                    mergelocals.go
+                    plive.go
+                logopt/
+                    log_opts.go
+                    logopt_test.go
+                loong64/
+                    galign.go
+                    ggen.go
+                    ssa.go
+                loopvar/
+                    testdata/
+                        inlines/
+                            a/
+                                a.go
+                            b/
+                                b.go
+                            c/
+                                c.go
+                            main.go
+                        for_complicated_esc_address.go
+                        for_esc_address.go
+                        for_esc_closure.go
+                        opt-122.go
+                        range_esc_address.go
+                    loopvar.go
+                    loopvar_test.go
+                mips/
+                    galign.go
+                    ggen.go
+                    ssa.go
+                mips64/
+                    galign.go
+                    ggen.go
+                    ssa.go
+                noder/
+                    codes.go
+                    lex.go
+                    posmap.go
+                    types.go
+                    unified.go
+                objw/
+                    objw.go
+                    prog.go
+                pgoir/
+                    irgraph.go
+                pkginit/
+                    init.go
+                    initAsanGlobals.go
+                ppc64/
+                    galign.go
+                    ggen.go
+                    opt.go
+                    ssa.go
+                rangefunc/
+                    rangefunc_test.go
+                    rewrite.go
+                reflectdata/
+                    alg.go
+                    alg_test.go
+                    helpers.go
+                    map_swiss.go
+                    reflect.go
+                riscv64/
+                    galign.go
+                    ggen.go
+                    gsubr.go
+                    ssa.go
+                rttype/
+                    rttype.go
+                s390x/
+                    galign.go
+                    ggen.go
+                    ssa.go
+                ssa/
+                    _gen/
+                        ARM64Ops.go
+                        MIPSOps.go
+                        WasmOps.go
+                        dec64Ops.go
+                        main.go
+                    testdata/
+                        b53456.go
+                        fma.go
+                        inline-dump.go
+                        sayhi.go
+                        scopes.go
+                    deadstore.go
+                    deadstore_test.go
+                    rewriteARM64.go
+                    schedule.go
+                    shortcircuit.go
+                ssagen/
+                    abi.go
+                    arch.go
+                    intrinsics.go
+                    intrinsics_test.go
+                    nowb.go
+                staticdata/
+                    data.go
+                    embed.go
+                staticinit/
+                    sched.go
+                syntax/
+                    testdata/
+                        chans.go
+                        issue65790.go
+                        issue68589.go
+                        map.go
+                        typeset.go
+                    branches.go
+                    dumper_test.go
+                    nodes.go
+                    syntax.go
+                    token_string.go
+                test/
+                    testdata/
+                        gen/
+                            arithConstGen.go
+                            cmpConstGen.go
+                            constFoldGen.go
+                            copyGen.go
+                            zeroGen.go
+                        mergelocals/
+                            integration.go
+                        mysort/
+                            mysort.go
+                        pgo/
+                            devirtualize/
+                                mult.pkg/
+                                    mult.go
+                                devirt.go
+                                devirt_test.go
+                            inline/
+                                inline_hot.go
+                                inline_hot_test.go
+                        reproducible/
+                            issue20272.go
+                            issue27013.go
+                            issue30202.go
+                            issue38068.go
+                        append_test.go
+                        arithConst_test.go
+                        break_test.go
+                        cmp_test.go
+                        fp_test.go
+                    constFold_test.go
+                    issue50182_test.go
+                    issue57434_test.go
+                    shift_test.go
+                    ssa_test.go
+                typebits/
+                    typebits.go
+                typecheck/
+                    _builtin/
+                        coverage.go
+                        runtime.go
+                    bexport.go
+                    builtin_test.go
+                    iexport.go
+                    stmt.go
+                    subr.go
+                types/
+                    alg.go
+                    kind_string.go
+                    sym.go
+                    type_test.go
+                    universe.go
+                types2/
+                    testdata/
+                        local/
+                            issue47996.go
+                            issue68183.go
+                            issue71254.go
+                        manual.go
+                    gccgosizes.go
+                    interface.go
+                    pointer.go
+                    predicates.go
+                    resolver_test.go
+                walk/
+                    complit.go
+                    convert.go
+                    range.go
+                    stmt.go
+                    temp.go
+                wasm/
+                    ssa.go
+                x86/
+                    galign.go
+                    ggen.go
+                    ssa.go
+            doc.go
+            main.go
+            script_test.go
+        covdata/
+            testdata/
+                dep.go
+                prog1.go
+                prog2.go
+            covdata.go
+            doc.go
+            export_test.go
+            metamerge.go
+            tool_test.go
+        cover/
+            testdata/
+                html/
+                    html.go
+                    html_test.go
+                pkgcfg/
+                    a/
+                        a.go
+                        a2.go
+                        a_test.go
+                    noFuncsNoTests/
+                        nfnt.go
+                    yesFuncsNoTests/
+                        yfnt.go
+                directives.go
+                main.go
+                p.go
+                test.go
+            cfg_test.go
+            cover.go
+            cover_test.go
+            doc.go
+            func.go
+        dist/
+            imports.go
+            main.go
+            quoted.go
+            testjson_test.go
+            util.go
+        distpack/
+            archive.go
+            archive_test.go
+            pack.go
+            test.go
+        doc/
+            testdata/
+                merge/
+                    aa.go
+                    bb.go
+                nested/
+                    empty/
+                        empty.go
+                    nested/
+                        real.go
+                    ignore.go
+                pkg.go
+            dirs.go
+            doc_test.go
+            main.go
+            signal_notunix.go
+            signal_unix.go
+        fix/
+            buildtag_test.go
+            cftype.go
+            egltype_test.go
+            jnitype.go
+            printerconfig_test.go
+        go/
+            internal/
+                auth/
+                    auth.go
+                    gitauth.go
+                    gitauth_test.go
+                    userauth.go
+                    userauth_test.go
+                base/
+                    base.go
+                    error_unix.go
+                    goflags.go
+                    limit.go
+                    signal_notunix.go
+                bug/
+                    bug.go
+                cache/
+                    cache_test.go
+                    default.go
+                    hash.go
+                    hash_test.go
+                    prog.go
+                cacheprog/
+                    cacheprog.go
+                cfg/
+                    bench_test.go
+                    cfg.go
+                clean/
+                    clean.go
+                cmdflag/
+                    flag.go
+                doc/
+                    doc.go
+                envcmd/
+                    env.go
+                    env_test.go
+                fips140/
+                    fips140.go
+                    fips_test.go
+                    mkzip.go
+                fix/
+                    fix.go
+                fmtcmd/
+                    fmt.go
+                fsys/
+                    fsys.go
+                    fsys_test.go
+                    glob.go
+                    walk.go
+                generate/
+                    generate.go
+                    generate_test.go
+                gover/
+                    gomod.go
+                    gover_test.go
+                    local.go
+                    mod_test.go
+                    toolchain_test.go
+                help/
+                    help.go
+                    helpdoc.go
+                imports/
+                    testdata/
+                        android/
+                            a_android.go
+                            b_android_arm64.go
+                            e.go
+                            f.go
+                            g.go
+                        illumos/
+                            .h.go
+                            a_illumos.go
+                            c_solaris.go
+                            d_solaris_amd64.go
+                            f.go
+                        star/
+                            x.go
+                            x1.go
+                            x_darwin.go
+                            x_windows.go
+                        test/
+                            child/
+                                child.go
+                            test.go
+                            test_test.go
+                    build.go
+                    read_test.go
+                    scan.go
+                    scan_test.go
+                    tags.go
+                list/
+                    context.go
+                    list.go
+                load/
+                    flag.go
+                    flag_test.go
+                    path.go
+                    search.go
+                    test.go
+                lockedfile/
+                    internal/
+                        filelock/
+                            filelock.go
+                            filelock_fcntl.go
+                            filelock_test.go
+                            filelock_unix.go
+                            filelock_windows.go
+                    lockedfile.go
+                    lockedfile_filelock.go
+                    lockedfile_plan9.go
+                    lockedfile_test.go
+                    transform_test.go
+                mmap/
+                    mmap.go
+                    mmap_other.go
+                    mmap_test.go
+                    mmap_unix.go
+                    mmap_windows.go
+                modcmd/
+                    graph.go
+                    init.go
+                    tidy.go
+                    verify.go
+                    why.go
+                modfetch/
+                    codehost/
+                        codehost.go
+                        git.go
+                        shell.go
+                        svn.go
+                        vcs.go
+                    zip_sum_test/
+                        zip_sum_test.go
+                    bootstrap.go
+                    coderepo_test.go
+                    key.go
+                    repo.go
+                    toolchain.go
+                modget/
+                    get.go
+                    query.go
+                modindex/
+                    testdata/
+                        ignore_non_source/
+                            b.go
+                    build.go
+                    build_read.go
+                    index_test.go
+                    read.go
+                    write.go
+                modinfo/
+                    info.go
+                modload/
+                    buildlist.go
+                    modfile.go
+                    mvs.go
+                    mvs_test.go
+                    stat_openfile.go
+                mvs/
+                    errors.go
+                    graph.go
+                    mvs.go
+                    mvs_test.go
+                run/
+                    run.go
+                search/
+                    search.go
+                str/
+                    path.go
+                    str.go
+                    str_test.go
+                telemetrycmd/
+                    telemetry.go
+                telemetrystats/
+                    telemetrystats.go
+                    telemetrystats_bootstrap.go
+                    version_other.go
+                    version_unix.go
+                    version_windows.go
+                test/
+                    internal/
+                        genflags/
+                            testflag.go
+                            vetflag.go
+                    cover.go
+                    flagdefs.go
+                    flagdefs_test.go
+                    test.go
+                    testflag.go
+                tool/
+                    tool.go
+                toolchain/
+                    exec.go
+                    exec_stub.go
+                    path_none.go
+                    switch.go
+                    umask_none.go
+                trace/
+                    trace.go
+                vcs/
+                    discovery.go
+                    discovery_test.go
+                    vcs.go
+                    vcs_test.go
+                vcweb/
+                    vcstest/
+                        vcstest.go
+                        vcstest_test.go
+                    auth.go
+                    dir.go
+                    git.go
+                    svn.go
+                    vcweb.go
+                version/
+                    version.go
+                vet/
+                    vet.go
+                    vetflag.go
+                web/
+                    intercept/
+                        intercept.go
+                    http.go
+                    url_other.go
+                    url_other_test.go
+                    url_test.go
+                    url_windows_test.go
+                work/
+                    build.go
+                    buildid.go
+                    exec_test.go
+                    init.go
+                    security_test.go
+                workcmd/
+                    edit.go
+                    init.go
+                    use.go
+                    vendor.go
+                    work.go
+            testdata/
+                addmod.go
+                savedir.go
+            go_test.go
+            help_test.go
+            init_test.go
+            stop_other_test.go
+            stop_unix_test.go
+```
+
+**CRITICAL OBJECTIVE**: Identify the **most relevant files** that are closely related to the proposal topic and discussion.
+
+**MANDATORY SELECTION RULES:**
+- Only include files that are directly related to the proposals.
+- Focus on implementation files (.go files) rather than test files unless the proposal specifically discusses testing.
+- Consider both the main implementation and supporting files that would be affected by the proposal.
+- The output must strictly follow the format.
+- VERIFY each file exists in the provided structure before including it
+
+Please output your answer in the following format:
+Return a JSON object with the following format.
+The response MUST:
+- Be a valid JSON block.
+- Contain a key `found_files` with a list of file paths.
+- Each file path must be a string like "src/crypto/dsa/dsa.go" or "src/net/http/server.go".
+- Output ONLY the raw JSON object. Do NOT include any markdown formatting (no ```json or ```).
+- Do NOT add any explanations or additional text.
+- If you are unsure which files apply, return an empty list.
+
+Example of correct output when files are found:
+{
+  "found_files": [
+    "src/crypto/dsa/dsa.go",
+    "src/net/http/server.go"
+  ]
+}
+
+Example of correct output when unsure:
+{
+  "found_files": []
+}
+

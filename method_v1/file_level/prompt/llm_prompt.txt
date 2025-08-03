@@ -1,0 +1,248 @@
+
+You are analyzing a Go proposal and repository to identify which files are **most relevant** to the given proposal.
+
+### Proposal Content ###
+# Proposal: 38776.md
+=== Fetching Proposal: MDU6SXNzdWU2MTAzMTA3NDg= ===
+Issue URL: https://github.com/golang/go/issues/38776
+
+==== [Issue Title] ====
+hash, crypto: add WriteByte, WriteString method to hash implementations
+
+==== [Issue Body] ====
+This proposal was initially for embedding io.ByteWriter in hash.Hash, or adding a WriteByte() method with the same signature.
+
+This method is already added in the new maphash.Hash. Adding it elsewhere will extend the benefits in performance and usability to the other Hash implementations.
+
+Per feedback of @ianlancetaylor below, I'm instead proposing the addition `WriteByte()` from io.ByteWriter to the standard library hash.Hash implementations, including:
+
+adler32
+crc32
+crc64
+fnv
+
+
+==== [Comments] ====
+
+--- Comment #1 by ianlancetaylor ---
+Unfortunately, the proposed change would not be backward compatible.  It would mean that existing types that satisfy the hash.Hash interface would no longer implement the interface.  That could break working code, and violates the Go 1 compatibility guarantee (https://golang.org/doc/go1compat).
+
+So, in short, we can't do this.
+
+--- Comment #2 by geraldss ---
+Got it. How about adding another interface, or just adding the WriteByte() method to the standard library's hash implementations?
+
+Hashing is sometimes part of performance-sensitive code paths, and it would be beneficial to avoid conversions to byte slices whose only purpose is to satisfy the API.
+
+--- Comment #3 by ianlancetaylor ---
+I'm not sure we need another interface, since people can always do a type assertion to `io.ByteWriter`.
+
+Do you want to repurpose this proposal for adding `WriteByte` methods to various hash implementations?
+
+--- Comment #4 by ulikunitz ---
+How does performance benefit? My experience with WriteByte is that it is slower than appending to a byte slice and use the classic Write method every 256 or 512 bytes.
+
+--- Comment #5 by geraldss ---
+The performance benefit isn't for hashing byte slices. It's for hashing everything else: primitives, structs, maps, arrays, and combinations thereof.
+
+--- Comment #6 by ulikunitz ---
+Can you provide some example code helping me to understand your statement?
+
+--- Comment #7 by rsc ---
+Usually hashes can operate much faster on a block of data than a single byte at a time.
+One potential problem with adding WriteByte is that using it would be inherently slower
+than passing in a larger slice of data.
+
+What is the use case where WriteByte would be preferable over constructing a (presumably larger than one byte) slice and calling Write?
+
+
+
+--- Comment #8 by geraldss ---
+```
+type T struct {
+    A byte
+    B string
+    C byte
+    D string
+}
+
+func HashT(h hash.Hash, t *T) { ... }
+```
+To implement `HashT()`, it would be convenient if there were no conversions to byte slices. The current option is to use `encoding/binary`, but that API doesn't express the avoidance of byte slices when it calls a generic `io.Writer`. Ditto for supporting `WriteString()`.
+
+--- Comment #9 by ulikunitz ---
+I have combined bufio.Writer and hash.Hash to create a buffered hash
+
+Test here: https://play.golang.org/p/IHx5GcvLW1v
+
+```Go
+package main
+
+import (
+	"bufio"
+	"crypto/sha256"
+	"fmt"
+	"hash"
+)
+
+type BufferedHash struct {
+	h hash.Hash
+	*bufio.Writer
+}
+
+func NewBufferedHash(h hash.Hash) *BufferedHash {
+	return &BufferedHash{
+		h:      h,
+		Writer: bufio.NewWriter(h),
+	}
+}
+
+func (bh *BufferedHash) Sum(p []byte) []byte {
+	if err := bh.Flush(); err != nil {
+		panic(err)
+	}
+	return bh.h.Sum(p)
+}
+
+func (bh *BufferedHash) Reset() {
+	bh.h.Reset()
+	bh.Writer.Reset(bh.h)
+}
+
+func (bh *BufferedHash) Size() int {
+	return bh.h.Size()
+}
+
+func (bh *BufferedHash) BlockSize() int {
+	return bh.h.BlockSize()
+}
+
+type T struct {
+	A byte
+	B string
+	C byte
+	D string
+}
+
+func HashT(bh *BufferedHash, t T) {
+	bh.WriteByte(t.A)
+	bh.WriteString(t.B)
+	bh.WriteByte(t.C)
+	bh.WriteString(t.D)
+}
+
+func main() {
+	bh := NewBufferedHash(sha256.New())
+
+	t := T{A: 'A', B: "B", C: 'C', D: "D"}
+	HashT(bh, t)
+
+	fmt.Printf("hash(%+v): %x\n", t, bh.Sum(nil))
+	bh.Reset()
+
+	t = T{A: 'A', B: "B", C: 'C', D: "Dee"}
+	HashT(bh, t)
+	fmt.Printf("hash(%+v): %x\n", t, bh.Sum(nil))
+}
+```
+
+--- Comment #10 by ulikunitz ---
+The proverb "If I Had More Time, I Would Have Written a Shorter Letter" applies here. There is no need for creating an extra type: https://play.golang.org/p/Pp6GVhLpEx_9
+
+```go
+package main
+
+import (
+	"crypto/sha256"
+	"fmt"
+	"io"
+)
+
+type T struct {
+	A byte
+	B string
+	C byte
+	D string
+}
+
+func SerializeT(w io.Writer, t T) {
+	fmt.Fprintf(w, "%c%s%c%s", t.A, t.B, t.C, t.D)
+}
+
+func main() {
+	h := sha256.New()
+
+	t := T{A: 'A', B: "B", C: 'C', D: "D"}
+	SerializeT(h, t)
+
+	fmt.Printf("hash(%+v): %x\n", t, h.Sum(nil))
+	h.Reset()
+
+	t = T{A: 'A', B: "B", C: 'C', D: "Dee"}
+	SerializeT(h, t)
+	fmt.Printf("hash(%+v): %x\n", t, h.Sum(nil))
+}
+```
+
+--- Comment #11 by rsc ---
+What's the context where you are hashing non-byte-slices with functions like sha256?
+If you are building a hash table, hash/maphash is the package to use, and maphash.Hash _does_ have WriteByte.
+If you need a well-defined fixed hash function, that's almost always for use with a specific byte sequence.
+
+I suppose the crypto/* hashes all buffer already and the hash/* function all operate byte at a time. But they all still run faster with large sequences.
+
+
+
+--- Comment #12 by geraldss ---
+I'm building a relational database. I understand the reservations about changes / additions, but at high scale and high performance, it's important for APIs to not require avoidable overhead.
+
+--- Comment #13 by rsc ---
+> but at high scale and high performance, it's important for APIs to not require avoidable overhead.
+
+The argument I was trying to make _against_ adding WriteByte is precisely that it really can't be very high performance. Arranging for larger Writes is always going to beat a WriteByte loop. The reservation about provided WriteByte is exactly that it would tempt people toward a less efficient path.
+
+We may still want to add it for convenience, especially for cases that don't care about "high scale and high performance", but I don't think you'd want to use it in your relational database.
+
+--- Comment #14 by rsc ---
+All the hashes have buffers underneath, so they can all implement WriteByte efficiently - well, as efficiently as anyone can implement WriteByte.
+
+It's still more efficient to call Write with many bytes than to call WriteByte in a loop, but given that io.ByteWriter exists, it seems reasonable to make the hash.Hash implementations implement it.
+(To be clear, we can't modify hash.Hash itself, as was originally proposed.)
+
+Earlier this year we declined #14757 because the implementation would have to use unsafe, but @bradfitz points out that the buffer that enables WriteByte would also enable a safe implementation of WriteString. So maybe we should add WriteString at the same time, using safe code. (If passed a long string, WriteString would have to copy into the buffer, process the buffer, and repeat. That would still be a bit of copying, but not more than converting to a []byte.)
+
+Will retitle this issue to be WriteByte and WriteString and leave open for another week, but this seems headed for likely accept.
+
+
+### Localized Go Repository Directory Structure ###
+```
+
+```
+
+### Directory-Level Localization Results ###
+[]
+
+**CRITICAL OBJECTIVE**: Identify the **most relevant files** that are closely related to the proposal topic and discussion.
+
+**MANDATORY OUTPUT FORMAT:**
+Return a JSON object with the following format.
+The response MUST:
+- Be a valid JSON block.
+- Contain a key `found_files` with a list of file paths.
+- Each file path must be a string like "src/crypto/dsa/dsa.go" or "src/net/http/server.go".
+- Output ONLY the raw JSON object. Do NOT include any markdown formatting (no ```json or ```).
+- Do NOT add any explanations or additional text.
+
+Example of correct output:
+{
+  "found_files": [
+    "src/crypto/dsa/dsa.go",
+    "src/net/http/server.go"
+  ]
+}
+
+**MANDATORY SELECTION RULES:**
+- Select only the most essential files, not directories.
+- Only include files that are directly related to the accepted proposals.
+- The output must strictly follow the format.
+- If you are unsure, make your best guess based on the structure.

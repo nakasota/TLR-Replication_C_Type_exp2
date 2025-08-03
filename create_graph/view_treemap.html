@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method v6 Treemap Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .stats {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .stats h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .stat-item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 3px;
+            border-left: 4px solid #007bff;
+        }
+        .legend {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .legend-item {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .accepted { background-color: #d62728; }
+        .declined { background-color: #1f77b4; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Method v6 Results: Go Proposals by Directory</h1>
+        
+        <div class="legend">
+            <h3>Legend</h3>
+            <div class="legend-item">
+                <span class="legend-color accepted"></span>
+                <span>Accepted Proposals</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color declined"></span>
+                <span>Declined Proposals</span>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="method_v6_treemap_chart.png" alt="Method v6 Treemap Chart" style="max-width: 100%; height: auto;">
+        </div>
+
+        <div class="stats">
+            <h2>Key Statistics</h2>
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <strong>Total Directories:</strong> 93
+                </div>
+                <div class="stat-item">
+                    <strong>Total Proposals:</strong> 742
+                </div>
+                <div class="stat-item">
+                    <strong>Accepted Proposals:</strong> 681
+                </div>
+                <div class="stat-item">
+                    <strong>Declined Proposals:</strong> 61
+                </div>
+                <div class="stat-item">
+                    <strong>Overall Acceptance Rate:</strong> 91.8%
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h2>About This Visualization</h2>
+            <p>This treemap shows the results of the method_v6 evaluation on Go proposals. Each rectangle represents the <strong>complete directory path including src/ prefix</strong> (e.g., <code>src/crypto/tls</code>, <code>src/runtime</code>), with the size proportional to the total number of proposals in that directory. The rectangles are divided into red (accepted) and blue (declined) sections based on the method_v6 predictions.</p>
+            
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Uses real data from method_v6 evaluation results</li>
+                <li>Shows complete directory paths including src/ prefix</li>
+                <li>Directory boundaries shown with black borders</li>
+                <li>Size represents total proposal count per directory</li>
+                <li>Color coding: Red = Accepted, Blue = Declined</li>
+                <li>93 directories with varying acceptance rates</li>
+            </ul>
+
+            <p><strong>Top Performing Directories by Size:</strong></p>
+            <ul>
+                <li><strong>src/runtime:</strong> 93 total (88 accepted, 5 declined) - 94.6% acceptance rate</li>
+                <li><strong>src/net/netip:</strong> 80 total (77 accepted, 3 declined) - 96.2% acceptance rate</li>
+                <li><strong>src/syscall:</strong> 65 total (61 accepted, 4 declined) - 93.8% acceptance rate</li>
+                <li><strong>src/sync/atomic:</strong> 43 total (41 accepted, 2 declined) - 95.3% acceptance rate</li>
+                <li><strong>src/reflect:</strong> 35 total (32 accepted, 3 declined) - 91.4% acceptance rate</li>
+            </ul>
+
+            <p><strong>Directories with Mixed Results:</strong></p>
+            <ul>
+                <li><strong>src/crypto/tls:</strong> 21 total (15 accepted, 6 declined) - 71.4% acceptance rate</li>
+                <li><strong>src/net/url:</strong> 13 total (5 accepted, 8 declined) - 38.5% acceptance rate</li>
+                <li><strong>src/encoding/json:</strong> 8 total (1 accepted, 7 declined) - 12.5% acceptance rate</li>
+                <li><strong>src/os/signal:</strong> 9 total (6 accepted, 3 declined) - 66.7% acceptance rate</li>
+            </ul>
+
+            <p><strong>Directory Structure Analysis:</strong></p>
+            <ul>
+                <li>Most proposals are concentrated in core runtime and networking modules</li>
+                <li>The <code>src/</code> prefix clearly distinguishes Go standard library code</li>
+                <li>Some directories like <code>misc/ios</code> and <code>test</code> exist outside the src/ hierarchy</li>
+                <li>Method v6 shows strong performance with 91.8% overall acceptance rate</li>
+                <li>Realistic variation in acceptance rates across different modules reflects real-world complexity</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

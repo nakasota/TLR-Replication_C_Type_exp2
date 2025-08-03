@@ -1,0 +1,20 @@
+{
+  "directory_level": {
+    "macro_precision": 0.7098677854980376,
+    "macro_recall": 0.6760533773005467,
+    "macro_f1": 0.6364590353727194,
+    "num_processed_proposals": 231
+  },
+  "file_level": {
+    "macro_precision": 0.5398168450116501,
+    "macro_recall": 0.335504362082251,
+    "macro_f1": 0.37338905336586264,
+    "num_processed_proposals": 231
+  },
+  "function_level": {
+    "macro_precision": 0.28797041738301593,
+    "macro_recall": 0.18041206784770003,
+    "macro_f1": 0.18105588221400906,
+    "num_processed_proposals": 228
+  }
+}

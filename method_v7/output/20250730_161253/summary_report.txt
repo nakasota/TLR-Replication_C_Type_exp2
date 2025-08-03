@@ -1,0 +1,58 @@
+Method v7 Coordinated Workflow - Summary Report
+==================================================
+
+Execution Time: 20250730_161253
+Batch Size: 5
+Total Proposals: 5
+
+Granularity Breakdown:
+  Directory: 1 proposals
+  File: 1 proposals
+  Function: 3 proposals
+
+Results by Proposal:
+------------------------------
+
+40239.md (file granularity):
+  Found Files: 2
+    - src/net/url/url.go
+    - src/net/url/url_test.go
+
+47459.md (function granularity):
+  Found Files: 7
+    - src/cmd/compile/internal/types2/typeset_test.go
+    - src/cmd/compile/internal/types2/typeparam.go
+    - src/go/types/instantiate_test.go
+    - src/cmd/compile/internal/types2/typeset.go
+    - src/go/types/typeparam.go
+    ... and 2 more
+  Found Functions: 37
+  Final Functions (Yes): 0
+
+29951.md (function granularity):
+  Found Files: 4
+    - src/math/big/int.go
+    - src/math/big/nat.go
+    - math/big/int.go
+    - src/math/big/arith.go
+  Found Functions: 16
+  Final Functions (Yes): 3
+    - src/math/big/int.go:NewInt
+    - src/math/big/int.go:SetInt64
+    - src/math/big/int.go:Add
+
+39528.md (directory granularity):
+  Found Files: 2
+    - src/reflect/type.go
+    - src/reflect/value.go
+
+44412.md (function granularity):
+  Found Files: 2
+    - src/time/time.go
+    - src/time/time_test.go
+  Found Functions: 9
+  Final Functions (Yes): 6
+    - src/time/time.go:UnixMilli
+    - src/time/time.go:UnixMicro
+    - src/time/time.go:Unix
+    ... and 3 more

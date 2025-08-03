@@ -1,0 +1,21 @@
+{
+  "dataset_info": {
+    "name": "CL-Validated Proposal-to-File Mappings",
+    "description": "High-confidence mappings validated through Gerrit CL diff comparison",
+    "creation_method": "Compare Gerrit CL diffs with current source code"
+  },
+  "total_proposals": 288,
+  "total_high_confidence_mappings": 3687,
+  "total_medium_confidence_mappings": 718,
+  "total_low_confidence_mappings": 1426,
+  "total_files_not_found": 1936,
+  "confidence_threshold": 0.6,
+  "file_categories": {
+    "test_file": 700,
+    "standard_library": 1756,
+    "command_tool": 370,
+    "internal_package": 807,
+    "other": 49,
+    "documentation": 5
+  }
+}

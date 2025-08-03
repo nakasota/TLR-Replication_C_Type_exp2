@@ -1,0 +1,55 @@
+Method v7 Coordinated Workflow - Summary Report
+==================================================
+
+Execution Time: 20250801_152545
+Batch Size: 5
+Total Proposals: 5
+
+Granularity Breakdown:
+  Directory: 1 proposals
+  File: 1 proposals
+  Function: 3 proposals
+
+Results by Proposal:
+------------------------------
+
+40239.md (file granularity):
+  Found Files: 2
+    - src/net/url/url.go
+    - src/net/url/url_test.go
+
+47459.md (function granularity):
+  Found Files: 0
+
+29951.md (function granularity):
+  Found Files: 3
+    - src/math/big/nat.go
+    - src/math/big/int.go
+    - src/math/big/arith.go
+  Found Functions: 16
+  Final Functions (Yes): 3
+    - src/math/big/int.go:NewInt
+    - src/math/big/int.go:SetInt64
+    - src/math/big/int.go:Add
+
+39528.md (directory granularity):
+  Found Files: 7
+    - src/reflectlite/type.go
+    - src/go/types/named_test.go
+    - src/reflect/type.go
+    - src/reflectlite/value.go
+    - src/reflect/value.go
+    ... and 2 more
+
+44412.md (function granularity):
+  Found Files: 4
+    - src/time/time_test.go
+    - src/time/time.go
+    - src/runtime/time_test.go
+    - src/runtime/time.go
+  Found Functions: 11
+  Final Functions (Yes): 6
+    - src/time/time_test.go:TestUnixMilli
+    - src/time/time_test.go:TestUnixMicro
+    - src/time/time.go:UnixMilli
+    ... and 3 more

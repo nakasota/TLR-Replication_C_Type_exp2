@@ -1,0 +1,47 @@
+{
+  "selected_file_level_output": "20250730_075601",
+  "47459.md": {
+    "src/go/types/instantiate.go": [
+      "Instantiate",
+      "instance",
+      "validateTArgLen",
+      "verify",
+      "mentions"
+    ],
+    "src/cmd/compile/internal/types2/typeparam.go": [
+      "NewTypeParam",
+      "newTypeParam",
+      "Obj",
+      "Index",
+      "Constraint",
+      "SetConstraint",
+      "Underlying"
+    ],
+    "src/cmd/compile/internal/types2/typeset.go": [
+      "IsEmpty",
+      "IsAll",
+      "IsMethodSet",
+      "IsComparable",
+      "NumMethods",
+      "Method",
+      "LookupMethod",
+      "String",
+      "hasTerms",
+      "subsetOf",
+      "typeset",
+      "is"
+    ],
+    "src/cmd/compile/internal/types2/typeset_test.go": [],
+    "src/go/types/typeparam.go": [
+      "NewTypeParam",
+      "newTypeParam",
+      "Obj",
+      "Index",
+      "Constraint",
+      "SetConstraint",
+      "Underlying",
+      "String"
+    ],
+    "src/cmd/compile/internal/types2/type.go": []
+  }
+}

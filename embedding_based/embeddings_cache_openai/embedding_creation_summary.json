@@ -1,0 +1,17 @@
+{
+  "total_files_processed": 1000,
+  "total_functions_processed": 5585,
+  "total_time_seconds": 188.49026584625244,
+  "batch_size": 500,
+  "num_batches": 2,
+  "model_name": "text-embedding-3-large",
+  "extraction_method": "json_pre_extracted",
+  "tree_sitter_available": false,
+  "created_at": "2025-07-31 07:18:49",
+  "files": {
+    "file_embeddings": "/workspace/embedding_based/embeddings_cache_openai/all_file_embeddings.pkl",
+    "file_metadata": "/workspace/embedding_based/embeddings_cache_openai/all_file_metadata.json",
+    "function_embeddings": "/workspace/embedding_based/embeddings_cache_openai/all_function_embeddings.pkl",
+    "function_metadata": "/workspace/embedding_based/embeddings_cache_openai/all_function_metadata.json"
+  }
+}

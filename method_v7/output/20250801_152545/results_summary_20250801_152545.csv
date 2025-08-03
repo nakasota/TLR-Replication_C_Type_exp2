@@ -1,0 +1,17 @@
+Proposal No.,Issue URL,Granularity,Directory Level,File Level,Function Level,Code URL
+40239,https://github.com/golang/go/issues/40239,file,src/net/url,src/net/url/url.go,N/A,https://github.com/golang/go/blob/master/src/net/url/url.go
+,,,,src/net/url/url_test.go,,https://github.com/golang/go/blob/master/src/net/url/url_test.go
+47459,https://github.com/golang/go/issues/47459,function,Analysis incomplete,Analysis incomplete,Analysis incomplete,https://github.com/golang/go
+29951,https://github.com/golang/go/issues/29951,function,src/math/big,src/math/big/int.go,NewInt,https://github.com/golang/go/blob/master/src/math/big/int.go
+,,,,,SetInt64,https://github.com/golang/go/blob/master/src/math/big/int.go
+,,,,,Add,https://github.com/golang/go/blob/master/src/math/big/int.go
+39528,https://github.com/golang/go/issues/39528,directory,src/runtime,N/A,N/A,https://github.com/golang/go/tree/master/src/runtime
+,,,src/go/types,,,https://github.com/golang/go/tree/master/src/go/types
+,,,src/reflect,,,https://github.com/golang/go/tree/master/src/reflect
+,,,src/reflectlite,,,https://github.com/golang/go/tree/master/src/reflectlite
+44412,https://github.com/golang/go/issues/44412,function,src/time,src/time/time_test.go,TestUnixMilli,https://github.com/golang/go/blob/master/src/time/time_test.go
+,,,,,TestUnixMicro,https://github.com/golang/go/blob/master/src/time/time_test.go
+,,,,src/time/time.go,UnixMilli,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,,UnixMicro,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,,Unix,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,,unixTime,https://github.com/golang/go/blob/master/src/time/time.go

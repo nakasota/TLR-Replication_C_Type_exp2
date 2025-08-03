@@ -1,0 +1,9 @@
+services:
+  python:
+    container_name: tlr
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/workspace
+    tty: true 

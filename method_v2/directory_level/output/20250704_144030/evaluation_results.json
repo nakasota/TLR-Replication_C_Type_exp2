@@ -1,0 +1,4728 @@
+{
+  "directory_level": {
+    "macro_precision": 0.6760202445351112,
+    "macro_recall": 0.6861081613813051,
+    "macro_f1": 0.6110928146947875,
+    "per_proposal": {
+      "45428": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/tls/fipsonly",
+          "src/crypto/tls",
+          "src/crypto/tls/internal/fips140tls"
+        ],
+        "ground_truth": [
+          "src/crypto/tls"
+        ]
+      },
+      "48801": {
+        "precision": 0.0625,
+        "recall": 0.5,
+        "f1": 0.1111111111111111,
+        "tp": 1,
+        "fp": 15,
+        "fn": 1,
+        "predicted": [
+          "src/go/format",
+          "src/go/doc",
+          "src/go/types",
+          "src/cmd/vet",
+          "src/go/internal/srcimporter",
+          "src/go/constant",
+          "src/go/build",
+          "src/go/printer",
+          "src/go/internal/gccgoimporter",
+          "src/internal/types",
+          "src/go/internal/gcimporter",
+          "src/go/importer",
+          "src/go/ast",
+          "src/go/scanner",
+          "src/go/token",
+          "src/go/parser"
+        ],
+        "ground_truth": [
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/timeformat",
+          "src/cmd/vet"
+        ]
+      },
+      "34875": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/go/doc/comment"
+        ],
+        "ground_truth": [
+          "src/go/doc"
+        ]
+      },
+      "32716": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/tls"
+        ],
+        "ground_truth": [
+          "src/crypto/tls"
+        ]
+      },
+      "51777": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/netip"
+        ],
+        "ground_truth": [
+          "src/net/netip"
+        ]
+      },
+      "47164": {
+        "precision": 0.14285714285714285,
+        "recall": 1.0,
+        "f1": 0.25,
+        "tp": 1,
+        "fp": 6,
+        "fn": 0,
+        "predicted": [
+          "src/log/slog",
+          "src/log/slog/internal/benchmarks",
+          "src/log/syslog",
+          "src/log/slog/internal",
+          "src/log",
+          "src/log/internal",
+          "src/log/slog/internal/buffer"
+        ],
+        "ground_truth": [
+          "src/log"
+        ]
+      },
+      "42710": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/hash/maphash"
+        ],
+        "ground_truth": [
+          "src/hash/maphash"
+        ]
+      },
+      "46259": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/syscall"
+        ],
+        "ground_truth": [
+          "src/syscall"
+        ]
+      },
+      "47257": {
+        "precision": 0.3333333333333333,
+        "recall": 0.18181818181818182,
+        "f1": 0.23529411764705885,
+        "tp": 2,
+        "fp": 4,
+        "fn": 9,
+        "predicted": [
+          "cmd/distpack",
+          "src/cmd/dist",
+          "cmd/dist",
+          "src/cmd/go",
+          "cmd/go",
+          "src/cmd/distpack"
+        ],
+        "ground_truth": [
+          "src/cmd/link",
+          "src/cmd/dist",
+          "src/cmd/go/internal/modindex",
+          "src/go/build",
+          "src/runtime",
+          "src/cmd/go/internal/work",
+          "src/cmd/compile/internal/importer",
+          "src/cmd/go",
+          "src/go/internal/gcimporter",
+          "src/cmd/go/internal/load",
+          "src/cmd/compile/internal/types2"
+        ]
+      },
+      "47216": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "predicted": [
+          "src/runtime/debug",
+          "src/runtime",
+          "src/runtime/metrics"
+        ],
+        "ground_truth": [
+          "src/runtime"
+        ]
+      },
+      "53747": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/flag"
+        ],
+        "ground_truth": [
+          "src/flag"
+        ]
+      },
+      "34974": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/archive/zip"
+        ],
+        "ground_truth": [
+          "src/archive/zip"
+        ]
+      },
+      "34626": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/testing"
+        ],
+        "ground_truth": [
+          "src/testing"
+        ]
+      },
+      "48530": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/net",
+          "src/os"
+        ],
+        "ground_truth": [
+          "src/net"
+        ]
+      },
+      "50102": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/archive/tar"
+        ],
+        "ground_truth": [
+          "src/archive/tar"
+        ]
+      },
+      "38687": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/cmd/go/internal/generate"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/generate"
+        ]
+      },
+      "50062": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/time"
+        ],
+        "ground_truth": [
+          "src/time"
+        ]
+      },
+      "46731": {
+        "precision": 0.5714285714285714,
+        "recall": 0.4444444444444444,
+        "f1": 0.5,
+        "tp": 4,
+        "fp": 3,
+        "fn": 5,
+        "predicted": [
+          "src/cmd/compile/internal/types",
+          "src/runtime/cgo",
+          "src/runtime/internal/sys",
+          "src/reflect",
+          "src/cmd/cgo",
+          "src/cmd/compile/internal/typecheck",
+          "src/cmd/compile/internal/types2"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/types",
+          "src/cmd/compile/internal/typecheck",
+          "src/cmd/compile/internal/noder",
+          "src/runtime",
+          "src/cmd/cgo",
+          "src/reflect",
+          "test/fixedbugs",
+          "src/cmd/compile/internal/typebits",
+          "test"
+        ]
+      },
+      "33184": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/time"
+        ],
+        "ground_truth": [
+          "src/runtime",
+          "src/time"
+        ]
+      },
+      "50489": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/math/big"
+        ],
+        "ground_truth": [
+          "src/math/big"
+        ]
+      },
+      "47342": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/hash/maphash"
+        ],
+        "ground_truth": [
+          "src/hash/maphash",
+          "src/cmd/dist"
+        ]
+      },
+      "37255": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/os/signal",
+          "src/context"
+        ],
+        "ground_truth": [
+          "src/os/signal"
+        ]
+      },
+      "42502": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/runtime",
+          "src/runtime/pprof"
+        ],
+        "ground_truth": [
+          "src/runtime",
+          "src/runtime/testdata/testprogcgo",
+          "src/runtime/pprof"
+        ]
+      },
+      "42782": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect"
+        ]
+      },
+      "38248": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 3,
+        "fn": 8,
+        "predicted": [
+          "src/cmd/compile/internal/wasm",
+          "src/runtime",
+          "misc/wasm"
+        ],
+        "ground_truth": [
+          "src/syscall/js",
+          "src/cmd/compile/internal/ssagen",
+          "src/cmd/compile/internal/ir",
+          "src/cmd/internal/obj/wasm",
+          "src/cmd/compile/internal/gc",
+          "src/cmd/compile/internal/noder",
+          "src/cmd/link/internal/wasm",
+          "src/cmd/internal/obj"
+        ]
+      },
+      "46279": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 4,
+        "fn": 1,
+        "predicted": [
+          "src/internal/poll",
+          "src/internal/syscall/unix",
+          "src/runtime",
+          "src/syscall"
+        ],
+        "ground_truth": [
+          "src/cmd/link/internal/ld"
+        ]
+      },
+      "40724": {
+        "precision": 0.1044776119402985,
+        "recall": 0.4666666666666667,
+        "f1": 0.17073170731707318,
+        "tp": 21,
+        "fp": 180,
+        "fn": 24,
+        "predicted": [
+          "src/cmd/compile/internal/rangefunc",
+          "src/cmd/compile/internal/objw",
+          "src/cmd/compile/internal/pgo/testdata",
+          "src/cmd/compile/internal/moddeps/testdata",
+          "src/cmd/compile/internal/script/testdata",
+          "src/cmd/compile/internal/hash",
+          "src/cmd/compile/internal/amd64",
+          "src/cmd/compile/internal/oserror/testdata",
+          "src/cmd/compile/internal/moddeps",
+          "src/cmd/compile/internal/disasm/testdata",
+          "src/cmd/compile/internal/x86",
+          "src/cmd/compile/internal/dwarfgen/testdata",
+          "src/cmd/compile/internal/weak",
+          "src/cmd/compile/internal/objfile",
+          "src/cmd/compile/internal/ssagen",
+          "src/cmd/compile/internal/reflectdata",
+          "src/cmd/compile/internal/quoted",
+          "src/cmd/compile/internal/stringslite/testdata",
+          "src/cmd/compile/internal/metadata",
+          "src/cmd/compile/internal/mips",
+          "src/cmd/compile/internal/deadlocals",
+          "src/cmd/compile/internal/zstd/testdata",
+          "src/cmd/compile/internal/browser/testdata",
+          "src/cmd/compile/internal/par/testdata",
+          "src/cmd/compile/internal/codesign",
+          "src/cmd/compile/internal/objabi",
+          "src/cmd/compile/internal/testlog/testdata",
+          "src/cmd/compile/internal/syscall",
+          "src/cmd/compile/internal/noder",
+          "src/cmd/compile/internal/poll/testdata",
+          "src/cmd/compile/internal/covdata",
+          "src/cmd/compile/internal/routebsd/testdata",
+          "src/cmd/compile/internal/pathcache",
+          "src/cmd/compile/internal/edit/testdata",
+          "src/cmd/compile/internal/oserror",
+          "src/cmd/compile/internal/testenv/testdata",
+          "src/cmd/compile/internal/types2/testdata",
+          "src/cmd/compile/internal/types2",
+          "src/cmd/compile/internal/loopvar",
+          "src/cmd/compile/internal/coverage/testdata",
+          "src/cmd/compile/internal/syscall/testdata",
+          "src/cmd/compile/internal/telemetry",
+          "src/cmd/compile/internal/quoted/testdata",
+          "src/cmd/compile/internal/test2json/testdata",
+          "src/cmd/compile/internal/routebsd",
+          "src/cmd/compile/internal/reflectlite",
+          "src/cmd/compile/internal/obj",
+          "src/cmd/compile/internal/testenv",
+          "src/cmd/compile/internal/saferio/testdata",
+          "src/cmd/compile/internal/sync",
+          "src/cmd/compile/internal/saferio",
+          "src/cmd/compile/internal/gcimporter",
+          "src/cmd/compile/internal/cover/testdata",
+          "src/cmd/compile/internal/metadata/testdata",
+          "src/cmd/compile/internal/syntax",
+          "src/cmd/compile/internal/disasm",
+          "src/cmd/compile/internal/staticinit",
+          "src/cmd/compile/internal/abi/testdata",
+          "src/cmd/compile/internal/objabi/testdata",
+          "src/cmd/compile/internal/goobj",
+          "src/cmd/compile/internal/pkginit",
+          "src/cmd/compile/internal/trace/testdata",
+          "src/cmd/compile/internal/logopt",
+          "src/cmd/compile/internal/typesinternal",
+          "src/cmd/compile/internal/runtime",
+          "src/cmd/compile/internal/race/testdata",
+          "src/cmd/compile/internal/unsafeheader/testdata",
+          "src/cmd/compile/internal/objfile/testdata",
+          "src/cmd/compile/internal/syntax/testdata",
+          "src/cmd/compile/internal/runtime/testdata",
+          "src/cmd/compile/internal/macho/testdata",
+          "src/cmd/compile/internal/ssa/testdata",
+          "src/cmd/compile/internal/edit",
+          "src/cmd/compile/internal/macho",
+          "src/cmd/compile/internal/robustio/testdata",
+          "src/cmd/compile/internal/script",
+          "src/cmd/compile/internal/deadlocals/testdata",
+          "src/cmd/compile/internal/bio",
+          "src/cmd/compile/internal/gcimporter/testdata",
+          "src/cmd/compile/internal/walk",
+          "src/cmd/compile/internal/liveness",
+          "src/cmd/compile/internal/race",
+          "src/cmd/compile/internal/importer",
+          "src/cmd/compile/internal/version/testdata",
+          "src/cmd/compile/internal/ssa",
+          "src/cmd/compile/internal/base",
+          "src/cmd/compile/internal/loopvar/testdata",
+          "src/cmd/compile/internal/profilerecord/testdata",
+          "src/cmd/compile/internal/testlog",
+          "src/cmd/compile/internal/gc",
+          "src/cmd/compile/internal/profile/testdata",
+          "src/cmd/compile/internal/reflectlite/testdata",
+          "src/cmd/compile/internal/coverage",
+          "src/cmd/compile/internal/bitvec",
+          "src/cmd/compile/internal/osinfo/testdata",
+          "src/cmd/compile/internal/wasm",
+          "src/cmd/compile/internal/ssa/_gen",
+          "src/cmd/compile/internal/trace",
+          "src/cmd/compile/internal/cov/testdata",
+          "src/cmd/compile/internal/importer/testdata",
+          "src/cmd/compile/internal/rttype/testdata",
+          "src/cmd/compile/internal/ppc64",
+          "src/cmd/compile/internal/buildid",
+          "src/cmd/compile/internal/srcimporter/testdata",
+          "src/cmd/compile/internal/goobj/testdata",
+          "src/cmd/compile/internal/pkgpath/testdata",
+          "src/cmd/compile/internal/inline",
+          "src/cmd/compile/internal/import_/testdata",
+          "src/cmd/compile/internal/pkgpath",
+          "src/cmd/compile/internal/dwarf",
+          "src/cmd/compile/internal/pkgbits/testdata",
+          "src/cmd/compile/internal/rttype",
+          "src/cmd/compile/internal/testpty",
+          "src/cmd/compile/internal/unsafeheader",
+          "src/cmd/compile/internal/mips64",
+          "src/cmd/compile/internal/pkgbits",
+          "src/cmd/compile/internal/test2json",
+          "src/cmd/compile/internal/arm",
+          "src/cmd/compile/internal/inline/testdata",
+          "src/cmd/compile/internal/archive/testdata",
+          "src/cmd/compile/internal/test/testdata",
+          "src/cmd/compile/internal/testdir/testdata",
+          "src/cmd/compile/internal/profile",
+          "src/cmd/compile/internal/buildid/testdata",
+          "src/cmd/compile/internal/types",
+          "src/cmd/compile/internal/obj/testdata",
+          "src/cmd/compile/internal/inline/inlheur/testdata",
+          "src/cmd/compile/internal/sync/testdata",
+          "src/cmd/compile/internal/robustio",
+          "src/cmd/compile/internal/arm64",
+          "src/cmd/compile/internal/singleflight/testdata",
+          "src/cmd/compile/internal/synctest",
+          "src/cmd/compile/internal/browser",
+          "src/cmd/compile/internal/bootstrap_test/testdata",
+          "src/cmd/compile/internal/testpty/testdata",
+          "src/cmd/compile/internal/xcoff",
+          "src/cmd/compile/internal/srcimporter",
+          "src/cmd/compile/internal/pgo",
+          "src/cmd/compile/internal/version",
+          "src/cmd/compile/internal/platform/testdata",
+          "src/cmd/compile/internal/par",
+          "src/cmd/compile/internal/testhash/testdata",
+          "src/cmd/compile/internal/obscuretestdata/testdata",
+          "src/cmd/compile/internal/profilerecord",
+          "src/cmd/compile/internal/escape/testdata",
+          "src/cmd/compile/internal/compare",
+          "src/cmd/compile/internal/zstd",
+          "src/cmd/compile/internal/pkginit/testdata",
+          "src/cmd/compile/internal/weak/testdata",
+          "src/cmd/compile/internal/bootstrap_test",
+          "src/cmd/compile/internal/logopt/testdata",
+          "src/cmd/compile/internal/cov",
+          "src/cmd/compile/internal/pkgpattern/testdata",
+          "src/cmd/compile/internal/bitvec/testdata",
+          "src/cmd/compile/internal/pathcache/testdata",
+          "src/cmd/compile/internal/poll",
+          "src/cmd/compile/internal/rangefunc/testdata",
+          "src/cmd/compile/internal/codesign/testdata",
+          "src/cmd/compile/internal/gcprog",
+          "src/cmd/compile/internal/gcprog/testdata",
+          "src/cmd/compile/internal/hash/testdata",
+          "src/cmd/compile/internal/cover",
+          "src/cmd/compile/internal/telemetry/testdata",
+          "src/cmd/compile/internal/riscv64",
+          "src/cmd/compile/internal/obscuretestdata",
+          "src/cmd/compile/internal/archive",
+          "src/cmd/compile/internal/base/testdata",
+          "src/cmd/compile/internal/compare/testdata",
+          "src/cmd/compile/internal/sys/testdata",
+          "src/cmd/compile/internal/inline/interleaved",
+          "src/cmd/compile/internal/types/testdata",
+          "src/cmd/compile/internal/devirtualize",
+          "src/cmd/compile/internal/dwarf/testdata",
+          "src/cmd/compile/internal/gccgoimporter/testdata",
+          "src/cmd/compile/internal/pkgpattern",
+          "src/cmd/compile/internal/covdata/testdata",
+          "src/cmd/compile/internal/abi",
+          "src/cmd/compile/internal/loong64",
+          "src/cmd/compile/internal/gccgoimporter",
+          "src/cmd/compile/internal/test",
+          "src/cmd/compile/internal/devirtualize/testdata",
+          "src/cmd/compile/internal/typesinternal/testdata",
+          "src/cmd/compile/internal/osinfo",
+          "src/cmd/compile/internal/testdir",
+          "src/cmd/compile/internal/bio/testdata",
+          "src/cmd/compile/internal/escape",
+          "src/cmd/compile/internal/stringslite",
+          "src/cmd/compile/internal/typebits",
+          "src/cmd/compile/internal/s390x",
+          "src/cmd/compile/internal/ir",
+          "src/cmd/compile/internal/dwarfgen",
+          "src/cmd/compile/internal/testhash",
+          "src/cmd/compile/internal/sys",
+          "src/cmd/compile/internal/staticdata",
+          "src/cmd/compile/internal/synctest/testdata",
+          "src/cmd/compile/internal/pgoir",
+          "src/cmd/compile/internal/import_",
+          "src/cmd/compile/internal/platform",
+          "src/cmd/compile/internal/xcoff/testdata",
+          "src/cmd/compile/internal/typecheck",
+          "src/cmd/compile/internal/singleflight"
+        ],
+        "ground_truth": [
+          "src/runtime/cgo",
+          "src/cmd/link/internal/loadmacho",
+          "src/cmd/compile/internal/amd64",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/asmdecl",
+          "src/cmd/link/internal/loadelf",
+          "src/cmd/go/internal/work",
+          "src/cmd/compile/internal/x86",
+          "src/cmd/compile/internal/ppc64",
+          "src/cmd/compile/internal/riscv64",
+          "src/cmd/internal/obj/x86",
+          "src/cmd/compile/internal/ssagen",
+          "src/cmd/dist",
+          "src/cmd/link/internal/loadpe",
+          "src/cmd/compile/internal/reflectdata",
+          "src/cmd/link/internal/loadxcoff",
+          "src/cmd/compile/internal/mips",
+          "src/internal/abi",
+          "src/cmd/compile/internal/mips64",
+          "src/cmd/compile/internal/arm",
+          "src/cmd/cgo",
+          "src/cmd/compile/internal/abi",
+          "src/cmd/asm",
+          "test/codegen",
+          "src/cmd/internal/objabi",
+          "src/cmd/compile/internal/test",
+          "src/cmd/compile/internal/noder",
+          "src/cmd/compile/internal/walk",
+          "src/cmd/asm/internal/asm",
+          "src/cmd/compile/internal/liveness",
+          "src/cmd/link/internal/loader",
+          "src/cmd/compile/internal/arm64",
+          "src/cmd/compile/internal/ssa",
+          "src/reflect",
+          "src/internal/abi/testdata",
+          "src/cmd/compile/internal/base",
+          "test",
+          "src/math",
+          "src/cmd/compile/internal/s390x",
+          "src/cmd/compile/internal/ir",
+          "src/cmd/internal/obj/wasm",
+          "src/cmd/compile/internal/gc",
+          "src/runtime",
+          "src/cmd/link/internal/ld",
+          "src/cmd/internal/obj",
+          "src/cmd/compile/internal/wasm"
+        ]
+      },
+      "51914": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/net/http",
+          "src/net/http/httputil"
+        ],
+        "ground_truth": [
+          "src/net/http/httputil"
+        ]
+      },
+      "40481": {
+        "precision": 1.0,
+        "recall": 0.14285714285714285,
+        "f1": 0.25,
+        "tp": 1,
+        "fp": 0,
+        "fn": 6,
+        "predicted": [
+          "src/unsafe"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/ssagen",
+          "src/go/types",
+          "src/cmd/compile/internal/ir",
+          "src/cmd/compile/internal/walk",
+          "src/unsafe",
+          "src/cmd/compile/internal/typecheck",
+          "test"
+        ]
+      },
+      "46552": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/syscall"
+        ],
+        "ground_truth": [
+          "src/runtime",
+          "src/syscall"
+        ]
+      },
+      "33136": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect"
+        ]
+      },
+      "52221": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 1,
+        "fn": 3,
+        "predicted": [
+          "src/crypto/elliptic",
+          "src/crypto/ecdh",
+          "src/crypto/internal/nistec"
+        ],
+        "ground_truth": [
+          "src/crypto/tls",
+          "src/crypto/ecdh",
+          "src/crypto/ecdsa",
+          "src/crypto/elliptic",
+          "src/crypto/x509"
+        ]
+      },
+      "44853": {
+        "precision": 0.21428571428571427,
+        "recall": 0.25,
+        "f1": 0.23076923076923075,
+        "tp": 3,
+        "fp": 11,
+        "fn": 9,
+        "predicted": [
+          "src/internal/asan",
+          "src/cmd/compile/internal/ssagen",
+          "src/runtime/cgo",
+          "src/cmd/dist",
+          "src/cmd/link/internal/loader",
+          "src/cmd/compile/internal/walk",
+          "misc/cgo/testsanitizers",
+          "src/cmd/link/internal/sym",
+          "src/runtime/asan",
+          "src/runtime/msan",
+          "src/cmd/go/internal/work",
+          "src/cmd/link/internal/ld",
+          "src/internal/msan",
+          "src/cmd/compile/internal/typecheck"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/ssagen",
+          "src/cmd/compile/internal/reflectdata",
+          "src/cmd/compile/internal/gc",
+          "src/cmd/compile/internal/noder",
+          "src/runtime",
+          "src/cmd/compile/internal/pkginit",
+          "src/cmd/go/internal/work",
+          "src/cmd/go",
+          "src/cmd/link/internal/ld",
+          "src/cmd/go/internal/load",
+          "src/syscall",
+          "src/cmd/compile/internal/base"
+        ]
+      },
+      "50599": {
+        "precision": 0.2,
+        "recall": 0.2,
+        "f1": 0.20000000000000004,
+        "tp": 1,
+        "fp": 4,
+        "fn": 4,
+        "predicted": [
+          "src/os/exec",
+          "src/os/signal",
+          "src/os/exec/internal/fdtest",
+          "src/os/user",
+          "src/os"
+        ],
+        "ground_truth": [
+          "src/os/exec",
+          "src/go/build",
+          "src/cmd/go/internal/work",
+          "src/cmd/internal/moddeps",
+          "src/cmd/go/internal/vcs"
+        ]
+      },
+      "42537": {
+        "precision": 1.0,
+        "recall": 0.046511627906976744,
+        "f1": 0.08888888888888888,
+        "tp": 2,
+        "fp": 0,
+        "fn": 41,
+        "predicted": [
+          "src/strings",
+          "src/bytes"
+        ],
+        "ground_truth": [
+          "src/go/build",
+          "src/os/user",
+          "src/net/mail",
+          "src/html/template",
+          "src/go/importer",
+          "src/net/textproto",
+          "src/archive/tar",
+          "src/cmd/go/internal/clean",
+          "src/encoding/pem",
+          "src/runtime/pprof",
+          "src/cmd/vet",
+          "src/encoding/asn1",
+          "src/text/template",
+          "src/go/constant",
+          "src/net/url",
+          "src/net/http/internal",
+          "src/strings",
+          "src/regexp/syntax",
+          "src/os",
+          "src/net",
+          "src/crypto/x509",
+          "src/archive/zip",
+          "src/os/exec",
+          "src/regexp",
+          "src/go/doc",
+          "src/go/types",
+          "src/crypto/tls",
+          "src/strconv",
+          "src/net/smtp",
+          "src/cmd/go/internal/load",
+          "src/cmd/doc",
+          "src/net/http",
+          "test",
+          "src/mime",
+          "src/encoding/xml",
+          "src/net/http/cgi",
+          "src/go/printer",
+          "src/runtime",
+          "src/crypto/ecdsa",
+          "src/bytes",
+          "src/encoding/json",
+          "src/runtime/testdata/testprog",
+          "src/cmd/fix"
+        ]
+      },
+      "40995": {
+        "precision": 0.375,
+        "recall": 0.42857142857142855,
+        "f1": 0.39999999999999997,
+        "tp": 3,
+        "fp": 5,
+        "fn": 4,
+        "predicted": [
+          "src/cmd/link",
+          "src/cmd/dist",
+          "src/internal/syscall/windows/registry",
+          "src/internal/syscall/unix",
+          "src/runtime",
+          "src/internal/syscall/execenv",
+          "src/internal/syscall/windows",
+          "src/syscall"
+        ],
+        "ground_truth": [
+          "src/cmd/dist",
+          "src/cmd/link/internal/mips64",
+          "src/vendor/golang.org/x/sys/cpu",
+          "src/runtime",
+          "src/cmd/vendor/golang.org/x/sys/windows",
+          "src/syscall",
+          "src/cmd/vendor/golang.org/x/sys/unix"
+        ]
+      },
+      "39034": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/time"
+        ],
+        "ground_truth": [
+          "src/time"
+        ]
+      },
+      "45100": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/url"
+        ],
+        "ground_truth": [
+          "src/net/url"
+        ]
+      },
+      "47005": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/url"
+        ],
+        "ground_truth": [
+          "src/net/url"
+        ]
+      },
+      "53482": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/net",
+          "src/syscall"
+        ],
+        "ground_truth": [
+          "src/net"
+        ]
+      },
+      "37112": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/runtime/debug",
+          "src/runtime",
+          "src/runtime/metrics"
+        ],
+        "ground_truth": [
+          "src/runtime",
+          "src/cmd/go/internal/work",
+          "src/runtime/metrics"
+        ]
+      },
+      "46771": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/mime/multipart"
+        ],
+        "ground_truth": [
+          "src/mime/multipart"
+        ]
+      },
+      "48424": {
+        "precision": 0.8,
+        "recall": 0.5714285714285714,
+        "f1": 0.6666666666666666,
+        "tp": 4,
+        "fp": 1,
+        "fn": 3,
+        "predicted": [
+          "src/go/types",
+          "src/go/parser",
+          "src/go/internal/gcimporter",
+          "src/cmd/compile/internal/types2",
+          "src/cmd/compile/internal/gcimporter"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/syntax",
+          "src/go/types",
+          "src/cmd/compile/internal/noder",
+          "src/go/internal/gcimporter",
+          "test/typeparam",
+          "src/cmd/compile/internal/types2",
+          "src/go/parser"
+        ]
+      },
+      "46485": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.33333333333333337,
+        "tp": 1,
+        "fp": 0,
+        "fn": 4,
+        "predicted": [
+          "src/go/parser"
+        ],
+        "ground_truth": [
+          "src/go/internal/srcimporter",
+          "src/cmd/go/internal/load",
+          "src/cmd/cgo",
+          "src/cmd/gofmt",
+          "src/go/parser"
+        ]
+      },
+      "34652": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "predicted": [
+          "src/text/template/parse"
+        ],
+        "ground_truth": [
+          "src/html/template",
+          "src/text/template/parse",
+          "src/text/template"
+        ]
+      },
+      "42098": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/syscall"
+        ],
+        "ground_truth": [
+          "src/syscall"
+        ]
+      },
+      "35998": {
+        "precision": 0.14285714285714285,
+        "recall": 0.3333333333333333,
+        "f1": 0.2,
+        "tp": 1,
+        "fp": 6,
+        "fn": 2,
+        "predicted": [
+          "src/internal/testdeps",
+          "src/testing/quick",
+          "src/testing/slogtest",
+          "src/testing/iotest",
+          "src/testing/synctest",
+          "src/testing",
+          "src/testing/fstest"
+        ],
+        "ground_truth": [
+          "src/testing",
+          "src/cmd/go/internal/web",
+          "src/io/ioutil"
+        ]
+      },
+      "43698": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/cmd/vet",
+          "src/embed"
+        ],
+        "ground_truth": [
+          "src/embed/internal/embedtest",
+          "src/embed"
+        ]
+      },
+      "51414": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/time"
+        ],
+        "ground_truth": [
+          "src/time"
+        ]
+      },
+      "37023": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/runtime/debug",
+          "src/runtime"
+        ],
+        "ground_truth": [
+          "src/runtime/debug",
+          "src/runtime"
+        ]
+      },
+      "46258": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/syscall"
+        ],
+        "ground_truth": [
+          "src/syscall"
+        ]
+      },
+      "51430": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 3,
+        "fn": 15,
+        "predicted": [
+          "src/runtime/coverage",
+          "src/internal/coverage",
+          "src/cmd/cover"
+        ],
+        "ground_truth": [
+          "src/cmd/internal/cov",
+          "src/internal/coverage/stringtab",
+          "src/internal/coverage/calloc",
+          "src/cmd/covdata",
+          "src/cmd/compile/internal/gc",
+          "src/internal/coverage/cformat",
+          "src/internal/coverage/cmerge",
+          "src/cmd/compile/internal/coverage",
+          "src/internal/coverage/encodecounter",
+          "src/internal/coverage/test",
+          "src/internal/coverage/decodecounter",
+          "src/cmd/compile/internal/typecheck",
+          "src/internal/coverage/pods",
+          "src/cmd/compile/internal/base",
+          "src/cmd/covdata/testdata"
+        ]
+      },
+      "46308": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/tls"
+        ],
+        "ground_truth": [
+          "src/crypto/tls"
+        ]
+      },
+      "37033": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/runtime/cgo"
+        ],
+        "ground_truth": [
+          "src/cmd/link/internal/ld",
+          "src/runtime/cgo"
+        ]
+      },
+      "51766": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/netip"
+        ],
+        "ground_truth": [
+          "src/net/netip"
+        ]
+      },
+      "51684": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/regexp",
+          "src/regexp/syntax"
+        ],
+        "ground_truth": [
+          "src/regexp/syntax"
+        ]
+      },
+      "51896": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/unicode/utf16"
+        ],
+        "ground_truth": [
+          "src/unicode/utf16"
+        ]
+      },
+      "42088": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "predicted": [
+          "src/cmd/go",
+          "src/cmd/go/internal/run"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/load",
+          "src/cmd/go/internal/run",
+          "src/cmd/go/internal/work"
+        ]
+      },
+      "19367": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/unsafe"
+        ],
+        "ground_truth": [
+          "src/runtime"
+        ]
+      },
+      "37168": {
+        "precision": 0.021739130434782608,
+        "recall": 0.5,
+        "f1": 0.041666666666666664,
+        "tp": 1,
+        "fp": 45,
+        "fn": 1,
+        "predicted": [
+          "src/crypto/sha256",
+          "src/crypto/sha3",
+          "src/crypto/ecdh",
+          "src/crypto/boring",
+          "src/crypto/internal/fips140/fipsdeps",
+          "src/crypto/internal/fips140/sha256",
+          "src/crypto/sha1",
+          "src/crypto/ed25519",
+          "src/crypto/internal/fips140/fipsdeps/cpu",
+          "src/crypto/internal/randutil",
+          "src/crypto/aes",
+          "src/crypto/fips140",
+          "src/crypto/internal/fips140/fips140tls",
+          "src/crypto/internal/fips140/sha512",
+          "src/crypto/des",
+          "src/crypto/hmac",
+          "src/crypto/mlkem",
+          "src/crypto/internal/fips140/sha3",
+          "src/crypto/pbkdf2",
+          "src/crypto/internal/fips140/indicator",
+          "src/crypto/elliptic",
+          "src/crypto/internal/fips140",
+          "src/crypto/internal/impl",
+          "src/crypto/x509",
+          "src/crypto/internal/fips140/tls13",
+          "src/crypto/subtle",
+          "src/crypto/internal/cryptotest",
+          "src/crypto/tls",
+          "src/crypto/internal/boring",
+          "src/crypto/sha512",
+          "src/crypto/internal/fips140/tls12",
+          "src/crypto/rc4",
+          "src/crypto/internal/sysrand",
+          "src/crypto/hkdf",
+          "src/crypto/internal/fips140/fipsdeps/godebug",
+          "src/crypto/md5",
+          "src/crypto/internal/fips140/fipsdeps/byteorder",
+          "src/math/big",
+          "src/crypto/ecdsa",
+          "src/crypto/rand",
+          "src/crypto/internal/fips140/fips140test",
+          "src/crypto/dsa",
+          "src/crypto/internal/hpke",
+          "src/crypto/internal/fips140/subtle",
+          "src/crypto/cipher",
+          "src/crypto/rsa"
+        ],
+        "ground_truth": [
+          "src/crypto/rc4",
+          "src/image"
+        ]
+      },
+      "29062": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 3,
+        "fn": 3,
+        "predicted": [
+          "src/cmd/go",
+          "src/testing",
+          "src/os"
+        ],
+        "ground_truth": [
+          "src/cmd/objdump",
+          "src/internal/testenv",
+          "src/cmd/go/internal/test"
+        ]
+      },
+      "43823": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/time"
+        ],
+        "ground_truth": [
+          "src/time"
+        ]
+      },
+      "48157": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 3,
+        "predicted": [
+          "src/cmd/go",
+          "src/testing"
+        ],
+        "ground_truth": [
+          "src/internal/fuzz",
+          "src/runtime",
+          "src/internal/testenv"
+        ]
+      },
+      "32779": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/encoding/json"
+        ],
+        "ground_truth": [
+          "src/encoding/json"
+        ]
+      },
+      "46131": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect"
+        ]
+      },
+      "51225": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 3,
+        "predicted": [
+          "src/cmd/compile",
+          "src/cmd/link"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/noder",
+          "src/cmd/compile/internal/base",
+          "src/cmd/go/internal/work"
+        ]
+      },
+      "40025": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/io/ioutil",
+          "src/io/fs",
+          "src/io"
+        ],
+        "ground_truth": [
+          "src/io/ioutil",
+          "src/os",
+          "src/io"
+        ]
+      },
+      "47527": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/bufio"
+        ],
+        "ground_truth": [
+          "src/bufio"
+        ]
+      },
+      "37974": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/go/doc",
+          "src/go/ast"
+        ],
+        "ground_truth": [
+          "src/go/ast"
+        ]
+      },
+      "37776": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/url"
+        ],
+        "ground_truth": [
+          "src/net/url"
+        ]
+      },
+      "40357": {
+        "precision": 0.06896551724137931,
+        "recall": 0.6666666666666666,
+        "f1": 0.125,
+        "tp": 2,
+        "fp": 27,
+        "fn": 1,
+        "predicted": [
+          "src/cmd/go/internal/web",
+          "src/cmd/go/internal/modget",
+          "src/cmd/go/internal/work",
+          "src/cmd/go/internal/cfg",
+          "src/cmd/go/internal/imports",
+          "src/cmd/go/internal/workcmd",
+          "src/cmd/go/internal/search",
+          "src/cmd/go/internal/base",
+          "src/cmd/go/internal/str",
+          "src/cmd/go/internal/vcweb",
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/go/internal/fix",
+          "src/cmd/go/internal/help",
+          "src/cmd/go/internal/test",
+          "src/cmd/go/internal/bug",
+          "src/cmd/go/internal/telemetrycmd",
+          "src/cmd/go/internal/mvs",
+          "src/cmd/go/internal/load",
+          "src/cmd/go/internal/generate",
+          "src/cmd/go/internal/telemetrystats",
+          "src/cmd/go/internal/modinfo",
+          "src/cmd/go/internal/modcmd",
+          "src/cmd/go/internal/lockedfile",
+          "src/cmd/go/internal/version",
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/fsys",
+          "src/cmd/go/internal/cache",
+          "src/cmd/go/internal/vcs",
+          "src/cmd/go/internal/tool"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/modcmd",
+          "src/cmd/go/internal/list"
+        ]
+      },
+      "39557": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/flag"
+        ],
+        "ground_truth": [
+          "src/flag"
+        ]
+      },
+      "35804": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/database/sql"
+        ],
+        "ground_truth": [
+          "src/database/sql"
+        ]
+      },
+      "53003": {
+        "precision": 1.0,
+        "recall": 0.1,
+        "f1": 0.18181818181818182,
+        "tp": 1,
+        "fp": 0,
+        "fn": 9,
+        "predicted": [
+          "src/unsafe"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/ssagen",
+          "src/go/types",
+          "src/cmd/compile/internal/ir",
+          "src/cmd/compile/internal/walk",
+          "src/cmd/compile/internal/noder",
+          "src/unsafe",
+          "src/cmd/compile/internal/escape",
+          "src/cmd/compile/internal/typecheck",
+          "src/cmd/compile/internal/types2",
+          "test"
+        ]
+      },
+      "40281": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1": 0.4,
+        "tp": 1,
+        "fp": 2,
+        "fn": 1,
+        "predicted": [
+          "src/reflect",
+          "src/go/analysis/passes/structtag",
+          "src/cmd/vet"
+        ],
+        "ground_truth": [
+          "src/reflect",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/structtag"
+        ]
+      },
+      "41563": {
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "tp": 1,
+        "fp": 0,
+        "fn": 5,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/encoding/asn1",
+          "src/text/template",
+          "src/encoding/xml",
+          "src/net/rpc",
+          "src/reflect",
+          "src/encoding/json"
+        ]
+      },
+      "46121": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/html/template",
+          "src/text/template"
+        ],
+        "ground_truth": [
+          "src/html/template"
+        ]
+      },
+      "43947": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/os/exec"
+        ],
+        "ground_truth": [
+          "src/os/exec",
+          "src/cmd/dist"
+        ]
+      },
+      "50860": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "predicted": [
+          "src/sync/atomic"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/types",
+          "src/cmd/compile/internal/test",
+          "src/sync/atomic",
+          "src/cmd/compile/internal/escape"
+        ]
+      },
+      "52444": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/x509"
+        ],
+        "ground_truth": [
+          "src/crypto/x509"
+        ]
+      },
+      "43724": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 3,
+        "fn": 2,
+        "predicted": [
+          "src/os/exec",
+          "src/internal/execabs",
+          "src/internal/pathcache"
+        ],
+        "ground_truth": [
+          "src/syscall",
+          "src/internal/syscall/windows"
+        ]
+      },
+      "41730": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1": 0.25,
+        "tp": 1,
+        "fp": 2,
+        "fn": 4,
+        "predicted": [
+          "src/cmd/go/internal/vcs",
+          "src/cmd/go/internal/vcweb",
+          "src/cmd/go/internal/modfetch/codehost"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/modget",
+          "src/cmd/go",
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/go/internal/vcs",
+          "src/cmd/go/internal/envcmd"
+        ]
+      },
+      "51668": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/fmt"
+        ],
+        "ground_truth": [
+          "src/fmt"
+        ]
+      },
+      "41980": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/testing"
+        ],
+        "ground_truth": [
+          "src/testing",
+          "src/internal/diff"
+        ]
+      },
+      "41792": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/flag"
+        ],
+        "ground_truth": [
+          "src/flag"
+        ]
+      },
+      "45453": {
+        "precision": 0.25,
+        "recall": 0.14285714285714285,
+        "f1": 0.18181818181818182,
+        "tp": 1,
+        "fp": 3,
+        "fn": 6,
+        "predicted": [
+          "src/internal/goarch",
+          "src/runtime",
+          "src/cmd/compile/internal/amd64",
+          "src/internal/goexperiment"
+        ],
+        "ground_truth": [
+          "src/cmd/dist",
+          "test/codegen",
+          "src/cmd/compile/internal/amd64",
+          "src/cmd/go/internal/work",
+          "src/internal/buildcfg",
+          "src/cmd/compile/internal/ssa",
+          "src/cmd/go/internal/cfg"
+        ]
+      },
+      "40276": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714285714285715,
+        "tp": 2,
+        "fp": 3,
+        "fn": 0,
+        "predicted": [
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/modget",
+          "src/cmd/go/internal/work",
+          "src/cmd/go",
+          "src/cmd/go/internal/modfetch"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/work"
+        ]
+      },
+      "42322": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
+        "f1": 0.3333333333333333,
+        "tp": 1,
+        "fp": 2,
+        "fn": 2,
+        "predicted": [
+          "src/io/fs",
+          "src/net/http",
+          "src/embed"
+        ],
+        "ground_truth": [
+          "src/io/fs",
+          "src/embed/internal/embedtest",
+          "src/testing/fstest"
+        ]
+      },
+      "42100": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 2,
+        "fn": 2,
+        "predicted": [
+          "misc/ios",
+          "src/runtime",
+          "src/cmd/dist",
+          "src/time"
+        ],
+        "ground_truth": [
+          "misc/ios",
+          "src/cmd/link/internal/ld",
+          "src/cmd/dist",
+          "src/cmd/go/internal/work"
+        ]
+      },
+      "37475": {
+        "precision": 0.8,
+        "recall": 0.4444444444444444,
+        "f1": 0.5714285714285714,
+        "tp": 4,
+        "fp": 1,
+        "fn": 5,
+        "predicted": [
+          "src/cmd/go/internal/version",
+          "src/cmd/go/internal/work",
+          "src/cmd/go/internal/modfetch/codehost",
+          "src/cmd/go/internal/load",
+          "src/runtime/debug"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/version",
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/work",
+          "src/encoding/binary",
+          "src/cmd/go",
+          "src/cmd/go/internal/load",
+          "src/debug/buildinfo",
+          "src/runtime/debug",
+          "src/cmd/go/internal/vcs"
+        ]
+      },
+      "39567": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/http"
+        ],
+        "ground_truth": [
+          "src/net/http"
+        ]
+      },
+      "44808": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "tp": 2,
+        "fp": 6,
+        "fn": 0,
+        "predicted": [
+          "src/image/color/palette",
+          "src/image/gif",
+          "src/image/draw",
+          "src/image",
+          "src/image/jpeg",
+          "src/image/color",
+          "src/image/png",
+          "src/image/internal/imageutil"
+        ],
+        "ground_truth": [
+          "src/image/draw",
+          "src/image"
+        ]
+      },
+      "45754": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/flag",
+          "src/encoding"
+        ],
+        "ground_truth": [
+          "src/flag"
+        ]
+      },
+      "47651": {
+        "precision": 1.0,
+        "recall": 0.047619047619047616,
+        "f1": 0.0909090909090909,
+        "tp": 1,
+        "fp": 0,
+        "fn": 20,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/testing/quick",
+          "src/html/template",
+          "src/encoding/gob",
+          "src/go/ast",
+          "src/database/sql/driver",
+          "src/flag",
+          "test/fixedbugs/issue32901.dir",
+          "src/encoding/asn1",
+          "src/text/template",
+          "src/internal/reflectlite",
+          "src/fmt",
+          "src/reflect",
+          "test",
+          "src/encoding/xml",
+          "src/encoding/binary",
+          "src/internal/fmtsort",
+          "src/net/rpc",
+          "src/encoding/json",
+          "src/cmd/gofmt",
+          "src/cmd/fix",
+          "src/database/sql"
+        ]
+      },
+      "48052": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/debug/plan9obj"
+        ],
+        "ground_truth": [
+          "src/debug/plan9obj"
+        ]
+      },
+      "33920": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/io/ioutil"
+        ],
+        "ground_truth": [
+          "src/io/ioutil",
+          "src/os"
+        ]
+      },
+      "47209": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "predicted": [
+          "src/path/filepath"
+        ],
+        "ground_truth": [
+          "src/io/fs",
+          "src/path/filepath",
+          "src/cmd/go/internal/fsys"
+        ]
+      },
+      "48152": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/crypto/tls"
+        ],
+        "ground_truth": [
+          "src/crypto/tls",
+          "src/net/http"
+        ]
+      },
+      "41682": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/x509"
+        ],
+        "ground_truth": [
+          "src/crypto/x509"
+        ]
+      },
+      "53200": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/go/token"
+        ],
+        "ground_truth": [
+          "src/go/token"
+        ]
+      },
+      "40082": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/database/sql/driver",
+          "src/database/sql"
+        ],
+        "ground_truth": [
+          "src/database/sql"
+        ]
+      },
+      "45963": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 62,
+        "fn": 2,
+        "predicted": [
+          "src/testing/quick",
+          "src/internal/oserror",
+          "src/runtime/cgo",
+          "src/go/build",
+          "src/runtime/race",
+          "src/go/importer",
+          "src/internal/goexperiment",
+          "src/go/ast",
+          "src/internal/goarch",
+          "src/go/scanner",
+          "src/internal/pkgbits",
+          "src/internal/unsafeheader",
+          "src/runtime/testdata",
+          "src/testing/fstest",
+          "src/runtime/pprof",
+          "src/internal/lazyregexp",
+          "src/cmd/vet",
+          "src/go/constant",
+          "src/internal/reflectlite",
+          "src/go/internal/gcimporter",
+          "src/internal/sys",
+          "src/cmd/go",
+          "src/internal/testenv",
+          "src/internal/race",
+          "src/runtime/debug",
+          "src/internal/obscuretestdata",
+          "src/go/format",
+          "src/internal/trace",
+          "src/go/doc",
+          "src/go/types",
+          "src/go/internal/srcimporter",
+          "src/internal/goversion",
+          "src/internal/singleflight",
+          "src/internal/saferio",
+          "src/internal/syscall",
+          "src/testing/slogtest",
+          "src/internal/goos",
+          "src/go/internal/gccgoimporter",
+          "src/runtime/asan",
+          "src/testing/synctest",
+          "src/internal/testlog",
+          "src/internal/profile",
+          "src/runtime/metrics",
+          "src/internal/xcoff",
+          "src/runtime/coverage",
+          "src/go/token",
+          "src/runtime/trace",
+          "src/internal/itoa",
+          "src/go/printer",
+          "src/internal/types",
+          "src/runtime",
+          "src/testing/internal/testdeps",
+          "src/runtime/msan",
+          "src/testing/iotest",
+          "src/internal/goroot",
+          "src/internal/lazytemplate",
+          "src/internal/profilerecord",
+          "src/testing",
+          "src/internal/zstd",
+          "src/internal/testpty",
+          "src/go/parser",
+          "src/internal/platform"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/work",
+          "src/cmd/go/internal/test"
+        ]
+      },
+      "46518": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.33333333333333337,
+        "tp": 1,
+        "fp": 0,
+        "fn": 4,
+        "predicted": [
+          "src/net/netip"
+        ],
+        "ground_truth": [
+          "src/net/http",
+          "src/internal/godebug",
+          "src/internal/fuzz",
+          "src/net/netip",
+          "src/net"
+        ]
+      },
+      "40337": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "tp": 1,
+        "fp": 3,
+        "fn": 0,
+        "predicted": [
+          "golang.org/x/crypto/ssh",
+          "src/crypto/ed25519",
+          "src/crypto/dsa",
+          "src/crypto/x509"
+        ],
+        "ground_truth": [
+          "src/crypto/x509"
+        ]
+      },
+      "45973": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/net/http",
+          "src/net/url"
+        ],
+        "ground_truth": [
+          "src/net/http"
+        ]
+      },
+      "49471": {
+        "precision": 0.1111111111111111,
+        "recall": 1.0,
+        "f1": 0.19999999999999998,
+        "tp": 1,
+        "fp": 8,
+        "fn": 0,
+        "predicted": [
+          "src/syscall/js",
+          "src/runtime/trace",
+          "src/internal/poll",
+          "src/runtime/race",
+          "src/runtime",
+          "src/internal/syscall/windows",
+          "src/syscall",
+          "src/runtime/debug",
+          "src/runtime/pprof"
+        ],
+        "ground_truth": [
+          "src/runtime"
+        ]
+      },
+      "52746": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "predicted": [
+          "src/time"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/vcs",
+          "src/cmd/go/internal/modfetch/codehost"
+        ]
+      },
+      "34293": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/go/doc",
+          "src/cmd/doc"
+        ],
+        "ground_truth": [
+          "src/cmd/doc"
+        ]
+      },
+      "31804": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/ed25519"
+        ],
+        "ground_truth": [
+          "src/crypto/ed25519"
+        ]
+      },
+      "43744": {
+        "precision": 0.14285714285714285,
+        "recall": 0.3333333333333333,
+        "f1": 0.2,
+        "tp": 1,
+        "fp": 6,
+        "fn": 2,
+        "predicted": [
+          "src/testing/quick",
+          "src/testing/slogtest",
+          "src/testing/internal/testdeps",
+          "src/testing/iotest",
+          "src/testing/synctest",
+          "src/testing",
+          "src/testing/fstest"
+        ],
+        "ground_truth": [
+          "src/testing",
+          "src/runtime",
+          "src/time"
+        ]
+      },
+      "47916": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
+        "f1": 0.3333333333333333,
+        "tp": 1,
+        "fp": 2,
+        "fn": 2,
+        "predicted": [
+          "src/go/token",
+          "src/go/types",
+          "src/go/ast"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/noder",
+          "src/cmd/compile/internal/types2",
+          "src/go/types"
+        ]
+      },
+      "40356": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 3,
+        "predicted": [
+          "src/errors",
+          "src/cmd/vet"
+        ],
+        "ground_truth": [
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/stdmethods",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/printf",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/sigchanyzer"
+        ]
+      },
+      "40034": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/smtp"
+        ],
+        "ground_truth": [
+          "src/net/smtp"
+        ]
+      },
+      "53002": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/http/httputil"
+        ],
+        "ground_truth": [
+          "src/net/http/httputil"
+        ]
+      },
+      "44196": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/time"
+        ],
+        "ground_truth": [
+          "src/time"
+        ]
+      },
+      "50465": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/http/httputil"
+        ],
+        "ground_truth": [
+          "src/net/http/httputil"
+        ]
+      },
+      "41696": {
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "tp": 2,
+        "fp": 0,
+        "fn": 3,
+        "predicted": [
+          "src/cmd/go",
+          "src/cmd/link"
+        ],
+        "ground_truth": [
+          "src/cmd/link",
+          "src/cmd/dist",
+          "src/cmd/go/internal/test",
+          "src/cmd/go/internal/work",
+          "src/cmd/go"
+        ]
+      },
+      "46336": {
+        "precision": 0.5,
+        "recall": 0.011627906976744186,
+        "f1": 0.022727272727272724,
+        "tp": 1,
+        "fp": 1,
+        "fn": 85,
+        "predicted": [
+          "src/bytes",
+          "src/strings"
+        ],
+        "ground_truth": [
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/asmdecl",
+          "src/os/user",
+          "src/cmd/vendor/github.com/google/pprof/profile",
+          "src/net/mail",
+          "src/html/template",
+          "src/archive/tar",
+          "src/cmd/go/internal/imports",
+          "src/vendor/golang.org/x/net/http/httpguts",
+          "src/encoding/asn1",
+          "src/go/constant",
+          "src/strings",
+          "src/cmd/cgo",
+          "src/cmd/vendor/golang.org/x/sys/unix",
+          "src/crypto/tls",
+          "src/cmd/vendor/golang.org/x/arch/ppc64/ppc64asm",
+          "src/cmd/compile/internal/noder",
+          "src/net/smtp",
+          "src/cmd/go/internal/load",
+          "src/cmd/go/testdata",
+          "src/cmd/go/internal/cmdflag",
+          "src/cmd/vendor/golang.org/x/sys/plan9",
+          "src/encoding/xml",
+          "src/mime",
+          "src/cmd/go/internal/cache",
+          "src/cmd/go/internal/vcs",
+          "src/cmd/go/internal/work",
+          "src/cmd/compile/internal/logopt",
+          "src/testing/fstest",
+          "src/vendor/golang.org/x/net/idna",
+          "src/cmd/dist",
+          "src/cmd/go/internal/base",
+          "src/cmd/go/internal/search",
+          "src/cmd/vet",
+          "src/vendor/golang.org/x/sys/cpu",
+          "src/regexp/syntax",
+          "src/os",
+          "src/net",
+          "src/crypto/x509",
+          "src/go/doc",
+          "src/fmt",
+          "src/strconv",
+          "src/cmd/compile/internal/liveness",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/buildtag",
+          "src/cmd/doc",
+          "src/cmd/compile/internal/ssa",
+          "src/cmd/compile/internal/base",
+          "src/math/big",
+          "src/go/printer",
+          "src/internal/goroot",
+          "src/cmd/internal/obj",
+          "src/cmd/asm/internal/lex",
+          "src/cmd/gofmt",
+          "src/cmd/fix",
+          "src/encoding/json",
+          "src/cmd/go/internal/modget",
+          "src/go/importer",
+          "src/cmd/vendor/golang.org/x/mod/sumdb",
+          "src/runtime/pprof",
+          "src/cmd/go/internal/modfetch/codehost",
+          "src/cmd/asm/internal/asm",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/structtag",
+          "src/cmd/internal/test2json",
+          "src/cmd/vendor/github.com/google/pprof/internal/binutils",
+          "src/cmd/go/internal/modload",
+          "src/cmd/vendor/golang.org/x/mod/modfile",
+          "src/cmd/vendor/golang.org/x/mod/sumdb/note",
+          "src/go/build",
+          "src/cmd/vendor/golang.org/x/sys/windows",
+          "src/net/url",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/framepointer",
+          "src/cmd/go",
+          "src/regexp",
+          "src/os/exec",
+          "src/go/types",
+          "src/cmd/go/internal/test",
+          "src/cmd/vendor/golang.org/x/mod/module",
+          "src/cmd/vendor/github.com/google/pprof/internal/report",
+          "src/cmd/go/internal/mvs",
+          "src/net/http",
+          "src/cmd/go/internal/modcmd",
+          "src/net/http/cgi",
+          "src/cmd/go/internal/vet",
+          "src/crypto/ecdsa",
+          "src/cmd/link/internal/ld",
+          "src/cmd/vendor/github.com/google/pprof/internal/driver",
+          "src/cmd/go/internal/envcmd"
+        ]
+      },
+      "44011": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1": 0.5714285714285715,
+        "tp": 2,
+        "fp": 2,
+        "fn": 1,
+        "predicted": [
+          "src/os/exec",
+          "src/internal/syscall/windows/registry",
+          "src/syscall",
+          "src/internal/syscall/windows"
+        ],
+        "ground_truth": [
+          "src/os/exec",
+          "src/os",
+          "src/syscall"
+        ]
+      },
+      "43620": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/testing"
+        ],
+        "ground_truth": [
+          "src/testing"
+        ]
+      },
+      "48256": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/cmd/go/internal/workcmd",
+          "src/cmd/go/internal/work"
+        ],
+        "ground_truth": [
+          "src/cmd/go",
+          "src/cmd/go/internal/workcmd"
+        ]
+      },
+      "38017": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/time/tzdata"
+        ],
+        "ground_truth": [
+          "src/time",
+          "src/time/tzdata"
+        ]
+      },
+      "50601": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/encoding/binary"
+        ],
+        "ground_truth": [
+          "src/encoding/binary"
+        ]
+      },
+      "50842": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/io"
+        ],
+        "ground_truth": [
+          "src/io"
+        ]
+      },
+      "41790": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/database/sql/driver",
+          "src/database/sql"
+        ],
+        "ground_truth": [
+          "src/database/sql"
+        ]
+      },
+      "5901": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/encoding/json",
+          "src/encoding/xml"
+        ],
+        "ground_truth": [
+          "src/encoding/json"
+        ]
+      },
+      "52792": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 2,
+        "fp": 2,
+        "fn": 0,
+        "predicted": [
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/modinfo",
+          "src/cmd/go/internal/modcmd"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/go/internal/modload"
+        ]
+      },
+      "28308": {
+        "precision": 0.5,
+        "recall": 0.043478260869565216,
+        "f1": 0.08,
+        "tp": 1,
+        "fp": 1,
+        "fn": 22,
+        "predicted": [
+          "src/net",
+          "src/cmd/vet"
+        ],
+        "ground_truth": [
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/testinggoroutine",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/hostport",
+          "src/cmd/vendor/golang.org/x/tools/internal/typesinternal",
+          "src/cmd/vendor/golang.org/x/tools/internal/astutil",
+          "src/cmd/vendor/golang.org/x/tools/internal/typesinternal/typeindex",
+          "src/cmd/vendor/golang.org/x/tools/go/types/typeutil",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/copylock",
+          "src/cmd/vet",
+          "src/vendor/golang.org/x/sys/cpu",
+          "src/cmd/vendor/golang.org/x/tools/internal/typeparams",
+          "src/cmd/vendor/golang.org/x/sys/unix",
+          "src/cmd/vendor/golang.org/x/text/language",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/unreachable",
+          "src/cmd/vendor/golang.org/x/tools/internal/astutil/cursor",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/composite",
+          "src/cmd/vendor/golang.org/x/tools/internal/bisect",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/nilfunc",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/structtag",
+          "src/cmd/vendor/golang.org/x/tools/internal/analysisinternal",
+          "src/net/http",
+          "src/vendor/golang.org/x/crypto/cryptobyte",
+          "src/cmd/vet/testdata/hostport",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/lostcancel"
+        ]
+      },
+      "44006": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/syscall/js"
+        ],
+        "ground_truth": [
+          "src/syscall/js"
+        ]
+      },
+      "53021": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/subtle",
+          "src/crypto/cipher"
+        ],
+        "ground_truth": [
+          "src/crypto/subtle",
+          "src/crypto/cipher"
+        ]
+      },
+      "49580": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "f1": 0.5714285714285715,
+        "tp": 2,
+        "fp": 1,
+        "fn": 2,
+        "predicted": [
+          "src/io/fs",
+          "src/os",
+          "src/archive/zip"
+        ],
+        "ground_truth": [
+          "src/io/fs",
+          "src/os",
+          "src/testing/fstest",
+          "src/archive/tar"
+        ]
+      },
+      "53015": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "predicted": [
+          "src/text/template"
+        ],
+        "ground_truth": [
+          "src/html/template",
+          "src/text/template/parse",
+          "src/text/template"
+        ]
+      },
+      "41048": {
+        "precision": 0.1,
+        "recall": 1.0,
+        "f1": 0.18181818181818182,
+        "tp": 1,
+        "fp": 9,
+        "fn": 0,
+        "predicted": [
+          "src/net/http/httptest",
+          "src/net/http/internal/testcert",
+          "src/net/http/cgi",
+          "src/net/http/fcgi",
+          "src/net/http/internal/ascii",
+          "src/net/http/httptrace",
+          "src/net/http/cookiejar",
+          "src/net/http/pprof",
+          "src/net/http",
+          "src/net/http/httputil"
+        ],
+        "ground_truth": [
+          "src/net/http"
+        ]
+      },
+      "48409": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/runtime/debug",
+          "src/runtime"
+        ],
+        "ground_truth": [
+          "src/runtime/debug",
+          "src/runtime",
+          "src/runtime/testdata/testprog"
+        ]
+      },
+      "42102": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/time",
+          "src/time/tzdata"
+        ],
+        "ground_truth": [
+          "src/time"
+        ]
+      },
+      "39904": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/testing",
+          "src/regexp/syntax"
+        ],
+        "ground_truth": [
+          "src/testing"
+        ]
+      },
+      "42027": {
+        "precision": 1.0,
+        "recall": 0.13333333333333333,
+        "f1": 0.23529411764705882,
+        "tp": 2,
+        "fp": 0,
+        "fn": 13,
+        "predicted": [
+          "src/io/fs",
+          "src/path/filepath"
+        ],
+        "ground_truth": [
+          "src/go/doc",
+          "src/cmd/dist",
+          "src/index/suffixarray",
+          "src/compress/gzip",
+          "src/cmd/go/internal/version",
+          "src/go/build",
+          "src/io/fs",
+          "src/cmd/go",
+          "src/cmd/internal/moddeps",
+          "test",
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/gofmt",
+          "src/cmd/fix",
+          "src/cmd/go/testdata",
+          "src/path/filepath"
+        ]
+      },
+      "27628": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/cmd/go",
+          "src/cmd/go/internal/work"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/cache",
+          "src/cmd/go/internal/work"
+        ]
+      },
+      "51868": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/debug/pe"
+        ],
+        "ground_truth": [
+          "src/debug/pe"
+        ]
+      },
+      "28089": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/go/parser",
+          "src/go/ast"
+        ],
+        "ground_truth": [
+          "src/go/ast"
+        ]
+      },
+      "41773": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/net/http",
+          "src/net/http/httputil"
+        ],
+        "ground_truth": [
+          "src/net/http"
+        ]
+      },
+      "50674": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/x509/pkix",
+          "src/crypto/x509"
+        ],
+        "ground_truth": [
+          "src/crypto/x509"
+        ]
+      },
+      "26535": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/compress/flate",
+          "src/compress/lzw"
+        ],
+        "ground_truth": [
+          "src/compress/lzw"
+        ]
+      },
+      "45964": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "predicted": [
+          "src/runtime/internal/atomic",
+          "src/syscall",
+          "src/internal/poll"
+        ],
+        "ground_truth": [
+          "src/syscall"
+        ]
+      },
+      "39444": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "tp": 1,
+        "fp": 3,
+        "fn": 0,
+        "predicted": [
+          "src/os/exec",
+          "src/os/signal",
+          "src/os",
+          "src/os/user"
+        ],
+        "ground_truth": [
+          "src/os"
+        ]
+      },
+      "45430": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/tls"
+        ],
+        "ground_truth": [
+          "src/crypto/tls"
+        ]
+      },
+      "37533": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/flag"
+        ],
+        "ground_truth": [
+          "src/flag"
+        ]
+      },
+      "47781": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1": 0.28571428571428575,
+        "tp": 1,
+        "fp": 1,
+        "fn": 4,
+        "predicted": [
+          "src/go/token",
+          "src/go/ast"
+        ],
+        "ground_truth": [
+          "src/go/types",
+          "src/go/printer",
+          "src/cmd/cgo",
+          "src/go/ast",
+          "src/go/parser"
+        ]
+      },
+      "46057": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/x509"
+        ],
+        "ground_truth": [
+          "src/crypto/x509"
+        ]
+      },
+      "43401": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/encoding/json",
+          "src/encoding/csv"
+        ],
+        "ground_truth": [
+          "src/encoding/csv"
+        ]
+      },
+      "40728": {
+        "precision": 0.6,
+        "recall": 0.42857142857142855,
+        "f1": 0.5,
+        "tp": 3,
+        "fp": 2,
+        "fn": 4,
+        "predicted": [
+          "src/cmd/go/internal/modcmd",
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/modget",
+          "src/cmd/go",
+          "src/cmd/go/internal/modfetch"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/base",
+          "src/cmd/go/internal/modcmd",
+          "src/cmd/go/internal/modget",
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/work",
+          "src/cmd/go/internal/fmtcmd",
+          "src/cmd/go/internal/list"
+        ]
+      },
+      "43993": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/reflect",
+          "src/cmd/vet"
+        ],
+        "ground_truth": [
+          "src/reflect",
+          "src/text/template"
+        ]
+      },
+      "50770": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/time"
+        ],
+        "ground_truth": [
+          "src/time"
+        ]
+      },
+      "44221": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/encoding/csv"
+        ],
+        "ground_truth": [
+          "src/encoding/csv"
+        ]
+      },
+      "44143": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "tp": 1,
+        "fp": 3,
+        "fn": 0,
+        "predicted": [
+          "src/net/rpc",
+          "src/context",
+          "src/net/http",
+          "src/database/sql"
+        ],
+        "ground_truth": [
+          "src/net/http"
+        ]
+      },
+      "43931": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 6,
+        "predicted": [],
+        "ground_truth": [
+          "src/cmd/dist",
+          "src/go/types",
+          "src/cmd/compile/internal/staticdata",
+          "src/cmd/compile/internal/noder",
+          "src/cmd/compile/internal/gc",
+          "src/embed/internal/embedtest"
+        ]
+      },
+      "48294": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect"
+        ]
+      },
+      "51428": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/net",
+          "src/context"
+        ],
+        "ground_truth": [
+          "src/net"
+        ]
+      },
+      "52463": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 3,
+        "fn": 1,
+        "predicted": [
+          "src/go/types",
+          "src/go/parser",
+          "src/go/ast"
+        ],
+        "ground_truth": [
+          "src/cmd/gofmt"
+        ]
+      },
+      "51115": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/io"
+        ],
+        "ground_truth": [
+          "src/io"
+        ]
+      },
+      "35567": {
+        "precision": 0.125,
+        "recall": 0.3333333333333333,
+        "f1": 0.18181818181818182,
+        "tp": 1,
+        "fp": 7,
+        "fn": 2,
+        "predicted": [
+          "src/testing/quick",
+          "src/testing/internal",
+          "src/testing/slogtest",
+          "src/testing/internal/testdeps",
+          "src/testing/iotest",
+          "src/testing/synctest",
+          "src/testing",
+          "src/testing/fstest"
+        ],
+        "ground_truth": [
+          "src/testing",
+          "src/runtime/debug",
+          "src/go/build"
+        ]
+      },
+      "40255": {
+        "precision": 0.2,
+        "recall": 0.1111111111111111,
+        "f1": 0.14285714285714285,
+        "tp": 1,
+        "fp": 4,
+        "fn": 8,
+        "predicted": [
+          "src/cmd/compile",
+          "src/internal/cpu",
+          "src/runtime",
+          "src/internal/goexperiment",
+          "src/internal/goarch"
+        ],
+        "ground_truth": [
+          "test/codegen",
+          "src/cmd/dist",
+          "src/runtime",
+          "src/cmd/asm/internal/asm",
+          "src/cmd/go/internal/work",
+          "src/cmd/compile/internal/x86",
+          "src/cmd/compile/internal/ssa",
+          "src/reflect",
+          "src/cmd/go/internal/cfg"
+        ]
+      },
+      "46648": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/go/types",
+          "cmd/compile/internal/types2"
+        ],
+        "ground_truth": [
+          "src/go/types"
+        ]
+      },
+      "53346": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/encoding/xml"
+        ],
+        "ground_truth": [
+          "src/encoding/xml"
+        ]
+      },
+      "40127": {
+        "precision": 0.14285714285714285,
+        "recall": 1.0,
+        "f1": 0.25,
+        "tp": 1,
+        "fp": 6,
+        "fn": 0,
+        "predicted": [
+          "src/encoding/json/v2",
+          "src/encoding/json/internal/jsonwire",
+          "src/encoding/json/internal/jsonopts",
+          "src/encoding/json/internal/jsontest",
+          "src/encoding/json/jsontext",
+          "src/encoding/json/internal/jsonflags",
+          "src/encoding/json"
+        ],
+        "ground_truth": [
+          "src/encoding/json"
+        ]
+      },
+      "51082": {
+        "precision": 0.6,
+        "recall": 0.046153846153846156,
+        "f1": 0.08571428571428573,
+        "tp": 3,
+        "fp": 2,
+        "fn": 62,
+        "predicted": [
+          "src/internal/pkgdoc",
+          "src/go/printer",
+          "src/go/doc/comment",
+          "src/cmd/doc",
+          "src/cmd/gofmt"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/syntax",
+          "src/cmd/cover",
+          "src/go/build",
+          "src/go/doc/comment",
+          "src/html/template",
+          "src/net/textproto",
+          "src/go/ast",
+          "src/cmd/internal/obj/x86",
+          "src/go/scanner",
+          "src/cmd/go/internal/imports",
+          "src/testing/fstest",
+          "src/runtime/pprof",
+          "src/math/rand",
+          "src/debug/gosym",
+          "src/sync",
+          "src/index/suffixarray",
+          "src/text/tabwriter",
+          "src/cmd/dist",
+          "src/text/template",
+          "src/path",
+          "src/go/constant",
+          "src/go/internal/gcimporter",
+          "src/regexp/syntax",
+          "misc/cgo/gmp",
+          "src/cmd/cgo",
+          "src/go/printer/testdata",
+          "src/archive/zip",
+          "src/go/format",
+          "src/regexp",
+          "src/cmd/compile/internal/types",
+          "src/go/doc",
+          "src/go/types",
+          "src/debug/dwarf",
+          "src/path/filepath",
+          "src/cmd/link/internal/loader",
+          "src/cmd/compile/internal/test",
+          "src/cmd/compile/internal/walk",
+          "src/go/internal/gccgoimporter",
+          "src/strconv",
+          "src/cmd/asm/internal/asm",
+          "src/container/ring",
+          "src/cmd/compile/internal/importer",
+          "src/cmd/doc",
+          "src/cmd/compile/internal/ssa",
+          "src/reflect",
+          "src/net/http",
+          "src/cmd/compile/internal/types2",
+          "src/cmd/internal/obj/riscv",
+          "src/go/token",
+          "src/runtime/trace",
+          "src/unicode",
+          "src/cmd/compile/internal/ir",
+          "src/math/big",
+          "src/go/printer",
+          "src/cmd/go/internal/modload",
+          "src/runtime",
+          "src/sort",
+          "src/encoding/binary",
+          "src/cmd/link/internal/ld",
+          "src/internal/fmtsort",
+          "src/encoding/ascii85",
+          "src/cmd/go/internal/cache",
+          "src/cmd/compile/internal/typecheck",
+          "src/encoding/json",
+          "src/go/parser"
+        ]
+      },
+      "35833": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.33333333333333337,
+        "tp": 1,
+        "fp": 0,
+        "fn": 4,
+        "predicted": [
+          "src/math/big"
+        ],
+        "ground_truth": [
+          "src/math/big",
+          "src/crypto/rand",
+          "src/crypto/x509",
+          "src/crypto/elliptic",
+          "src/crypto/rsa"
+        ]
+      },
+      "45460": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/http"
+        ],
+        "ground_truth": [
+          "src/net/http"
+        ]
+      },
+      "42387": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/io/fs"
+        ],
+        "ground_truth": [
+          "src/io/fs"
+        ]
+      },
+      "45454": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 23,
+        "fn": 3,
+        "predicted": [
+          "src/cmd/link/internal/mips64",
+          "src/cmd/compile/internal/amd64",
+          "src/cmd/compile/internal/x86",
+          "src/cmd/compile/internal/ppc64",
+          "src/cmd/compile/internal/riscv64",
+          "src/cmd/compile/internal/mips",
+          "src/cmd/go",
+          "src/cmd/link/internal/x86",
+          "src/cmd/compile/internal/mips64",
+          "src/cmd/compile/internal/arm",
+          "src/cmd/link/internal/amd64",
+          "src/cmd/compile/internal/loong64",
+          "src/cmd/link/internal/ppc64",
+          "src/cmd/link/internal/s390x",
+          "src/cmd/link/internal/loong64",
+          "src/cmd/link/internal/wasm",
+          "src/cmd/compile/internal/arm64",
+          "src/cmd/link/internal/arm",
+          "src/cmd/compile/internal/s390x",
+          "src/cmd/link/internal/arm64",
+          "src/cmd/link/internal/mips",
+          "src/cmd/link/internal/riscv64",
+          "src/cmd/compile/internal/wasm"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/cfg",
+          "src/go/build",
+          "src/internal/buildcfg"
+        ]
+      },
+      "50436": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/os/exec",
+          "src/os/exec/internal/fdtest"
+        ],
+        "ground_truth": [
+          "src/os/exec"
+        ]
+      },
+      "44167": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1": 0.2857142857142857,
+        "tp": 1,
+        "fp": 5,
+        "fn": 0,
+        "predicted": [
+          "src/runtime/trace",
+          "src/runtime/race",
+          "src/runtime",
+          "src/runtime/metrics",
+          "src/runtime/testdata",
+          "src/runtime/pprof"
+        ],
+        "ground_truth": [
+          "src/runtime"
+        ]
+      },
+      "39178": {
+        "precision": 0.07142857142857142,
+        "recall": 1.0,
+        "f1": 0.13333333333333333,
+        "tp": 1,
+        "fp": 13,
+        "fn": 0,
+        "predicted": [
+          "src/net/http",
+          "src/net/http/internal/testcert",
+          "src/net/internal/socktest",
+          "src/internal/poll",
+          "src/net/url",
+          "src/net/http/internal",
+          "src/net/smtp",
+          "src/net/http/internal/ascii",
+          "src/net/rpc",
+          "src/net/netip",
+          "src/net/textproto",
+          "src/net/rpc/jsonrpc",
+          "src/net/http/pprof",
+          "src/net"
+        ],
+        "ground_truth": [
+          "src/net"
+        ]
+      },
+      "46287": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "predicted": [
+          "src/crypto/x509/internal/macos",
+          "src/crypto/x509"
+        ],
+        "ground_truth": [
+          "src/crypto/x509/internal/macos",
+          "src/runtime",
+          "src/cmd/dist",
+          "src/crypto/x509"
+        ]
+      },
+      "48257": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/cmd/go/internal/workcmd",
+          "src/cmd/go/internal/work"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/workcmd"
+        ]
+      },
+      "46293": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect",
+          "src/cmd/compile/internal/test"
+        ]
+      },
+      "42026": {
+        "precision": 0.6666666666666666,
+        "recall": 0.022222222222222223,
+        "f1": 0.043010752688172046,
+        "tp": 2,
+        "fp": 1,
+        "fn": 88,
+        "predicted": [
+          "src/io/ioutil",
+          "src/os",
+          "src/io/fs"
+        ],
+        "ground_truth": [
+          "src/math/bits",
+          "src/hash/crc32",
+          "src/os/user",
+          "src/html/template",
+          "src/archive/tar",
+          "src/cmd/go/internal/imports",
+          "src/internal/poll",
+          "src/go/internal/gcimporter",
+          "src/runtime/debug",
+          "src/io/ioutil",
+          "src/internal/obscuretestdata",
+          "src/path/filepath",
+          "src/debug/dwarf",
+          "src/crypto/tls",
+          "src/cmd/go/internal/load",
+          "src/crypto/md5",
+          "src/cmd/go/testdata",
+          "src/cmd/go/internal/lockedfile/internal/filelock",
+          "src/compress/bzip2",
+          "src/cmd/go/internal/cache",
+          "src/cmd/go/internal/work",
+          "src/cmd/go/internal/cfg",
+          "src/runtime/race/testdata",
+          "src/image/internal/imageutil",
+          "src/debug/pe",
+          "src/cmd/vet",
+          "src/text/template",
+          "src/mime/multipart",
+          "src/os",
+          "src/cmd/go/internal/modfetch/zip_sum_test",
+          "src/net",
+          "src/crypto/x509",
+          "src/go/format",
+          "src/archive/zip",
+          "src/image/color/palette",
+          "src/go/doc",
+          "src/strconv",
+          "src/image/png",
+          "src/cmd/go/internal/generate",
+          "src/math/big",
+          "src/go/printer",
+          "src/cmd/gofmt",
+          "src/cmd/fix",
+          "src/cmd/pack",
+          "src/cmd/cover",
+          "src/runtime/race",
+          "src/cmd/go/internal/web",
+          "src/go/importer",
+          "src/runtime/pprof",
+          "src/debug/gosym",
+          "src/embed/internal/embedtest",
+          "src/cmd/go/internal/modfetch/codehost",
+          "src/cmd/objdump",
+          "src/go/internal/srcimporter",
+          "src/log/syslog",
+          "src/go/internal/gccgoimporter",
+          "src/image/gif",
+          "src/image/jpeg",
+          "src/cmd/go/internal/lockedfile",
+          "src/cmd/addr2line",
+          "src/runtime",
+          "src/cmd/go/internal/modload",
+          "src/testing",
+          "src/compress/lzw",
+          "src/runtime/testdata/testprog",
+          "src/time",
+          "src/go/parser",
+          "src/go/build",
+          "src/runtime/testdata/testprogcgo",
+          "src/cmd/go/internal/clean",
+          "src/internal/cpu",
+          "src/os/signal",
+          "src/index/suffixarray",
+          "src/cmd/go",
+          "src/cmd/go/internal/modfetch",
+          "src/os/exec",
+          "src/internal/trace",
+          "src/go/types",
+          "src/cmd/go/internal/test",
+          "src/compress/flate",
+          "src/cmd/go/internal/bug",
+          "src/compress/zlib",
+          "src/net/http",
+          "src/runtime/trace",
+          "src/cmd/nm",
+          "src/cmd/go/internal/modcmd",
+          "src/cmd/go/internal/fsys",
+          "src/syscall",
+          "src/cmd/go/internal/vcs",
+          "src/cmd/go/internal/envcmd"
+        ]
+      },
+      "45435": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/sync"
+        ],
+        "ground_truth": [
+          "src/sync"
+        ]
+      },
+      "48187": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/debug/buildinfo",
+          "src/cmd/go/internal/version"
+        ],
+        "ground_truth": [
+          "src/debug/buildinfo",
+          "src/cmd/go/internal/version"
+        ]
+      },
+      "37519": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/cmd/go/internal/modget",
+          "src/cmd/go/internal/get"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/go/internal/modget"
+        ]
+      },
+      "38627": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/text/template/parse"
+        ],
+        "ground_truth": [
+          "src/text/template/parse"
+        ]
+      },
+      "41260": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/testing"
+        ],
+        "ground_truth": [
+          "src/testing"
+        ]
+      },
+      "44505": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 11,
+        "fn": 3,
+        "predicted": [
+          "src/cmd/compile/internal/types",
+          "src/cmd/go/internal/gover",
+          "src/cmd/compile/internal/gc",
+          "src/cmd/compile/internal/noder",
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/work",
+          "src/internal/goexperiment",
+          "src/internal/buildcfg",
+          "src/cmd/go/internal/cfg",
+          "src/cmd/compile/internal/types2",
+          "src/cmd/compile/internal/base"
+        ],
+        "ground_truth": [
+          "src/cmd/dist",
+          "src/cmd/asm/internal/lex",
+          "src/sort"
+        ]
+      },
+      "50429": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 1,
+        "predicted": [
+          "src/go/token",
+          "src/go/ast"
+        ],
+        "ground_truth": [
+          "src/go/parser"
+        ]
+      },
+      "53573": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/x509/pkix",
+          "src/crypto/x509"
+        ],
+        "ground_truth": [
+          "src/crypto/x509"
+        ]
+      },
+      "46059": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/url"
+        ],
+        "ground_truth": [
+          "src/net/url"
+        ]
+      },
+      "42681": {
+        "precision": 0.14285714285714285,
+        "recall": 0.2,
+        "f1": 0.16666666666666666,
+        "tp": 1,
+        "fp": 6,
+        "fn": 4,
+        "predicted": [
+          "src/cmd/go/internal/base",
+          "src/cmd/go/internal/work",
+          "src/internal/goexperiment",
+          "src/cmd/go/internal/load",
+          "src/cmd/go/internal/cfg",
+          "src/cmd/compile/internal/objabi",
+          "src/cmd/go/internal/envcmd"
+        ],
+        "ground_truth": [
+          "src/cmd/dist",
+          "src/runtime",
+          "src/cmd/go/internal/work",
+          "src/cmd/link/internal/ld",
+          "src/cmd/asm/internal/lex"
+        ]
+      },
+      "40592": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect",
+          "src/encoding/json"
+        ]
+      },
+      "51644": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/encoding/binary"
+        ],
+        "ground_truth": [
+          "src/encoding/binary"
+        ]
+      },
+      "34527": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 0,
+        "fn": 3,
+        "predicted": [
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/cfg"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/cfg",
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/modfetch/codehost",
+          "src/cmd/go/internal/clean",
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/go/internal/envcmd"
+        ]
+      },
+      "45628": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/encoding/xml"
+        ],
+        "ground_truth": [
+          "src/encoding/xml"
+        ]
+      },
+      "46746": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect"
+        ]
+      },
+      "44940": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/unicode/utf16"
+        ],
+        "ground_truth": [
+          "src/unicode/utf16"
+        ]
+      },
+      "41066": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/tls"
+        ],
+        "ground_truth": [
+          "src/crypto/tls"
+        ]
+      },
+      "41184": {
+        "precision": 0.625,
+        "recall": 0.3125,
+        "f1": 0.4166666666666667,
+        "tp": 5,
+        "fp": 3,
+        "fn": 11,
+        "predicted": [
+          "src/cmd/compile",
+          "src/cmd/vet",
+          "src/go/printer",
+          "src/go/build",
+          "src/cmd/go",
+          "src/go/build/constraint",
+          "src/cmd/fix",
+          "src/cmd/asm"
+        ],
+        "ground_truth": [
+          "src/cmd/vet",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/loopclosure",
+          "src/go/printer",
+          "src/cmd/go/internal/fix",
+          "src/runtime",
+          "src/go/build",
+          "src/cmd/asm/internal/asm",
+          "src/cmd/go/internal/work",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/buildtag",
+          "src/cmd/go/internal/load",
+          "src/runtime/pprof",
+          "src/cmd/asm/internal/lex",
+          "src/cmd/vendor/golang.org/x/sys/unix",
+          "src/go/build/constraint",
+          "src/cmd/fix",
+          "src/cmd/vendor/golang.org/x/tools/go/analysis/unitchecker"
+        ]
+      },
+      "48866": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "predicted": [
+          "src/mime/multipart",
+          "src/mime/quotedprintable",
+          "src/mime"
+        ],
+        "ground_truth": [
+          "src/mime"
+        ]
+      },
+      "50332": {
+        "precision": 0.6,
+        "recall": 0.2727272727272727,
+        "f1": 0.37499999999999994,
+        "tp": 3,
+        "fp": 2,
+        "fn": 8,
+        "predicted": [
+          "src/cmd/go/internal/base",
+          "src/cmd/go/internal/work",
+          "src/cmd/go",
+          "src/cmd/go/internal/load",
+          "src/cmd/go/internal/cfg"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/base",
+          "src/cmd/go/internal/modcmd",
+          "src/cmd/go/internal/version",
+          "src/cmd/go/internal/bug",
+          "src/cmd/go/internal/work",
+          "src/cmd/go",
+          "src/cmd/go/internal/fmtcmd",
+          "src/cmd/doc",
+          "src/cmd/go/internal/envcmd",
+          "src/cmd/go/internal/workcmd",
+          "src/cmd/go/internal/tool"
+        ]
+      },
+      "53466": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 5,
+        "fn": 6,
+        "predicted": [
+          "src/syscall/js",
+          "src/internal/syscall/unix",
+          "src/runtime/internal/sys",
+          "src/cmd/asm/internal/arch",
+          "src/cmd/compile/internal/riscv64"
+        ],
+        "ground_truth": [
+          "src/cmd/link",
+          "src/cmd/dist",
+          "src/runtime",
+          "src/cmd/link/internal/ld",
+          "src/syscall",
+          "src/cmd/link/internal/riscv64"
+        ]
+      },
+      "49097": {
+        "precision": 0.05,
+        "recall": 1.0,
+        "f1": 0.09523809523809523,
+        "tp": 1,
+        "fp": 19,
+        "fn": 0,
+        "predicted": [
+          "src/net/mail",
+          "src/net/textproto",
+          "src/net/internal/cgotest",
+          "src/net/internal/socktest",
+          "src/net/http/fcgi",
+          "src/net/url",
+          "src/net/netip",
+          "src/net/http/pprof",
+          "src/net",
+          "src/net/http/httputil",
+          "src/net/smtp",
+          "src/net/http/internal/ascii",
+          "src/net/http",
+          "src/net/http/httptest",
+          "src/net/http/cgi",
+          "src/net/rpc",
+          "src/net/http/httptrace",
+          "src/net/http/cookiejar",
+          "src/net/rpc/jsonrpc",
+          "src/net/http/internal/testcert"
+        ],
+        "ground_truth": [
+          "src/net"
+        ]
+      },
+      "49390": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "predicted": [
+          "src/cmd/compile",
+          "src/internal/testenv"
+        ],
+        "ground_truth": [
+          "src/cmd/dist",
+          "src/internal/testenv"
+        ]
+      },
+      "39351": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/sync/atomic"
+        ],
+        "ground_truth": [
+          "src/sync/atomic",
+          "src/expvar"
+        ]
+      },
+      "47142": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/database/sql/driver",
+          "src/database/sql"
+        ],
+        "ground_truth": [
+          "src/database/sql"
+        ]
+      },
+      "46742": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 5,
+        "predicted": [
+          "src/unsafe"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/walk",
+          "src/runtime",
+          "src/runtime/testdata/testprog",
+          "src/cmd/compile/internal/typecheck",
+          "test"
+        ]
+      },
+      "46505": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 4,
+        "fn": 2,
+        "predicted": [
+          "src/reflect",
+          "src/builtin",
+          "src/cmd/compile/internal/types2",
+          "src/go/types"
+        ],
+        "ground_truth": [
+          "src/crypto/sha256",
+          "src/crypto/sha512"
+        ]
+      },
+      "52376": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect"
+        ]
+      },
+      "44815": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/bufio"
+        ],
+        "ground_truth": [
+          "src/bufio"
+        ]
+      },
+      "45033": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/strconv"
+        ],
+        "ground_truth": [
+          "src/strconv"
+        ]
+      },
+      "48218": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect"
+        ]
+      },
+      "47066": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect"
+        ]
+      },
+      "51572": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "predicted": [
+          "src/cmd/go",
+          "src/go/build"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/imports",
+          "src/go/build",
+          "src/cmd/dist"
+        ]
+      },
+      "39057": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/log"
+        ],
+        "ground_truth": [
+          "src/log"
+        ]
+      },
+      "38781": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/testing/iotest"
+        ],
+        "ground_truth": [
+          "src/net/http",
+          "src/testing/iotest"
+        ]
+      },
+      "36771": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/strconv"
+        ],
+        "ground_truth": [
+          "src/strconv"
+        ]
+      },
+      "44435": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 2,
+        "fp": 2,
+        "fn": 0,
+        "predicted": [
+          "src/cmd/go",
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/go/internal/modcmd"
+        ],
+        "ground_truth": [
+          "src/cmd/go/internal/modload",
+          "src/cmd/go/internal/modcmd"
+        ]
+      },
+      "50101": {
+        "precision": 0.045454545454545456,
+        "recall": 0.5,
+        "f1": 0.08333333333333334,
+        "tp": 1,
+        "fp": 21,
+        "fn": 1,
+        "predicted": [
+          "src/net/mail",
+          "src/net/http/internal/httpcommon",
+          "src/net/textproto",
+          "src/net/internal/cgotest",
+          "src/net/internal/socktest",
+          "src/net/http/fcgi",
+          "src/net/url",
+          "src/net/http/internal",
+          "src/net/netip",
+          "src/net/http/pprof",
+          "src/net",
+          "src/net/http/httputil",
+          "src/net/smtp",
+          "src/net/http/internal/ascii",
+          "src/net/http",
+          "src/net/http/httptest",
+          "src/net/http/cgi",
+          "src/net/rpc",
+          "src/net/http/httptrace",
+          "src/net/http/cookiejar",
+          "src/net/rpc/jsonrpc",
+          "src/net/http/internal/testcert"
+        ],
+        "ground_truth": [
+          "src/internal/syscall/unix",
+          "src/net"
+        ]
+      },
+      "29770": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "predicted": [
+          "src/text/template/parse"
+        ],
+        "ground_truth": [
+          "src/html/template",
+          "src/text/template/parse",
+          "src/text/template"
+        ]
+      },
+      "51566": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/io"
+        ],
+        "ground_truth": [
+          "src/net/http",
+          "src/io"
+        ]
+      },
+      "37196": {
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "tp": 2,
+        "fp": 0,
+        "fn": 3,
+        "predicted": [
+          "src/runtime",
+          "src/time"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/ssagen",
+          "src/cmd/compile/internal/walk",
+          "src/runtime",
+          "src/time",
+          "src/cmd/compile/internal/typecheck/_builtin"
+        ]
+      },
+      "38079": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/net/http/httputil"
+        ],
+        "ground_truth": [
+          "src/net/http/httputil"
+        ]
+      },
+      "51682": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/go/types"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/types2",
+          "src/go/types"
+        ]
+      },
+      "39214": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "tp": 2,
+        "fp": 0,
+        "fn": 6,
+        "predicted": [
+          "src/testing",
+          "src/internal/cpu"
+        ],
+        "ground_truth": [
+          "src/internal/cpu",
+          "src/cmd/compile/internal/types",
+          "src/cmd/compile/internal/gc",
+          "src/strconv",
+          "src/strings",
+          "src/cmd/internal/obj",
+          "src/testing",
+          "src/cmd/internal/obj/x86"
+        ]
+      },
+      "30715": {
+        "precision": 0.1,
+        "recall": 1.0,
+        "f1": 0.18181818181818182,
+        "tp": 1,
+        "fp": 9,
+        "fn": 0,
+        "predicted": [
+          "src/net/http/httptest",
+          "src/net/http/internal/testcert",
+          "src/net/http/cgi",
+          "src/net/http/fcgi",
+          "src/net/http/internal/ascii",
+          "src/net/http/httptrace",
+          "src/net/http/cookiejar",
+          "src/net/http/pprof",
+          "src/net/http",
+          "src/net/http/httputil"
+        ],
+        "ground_truth": [
+          "src/net/http"
+        ]
+      },
+      "51972": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/sync"
+        ],
+        "ground_truth": [
+          "src/sync"
+        ]
+      },
+      "50859": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "tp": 1,
+        "fp": 3,
+        "fn": 0,
+        "predicted": [
+          "doc",
+          "src/sync",
+          "src/runtime",
+          "src/sync/atomic"
+        ],
+        "ground_truth": [
+          "src/sync"
+        ]
+      },
+      "32406": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/tls",
+          "src/net/http"
+        ],
+        "ground_truth": [
+          "src/crypto/tls",
+          "src/net/http"
+        ]
+      },
+      "35044": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": [
+          "src/crypto/x509"
+        ],
+        "ground_truth": [
+          "src/crypto/x509"
+        ]
+      },
+      "45899": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "predicted": [
+          "src/os",
+          "src/io"
+        ],
+        "ground_truth": [
+          "src/io"
+        ]
+      },
+      "33232": {
+        "precision": 1.0,
+        "recall": 0.033707865168539325,
+        "f1": 0.06521739130434782,
+        "tp": 3,
+        "fp": 0,
+        "fn": 86,
+        "predicted": [
+          "src/reflect",
+          "src/builtin",
+          "src/go/types"
+        ],
+        "ground_truth": [
+          "src/math/bits",
+          "src/os/user",
+          "src/html/template",
+          "src/archive/tar",
+          "src/math/rand",
+          "src/cmd/compile/internal/ssagen",
+          "src/cmd/internal/buildid",
+          "src/encoding/asn1",
+          "src/strings",
+          "src/cmd/cgo",
+          "src/debug/dwarf",
+          "src/crypto/tls",
+          "src/cmd/go/internal/load",
+          "src/cmd/compile/internal/types2",
+          "src/sync/atomic",
+          "src/cmd/go/internal/cmdflag",
+          "src/errors",
+          "src/encoding/xml",
+          "src/bytes",
+          "src/encoding/binary",
+          "src/internal/fmtsort",
+          "src/cmd/compile/internal/syntax",
+          "src/plugin",
+          "src/runtime/cgo",
+          "src/cmd/link/internal/loadmacho",
+          "src/cmd/go/internal/work",
+          "src/runtime/race/testdata",
+          "src/sync",
+          "src/debug/pe",
+          "src/text/template",
+          "src/container/list",
+          "src/net",
+          "src/crypto/x509",
+          "src/fmt",
+          "src/container/ring",
+          "src/builtin",
+          "src/cmd/link/internal/ld/testdata/deadcode",
+          "src/cmd/doc",
+          "src/cmd/compile/internal/ssa",
+          "src/reflect",
+          "src/go/token",
+          "src/cmd/compile/internal/base",
+          "src/cmd/go/internal/list",
+          "src/math/big",
+          "src/cmd/internal/obj",
+          "src/mime/quotedprintable",
+          "src/cmd/fix",
+          "src/encoding/json",
+          "src/syscall/js",
+          "src/testing/quick",
+          "src/cmd/pack",
+          "src/runtime/race",
+          "src/cmd/go/internal/modget",
+          "src/cmd/link/internal/loadelf",
+          "src/cmd/compile/internal/importer/testdata",
+          "src/encoding/gob",
+          "src/go/ast",
+          "src/runtime/pprof",
+          "src/embed/internal/embedtest",
+          "src/internal/reflectlite",
+          "src/cmd/go/internal/modfetch/codehost",
+          "src/cmd/compile/internal/test/testdata",
+          "src/cmd/compile/internal/types",
+          "src/cmd/asm/internal/asm",
+          "src/cmd/internal/test2json",
+          "src/runtime",
+          "src/cmd/go/internal/modload",
+          "src/testing",
+          "src/net/rpc",
+          "src/go/doc/testdata",
+          "src/net/rpc/jsonrpc",
+          "src/net/url",
+          "src/cmd/link/internal/loadxcoff",
+          "src/cmd/go",
+          "src/cmd/go/internal/modfetch",
+          "src/cmd/asm",
+          "src/internal/singleflight",
+          "src/go/types",
+          "src/cmd/compile/internal/test",
+          "src/cmd/go/internal/mvs",
+          "src/net/http",
+          "src/expvar",
+          "src/cmd/compile/internal/ir",
+          "src/go/internal/gcimporter/testdata",
+          "src/cmd/cover/testdata",
+          "src/syscall",
+          "src/net/http/httptrace",
+          "src/cmd/go/internal/vcs",
+          "src/database/sql"
+        ]
+      },
+      "47658": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/reflect"
+        ],
+        "ground_truth": [
+          "src/reflect",
+          "src/cmd/compile/internal/test"
+        ]
+      },
+      "47609": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "predicted": [
+          "src/unicode/utf8"
+        ],
+        "ground_truth": [
+          "src/cmd/compile/internal/test",
+          "src/unicode/utf8"
+        ]
+      },
+      "38776": {
+        "precision": 0.6,
+        "recall": 0.375,
+        "f1": 0.4615384615384615,
+        "tp": 3,
+        "fp": 2,
+        "fn": 5,
+        "predicted": [
+          "src/hash/fnv",
+          "src/hash/crc32",
+          "src/hash/crc64",
+          "src/hash/maphash",
+          "src/hash/adler32"
+        ],
+        "ground_truth": [
+          "src/crypto/sha256",
+          "src/hash/fnv",
+          "src/crypto/internal/boring",
+          "src/crypto/sha512",
+          "src/hash/crc64",
+          "src/hash/crc32",
+          "src/crypto/sha1",
+          "src/crypto/md5"
+        ]
+      }
+    }
+  }
+}

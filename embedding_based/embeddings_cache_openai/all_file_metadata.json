@@ -1,0 +1,5002 @@
+[
+  {
+    "file_path": "misc/ios/detect.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "misc/ios/go_ios_exec.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "misc/cgo/gmp/gmp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "misc/cgo/gmp/fib.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "misc/cgo/gmp/pi.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "misc/go_android_exec/exitcode_test.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "misc/go_android_exec/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/rename.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/recover2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/initialize.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/fibo.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typecheck.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/parentype.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/alias1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/maymorestack.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/mapclear.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/const6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/floatcmp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/import6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/func1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/wasmexport2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/peano.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/tailcall.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/goto.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/gc.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/index.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/literal.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reflectmethod5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/clear.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/compos.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeswitch2b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/rangegen.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/intrinsic.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/env.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/convert4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/func5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_iface.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nilptr_aix.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/align.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/const2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/import2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/checkbce.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/mergemul.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/index2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/live_uintptrkeepalive.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/gcstring.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reflectmethod1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/indirect1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/wasmexport.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/alias.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nilptr.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_unsafe.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/literal2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_mutations.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/goprint.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_map.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/varinit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline_endian.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/linkx.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/divmod.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/winbatch.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/func4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/deferfin.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/maplinear.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_param.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/linkx_run.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/const3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/copy1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/cmplxdivide.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/live1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/char_lit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/convlit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/phiopt.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nilptr5_wasm.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/recover3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_iface_data.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/bigmap.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/uintptrescapes.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/convert1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/import.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/strength.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/struct0.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/const7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/tinyfin.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/unsafe_string_data.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeswitch1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/char_lit1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/range4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_sync_atomic.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/linkmain_run.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nul1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/append1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/alg.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reflectmethod4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline_testingbloop.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline_variadic.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/wasmmemsize.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_hash_maphash.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/uintptrkeepalive.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/runtime.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_field.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/switch.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/linkname3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/noinit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/funcdup2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/declbad.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/divide.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/makechan.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/gc2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/const8.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/rotate3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/initloop.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/initexp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nilptr4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/shift2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/copy.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/switch4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/sigchld.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline_caller.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/assign1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/armimm.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/ddd2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/235.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nilcheck.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/intrinsic_atomic.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/rotate2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nilptr5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/shift3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline_math_bits_rotate.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/empty.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/switch5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/sieve.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chancap.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/range.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/convert.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/prove_popcount.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/opt_branchlikely.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/convlit1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/used.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_make_non_const.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/cannotassign.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/strcopy.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/convT2X.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/gcgort.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closedchan.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape2n.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_struct_param2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/defernil.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_slice.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/mallocfin.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/complit1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/named1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/linkobj.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/directive.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/zerosize.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/prove.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/eof.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reorder2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/rotate1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nosplit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/writebarrier.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/eof1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/torture.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/intcvt.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/switch6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/slice3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/cmplxdivide1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/linknameasm.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/solitaire.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/uintptrescapes2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/args.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reorder.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/makenew.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/live.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/tighten.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_goto.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/cmp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/retjmp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/deferprint.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/label.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/blank1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/defer.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/printbig.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nilptr2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_array.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_struct_param1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/assign.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/makeslice.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/switch2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/print.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/sliceopt.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/initializerr.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/float_lit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline_callers.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/label1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/unsafebuiltins.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/cmp6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/bom.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/stack.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/map1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/finprofiled.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nil.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/prove_constant_folding.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/initcomma.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/prove_invert_loop_with_unused_iterators.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/func8.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/stringrange.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/complit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/undef.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nilptr3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typecheckloop.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/switch3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_calls.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/convinline.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chanlinear.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/makemap.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/gc1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline_sync.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/embedfunc.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/rotate0.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/ddd.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/bigalg.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/shift1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/newinline.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/simassign.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/switch7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_selfassign.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/indirect.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/uintptrescapes3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/rune.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reflectmethod8.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/iota.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/map.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/int_lit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/ddd1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/slicecap.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/init1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/64bit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/recover4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/if.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/clearfat.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/func7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/asmhdr.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_indir.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reflectmethod3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/index0.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/float_lit3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/func.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/const.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/live2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/range3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/weak.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/recover.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/embedvers.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/convert2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/named.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/alias3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeswitch.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeswitch2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/import4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/blank.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline_big.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/const4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/func3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_struct_return.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/string_lit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/stackobj2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/utf.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/bounds.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/fuse.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reflectmethod7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/bombad.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_unique.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nowritebarrier.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/unsafe_slice_data.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/live_regabi.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/return.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/mainsig.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/inline_literal.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/convert3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/rename1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/sizeof.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/recover1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/alias2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/atomicload.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/funcdup.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/decl.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_closure.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/import5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeswitch3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/const5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_reflect.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/linkmain.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/func2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/linkname.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/rotate.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/stackobj3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/defererrcheck.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reflectmethod6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/append.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/init.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/cmplx.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_level.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/varerr.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/heapsampling.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/loopbce.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/recover5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/devirt.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/turing.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/crlf.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/func6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/import1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/const1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/escape_runtime_atomic.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/unsafe_string.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/reflectmethod2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/index1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/slice3err.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/float_lit2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/range2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/helloworld.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/nilptr5_aix.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/directive2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/for.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/zerodivide.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/stackobj.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/intrinsic.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/alias3.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/alias3.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/alias3.dir/c.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/embed.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/fake.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/convert1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/explicit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/embed1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/receiver.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/assertinline.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/convert.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/recursive.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/noeq.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/receiver1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/embed3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/embed2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/returntype.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/bigdata.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/fail.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/struct.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/convert2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/private.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/recursive1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/pointer.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/private.dir/prog.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/private.dir/private1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/embed1.dir/embed1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/embed1.dir/embed0.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/embed3.dir/embed1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/embed3.dir/embed0.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/recursive1.dir/recursive2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/interface/recursive1.dir/recursive1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure3.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/arenas/smoke.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/select5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/select4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/fifo.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/perm.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/sieve1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/goroutines.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/powser2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/zerosize.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/nonblock.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/doubleselect.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/powser1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/select8.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/sieve2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/select3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/sendstmt.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/select7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/select6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/select2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/chan/select.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method4.dir/prog.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/method4.dir/method4a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure5.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/closure5.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/retjmp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/absdiffimp2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50259.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/genembed2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51232.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue52228.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49309.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48280.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/dictionaryCapture-noinline.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/index.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48317.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/devirtualize1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48276b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48838.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54765.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47514.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47676.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue46461b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue45722.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54456.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47924.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49432.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/sliceimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51236.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/combine.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/orderedmap.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/equal.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47716.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/lockable.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48030.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/list.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/orderedmapsimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/typeswitch4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mutualimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue42758.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48253.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/index2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51909.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50552.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47740b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51303.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/absdiff.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47723.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/dottype.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue53390.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/recoverimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/chansimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54537.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48538.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49536.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue53419.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50833.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50437.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51522b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/typeswitch5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50485.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/interfacearg.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/metrics.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50417b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48337a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue53087.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/maps.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47892.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/boundmethod.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/listimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51367.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47713.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47901.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48645a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/structinit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51233.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/typeswitch1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48306.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/tparam1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/pragma.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue55101.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50417.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47896.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49516.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49547.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47684.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47925.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49611.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54302.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51832.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50193.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48604.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48537.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48962.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue45738.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48453.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50121.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47708.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/list2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/setsimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/dictionaryCapture.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue53406.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48185a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51836.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue53477.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47684c.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50317.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48711.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/gencrawler.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47925d.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51765.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51700.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49246.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47684b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/eface.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue46461.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51219.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48462.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/geninline.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54135.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48198.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/fact.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51423.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/graph.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48318.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50419.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mapimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49538.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/importtest.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/minimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue52124.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50690a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/factimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/smoketest.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/chans.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51219b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49295.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/builtins.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51925.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47272.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/ifaceconv.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51521.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47878.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue52117.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49659b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue46472.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48602.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue52241.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/subdict.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50481c.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50002.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue53762.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/valimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/absdiff3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49241.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54225.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49659.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48424.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50121b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50109b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50690b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47892b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue52026.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47925b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/pairimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48049.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47514b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/absdiff2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue23536.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/dedup.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48716.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50264.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50690c.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50147.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48617.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47948.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/shape1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47925c.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50598.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47514c.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue376214.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48185b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/listimp2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue46591.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50177.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50481b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47929.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48454.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49027.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51840.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/map.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/typelist.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/min.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue45547.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47631.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50109.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/stringerimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/typeswitch6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/nested.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51522a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51250a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/struct.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50486.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mincheck.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48191.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/stringer.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48047.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50993.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48016.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49049.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48337b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54497.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48645b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/smallest.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47710.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/cons.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49875.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47775.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue58513.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49667.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/typeswitch2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mapsimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/absdiffimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48094.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48094b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/pair.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48137.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47258.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50841.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48344.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47775b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/genembed.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/settable.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue45817.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51245.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49421.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/stringable.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47740.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47966.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47877.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/sets.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/typeswitch3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50642.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48013.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48042.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/slices.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50561.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48276a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/append.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/devirtualize2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47797.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue39755.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51355.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue44688.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/sum.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48609.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48598.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/double.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54535.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48225.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/aliasimp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48056.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/typeswitch7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/select.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/ordered.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49497.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/value.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue53254.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/adder.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49524.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49893.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50598.dir/a1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50598.dir/a0.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50598.dir/a2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50598.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/setsimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/setsimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/select.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/select.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/valimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/valimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54302.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue54302.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mapsimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mapsimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48094b.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48094b.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48306.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48306.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50561.dir/diameter.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50561.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48716.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48716.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48462.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48462.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mutualimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mutualimp.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49027.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49027.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mincheck.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mincheck.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49524.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49524.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50841.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50841.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/listimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/listimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49241.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49241.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49241.dir/c.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49241.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51219.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51219.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/aliasimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/aliasimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49536.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49536.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51423.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51423.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue52117.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue52117.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/structinit.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/structinit.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/structinit.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/factimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/factimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49246.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49246.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51250a.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51250a.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51250a.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49497.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49497.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/dedup.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/dedup.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/dedup.dir/c.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/dedup.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/sliceimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/sliceimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49667.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49667.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49667.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47892.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47892.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50486.dir/goerror_fp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50486.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50121.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50121.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/chansimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/chansimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51836.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51836.dir/p.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51836.dir/aa.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50481b.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50481b.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50481c.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50481c.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49659.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49659.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50485.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50485.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48962.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48962.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mapimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mapimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/pairimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/pairimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47892b.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47892b.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47514c.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47514c.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/14.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/20.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/10.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/9.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/8.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/15.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/21.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/18.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/19.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/12.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/16.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/17.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/13.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/7.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/7.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/4.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/4.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/1.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/1.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/3.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/3.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/10.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/10.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/12.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/12.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/8.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/mdempsky/8.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48337b.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48337b.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51367.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51367.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50121b.dir/d.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50121b.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50121b.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50121b.dir/c.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50121b.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49893.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49893.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue49893.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48337a.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48337a.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/gencrawler.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/gencrawler.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47775.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue47775.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50552.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50552.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48185a.dir/p_test.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48185a.dir/p.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48094.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48094.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48280.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48280.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48185b.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48185b.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue46461b.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue46461b.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/stringerimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/stringerimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/absdiffimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/absdiffimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51219b.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51219b.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue51219b.dir/p.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48454.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48454.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue48454.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/listimp2.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/listimp2.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/geninline.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/geninline.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/minimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/minimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/orderedmapsimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/orderedmapsimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50437.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/issue50437.dir/b.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/absdiffimp2.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/absdiffimp2.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/recoverimp.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/typeparam/recoverimp.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/internal/runtime/sys/inlinegcpc.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/uintptrescapes.dir/a.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/uintptrescapes.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/asmhdr.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue69635.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/comparisons.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/atomics.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue22703.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue60324.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/mapaccess.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/regabi_regalloc.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/clobberdead.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue48054.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/floats.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue33580.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue52635.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/compare_and_branch.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/memcombine.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/bits.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue54467.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/maps.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/addrcalc.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/clobberdeadreg.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/retpoline.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/shortcircuit.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/arithmetic.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue59297.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue72832.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue58166.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue38554.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/logic.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/switch.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/copy.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue70409.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/memops.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/noextend.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/constants.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/unique.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue60673.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/race.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/multiply.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/bool.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/zerosize.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue42610.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/writebarrier.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue63332.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/bmi.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/load_type_from_itab.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue31618.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue66585.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/stack.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/unsafe.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue61356.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue68845.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/spills.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/shift.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/structs.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue25378.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/bitfield.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/spectre.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/alloc.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/ifaces.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/mathbits.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/typeswitch.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/condmove.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/strings.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/fuse.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/issue56440.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/rotate.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/smallintiface.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/slices.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/select.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/schedule.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/memops_bigoffset.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/codegen/math.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/zombie_struct_select.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/uglyfib.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/more_intstar_input.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/struct_3_string_input.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/named_results.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/fibish.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/reg_not_ssa.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/named_return_stuff.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/f_ret_z_not.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/s_sif_sif.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/return_stuff.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/bad_internal_offsets.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/result_live.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/open_defer_1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/store_reg_args.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/struct_lower_1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/result_regalloc.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/spills3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/idata.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/method_wrapper.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/leaf.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/convT64_criteria.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/fibish_closure.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/part_live.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/bad_select_crash.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/defer_aggregate.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/spills4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/part_live_2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/many_intstar_input.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/defer_recover_results.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/wrapdefer_largetmp.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/double_nested_addressed_struct.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/convF_criteria.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/map.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/fuzz_trailing_zero_field.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/too_big_to_ssa.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/leaf2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/many_int_input.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/abi/double_nested_struct.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/ddd2.dir/ddd2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/ddd2.dir/ddd3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/linedirectives.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z6.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z11.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z2.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z15.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z3.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z14.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z20.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z7.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z10.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z8.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z9.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z19.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z18.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z17.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z4.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z13.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z5.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/main.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z12.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z1.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  },
+  {
+    "file_path": "test/dwarf/dwarf.dir/z16.go",
+    "type": "file",
+    "extraction_method": "json_pre_extracted"
+  }
+]

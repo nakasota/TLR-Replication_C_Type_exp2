@@ -1,0 +1,203 @@
+{
+  "selected_file_level_output": "20250730_150200",
+  "47459.md": {
+    "src/cmd/compile/internal/types2/instantiate_test.go": [
+      "TestMethodInstantiation"
+    ],
+    "src/cmd/compile/internal/types2/type.go": [],
+    "src/go/types/instantiate_test.go": [
+      "TestMethodInstantiation"
+    ],
+    "src/go/types/typeparam.go": [
+      "NewTypeParam",
+      "Obj",
+      "Index",
+      "Constraint",
+      "SetConstraint",
+      "Underlying",
+      "String"
+    ],
+    "src/cmd/compile/internal/types2/typeparam.go": [
+      "NewTypeParam",
+      "newTypeParam",
+      "Obj",
+      "Index",
+      "Constraint",
+      "SetConstraint",
+      "Underlying",
+      "String",
+      "cleanup",
+      "iface",
+      "is",
+      "typeset"
+    ],
+    "src/go/types/instantiate.go": [
+      "Instantiate",
+      "instance",
+      "validateTArgLen",
+      "verify",
+      "mentions"
+    ],
+    "src/cmd/compile/internal/types2/instantiate.go": [
+      "Instantiate",
+      "instance",
+      "validateTArgLen",
+      "verify",
+      "mentions"
+    ]
+  },
+  "29951.md": {
+    "src/math/big/nat.go": [
+      "setUint64",
+      "add",
+      "sub",
+      "cmp"
+    ],
+    "src/math/big/int.go": [
+      "NewInt",
+      "SetInt64",
+      "SetUint64",
+      "Add",
+      "Sub",
+      "Cmp"
+    ],
+    "src/math/big/arith.go": [
+      "addVV_g",
+      "subVV_g",
+      "addVW",
+      "addVW_ref",
+      "subVW",
+      "subVW_ref"
+    ]
+  },
+  "44412.md": {
+    "src/time/time.go": [
+      "UnixMilli",
+      "UnixMicro",
+      "Unix",
+      "unixTime",
+      "UnixNano"
+    ],
+    "src/time/time_test.go": [
+      "TestUnixMilli",
+      "TestUnixMicro",
+      "BenchmarkNowUnixMilli",
+      "BenchmarkNowUnixMicro"
+    ]
+  },
+  "34593.md": {
+    "src/database/sql/sql.go": [
+      "NullString",
+      "NullInt64",
+      "NullInt32",
+      "NullInt16",
+      "NullByte",
+      "NullFloat64",
+      "NullBool",
+      "NullTime",
+      "Null",
+      "Scan",
+      "Value"
+    ],
+    "src/database/sql/driver/types.go": [
+      "IsValue",
+      "IsScanValue",
+      "ConvertValue"
+    ]
+  },
+  "52157.md": {
+    "src/runtime/map_noswiss_test.go": [
+      "TestHmapSize",
+      "TestLoadFactor",
+      "TestMapBuckets"
+    ],
+    "src/runtime/map_swiss_test.go": [
+      "TestHmapSize"
+    ],
+    "test/map.go": [
+      "main",
+      "testbasic"
+    ],
+    "test/maplinear.go": [
+      "main",
+      "checkLinear"
+    ],
+    "src/runtime/map_swiss.go": [
+      "makemap",
+      "makemap64",
+      "makemap_small",
+      "reflect_makemap",
+      "reflectlite_maplen",
+      "reflect_maplen"
+    ],
+    "src/runtime/map_test.go": [
+      "TestIgnoreBogusMapHint"
+    ],
+    "src/cmd/compile/internal/reflectdata/map_noswiss.go": [
+      "OldMapType"
+    ],
+    "test/map1.go": [
+      "main"
+    ],
+    "src/cmd/compile/internal/reflectdata/map_swiss.go": [
+      "SwissMapType",
+      "swissTableType"
+    ],
+    "test/mapclear.go": [
+      "main"
+    ],
+    "test/makemap.go": [
+      "main"
+    ],
+    "src/runtime/map_noswiss.go": [
+      "makemap",
+      "makemap_small",
+      "makemap64",
+      "makeBucketArray",
+      "overLoadFactor",
+      "tooManyOverflowBuckets",
+      "hashGrow",
+      "growWork",
+      "mapassign",
+      "mapdelete",
+      "mapclear"
+    ]
+  },
+  "51039.md": {
+    "src/strings/strings.go": [
+      "Split",
+      "SplitAfter",
+      "Fields",
+      "FieldsFunc",
+      "Cut",
+      "CutPrefix",
+      "CutSuffix",
+      "Replace",
+      "ReplaceAll"
+    ],
+    "src/strings/strings_test.go": [
+      "TestLines",
+      "TestSplit",
+      "TestSplitAfter",
+      "TestFields",
+      "TestFieldsFunc",
+      "TestCut",
+      "TestCutPrefix",
+      "TestCutSuffix"
+    ]
+  },
+  "42099.md": {
+    "src/reflect/value.go": [
+      "NumMethod",
+      "String",
+      "QualifiedString"
+    ],
+    "src/reflect/type.go": [
+      "String",
+      "NumMethod",
+      "Method",
+      "PkgPath",
+      "Name"
+    ]
+  }
+}

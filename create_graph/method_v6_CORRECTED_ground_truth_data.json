@@ -1,0 +1,458 @@
+{
+  "src/crypto/tls": {
+    "accepted": 26,
+    "declined": 10
+  },
+  "src/cmd/vet": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/go/doc": {
+    "accepted": 3,
+    "declined": 0
+  },
+  "src/net/netip": {
+    "accepted": 68,
+    "declined": 8
+  },
+  "src/log": {
+    "accepted": 5,
+    "declined": 0
+  },
+  "src/hash/maphash": {
+    "accepted": 9,
+    "declined": 2
+  },
+  "src/syscall": {
+    "accepted": 65,
+    "declined": 10
+  },
+  "src/flag": {
+    "accepted": 12,
+    "declined": 4
+  },
+  "src/archive/zip": {
+    "accepted": 1,
+    "declined": 3
+  },
+  "src/testing": {
+    "accepted": 15,
+    "declined": 6
+  },
+  "src/net": {
+    "accepted": 14,
+    "declined": 5
+  },
+  "src/archive/tar": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/cmd/go/internal/generate": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/time": {
+    "accepted": 21,
+    "declined": 6
+  },
+  "src/os/signal": {
+    "accepted": 6,
+    "declined": 4
+  },
+  "src/runtime/pprof": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/runtime": {
+    "accepted": 52,
+    "declined": 12
+  },
+  "src/reflect": {
+    "accepted": 35,
+    "declined": 8
+  },
+  "src/cmd/asm/internal/asm": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/cmd/compile/internal/abi": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/internal/abi": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/cmd/compile/internal/ssa": {
+    "accepted": 4,
+    "declined": 0
+  },
+  "src/cmd/compile/internal/ssagen": {
+    "accepted": 5,
+    "declined": 0
+  },
+  "src/net/http/httputil": {
+    "accepted": 12,
+    "declined": 3
+  },
+  "src/unsafe": {
+    "accepted": 4,
+    "declined": 0
+  },
+  "test": {
+    "accepted": 3,
+    "declined": 0
+  },
+  "src/crypto/ecdh": {
+    "accepted": 8,
+    "declined": 4
+  },
+  "src/os/exec": {
+    "accepted": 9,
+    "declined": 0
+  },
+  "src/strings": {
+    "accepted": 4,
+    "declined": 3
+  },
+  "src/cmd/link/internal/mips64": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/net/url": {
+    "accepted": 8,
+    "declined": 10
+  },
+  "src/runtime/metrics": {
+    "accepted": 5,
+    "declined": 2
+  },
+  "src/mime/multipart": {
+    "accepted": 3,
+    "declined": 2
+  },
+  "test/typeparam": {
+    "accepted": 3,
+    "declined": 0
+  },
+  "src/cmd/compile/internal/types2": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/go/parser": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/text/template/parse": {
+    "accepted": 11,
+    "declined": 0
+  },
+  "src/runtime/debug": {
+    "accepted": 3,
+    "declined": 0
+  },
+  "src/cmd/compile/internal/coverage": {
+    "accepted": 3,
+    "declined": 0
+  },
+  "src/cmd/covdata": {
+    "accepted": 8,
+    "declined": 3
+  },
+  "src/internal/coverage/encodecounter": {
+    "accepted": 3,
+    "declined": 0
+  },
+  "src/internal/coverage/cmerge": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/internal/coverage/decodecounter": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/runtime/cgo": {
+    "accepted": 6,
+    "declined": 2
+  },
+  "src/regexp/syntax": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/unicode/utf16": {
+    "accepted": 6,
+    "declined": 2
+  },
+  "src/cmd/go/internal/work": {
+    "accepted": 5,
+    "declined": 0
+  },
+  "src/cmd/go/internal/run": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/encoding/json": {
+    "accepted": 2,
+    "declined": 12
+  },
+  "src/cmd/compile/internal/base": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/io": {
+    "accepted": 15,
+    "declined": 5
+  },
+  "src/io/ioutil": {
+    "accepted": 10,
+    "declined": 5
+  },
+  "src/bufio": {
+    "accepted": 4,
+    "declined": 4
+  },
+  "src/cmd/go/internal/modload": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/database/sql": {
+    "accepted": 6,
+    "declined": 2
+  },
+  "src/html/template": {
+    "accepted": 1,
+    "declined": 4
+  },
+  "src/sync/atomic": {
+    "accepted": 37,
+    "declined": 6
+  },
+  "src/crypto/x509": {
+    "accepted": 22,
+    "declined": 6
+  },
+  "src/cmd/go/internal/vcs": {
+    "accepted": 5,
+    "declined": 0
+  },
+  "src/fmt": {
+    "accepted": 2,
+    "declined": 6
+  },
+  "src/cmd/compile/internal/amd64": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/io/fs": {
+    "accepted": 9,
+    "declined": 4
+  },
+  "misc/ios": {
+    "accepted": 3,
+    "declined": 0
+  },
+  "src/cmd/go/internal/load": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/net/http": {
+    "accepted": 9,
+    "declined": 8
+  },
+  "src/image": {
+    "accepted": 2,
+    "declined": 2
+  },
+  "src/image/draw": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/debug/plan9obj": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/path/filepath": {
+    "accepted": 9,
+    "declined": 5
+  },
+  "src/go/token": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/cmd/doc": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/crypto/ed25519": {
+    "accepted": 3,
+    "declined": 2
+  },
+  "src/go/types": {
+    "accepted": 3,
+    "declined": 8
+  },
+  "src/net/smtp": {
+    "accepted": 2,
+    "declined": 6
+  },
+  "src/cmd/go/internal/workcmd": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/time/tzdata": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/encoding/binary": {
+    "accepted": 13,
+    "declined": 5
+  },
+  "src/syscall/js": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/crypto/subtle": {
+    "accepted": 4,
+    "declined": 2
+  },
+  "src/text/template": {
+    "accepted": 2,
+    "declined": 3
+  },
+  "src/debug/pe": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/go/ast": {
+    "accepted": 2,
+    "declined": 2
+  },
+  "src/compress/lzw": {
+    "accepted": 8,
+    "declined": 3
+  },
+  "src/os": {
+    "accepted": 6,
+    "declined": 5
+  },
+  "src/encoding/csv": {
+    "accepted": 5,
+    "declined": 3
+  },
+  "src/encoding/xml": {
+    "accepted": 5,
+    "declined": 4
+  },
+  "src/go/doc/comment": {
+    "accepted": 25,
+    "declined": 5
+  },
+  "src/math/big": {
+    "accepted": 2,
+    "declined": 3
+  },
+  "src/crypto/x509/internal/macos": {
+    "accepted": 4,
+    "declined": 0
+  },
+  "src/sync": {
+    "accepted": 13,
+    "declined": 4
+  },
+  "src/cmd/go/internal/version": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/debug/buildinfo": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/cmd/go/internal/modget": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/cmd/dist": {
+    "accepted": 2,
+    "declined": 0
+  },
+  "src/cmd/go/internal/modfetch": {
+    "accepted": 6,
+    "declined": 0
+  },
+  "src/go/build/constraint": {
+    "accepted": 10,
+    "declined": 5
+  },
+  "src/go/printer": {
+    "accepted": 3,
+    "declined": 2
+  },
+  "src/cmd/fix": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/mime": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/cmd/go/internal/base": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/internal/testenv": {
+    "accepted": 3,
+    "declined": 0
+  },
+  "src/strconv": {
+    "accepted": 5,
+    "declined": 3
+  },
+  "src/cmd/go/internal/imports": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/go/build": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/testing/iotest": {
+    "accepted": 3,
+    "declined": 0
+  },
+  "src/cmd/go/internal/modcmd": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/internal/cpu": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/unicode/utf8": {
+    "accepted": 4,
+    "declined": 2
+  },
+  "src/crypto/sha1": {
+    "accepted": 1,
+    "declined": 0
+  },
+  "src/context": {
+    "accepted": 0,
+    "declined": 10
+  },
+  "src/errors": {
+    "accepted": 0,
+    "declined": 6
+  },
+  "src/sort": {
+    "accepted": 0,
+    "declined": 5
+  },
+  "src/math": {
+    "accepted": 0,
+    "declined": 4
+  },
+  "src/regexp": {
+    "accepted": 0,
+    "declined": 5
+  }
+}

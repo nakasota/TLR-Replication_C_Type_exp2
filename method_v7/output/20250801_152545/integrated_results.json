@@ -1,0 +1,490 @@
+{
+  "workflow_info": {
+    "timestamp": "20250801_152545",
+    "batch_size": "5",
+    "total_proposals": 5,
+    "granularity_breakdown": {
+      "directory": 1,
+      "file": 1,
+      "function": 3
+    }
+  },
+  "proposals": {
+    "40239.md": {
+      "proposal_file": "40239.md",
+      "granularity": "file",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "file"
+        },
+        "directory_file_level": {
+          "granularity": "file",
+          "found_files": [
+            "src/net/url/url.go",
+            "src/net/url/url_test.go"
+          ]
+        }
+      },
+      "found_files": [
+        "src/net/url/url.go",
+        "src/net/url/url_test.go"
+      ]
+    },
+    "47459.md": {
+      "proposal_file": "47459.md",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": []
+        }
+      },
+      "found_files": []
+    },
+    "29951.md": {
+      "proposal_file": "29951.md",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "src/math/big/nat.go",
+            "src/math/big/int.go",
+            "src/math/big/arith.go"
+          ]
+        },
+        "function_level_localization": {
+          "src/math/big/nat.go": [
+            "setUint64",
+            "add",
+            "sub",
+            "cmp"
+          ],
+          "src/math/big/int.go": [
+            "NewInt",
+            "SetInt64",
+            "SetUint64",
+            "Add",
+            "Sub",
+            "Cmp"
+          ],
+          "src/math/big/arith.go": [
+            "addVV_g",
+            "subVV_g",
+            "addVW",
+            "addVW_ref",
+            "subVW",
+            "subVW_ref"
+          ]
+        },
+        "link_decision": {
+          "total_functions": 16,
+          "functions_with_yes": 3,
+          "functions_with_no": 13,
+          "detailed_results": [
+            {
+              "file_path": "src/math/big/nat.go",
+              "function_name": "setUint64",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/nat.go",
+              "function_name": "add",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/nat.go",
+              "function_name": "sub",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/nat.go",
+              "function_name": "cmp",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/int.go",
+              "function_name": "NewInt",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/math/big/int.go",
+              "function_name": "SetInt64",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/math/big/int.go",
+              "function_name": "SetUint64",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/int.go",
+              "function_name": "Add",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/math/big/int.go",
+              "function_name": "Sub",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/int.go",
+              "function_name": "Cmp",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/arith.go",
+              "function_name": "addVV_g",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/arith.go",
+              "function_name": "subVV_g",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/arith.go",
+              "function_name": "addVW",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/arith.go",
+              "function_name": "addVW_ref",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/arith.go",
+              "function_name": "subVW",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math/big/arith.go",
+              "function_name": "subVW_ref",
+              "link_decision": "No"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "src/math/big/nat.go",
+        "src/math/big/int.go",
+        "src/math/big/arith.go"
+      ],
+      "found_functions": [
+        {
+          "file_path": "src/math/big/nat.go",
+          "function_name": "setUint64"
+        },
+        {
+          "file_path": "src/math/big/nat.go",
+          "function_name": "add"
+        },
+        {
+          "file_path": "src/math/big/nat.go",
+          "function_name": "sub"
+        },
+        {
+          "file_path": "src/math/big/nat.go",
+          "function_name": "cmp"
+        },
+        {
+          "file_path": "src/math/big/int.go",
+          "function_name": "NewInt"
+        },
+        {
+          "file_path": "src/math/big/int.go",
+          "function_name": "SetInt64"
+        },
+        {
+          "file_path": "src/math/big/int.go",
+          "function_name": "SetUint64"
+        },
+        {
+          "file_path": "src/math/big/int.go",
+          "function_name": "Add"
+        },
+        {
+          "file_path": "src/math/big/int.go",
+          "function_name": "Sub"
+        },
+        {
+          "file_path": "src/math/big/int.go",
+          "function_name": "Cmp"
+        },
+        {
+          "file_path": "src/math/big/arith.go",
+          "function_name": "addVV_g"
+        },
+        {
+          "file_path": "src/math/big/arith.go",
+          "function_name": "subVV_g"
+        },
+        {
+          "file_path": "src/math/big/arith.go",
+          "function_name": "addVW"
+        },
+        {
+          "file_path": "src/math/big/arith.go",
+          "function_name": "addVW_ref"
+        },
+        {
+          "file_path": "src/math/big/arith.go",
+          "function_name": "subVW"
+        },
+        {
+          "file_path": "src/math/big/arith.go",
+          "function_name": "subVW_ref"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "src/math/big/int.go",
+          "function_name": "NewInt",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/math/big/int.go",
+          "function_name": "SetInt64",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/math/big/int.go",
+          "function_name": "Add",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "39528.md": {
+      "proposal_file": "39528.md",
+      "granularity": "directory",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "directory"
+        },
+        "directory_file_level": {
+          "granularity": "directory",
+          "found_directories": [
+            "src/runtime",
+            "src/go/types",
+            "src/reflect",
+            "src/reflectlite"
+          ],
+          "found_files": [
+            "src/reflectlite/type.go",
+            "src/go/types/named_test.go",
+            "src/reflect/type.go",
+            "src/reflectlite/value.go",
+            "src/reflect/value.go",
+            "src/runtime/type.go",
+            "src/go/types/named.go"
+          ]
+        }
+      },
+      "found_directories": [
+        "src/runtime",
+        "src/go/types",
+        "src/reflect",
+        "src/reflectlite"
+      ],
+      "found_files": [
+        "src/reflectlite/type.go",
+        "src/go/types/named_test.go",
+        "src/reflect/type.go",
+        "src/reflectlite/value.go",
+        "src/reflect/value.go",
+        "src/runtime/type.go",
+        "src/go/types/named.go"
+      ]
+    },
+    "44412.md": {
+      "proposal_file": "44412.md",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "src/time/time_test.go",
+            "src/time/time.go",
+            "src/runtime/time_test.go",
+            "src/runtime/time.go"
+          ]
+        },
+        "function_level_localization": {
+          "src/time/time_test.go": [
+            "TestUnixMilli",
+            "TestUnixMicro",
+            "BenchmarkNowUnixMilli",
+            "BenchmarkNowUnixMicro"
+          ],
+          "src/time/time.go": [
+            "UnixMilli",
+            "UnixMicro",
+            "Unix",
+            "unixTime",
+            "UnixNano"
+          ],
+          "src/runtime/time_test.go": [],
+          "src/runtime/time.go": [
+            "time_runtimeNow",
+            "time_runtimeNano"
+          ]
+        },
+        "link_decision": {
+          "total_functions": 11,
+          "functions_with_yes": 6,
+          "functions_with_no": 5,
+          "detailed_results": [
+            {
+              "file_path": "src/time/time_test.go",
+              "function_name": "TestUnixMilli",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/time/time_test.go",
+              "function_name": "TestUnixMicro",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/time/time_test.go",
+              "function_name": "BenchmarkNowUnixMilli",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/time/time_test.go",
+              "function_name": "BenchmarkNowUnixMicro",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/time/time.go",
+              "function_name": "UnixMilli",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/time/time.go",
+              "function_name": "UnixMicro",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/time/time.go",
+              "function_name": "Unix",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/time/time.go",
+              "function_name": "unixTime",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/time/time.go",
+              "function_name": "UnixNano",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/runtime/time.go",
+              "function_name": "time_runtimeNow",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/runtime/time.go",
+              "function_name": "time_runtimeNano",
+              "link_decision": "No"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "src/time/time_test.go",
+        "src/time/time.go",
+        "src/runtime/time_test.go",
+        "src/runtime/time.go"
+      ],
+      "found_functions": [
+        {
+          "file_path": "src/time/time_test.go",
+          "function_name": "TestUnixMilli"
+        },
+        {
+          "file_path": "src/time/time_test.go",
+          "function_name": "TestUnixMicro"
+        },
+        {
+          "file_path": "src/time/time_test.go",
+          "function_name": "BenchmarkNowUnixMilli"
+        },
+        {
+          "file_path": "src/time/time_test.go",
+          "function_name": "BenchmarkNowUnixMicro"
+        },
+        {
+          "file_path": "src/time/time.go",
+          "function_name": "UnixMilli"
+        },
+        {
+          "file_path": "src/time/time.go",
+          "function_name": "UnixMicro"
+        },
+        {
+          "file_path": "src/time/time.go",
+          "function_name": "Unix"
+        },
+        {
+          "file_path": "src/time/time.go",
+          "function_name": "unixTime"
+        },
+        {
+          "file_path": "src/time/time.go",
+          "function_name": "UnixNano"
+        },
+        {
+          "file_path": "src/runtime/time.go",
+          "function_name": "time_runtimeNow"
+        },
+        {
+          "file_path": "src/runtime/time.go",
+          "function_name": "time_runtimeNano"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "src/time/time_test.go",
+          "function_name": "TestUnixMilli",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/time/time_test.go",
+          "function_name": "TestUnixMicro",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/time/time.go",
+          "function_name": "UnixMilli",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/time/time.go",
+          "function_name": "UnixMicro",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/time/time.go",
+          "function_name": "Unix",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/time/time.go",
+          "function_name": "unixTime",
+          "link_decision": "Yes"
+        }
+      ]
+    }
+  }
+}

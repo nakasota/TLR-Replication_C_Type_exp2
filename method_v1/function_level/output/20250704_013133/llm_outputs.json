@@ -1,0 +1,88 @@
+{
+  "selected_file_level_output": "20250703_103032",
+  "45428.md": {
+    "src/crypto/tls/handshake_client.go": [
+      "pickTLSVersion",
+      "clientHandshake"
+    ],
+    "src/crypto/tls/common.go": [
+      "defaultConfig",
+      "supportedVersions",
+      "minSupportedVersion"
+    ],
+    "src/crypto/tls/handshake_server.go": [
+      "readClientHello",
+      "processClientHello",
+      "pickCipherSuite"
+    ]
+  },
+  "48801.md": {
+    "src/go/types/stdlib_test.go": [],
+    "src/cmd/vet/main.go": [
+      "main"
+    ]
+  },
+  "34875.md": {
+    "src/go/doc/comment.go": [
+      "ToHTML",
+      "ToText"
+    ]
+  },
+  "32716.md": {
+    "src/crypto/tls/prf_test.go": [
+      "TestSplitPreMasterSecret",
+      "TestKeysFromPreMasterSecret"
+    ],
+    "src/crypto/tls/key_agreement.go": [
+      "a1Hash",
+      "5SHA1Hash",
+      "shForServerKeyExchange"
+    ],
+    "src/crypto/tls/auth_test.go": [
+      "TestLegacyTypeAndHash"
+    ],
+    "src/crypto/tls/common.go": [
+      "VersionName",
+      "ortedVersions",
+      "upportedVersion",
+      "ortedVersionsFromMax",
+      "ePreferences"
+    ],
+    "src/crypto/tls/tls_test.go": [
+      "stVersionName",
+      "stCipherSuites"
+    ],
+    "src/crypto/tls/handshake_server_test.go": [
+      "TestRejectBadProtocolVersion",
+      "runServerTestForVersion",
+      "runServerTestTLS10",
+      "runServerTestTLS11",
+      "runServerTestTLS12",
+      "runServerTestTLS13"
+    ],
+    "src/crypto/tls/cipher_suites.go": [
+      "CipherSuites",
+      "InsecureCipherSuites"
+    ],
+    "src/crypto/tls/conn.go": [
+      "readRecord",
+      "readChangeCipherSpec",
+      "readRecordOrCCS",
+      "writeRecordLocked",
+      "writeHandshakeRecord",
+      "writeChangeCipherRecord"
+    ],
+    "src/crypto/tls/prf.go": [
+      "prf10",
+      "prf12",
+      "prfForVersion",
+      "prfAndHashForVersion"
+    ]
+  },
+  "51777.md": {
+    "src/net/netip/netip.go": [
+      "IPv6Loopback",
+      "AddrFrom16"
+    ]
+  }
+}

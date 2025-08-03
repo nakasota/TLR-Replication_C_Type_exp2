@@ -1,0 +1,6 @@
+{
+  "macro_precision": 0.7201358826358826,
+  "macro_recall": 0.6768692040903997,
+  "macro_f1": 0.6439155895465373,
+  "num_processed_proposals": 231
+}

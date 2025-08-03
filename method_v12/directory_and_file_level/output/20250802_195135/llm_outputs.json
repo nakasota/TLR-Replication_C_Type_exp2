@@ -1,0 +1,2273 @@
+{
+  "45428.md": {
+    "found_files": [
+      "src/crypto/tls/handshake_client.go",
+      "src/crypto/tls/handshake_server.go",
+      "src/crypto/tls/conn.go",
+      "src/crypto/tls/common.go"
+    ]
+  },
+  "48801.md": {
+    "found_files": [
+      "src/cmd/vet/main.go",
+      "src/time/format.go",
+      "src/time/format_test.go",
+      "src/cmd/vet/vet_test.go"
+    ]
+  },
+  "32716.md": {
+    "found_files": [
+      "src/crypto/tls/prf.go",
+      "src/crypto/tls/conn.go",
+      "src/crypto/tls/handshake_server_test.go",
+      "src/crypto/tls/cipher_suites.go",
+      "src/crypto/tls/tls_test.go",
+      "src/crypto/tls/auth_test.go",
+      "src/crypto/tls/prf_test.go",
+      "src/crypto/tls/key_agreement.go",
+      "src/crypto/tls/common.go"
+    ]
+  },
+  "51777.md": {
+    "found_files": [
+      "src/net/netip/netip.go",
+      "src/net/netip/netip_test.go"
+    ]
+  },
+  "47164.md": {
+    "found_files": [
+      "src/log/log_test.go",
+      "src/log/log.go"
+    ]
+  },
+  "42710.md": {
+    "found_files": [
+      "src/hash/maphash/maphash.go",
+      "src/hash/maphash/maphash_runtime.go",
+      "test/escape_hash_maphash.go",
+      "src/hash/maphash/maphash_purego.go",
+      "src/hash/maphash/maphash_test.go"
+    ]
+  },
+  "46259.md": {
+    "found_files": [
+      "syscall/exec_bsd.go",
+      "src/syscall/exec_freebsd.go",
+      "src/syscall/syscall_freebsd.go",
+      "src/syscall/exec_freebsd_test.go",
+      "src/syscall/exec_bsd.go"
+    ]
+  },
+  "47257.md": {
+    "found_files": [
+      "src/cmd/dist/buildruntime.go",
+      "src/cmd/dist/buildtag_test.go",
+      "src/cmd/dist/util_gccgo.go",
+      "src/cmd/dist/imports.go",
+      "src/cmd/dist/exec.go",
+      "src/cmd/dist/test.go",
+      "src/cmd/dist/doc.go",
+      "src/cmd/dist/sys_windows.go",
+      "src/cmd/dist/testjson.go",
+      "src/cmd/dist/util.go",
+      "src/cmd/dist/buildtag.go",
+      "src/cmd/dist/build.go",
+      "src/cmd/dist/util_gc.go",
+      "src/cmd/dist/quoted.go",
+      "src/cmd/dist/sys_default.go",
+      "src/cmd/dist/buildtool.go",
+      "src/cmd/dist/notgo122.go",
+      "src/cmd/dist/testjson_test.go",
+      "src/cmd/dist/build_test.go",
+      "src/cmd/dist/supported_test.go",
+      "src/cmd/dist/main.go",
+      "src/cmd/dist/buildgo.go"
+    ]
+  },
+  "47216.md": {
+    "found_files": [
+      "src/runtime/metrics/sample.go",
+      "src/runtime/metrics/example_test.go",
+      "src/runtime/metrics/value.go",
+      "src/runtime/metrics/description.go",
+      "src/runtime/metrics/doc.go",
+      "src/runtime/metrics/description_test.go",
+      "src/runtime/metrics/histogram.go"
+    ]
+  },
+  "53747.md": {
+    "found_files": [
+      "src/flag/flag.go",
+      "src/flag/flag_test.go"
+    ]
+  },
+  "34626.md": {
+    "found_files": [
+      "src/testing/benchmark_test.go",
+      "src/testing/benchmark.go"
+    ]
+  },
+  "50102.md": {
+    "found_files": [
+      "src/archive/tar/common.go",
+      "src/archive/tar/stat_unix.go"
+    ]
+  },
+  "38687.md": {
+    "found_files": [
+      "src/cmd/go/internal/generate/generate.go",
+      "src/cmd/go/internal/generate/generate_test.go"
+    ]
+  },
+  "50062.md": {
+    "found_files": [
+      "src/time/zoneinfo.go",
+      "src/time/time.go"
+    ]
+  },
+  "46731.md": {
+    "found_files": [
+      "src/runtime/internal/sys/sys.go",
+      "src/cmd/cgo/ast.go",
+      "src/cmd/compile/internal/types2/api.go",
+      "test/fixedbugs/notinheap3.go",
+      "src/cmd/compile/internal/types2/types.go",
+      "src/runtime/cgo/cgo.go",
+      "src/cmd/compile/internal/types2/type_test.go",
+      "src/cmd/compile/internal/types2/type.go",
+      "src/cmd/compile/internal/types2/api_test.go",
+      "src/cmd/compile/internal/typecheck/type.go",
+      "src/cmd/cgo/out.go",
+      "src/cmd/cgo/main.go",
+      "src/cmd/compile/internal/types2/object_test.go",
+      "test/fixedbugs/notinheap2.go",
+      "test/fixedbugs/notinheap.go",
+      "src/cmd/compile/internal/ir/type.go",
+      "src/cmd/compile/internal/types2/object.go",
+      "src/cmd/compile/internal/typecheck/typecheck.go",
+      "src/runtime/internal/sys/nih.go"
+    ]
+  },
+  "33184.md": {
+    "found_files": [
+      "src/time/tick_test.go",
+      "src/time/tick.go"
+    ]
+  },
+  "50489.md": {
+    "found_files": [
+      "src/math/big/rat_test.go",
+      "src/math/big/rat.go"
+    ]
+  },
+  "47342.md": {
+    "found_files": [
+      "src/hash/maphash/maphash.go",
+      "src/hash/maphash/maphash_runtime.go",
+      "src/hash/maphash/maphash_purego.go",
+      "escape_hash_maphash.go",
+      "src/hash/maphash/maphash_test.go"
+    ]
+  },
+  "37255.md": {
+    "found_files": [
+      "src/os/signal/signal.go",
+      "src/os/signal/signal_test.go",
+      "src/os/signal/doc.go",
+      "src/context/context.go"
+    ]
+  },
+  "42782.md": {
+    "found_files": [
+      "src/reflect/visiblefields.go",
+      "src/reflect/type.go",
+      "src/reflect/visiblefields_test.go"
+    ]
+  },
+  "46279.md": {
+    "found_files": [
+      "src/cmd/go/internal/base/limit.go",
+      "src/runtime/rlimit_js.go",
+      "src/internal/syscall/unix/getrandom_linux.go",
+      "src/runtime/os_linux.go",
+      "src/syscall/rlimit.go",
+      "src/internal/syscall/unix/getrandom_linux_test.go",
+      "src/syscall/syscall_unix.go",
+      "src/runtime/sys_unix.go",
+      "src/syscall/exec_unix.go",
+      "src/internal/syscall/unix/syscall_linux_test.go",
+      "src/internal/syscall/unix/syscall_linux.go",
+      "src/syscall/rlimit_darwin.go",
+      "src/runtime/rlimit_unix.go",
+      "src/syscall/rlimit_test.go"
+    ]
+  },
+  "40724.md": {
+    "found_files": [
+      "src/cmd/compile/internal/abi/abiutils.go",
+      "src/cmd/compile/internal-abi.md",
+      "src/reflect/abi_test.go",
+      "src/runtime/wincallback.go",
+      "src/internal/abi/abi_ppc64x.go",
+      "src/internal/goexperiment/exp_regabiargs_on.go",
+      "src/runtime/abi.go",
+      "src/internal/goexperiment/exp_regabiwrappers_on.go",
+      "src/internal/abi/abi_generic.go",
+      "src/internal/abi/abi_arm64.go",
+      "src/cmd/compile/internal/ir/abi.go",
+      "src/runtime/zcallback_windows.go",
+      "src/cmd/asm/internal/arch/arch.go",
+      "src/cmd/compile/internal/ssagen/abi.go",
+      "src/cmd/compile/internal/ssa/abiutils.go",
+      "src/cmd/compile/internal/abi/abi.go",
+      "src/internal/abi/abi.go",
+      "src/internal/abi/abi_amd64.go",
+      "src/internal/goexperiment/exp_regabiwrappers_off.go",
+      "src/internal/goexperiment/exp_regabiargs_off.go",
+      "src/runtime/abi_test.go",
+      "src/internal/abi/abi_riscv64.go",
+      "src/reflect/abi.go",
+      "src/internal/abi/abi_test.go",
+      "src/cmd/internal/obj/abi_string.go",
+      "src/cmd/compile/internal/ssa/expand_calls.go",
+      "src/cmd/compile/internal/types/abi.go",
+      "src/cmd/internal/objabi/abi.go",
+      "src/internal/abi/abi_loong64.go"
+    ]
+  },
+  "51914.md": {
+    "found_files": [
+      "src/net/http/httputil/reverseproxy_test.go",
+      "src/net/http/httputil/reverseproxy.go",
+      "src/net/http/server.go",
+      "src/net/http/response.go"
+    ]
+  },
+  "40481.md": {
+    "found_files": [
+      "src/runtime/unsafe.go",
+      "src/cmd/compile/internal/test/testdata/unsafe_test.go",
+      "test/unsafe_slice_data.go",
+      "src/builtin/builtin.go",
+      "test/unsafe_string_data.go",
+      "test/unsafe_string.go",
+      "src/unsafe/unsafe.go",
+      "test/unsafebuiltins.go"
+    ]
+  },
+  "46552.md": {
+    "found_files": [
+      "uintptrescapes.dir/a.go",
+      "uintptrescapes2.go",
+      "src/internal/syscall/windows/syscall_windows.go",
+      "src/syscall/dll_windows.go",
+      "uintptrescapes.dir/main.go",
+      "src/runtime/syscall_windows.go",
+      "uintptrescapes3.go",
+      "src/internal/syscall/windows/zsyscall_windows.go",
+      "src/syscall/syscall_windows.go",
+      "uintptrescapes.go",
+      "src/syscall/zsyscall_windows.go",
+      "src/runtime/syscall_windows_test.go"
+    ]
+  },
+  "33136.md": {
+    "found_files": [
+      "src/reflect/value.go",
+      "src/reflect/type.go",
+      "test/clear.go"
+    ]
+  },
+  "52221.md": {
+    "found_files": [
+      "src/crypto/ecdh/ecdh.go",
+      "src/crypto/ecdh/x25519.go",
+      "src/crypto/ecdh/nist.go",
+      "src/crypto/ecdh/ecdh_test.go"
+    ]
+  },
+  "44853.md": {
+    "found_files": [
+      "src/runtime/msan0.go",
+      "src/internal/msan/doc.go",
+      "src/internal/msan/msan.go",
+      "misc/cgo/testsanitizers/testdata/asan_global1_fail.go",
+      "src/cmd/dist/test.go",
+      "src/cmd/compile/internal/pkginit/initAsanGlobals.go",
+      "misc/cgo/testsanitizers/asan_test.go",
+      "misc/cgo/testsanitizers/testdata/asan5_fail.go",
+      "src/runtime/asan0.go",
+      "misc/cgo/testsanitizers/testdata/asan_global2_fail.go",
+      "src/cmd/link/internal/ld/ld.go",
+      "src/runtime/msan.go",
+      "misc/cgo/testsanitizers/testdata/asan1_fail.go",
+      "misc/cgo/testsanitizers/testdata/asan_useAfterReturn.go",
+      "src/internal/asan/noasan.go",
+      "src/cmd/compile/internal/asan/asan.go",
+      "misc/cgo/testsanitizers/testdata/asan_global4_fail.go",
+      "src/runtime/malloc.go",
+      "src/runtime/asan/asan.go",
+      "src/cmd/go/internal/work/build.go",
+      "misc/cgo/testsanitizers/testdata/asan2_fail.go",
+      "misc/cgo/testsanitizers/testdata/asan4_fail.go",
+      "misc/cgo/testsanitizers/testdata/asan_global3_fail.go",
+      "misc/cgo/testsanitizers/testdata/asan_unsafe_fail3.go",
+      "src/internal/msan/nomsan.go",
+      "misc/cgo/testsanitizers/testdata/asan3_fail.go",
+      "misc/cgo/testsanitizers/testdata/asan_global5.go",
+      "src/internal/asan/doc.go",
+      "src/cmd/go/internal/work/asan.go",
+      "src/internal/asan/asan.go",
+      "misc/cgo/testsanitizers/testdata/asan_unsafe_fail2.go",
+      "src/cmd/compile/internal/ssa/compile.go",
+      "src/cmd/link/internal/ld/asan.go",
+      "misc/cgo/testsanitizers/testdata/asan_unsafe_fail1.go"
+    ]
+  },
+  "50599.md": {
+    "found_files": [
+      "src/syscall/exec_unix_test.go",
+      "src/os/exec/exec.go",
+      "src/syscall/exec_windows.go",
+      "src/syscall/exec_pdeathsig_test.go",
+      "src/syscall/exec_plan9.go",
+      "src/syscall/exec_bsd.go",
+      "src/syscall/exec_libc2.go",
+      "src/syscall/exec_libc.go",
+      "src/syscall/exec_solaris_test.go",
+      "src/syscall/exec_unix.go",
+      "src/syscall/exec_freebsd_test.go",
+      "src/syscall/exec_linux.go",
+      "src/syscall/exec_aix_test.go",
+      "src/os/exec/exec_test.go",
+      "src/syscall/exec_freebsd.go",
+      "src/os/exec/exec_unix.go",
+      "src/syscall/exec_linux_test.go",
+      "src/os/exec/exec_windows.go",
+      "src/syscall/exec_windows_test.go"
+    ]
+  },
+  "42537.md": {
+    "found_files": [
+      "src/cmd/go/internal/modload/load.go",
+      "src/testing/fstest/mapfs.go",
+      "src/cmd/go/proxy_test.go",
+      "src/mime/mediatype.go",
+      "src/testing/benchmark.go",
+      "test/run.go",
+      "src/strings/strings_test.go",
+      "src/strings/strings.go"
+    ]
+  },
+  "40995.md": {
+    "found_files": [
+      "src/internal/syscall/unix/faccessat_openbsd.go",
+      "src/syscall/syscall_openbsd_mips64.go",
+      "src/syscall/zsyscall_openbsd_mips64.go",
+      "src/runtime/signal_openbsd_mips64.go",
+      "src/syscall/zsysnum_openbsd_mips64.go",
+      "src/internal/goos/zgoos_openbsd.go",
+      "src/runtime/sys_openbsd1.go",
+      "src/internal/syscall/unix/nofollow_openbsd.go",
+      "src/runtime/os_openbsd_mips64.go",
+      "src/cmd/link/internal/ld/arch_mips64.go",
+      "src/internal/goarch/goarch_mips64.go",
+      "src/internal/syscall/unix/arc4random_openbsd.go",
+      "src/internal/syscall/unix/at_sysnum_openbsd.go",
+      "src/cmd/link/internal/mips64/obj.go",
+      "src/internal/syscall/unix/syscall_openbsd_mips64.go",
+      "src/internal/syscall/unix/at_openbsd.go",
+      "src/runtime/sys_openbsd3.go",
+      "src/runtime/internal/atomic/atomic_mips64x.go",
+      "src/cmd/link/internal/mips64/asm.go",
+      "src/syscall/ztypes_openbsd_mips64.go",
+      "src/runtime/sys_openbsd2.go",
+      "src/runtime/defs_openbsd_mips64.go",
+      "src/syscall/zerrors_openbsd_mips64.go",
+      "src/cmd/dist/dist.go",
+      "src/runtime/sys_openbsd.go",
+      "src/internal/goarch/zgoarch_mips64.go",
+      "src/cmd/link/internal/mips64/l.go"
+    ]
+  },
+  "39034.md": {
+    "found_files": [
+      "src/time/time_test.go",
+      "src/time/time.go",
+      "src/time/format_test.go",
+      "src/time/format.go"
+    ]
+  },
+  "45100.md": {
+    "found_files": [
+      "src/net/url/url_test.go",
+      "src/net/url/url.go"
+    ]
+  },
+  "47005.md": {
+    "found_files": [
+      "src/net/url/url_test.go",
+      "src/net/url/url.go"
+    ]
+  },
+  "53482.md": {
+    "found_files": [
+      "src/syscall/zerrors_netbsd_386.go",
+      "src/syscall/zerrors_freebsd_386.go",
+      "src/net/interface_linux.go",
+      "src/syscall/zerrors_freebsd_arm.go",
+      "src/syscall/zerrors_aix_ppc64.go",
+      "src/net/interface_unix_test.go",
+      "src/syscall/zerrors_linux_riscv64.go",
+      "src/net/interface_freebsd.go",
+      "src/net/interface.go",
+      "src/syscall/zerrors_linux_amd64.go",
+      "src/net/interface_bsd_test.go",
+      "src/net/interface_aix.go",
+      "src/net/interface_plan9.go",
+      "src/net/interface_windows.go",
+      "src/net/interface_solaris.go",
+      "src/net/interface_bsdvar.go",
+      "src/syscall/zerrors_linux_s390x.go",
+      "src/net/interface_darwin.go",
+      "src/syscall/zerrors_freebsd_amd64.go",
+      "src/net/interface_linux_test.go",
+      "src/net/interface_stub.go",
+      "src/syscall/zerrors_freebsd_arm64.go",
+      "src/syscall/zerrors_openbsd_arm64.go",
+      "src/net/interface_test.go",
+      "src/net/interface_bsd.go"
+    ]
+  },
+  "37112.md": {
+    "found_files": [
+      "src/runtime/metrics_test.go",
+      "src/runtime/metrics/sample.go",
+      "src/runtime/metrics/example_test.go",
+      "src/runtime/metrics/value.go",
+      "src/runtime/metrics/description.go",
+      "src/runtime/metrics/doc.go",
+      "src/runtime/metrics.go",
+      "src/runtime/metrics/description_test.go",
+      "src/runtime/metrics/histogram.go"
+    ]
+  },
+  "46771.md": {
+    "found_files": [
+      "src/mime/multipart/writer_test.go",
+      "src/mime/multipart/writer.go"
+    ]
+  },
+  "48424.md": {
+    "found_files": [
+      "src/slices/slices_test.go",
+      "test/typeparam/issue48424.go",
+      "src/go/types/typeparam.go",
+      "src/slices/slices.go",
+      "src/cmd/compile/internal/types2/typeparam.go"
+    ]
+  },
+  "46485.md": {
+    "found_files": [
+      "src/go/ast/resolve.go",
+      "src/go/parser/parser.go",
+      "src/go/parser/resolver.go"
+    ]
+  },
+  "34652.md": {
+    "found_files": [
+      "src/text/template/parse/node.go",
+      "src/text/template/parse/parse.go",
+      "src/text/template/parse/lex.go"
+    ]
+  },
+  "42098.md": {
+    "found_files": [
+      "src/syscall/syscall_windows.go",
+      "syscall/exec_windows.go",
+      "src/syscall/exec_windows.go"
+    ]
+  },
+  "35998.md": {
+    "found_files": [
+      "src/testing/testing.go",
+      "src/testing/testing_test.go"
+    ]
+  },
+  "43698.md": {
+    "found_files": [
+      "src/embed/example_test.go",
+      "src/cmd/vet/main.go",
+      "src/embed/embed.go",
+      "src/cmd/vet/vet_test.go"
+    ]
+  },
+  "51414.md": {
+    "found_files": [
+      "src/time/time_test.go",
+      "src/time/time.go"
+    ]
+  },
+  "46258.md": {
+    "found_files": [
+      "src/syscall/syscall_freebsd_riscv64.go",
+      "src/syscall/zerrors_freebsd_riscv64.go",
+      "src/syscall/zsyscall_freebsd_arm.go",
+      "src/syscall/exec_freebsd.go",
+      "src/syscall/ztypes_freebsd_riscv64.go",
+      "src/syscall/syscall_unix.go",
+      "src/syscall/zsyscall_freebsd_arm64.go",
+      "src/syscall/syscall_freebsd.go",
+      "src/syscall/syscall_freebsd_amd64.go",
+      "src/syscall/exec_unix.go",
+      "src/syscall/zsyscall_freebsd_riscv64.go",
+      "src/syscall/zsysnum_freebsd_riscv64.go",
+      "src/syscall/exec_bsd.go",
+      "src/syscall/zsyscall_freebsd_386.go",
+      "src/syscall/syscall_freebsd_arm64.go",
+      "src/syscall/zsyscall_freebsd_amd64.go"
+    ]
+  },
+  "51430.md": {
+    "found_files": [
+      "src/internal/coverage/rtcov/rtcov.go",
+      "src/testing/cover.go",
+      "src/internal/coverage/decodecounter/decodecounterfile.go",
+      "src/cmd/cover/testdata/pkgcfg/a/a.go",
+      "src/runtime/covermeta.go",
+      "src/internal/coverage/pkid.go",
+      "src/internal/coverage/cfile/apis.go",
+      "src/internal/coverage/slicereader/slicereader.go",
+      "src/internal/coverage/cfile/emit.go",
+      "src/cmd/covdata/covdata.go",
+      "src/cmd/cover/profile.go",
+      "src/cmd/covdata/doc.go",
+      "src/cmd/compile/internal/coverage/cover.go",
+      "src/internal/coverage/pods/pods.go",
+      "src/internal/coverage/uleb128/uleb128.go",
+      "src/cmd/cover/doc.go",
+      "src/cmd/cover/cover.go",
+      "src/internal/coverage/encodemeta/encode.go",
+      "src/internal/coverage/slicewriter/slicewriter.go",
+      "src/internal/coverage/defs.go",
+      "src/internal/coverage/encodemeta/encodefile.go",
+      "src/internal/coverage/cfile/hooks.go",
+      "src/cmd/cover/testdata/pkgcfg/a/a_test.go",
+      "src/cmd/cover/testdata/html/html_test.go",
+      "src/internal/coverage/encodecounter/encode.go",
+      "src/cmd/cover/testdata/main.go",
+      "src/runtime/coverage/coverage.go",
+      "src/cmd/cover/testdata/html/html.go",
+      "src/testing/newcover.go",
+      "src/internal/coverage/decodemeta/decodefile.go",
+      "src/internal/coverage/cmerge/merge.go",
+      "src/cmd/covdata/testdata/prog2.go",
+      "src/cmd/cover/testdata/test.go",
+      "src/internal/coverage/cformat/format.go",
+      "src/internal/coverage/decodemeta/decode.go",
+      "src/cmd/covdata/testdata/prog1.go",
+      "src/internal/coverage/stringtab/stringtab.go",
+      "src/runtime/covercounter.go"
+    ]
+  },
+  "46308.md": {
+    "found_files": [
+      "src/crypto/tls/tls.go",
+      "src/crypto/tls/common_string.go",
+      "src/crypto/tls/common.go"
+    ]
+  },
+  "37033.md": {
+    "found_files": [
+      "src/runtime/cgo/handle.go",
+      "src/runtime/cgo/handle_test.go"
+    ]
+  },
+  "51766.md": {
+    "found_files": [
+      "src/net/netip/netip.go",
+      "src/net/netip/netip_test.go"
+    ]
+  },
+  "51684.md": {
+    "found_files": [
+      "src/regexp/syntax/parse.go",
+      "src/regexp/syntax/parse_test.go"
+    ]
+  },
+  "51896.md": {
+    "found_files": [
+      "src/unicode/utf16/utf16.go",
+      "utf.go",
+      "src/unicode/utf16/utf16_test.go"
+    ]
+  },
+  "42088.md": {
+    "found_files": [
+      "src/cmd/go/internal/work/exec.go",
+      "src/cmd/go/internal/run/run.go",
+      "src/cmd/go/internal/work/build.go"
+    ]
+  },
+  "19367.md": {
+    "found_files": [
+      "src/runtime/unsafe.go",
+      "src/reflect/type.go",
+      "test/unsafe_slice_data.go",
+      "src/cmd/compile/internal/test/unsafe_test.go",
+      "test/unsafe_string_data.go",
+      "test/unsafe_string.go",
+      "src/unsafe/unsafe.go",
+      "src/reflect/value.go"
+    ]
+  },
+  "37168.md": {
+    "found_files": [
+      "src/crypto/sha512/sha512.go",
+      "src/math/big/arithvec_s390x.go",
+      "src/math/big/internal/asmgen/386.go",
+      "src/crypto/x509/x509.go",
+      "src/crypto/dsa/dsa_test.go",
+      "src/crypto/ed25519/ed25519_test.go",
+      "src/math/big/internal/asmgen/arm.go",
+      "src/math/big/arith_test.go",
+      "src/crypto/aes/aes_test.go",
+      "src/crypto/sha1/sha1.go",
+      "src/crypto/tls/tls_test.go",
+      "src/crypto/sha256/sha256_test.go",
+      "src/math/big/internal/asmgen/cheat.go",
+      "src/math/big/internal/asmgen/asm.go",
+      "src/crypto/hmac/hmac.go",
+      "src/crypto/aes/aes.go",
+      "src/math/big/internal/asmgen/mul.go",
+      "src/crypto/des/block.go",
+      "src/math/big/internal/asmgen/amd64.go",
+      "src/crypto/rc4/rc4.go",
+      "src/crypto/des/cipher.go",
+      "src/hash/crc32/crc32_loong64.go",
+      "src/math/big/internal/asmgen/add.go",
+      "src/math/big/internal/asmgen/main.go",
+      "src/hash/crc32/crc32_ppc64le.go",
+      "src/math/big/internal/asmgen/mips.go",
+      "src/hash/crc32/crc32_generic.go",
+      "src/hash/crc32/crc32_amd64.go",
+      "src/crypto/ecdsa/ecdsa.go",
+      "src/crypto/ecdh/ecdh.go",
+      "src/crypto/hmac/hmac_test.go",
+      "src/crypto/cipher/cipher.go",
+      "src/crypto/rsa/rsa.go",
+      "src/crypto/dsa/dsa.go",
+      "src/math/big/internal/asmgen/loong64.go",
+      "src/crypto/md5/md5.go",
+      "src/crypto/ed25519/ed25519.go",
+      "src/crypto/subtle/constant_time_test.go",
+      "src/crypto/sha512/sha512_test.go",
+      "src/crypto/aes/gcm_amd64.s",
+      "src/hash/crc32/crc32_arm64.go",
+      "src/crypto/cipher/gcm.go",
+      "src/crypto/ecdsa/ecdsa_test.go",
+      "src/math/big/internal/asmgen/s390x.go",
+      "src/math/big/arith_s390x_test.go",
+      "src/crypto/x509/x509_test.go",
+      "src/crypto/tls/tls.go",
+      "src/math/big/internal/asmgen/shift.go",
+      "src/hash/crc32/crc32_s390x.go",
+      "src/math/big/internal/asmgen/main_test.go",
+      "src/crypto/sha256/sha256.go",
+      "src/math/big/big_test.go",
+      "src/math/big/internal/asmgen/func.go",
+      "src/math/big/arith_decl.go",
+      "src/math/big/internal/asmgen/arch.go",
+      "src/crypto/rc4/rc4_test.go",
+      "src/math/big/internal/asmgen/mips64.go",
+      "src/math/big/arith_decl_pure.go",
+      "src/crypto/cipher/gcm_test.go",
+      "src/math/big/internal/asmgen/arm64.go",
+      "src/crypto/elliptic/p256_asm_amd64.s",
+      "src/math/big/internal/asmgen/pipe.go",
+      "src/crypto/elliptic/elliptic_test.go",
+      "src/crypto/des/des_test.go",
+      "src/math/big/arith_amd64.go",
+      "src/math/big/internal/asmgen/riscv64.go",
+      "src/crypto/elliptic/elliptic.go",
+      "src/hash/crc32/crc32_otherarch.go",
+      "src/crypto/sha1/sha1_test.go",
+      "src/crypto/subtle/constant_time.go",
+      "src/math/big/big.go",
+      "src/math/big/arith.go",
+      "src/math/big/arith_amd64_test.go",
+      "src/crypto/ecdh/ecdh_test.go",
+      "src/crypto/rsa/rsa_test.go",
+      "src/math/big/internal/asmgen/ppc64.go",
+      "src/crypto/md5/md5_test.go"
+    ]
+  },
+  "29062.md": {
+    "found_files": [
+      "src/os/exec/read3.go",
+      "src/testing/testing_test.go",
+      "src/os/exec/internal/fdtest/exists_unix.go",
+      "src/os/exec/exec_other_test.go",
+      "src/os/exec/exec.go",
+      "src/os/exec/example_test.go",
+      "src/os/exec/lp_unix.go",
+      "src/os/exec/env_test.go",
+      "src/os/exec/lp_wasm.go",
+      "src/os/exec/lp_unix_test.go",
+      "src/testing/testing.go",
+      "src/cmd/go/internal/test/testflag.go",
+      "src/os/exec/internal/fdtest/exists_windows.go",
+      "src/os/exec/dot_test.go",
+      "src/os/exec/exec_windows_test.go",
+      "src/os/exec/lp_windows.go",
+      "src/os/exec/exec_test.go",
+      "src/os/exec/exec_plan9.go",
+      "src/os/exec/exec_unix_test.go",
+      "src/os/exec/exec_unix.go",
+      "src/os/exec/lp_test.go",
+      "src/os/exec/exec_linux_test.go",
+      "src/os/exec/lp_linux_test.go",
+      "src/os/exec/lp_windows_test.go",
+      "src/os/exec/bench_test.go",
+      "src/os/exec/internal/fdtest/exists_test.go",
+      "src/os/exec/exec_windows.go",
+      "src/cmd/go/internal/test/test.go",
+      "src/os/exec/exec_posix_test.go",
+      "src/os/exec/internal_test.go",
+      "src/os/exec/internal/fdtest/exists_plan9.go",
+      "src/os/exec/lp_plan9.go"
+    ]
+  },
+  "43823.md": {
+    "found_files": [
+      "src/time/format_test.go",
+      "src/time/format.go"
+    ]
+  },
+  "48157.md": {
+    "found_files": [
+      "src/cmd/go/test.go",
+      "src/testing/testing_test.go",
+      "src/testing/testing.go",
+      "src/cmd/go/internal/test/test.go",
+      "src/cmd/go/internal/test/testflag.go"
+    ]
+  },
+  "46131.md": {
+    "found_files": [
+      "src/reflect/map_noswiss.go",
+      "src/reflect/type.go",
+      "src/reflect/map_swiss_test.go",
+      "src/reflect/iter.go",
+      "src/reflect/map_swiss.go",
+      "src/reflect/value.go",
+      "src/reflect/iter_test.go",
+      "src/reflect/map_noswiss_test.go"
+    ]
+  },
+  "51225.md": {
+    "found_files": [
+      "src/cmd/compile/doc.go",
+      "src/cmd/compile/internal/base/flag.go",
+      "src/cmd/compile/internal/gc/main.go",
+      "src/cmd/compile/main.go"
+    ]
+  },
+  "40025.md": {
+    "found_files": [
+      "src/io/io.go",
+      "src/io/ioutil/ioutil_test.go",
+      "src/io/ioutil/ioutil.go",
+      "src/io/io_test.go"
+    ]
+  },
+  "47527.md": {
+    "found_files": [
+      "src/bufio/bufio_test.go",
+      "src/bufio/bufio.go"
+    ]
+  },
+  "37974.md": {
+    "found_files": [
+      "test/directive2.go",
+      "src/go/doc/doc.go",
+      "test/directive.go",
+      "src/cmd/doc/main.go",
+      "src/go/doc/doc_test.go"
+    ]
+  },
+  "37776.md": {
+    "found_files": [
+      "src/net/url/url_test.go",
+      "src/net/url/url.go"
+    ]
+  },
+  "40357.md": {
+    "found_files": [
+      "src/cmd/go/internal/modload/query.go",
+      "src/cmd/go/internal/modload/list.go",
+      "src/cmd/go/internal/modload/modfile.go"
+    ]
+  },
+  "39557.md": {
+    "found_files": [
+      "src/flag/flag.go",
+      "src/flag/flag_test.go"
+    ]
+  },
+  "53003.md": {
+    "found_files": [
+      "src/reflect/type.go",
+      "src/runtime/unsafe.go",
+      "test/unsafe_slice_data.go",
+      "src/builtin/builtin.go",
+      "test/unsafe_string_data.go",
+      "test/unsafe_string.go",
+      "src/unsafe/unsafe.go",
+      "src/reflect/value.go"
+    ]
+  },
+  "40281.md": {
+    "found_files": [
+      "src/reflect/type.go",
+      "src/cmd/vet/testdata/tagtest/file1.go",
+      "src/reflect/type_test.go",
+      "src/cmd/vet/testdata/tagtest/file2.go",
+      "src/cmd/vet/testdata/structtag/structtag.go",
+      "src/reflect/value.go"
+    ]
+  },
+  "41563.md": {
+    "found_files": [
+      "src/reflect/value.go",
+      "src/reflect/type.go"
+    ]
+  },
+  "46121.md": {
+    "found_files": [
+      "src/text/template/funcs.go",
+      "src/html/template/template.go",
+      "src/text/template/template.go"
+    ]
+  },
+  "43947.md": {
+    "found_files": [
+      "src/os/exec/lp_windows_test.go",
+      "src/os/exec/exec_windows.go",
+      "src/os/exec/exec.go",
+      "src/syscall/exec_windows.go",
+      "src/syscall/syscall_windows.go",
+      "src/os/exec/lp_unix.go",
+      "src/os/exec/lp_windows.go"
+    ]
+  },
+  "50860.md": {
+    "found_files": [
+      "test/atomicload.go",
+      "src/sync/atomic/example_test.go",
+      "src/sync/atomic/atomic_test.go",
+      "src/sync/atomic/doc_32.go",
+      "src/sync/atomic/type.go",
+      "src/sync/atomic/doc.go",
+      "src/sync/atomic/value.go",
+      "src/sync/atomic/doc_64.go",
+      "test/escape_sync_atomic.go",
+      "src/sync/atomic/value_test.go",
+      "test/escape_runtime_atomic.go"
+    ]
+  },
+  "52444.md": {
+    "found_files": [
+      "src/crypto/x509/x509.go",
+      "src/crypto/x509/x509_test.go"
+    ]
+  },
+  "43724.md": {
+    "found_files": [
+      "src/os/exec/lp_windows_test.go",
+      "src/os/exec/exec_test.go",
+      "src/os/exec/exec_windows.go",
+      "src/os/exec/exec.go",
+      "src/syscall/exec_windows.go",
+      "src/syscall/exec_unix.go",
+      "src/os/exec/lp_test.go",
+      "src/os/exec/exec_windows_test.go",
+      "src/os/exec/lp_windows.go"
+    ]
+  },
+  "41730.md": {
+    "found_files": [
+      "src/cmd/go/internal/modfetch/codehost/codehost.go",
+      "src/cmd/go/internal/vcweb/bzr.go",
+      "src/cmd/go/internal/vcweb/fossil.go",
+      "src/cmd/go/internal/vcs/vcs.go",
+      "src/cmd/go/internal/vcweb/svn.go",
+      "src/cmd/go/internal/modfetch/codehost/svn.go",
+      "src/cmd/go/internal/vcweb/vcweb.go",
+      "src/cmd/go/internal/modfetch/codehost/vcs.go",
+      "src/cmd/go/internal/vcweb/git.go",
+      "src/cmd/go/internal/modfetch/codehost/git.go",
+      "src/cmd/go/internal/vcweb/hg.go"
+    ]
+  },
+  "51668.md": {
+    "found_files": [
+      "src/fmt/state_test.go",
+      "src/fmt/format.go",
+      "src/fmt/print.go"
+    ]
+  },
+  "41792.md": {
+    "found_files": [
+      "src/flag/flag.go",
+      "src/flag/flag_test.go"
+    ]
+  },
+  "45453.md": {
+    "found_files": [
+      "src/cmd/compile/internal/amd64/ssa.go",
+      "src/cmd/link/internal/amd64/l.go",
+      "src/cmd/link/internal/amd64/asm.go",
+      "src/internal/cpu/cpu_x86.go",
+      "src/cmd/compile/internal/amd64/galign.go",
+      "src/internal/cpu/cpu.go",
+      "src/vendor/golang.org/x/sys/cpu/cpu_x86.go",
+      "src/cmd/compile/internal/amd64/ggen.go",
+      "src/cmd/link/internal/amd64/obj.go",
+      "src/internal/cpu/cpu_x86_test.go",
+      "src/cmd/internal/sys/arch.go",
+      "src/cmd/internal/objabi/head.go",
+      "src/cmd/compile/internal/amd64/versions_test.go"
+    ]
+  },
+  "40276.md": {
+    "found_files": [
+      "src/cmd/go/internal/work/gc.go",
+      "src/cmd/go/internal/work/exec.go",
+      "src/cmd/go/internal/load/pkg.go",
+      "src/cmd/go/internal/modget/get.go",
+      "src/cmd/go/internal/workcmd/work.go",
+      "src/cmd/go/internal/work/build.go",
+      "src/cmd/go/internal/modload/query.go",
+      "src/cmd/go/internal/work/security.go",
+      "src/cmd/go/internal/work/gccgo.go"
+    ]
+  },
+  "42322.md": {
+    "found_files": [
+      "src/net/http/fs.go",
+      "src/io/fs/fs.go",
+      "src/io/fs/sub_test.go",
+      "src/io/fs/sub.go"
+    ]
+  },
+  "42100.md": {
+    "found_files": [
+      "src/runtime/cgo/signal_ios_arm64.go",
+      "src/syscall/syscall_darwin.go",
+      "src/internal/goos/zgoos_ios.go",
+      "src/syscall/zsyscall_darwin_amd64.go",
+      "src/syscall/ztypes_darwin_amd64.go",
+      "misc/ios/detect.go",
+      "src/internal/goos/goos.go",
+      "misc/ios/go_ios_exec.go",
+      "src/syscall/syscall_darwin_amd64.go",
+      "src/syscall/zerrors_darwin_amd64.go"
+    ]
+  },
+  "37475.md": {
+    "found_files": [
+      "src/cmd/go/internal/load/pkg.go",
+      "src/cmd/go/internal/work/exec.go",
+      "src/runtime/debug/buildinfo.go",
+      "src/cmd/go/internal/modfetch/codehost/codehost.go",
+      "src/runtime/debug/mod.go",
+      "src/cmd/go/internal/modfetch/codehost/svn.go",
+      "src/cmd/go/internal/modfetch/codehost/",
+      "src/cmd/go/internal/modfetch/codehost",
+      "src/cmd/go/internal/modfetch/codehost/vcs.go",
+      "src/cmd/go/internal/modfetch/codehost/git.go"
+    ]
+  },
+  "39567.md": {
+    "found_files": [
+      "src/net/http/server_test.go",
+      "src/net/http/server.go"
+    ]
+  },
+  "44808.md": {
+    "found_files": [
+      "src/image/draw/draw.go",
+      "src/image/image.go",
+      "src/image/color/color.go"
+    ]
+  },
+  "45754.md": {
+    "found_files": [
+      "src/flag/example_textvar_test.go",
+      "src/flag/flag.go",
+      "src/flag/flag_test.go"
+    ]
+  },
+  "47651.md": {
+    "found_files": [
+      "src/reflect/value.go",
+      "src/reflect/type.go"
+    ]
+  },
+  "48052.md": {
+    "found_files": [
+      "src/debug/plan9obj/file.go",
+      "src/debug/plan9obj/plan9obj.go"
+    ]
+  },
+  "33920.md": {
+    "found_files": [
+      "src/io/ioutil/tempfile.go",
+      "src/io/ioutil/tempfile_test.go"
+    ]
+  },
+  "47209.md": {
+    "found_files": [
+      "src/path/filepath/symlink.go",
+      "src/path/filepath/path_windows.go",
+      "src/path/filepath/path_unix.go",
+      "src/path/filepath/path_plan9.go",
+      "src/path/filepath/path.go",
+      "src/path/filepath/symlink_unix.go",
+      "src/path/filepath/path_test.go",
+      "src/path/filepath/symlink_windows.go"
+    ]
+  },
+  "48152.md": {
+    "found_files": [
+      "src/crypto/tls/conn_test.go",
+      "src/crypto/tls/handshake_client.go",
+      "src/crypto/tls/handshake_server.go",
+      "src/crypto/tls/conn.go",
+      "src/crypto/tls/handshake_server_test.go",
+      "src/crypto/tls/handshake_test.go",
+      "src/crypto/tls/handshake_client_test.go"
+    ]
+  },
+  "41682.md": {
+    "found_files": [
+      "src/crypto/x509/verify.go",
+      "src/crypto/x509/verify_test.go"
+    ]
+  },
+  "53200.md": {
+    "found_files": [
+      "src/go/token/position.go",
+      "src/go/token/token.go"
+    ]
+  },
+  "40082.md": {
+    "found_files": [
+      "src/database/sql/sql.go",
+      "src/database/sql/convert.go",
+      "src/database/sql/driver/types.go"
+    ]
+  },
+  "45963.md": {
+    "found_files": [
+      "src/cmd/go/test.go",
+      "src/cmd/go/internal/vet/vet.go",
+      "src/cmd/go/internal/vet/vetflag.go",
+      "src/cmd/go/internal/test/test.go",
+      "src/cmd/go/internal/test/testflag.go",
+      "src/cmd/vet/vet_test.go",
+      "src/cmd/vet/main.go"
+    ]
+  },
+  "46518.md": {
+    "found_files": [
+      "src/net/netip/netip.go",
+      "src/net/netip/netip_test.go",
+      "src/net/netip/uint128_test.go",
+      "src/net/netip/inlining_test.go",
+      "src/net/netip/fuzz_test.go",
+      "src/net/netip/netip_pkg_test.go",
+      "src/net/netip/slow_test.go",
+      "src/net/netip/uint128.go",
+      "src/net/ip_test.go",
+      "src/net/ip.go",
+      "src/net/netip/export_test.go"
+    ]
+  },
+  "40337.md": {
+    "found_files": [
+      "src/crypto/dsa/dsa.go",
+      "src/crypto/x509/x509_test.go",
+      "src/crypto/x509/x509.go",
+      "src/crypto/dsa/dsa_test.go"
+    ]
+  },
+  "45973.md": {
+    "found_files": [
+      "src/net/http/http.go",
+      "src/net/http/server.go"
+    ]
+  },
+  "49471.md": {
+    "found_files": [
+      "src/runtime/debug.go",
+      "src/syscall/dll_windows.go",
+      "src/runtime/os_windows.go",
+      "src/runtime/crashdump.go",
+      "src/syscall/syscall_windows.go",
+      "src/syscall/zsyscall_windows.go"
+    ]
+  },
+  "52746.md": {
+    "found_files": [
+      "src/time/format_test.go",
+      "src/time/format.go"
+    ]
+  },
+  "31804.md": {
+    "found_files": [
+      "src/crypto/ed25519/ed25519_test.go",
+      "src/crypto/ed25519/ed25519.go",
+      "src/crypto/ed25519/ed25519vectors_test.go"
+    ]
+  },
+  "43744.md": {
+    "found_files": [
+      "src/testing/benchmark_test.go",
+      "src/testing/benchmark.go"
+    ]
+  },
+  "47916.md": {
+    "found_files": [
+      "src/go/types/infer.go",
+      "src/go/types/instantiate.go",
+      "src/go/types/types.go",
+      "src/go/types/api.go",
+      "src/go/types/typeparam.go",
+      "src/go/types/interface.go",
+      "src/go/types/signature.go",
+      "src/go/types/context.go",
+      "src/go/types/named.go",
+      "src/go/types/object.go"
+    ]
+  },
+  "40356.md": {
+    "found_files": [
+      "src/errors/errors.go",
+      "src/cmd/vet/stdmethods.go",
+      "src/errors/wrap.go",
+      "src/errors/wrap_test.go",
+      "src/cmd/vet/vet_test.go",
+      "src/cmd/vet/main.go"
+    ]
+  },
+  "53002.md": {
+    "found_files": [
+      "src/net/http/httputil/reverseproxy_test.go",
+      "src/net/http/httputil/reverseproxy.go"
+    ]
+  },
+  "44196.md": {
+    "found_files": [
+      "src/time/time_test.go",
+      "src/time/time.go"
+    ]
+  },
+  "50465.md": {
+    "found_files": [
+      "src/net/http/httputil/reverseproxy_test.go",
+      "src/net/http/httputil/reverseproxy.go"
+    ]
+  },
+  "41696.md": {
+    "found_files": [
+      "src/cmd/go/internal/work/gc.go",
+      "src/cmd/go/internal/work/exec.go",
+      "src/cmd/go/internal/work/build.go",
+      "src/cmd/go/internal/work/security.go",
+      "src/cmd/go/internal/work/gccgo.go"
+    ]
+  },
+  "44011.md": {
+    "found_files": [
+      "src/os/exec_windows.go",
+      "src/internal/syscall/windows/syscall_windows.go",
+      "src/os/exec/exec_windows.go",
+      "src/os/exec_posix.go",
+      "src/internal/syscall/windows/types_windows.go",
+      "src/syscall/exec_windows.go",
+      "src/syscall/types_windows.go",
+      "src/os/exec.go",
+      "src/syscall/syscall_windows.go",
+      "src/internal/syscall/windows/exec_windows_test.go",
+      "src/syscall/zsyscall_windows.go",
+      "src/internal/syscall/windows/zsyscall_windows.go"
+    ]
+  },
+  "43620.md": {
+    "found_files": [
+      "src/testing/benchmark.go",
+      "src/testing/testing.go"
+    ]
+  },
+  "48256.md": {
+    "found_files": [
+      "src/cmd/go/internal/workcmd/work.go",
+      "src/cmd/go/internal/workcmd/edit.go",
+      "src/cmd/go/internal/workcmd/init.go"
+    ]
+  },
+  "38017.md": {
+    "found_files": [
+      "lib/time/mkzip.go",
+      "src/time/zoneinfo.go",
+      "src/time/tzdata/tzdata.go",
+      "src/time/zoneinfo_test.go",
+      "src/time/zoneinfo_read.go"
+    ]
+  },
+  "50601.md": {
+    "found_files": [
+      "src/encoding/binary/binary.go",
+      "src/encoding/binary/binary_test.go"
+    ]
+  },
+  "50842.md": {
+    "found_files": [
+      "src/io/multi.go",
+      "src/io/multi_test.go"
+    ]
+  },
+  "41790.md": {
+    "found_files": [
+      "src/database/sql/sql.go",
+      "src/database/sql/driver/driver.go"
+    ]
+  },
+  "52792.md": {
+    "found_files": [
+      "src/cmd/go/internal/modinfo/info.go"
+    ]
+  },
+  "28308.md": {
+    "found_files": [
+      "src/net/dial_test.go",
+      "src/cmd/vet/README",
+      "src/net/net.go",
+      "src/cmd/vet/main.go",
+      "src/fmt/format.go",
+      "src/cmd/vet/vet_test.go",
+      "src/net/dial.go"
+    ]
+  },
+  "44006.md": {
+    "found_files": [
+      "src/syscall/js/js.go"
+    ]
+  },
+  "53021.md": {
+    "found_files": [
+      "src/crypto/subtle/xor_test.go",
+      "src/crypto/subtle/xor_asm.go",
+      "src/crypto/subtle/xor_linux_test.go",
+      "src/crypto/subtle/xor_generic.go",
+      "src/crypto/subtle/xor.go",
+      "src/crypto/cipher/xor_generic.go"
+    ]
+  },
+  "49580.md": {
+    "found_files": [
+      "src/io/fs/fs.go",
+      "src/io/fs/readlink.go",
+      "src/io/fs/readlink_test.go"
+    ]
+  },
+  "41048.md": {
+    "found_files": [
+      "src/net/http/transport.go",
+      "src/net/http/transport_test.go"
+    ]
+  },
+  "48409.md": {
+    "found_files": [
+      "src/runtime/mheap.go",
+      "src/runtime/mgclimit_test.go",
+      "src/runtime/debug/garbage.go",
+      "src/runtime/mgcwork.go",
+      "src/runtime/debug/garbage_test.go",
+      "src/runtime/mgcpacer.go",
+      "src/runtime/mgcpacer_test.go",
+      "src/runtime/mgclimit.go",
+      "src/runtime/mgcscavenge.go",
+      "src/runtime/mgcmark.go",
+      "src/runtime/mgcscavenge_test.go",
+      "src/runtime/mgc.go"
+    ]
+  },
+  "42102.md": {
+    "found_files": [
+      "src/time/zoneinfo.go",
+      "src/time/time.go"
+    ]
+  },
+  "39904.md": {
+    "found_files": [
+      "src/testing/match.go",
+      "src/testing/match_test.go"
+    ]
+  },
+  "42027.md": {
+    "found_files": [
+      "src/io/fs/walk_test.go",
+      "src/path/filepath/path_windows.go",
+      "src/io/fs/walk.go",
+      "src/path/filepath/path_unix.go",
+      "src/path/filepath/path.go",
+      "src/path/filepath/path_test.go"
+    ]
+  },
+  "27628.md": {
+    "found_files": [
+      "src/cmd/go/internal/work/gc.go",
+      "src/cmd/go/internal/work/exec.go",
+      "src/cmd/go/internal/work/build.go",
+      "src/cmd/go/internal/work/action.go",
+      "src/cmd/go/internal/work/gccgo.go"
+    ]
+  },
+  "51868.md": {
+    "found_files": [
+      "src/debug/pe/symbol.go",
+      "src/debug/pe/file.go",
+      "src/debug/pe/pe.go"
+    ]
+  },
+  "28089.md": {
+    "found_files": [
+      "src/go/ast/ast_test.go",
+      "src/go/ast/ast.go"
+    ]
+  },
+  "41773.md": {
+    "found_files": [
+      "src/net/http/server.go"
+    ]
+  },
+  "50674.md": {
+    "found_files": [
+      "src/crypto/x509/x509_test.go",
+      "src/crypto/x509/pkix/pkix.go",
+      "src/crypto/x509/parser.go",
+      "src/crypto/x509/x509.go",
+      "src/crypto/x509/parser_test.go"
+    ]
+  },
+  "26535.md": {
+    "found_files": [
+      "src/compress/lzw/reader.go",
+      "src/compress/lzw/reader_test.go",
+      "src/compress/lzw/writer_test.go",
+      "src/compress/lzw/writer.go"
+    ]
+  },
+  "45964.md": {
+    "found_files": [
+      "src/runtime/os_linux_generic.go",
+      "src/runtime/defs_linux_s390x.go",
+      "src/runtime/os_linux_arm.go",
+      "src/runtime/os_linux_s390x.go",
+      "src/runtime/os_linux_mipsx.go",
+      "src/runtime/os_linux_riscv64.go",
+      "src/runtime/defs_linux.go",
+      "src/runtime/defs_linux_riscv64.go",
+      "src/runtime/os_linux_novdso.go",
+      "src/runtime/os_linux.go",
+      "src/runtime/os_linux_loong64.go",
+      "src/runtime/os_linux_noauxv.go",
+      "src/runtime/defs_linux_amd64.go",
+      "src/runtime/internal/atomic/sys_linux_arm.s",
+      "src/runtime/os_linux_x86.go",
+      "src/syscall/exec_linux.go",
+      "src/runtime/defs_linux_arm64.go",
+      "src/runtime/defs_linux_ppc64le.go",
+      "src/runtime/defs_linux_mips64x.go",
+      "src/syscall/syscall_linux.go",
+      "src/runtime/defs_linux_loong64.go",
+      "src/internal/poll/sock_cloexec.go",
+      "src/runtime/defs_linux_ppc64.go",
+      "src/runtime/os_linux_ppc64x.go",
+      "src/runtime/defs_linux_mipsx.go",
+      "src/runtime/os_linux_be64.go",
+      "src/runtime/os_linux_mips64x.go",
+      "src/runtime/defs_linux_386.go",
+      "src/runtime/defs_linux_arm.go",
+      "src/runtime/os_linux_arm64.go"
+    ]
+  },
+  "39444.md": {
+    "found_files": [
+      "src/os/exec_unix.go"
+    ]
+  },
+  "45430.md": {
+    "found_files": [
+      "src/crypto/tls/handshake_client.go",
+      "src/crypto/tls/handshake_server.go",
+      "src/crypto/tls/conn.go",
+      "src/crypto/tls/cipher_suites.go",
+      "src/crypto/tls/common.go"
+    ]
+  },
+  "37533.md": {
+    "found_files": [
+      "src/flag/flag.go",
+      "src/flag/flag_test.go"
+    ]
+  },
+  "47781.md": {
+    "found_files": [
+      "src/go/token/token_test.go",
+      "src/go/ast/ast_test.go",
+      "src/go/token/token.go",
+      "src/go/ast/ast.go"
+    ]
+  },
+  "46057.md": {
+    "found_files": [
+      "src/crypto/x509/cert_pool_test.go",
+      "src/crypto/x509/cert_pool.go"
+    ]
+  },
+  "43401.md": {
+    "found_files": [
+      "src/encoding/csv/reader_test.go",
+      "src/encoding/csv/reader.go"
+    ]
+  },
+  "40728.md": {
+    "found_files": [
+      "src/cmd/go/internal/modload/load.go",
+      "src/cmd/go/internal/modload/import.go",
+      "src/cmd/go/internal/modload/modfile.go",
+      "src/cmd/go/internal/modload/import_test.go",
+      "src/cmd/go/internal/modcmd/mod.go"
+    ]
+  },
+  "43993.md": {
+    "found_files": [
+      "src/reflect/deepequal.go",
+      "src/reflect/value.go",
+      "src/cmd/vet/main.go",
+      "src/cmd/vet/vet_test.go"
+    ]
+  },
+  "50770.md": {
+    "found_files": [
+      "src/time/time_test.go",
+      "src/time/time.go"
+    ]
+  },
+  "44221.md": {
+    "found_files": [
+      "src/encoding/csv/reader_test.go",
+      "src/encoding/csv/reader.go"
+    ]
+  },
+  "44143.md": {
+    "found_files": [
+      "src/context/context.go"
+    ]
+  },
+  "43931.md": {
+    "found_files": [
+      "src/go/types/instantiate.go",
+      "src/go/internal/gcimporter/gcimporter.go",
+      "src/cmd/compile/internal/types2/instantiate.go",
+      "src/cmd/compile/internal/types2/typeset.go",
+      "src/go/types/testdata/typeinst1.go",
+      "src/go/types/testdata/typeinstcycles.go",
+      "src/go/types/api.go",
+      "src/go/types/typeset.go",
+      "src/go/types/testdata/unions.go",
+      "src/cmd/compile/internal/types2/typeparam.go",
+      "src/go/types/infer_test.go",
+      "src/cmd/compile/internal/types2/subst.go",
+      "src/go/internal/gcimporter/testdata/generics.go",
+      "src/go/types/subst_test.go",
+      "src/cmd/compile/internal/types2/typeset_test.go",
+      "src/go/types/typeparam_test.go",
+      "src/cmd/compile/internal/types2/instantiate_test.go",
+      "src/go/internal/gcimporter/gcimporter_test.go",
+      "src/cmd/compile/internal/types2/unify.go",
+      "src/go/types/union_test.go",
+      "src/go/internal/types/errors/codes.go",
+      "src/go/types/typeterm_test.go",
+      "src/go/types/types.go",
+      "src/go/types/typeparam.go",
+      "src/go/types/testdata/typeinst0.go",
+      "src/go/types/instantiate_test.go",
+      "src/go/types/union.go",
+      "src/go/types/typeterm.go",
+      "src/go/types/example_test.go",
+      "src/go/types/typelists_test.go",
+      "src/go/types/typelists.go",
+      "src/go/types/infer.go",
+      "src/go/types/subst.go",
+      "src/go/internal/types/errors/codes_test.go",
+      "src/go/internal/types/errors/generrordocs.go",
+      "src/go/types/typeset_test.go",
+      "src/go/types/testdata/typeparams.go",
+      "src/go/types/api_test.go"
+    ]
+  },
+  "48294.md": {
+    "found_files": [
+      "src/reflect/value.go",
+      "src/reflect/iter_test.go",
+      "src/reflect/type.go",
+      "src/reflect/iter.go"
+    ]
+  },
+  "51428.md": {
+    "found_files": [
+      "src/net/dial.go",
+      "src/net/net.go"
+    ]
+  },
+  "52463.md": {
+    "found_files": [
+      "src/go/ast/ast.go",
+      "src/go/parser/resolver.go",
+      "src/go/parser/parser.go",
+      "src/go/ast/scope.go",
+      "src/go/types/object.go"
+    ]
+  },
+  "51115.md": {
+    "found_files": [
+      "src/io/io.go",
+      "src/io/io_test.go"
+    ]
+  },
+  "40255.md": {
+    "found_files": [
+      "src/cmd/compile/internal/ssa/rewrite386splitload.go",
+      "src/cmd/compile/internal/ssa/rewrite386.go",
+      "test/fixedbugs/issue22429.go",
+      "src/cmd/compile/internal/ssa/softfloat.go"
+    ]
+  },
+  "46648.md": {
+    "found_files": [
+      "src/go/types/goversion.go",
+      "src/go/types/check.go",
+      "src/cmd/compile/internal/types2/version.go",
+      "src/go/types/types.go"
+    ]
+  },
+  "53346.md": {
+    "found_files": [
+      "src/encoding/xml/xml_test.go",
+      "src/encoding/xml/xml.go",
+      "src/encoding/xml/marshal.go"
+    ]
+  },
+  "51082.md": {
+    "found_files": [
+      "src/go/doc/comment/parse.go",
+      "src/go/doc/comment/html.go",
+      "src/cmd/doc/",
+      "src/go/doc/doc.go",
+      "src/go/doc/comment/comment.go",
+      "src/go/doc/comment_test.go",
+      "src/go/doc/comment/parse_test.go",
+      "src/cmd/doc/doc.go",
+      "src/go/doc/comment/",
+      "src/go/doc/comment/testdata_test.go",
+      "src/go/doc/comment/print.go",
+      "src/go/doc/comment/std_test.go",
+      "src/go/doc/comment/doc.go",
+      "src/go/printer/printer.go",
+      "src/go/printer/comment.go",
+      "src/go/doc/comment/markdown.go",
+      "src/go/doc/comment.go",
+      "src/go/printer/printer_test.go",
+      "src/go/doc/comment/wrap_test.go",
+      "src/go/printer/",
+      "src/go/doc/comment/text.go",
+      "src/go/doc/",
+      "src/go/doc/comment/std.go",
+      "src/cmd/gofmt/gofmt.go"
+    ]
+  },
+  "35833.md": {
+    "found_files": [
+      "src/math/big/int.go",
+      "src/math/big/int_test.go"
+    ]
+  },
+  "42387.md": {
+    "found_files": [
+      "src/io/fs/fs.go",
+      "src/io/fs/fs_test.go"
+    ]
+  },
+  "45454.md": {
+    "found_files": [
+      "src/cmd/go/internal/cfg/cfg.go",
+      "src/cmd/go/internal/work/exec.go",
+      "src/go/build/constraint/expr.go",
+      "src/cmd/go/internal/base/env.go",
+      "src/go/build/constraint/expr_test.go",
+      "src/go/build/build.go"
+    ]
+  },
+  "50436.md": {
+    "found_files": [
+      "src/os/exec/exec_unix.go",
+      "src/os/exec/exec_test.go",
+      "src/os/exec/exec_windows.go",
+      "src/os/exec/exec.go"
+    ]
+  },
+  "44167.md": {
+    "found_files": [
+      "test/gc.go",
+      "test/gc2.go",
+      "src/runtime/mgcpacer.go",
+      "src/runtime/mgcpacer_test.go",
+      "test/gc1.go",
+      "src/runtime/mgcmark.go",
+      "src/runtime/mgcsweep.go",
+      "src/runtime/mgc.go"
+    ]
+  },
+  "39178.md": {
+    "found_files": [
+      "src/net/lookup.go"
+    ]
+  },
+  "46287.md": {
+    "found_files": [
+      "src/crypto/x509/root_windows.go",
+      "src/crypto/x509/cert_pool_test.go",
+      "src/crypto/x509/internal/macos/security.go",
+      "src/crypto/x509/internal/macos/corefoundation.go",
+      "src/crypto/x509/verify.go",
+      "src/crypto/x509/root_darwin.go",
+      "src/crypto/x509/cert_pool.go",
+      "src/crypto/x509/verify_test.go"
+    ]
+  },
+  "48257.md": {
+    "found_files": [
+      "src/cmd/go/internal/workcmd/use.go"
+    ]
+  },
+  "46293.md": {
+    "found_files": [
+      "src/reflect/value.go",
+      "src/reflect/iter_test.go",
+      "src/reflect/type.go",
+      "src/reflect/iter.go"
+    ]
+  },
+  "42026.md": {
+    "found_files": [
+      "src/io/fs/readdir.go",
+      "src/io/fs/readfile.go",
+      "src/os/file.go",
+      "src/io/ioutil/ioutil.go",
+      "src/io/ioutil/tempfile.go",
+      "src/os/tempfile.go",
+      "src/os/dir.go",
+      "src/os/path.go"
+    ]
+  },
+  "45435.md": {
+    "found_files": [
+      "src/sync/rwmutex.go",
+      "src/sync/mutex.go",
+      "src/sync/rwmutex_test.go",
+      "src/sync/mutex_test.go"
+    ]
+  },
+  "48187.md": {
+    "found_files": [
+      "src/debug/buildinfo/buildinfo.go",
+      "src/cmd/go/internal/version/version.go",
+      "src/debug/buildinfo/buildinfo_test.go"
+    ]
+  },
+  "37519.md": {
+    "found_files": [
+      "src/cmd/go/internal/get/get.go",
+      "src/cmd/go/internal/modget/modget.go",
+      "src/cmd/go/internal/modget/get.go"
+    ]
+  },
+  "38627.md": {
+    "found_files": [
+      "src/text/template/parse/node.go",
+      "src/text/template/parse/parse.go"
+    ]
+  },
+  "41260.md": {
+    "found_files": [
+      "src/testing/testing.go",
+      "src/testing/testing_test.go"
+    ]
+  },
+  "44505.md": {
+    "found_files": [
+      "src/cmd/dist/buildruntime.go",
+      "src/cmd/dist/buildtag_test.go",
+      "src/cmd/dist/util_gccgo.go",
+      "src/cmd/dist/imports.go",
+      "src/cmd/dist/exec.go",
+      "src/cmd/dist/test.go",
+      "src/cmd/dist/doc.go",
+      "src/cmd/dist/sys_windows.go",
+      "src/cmd/dist/testjson.go",
+      "src/cmd/dist/util.go",
+      "src/cmd/dist/buildtag.go",
+      "src/cmd/dist/build.go",
+      "src/cmd/dist/util_gc.go",
+      "src/cmd/dist/quoted.go",
+      "src/cmd/dist/sys_default.go",
+      "src/cmd/dist/buildtool.go",
+      "src/cmd/dist/notgo122.go",
+      "src/cmd/dist/testjson_test.go",
+      "src/cmd/dist/build_test.go",
+      "src/cmd/dist/supported_test.go",
+      "src/cmd/dist/main.go",
+      "src/cmd/dist/buildgo.go"
+    ]
+  },
+  "50429.md": {
+    "found_files": [
+      "test/range3.go",
+      "test/range2.go",
+      "src/go/token/token.go",
+      "ken/range.go",
+      "test/range4.go",
+      "test/range.go",
+      "test/rangegen.go",
+      "src/go/ast/ast.go"
+    ]
+  },
+  "53573.md": {
+    "found_files": [
+      "src/crypto/x509/x509.go",
+      "src/crypto/x509/pkix/pkix.go"
+    ]
+  },
+  "46059.md": {
+    "found_files": [
+      "src/net/url/url_test.go",
+      "src/net/url/url.go"
+    ]
+  },
+  "42681.md": {
+    "found_files": [
+      "src/cmd/go/internal/cfg/cfg.go",
+      "src/internal/goexperiment/flags.go",
+      "src/internal/goexperiment/exp_fieldtrack_off.go",
+      "src/cmd/compile/internal/base/base.go",
+      "src/internal/goexperiment/exp_fieldtrack_on.go",
+      "src/internal/goexperiment/exp_preemptibleloops_off.go",
+      "src/internal/goexperiment/exp_preemptibleloops_on.go",
+      "src/internal/goexperiment/exp_staticlockranking_on.go",
+      "src/internal/goexperiment/exp_regabi_on.go",
+      "src/cmd/go/internal/base/env.go",
+      "src/internal/goexperiment/exp_regabi_off.go",
+      "src/cmd/internal/objabi/util.go",
+      "src/internal/goexperiment/exp_staticlockranking_off.go"
+    ]
+  },
+  "40592.md": {
+    "found_files": [
+      "src/reflect/value.go",
+      "test/fixedbugs/issue36085.go",
+      "src/reflect/type.go"
+    ]
+  },
+  "51644.md": {
+    "found_files": [
+      "src/encoding/binary/binary.go",
+      "src/encoding/binary/varint_test.go",
+      "src/encoding/binary/varint.go"
+    ]
+  },
+  "34527.md": {
+    "found_files": [
+      "src/cmd/go/internal/modfetch/sumdb.go",
+      "src/cmd/go/internal/cache/cache.go",
+      "src/cmd/go/internal/modfetch/cache.go"
+    ]
+  },
+  "45628.md": {
+    "found_files": [
+      "src/encoding/xml/read_test.go",
+      "src/encoding/xml/read.go",
+      "src/encoding/xml/xml.go"
+    ]
+  },
+  "46746.md": {
+    "found_files": [
+      "src/reflect/value.go",
+      "src/reflect/type.go"
+    ]
+  },
+  "44940.md": {
+    "found_files": [
+      "src/unicode/utf16/utf16.go",
+      "utf.go",
+      "src/unicode/utf16/utf16_test.go"
+    ]
+  },
+  "41066.md": {
+    "found_files": [
+      "src/crypto/tls/conn_test.go",
+      "src/crypto/tls/conn.go"
+    ]
+  },
+  "41184.md": {
+    "found_files": [
+      "src/cmd/vet/testdata/buildtag/buildtag5.go",
+      "src/go/build/constraint/expr_test.go",
+      "src/go/build/constraint/vers_test.go",
+      "src/cmd/vet/testdata/buildtag/buildtag3.go",
+      "src/go/build/constraint/constraint.go",
+      "src/cmd/go/internal/work/exec.go",
+      "src/go/build/constraint/expr.go",
+      "src/cmd/go/internal/work/build.go",
+      "src/go/build/constraint/vers.go",
+      "src/go/printer/gobuild.go",
+      "src/cmd/vet/main.go",
+      "src/go/printer/printer.go",
+      "src/go/build/build.go",
+      "src/cmd/go/internal/load/pkg.go",
+      "src/cmd/go/build.go",
+      "src/cmd/vet/testdata/buildtag/buildtag.go",
+      "src/cmd/vet/testdata/buildtag/buildtag4.go",
+      "src/cmd/asm/internal/asm/parse.go",
+      "src/cmd/compile/internal/syntax/parser.go",
+      "src/cmd/vet/testdata/buildtag/buildtag2.go",
+      "src/cmd/fix/buildtag.go"
+    ]
+  },
+  "48866.md": {
+    "found_files": [
+      "src/mime/mediatype.go",
+      "src/mime/mediatype_test.go"
+    ]
+  },
+  "50332.md": {
+    "found_files": [
+      "src/cmd/go/internal/work/build.go",
+      "src/cmd/go/internal/base/flag.go",
+      "src/cmd/go/main.go",
+      "src/cmd/go/internal/base/base.go"
+    ]
+  },
+  "53466.md": {
+    "found_files": [
+      "src/cmd/compile/internal/riscv64/gsubr.go",
+      "src/internal/goarch/zgoarch_riscv64.go",
+      "src/vendor/golang.org/x/sys/unix/syscall_freebsd_riscv64.go",
+      "src/cmd/compile/internal/riscv64/galign.go",
+      "src/runtime/os_freebsd_riscv64.go",
+      "src/internal/cpu/cpu_riscv64.go",
+      "src/runtime/defs_freebsd_riscv64.go",
+      "src/vendor/golang.org/x/sys/unix/zerrors_freebsd_riscv64.go",
+      "src/syscall/ztypes_freebsd_riscv64.go",
+      "src/vendor/golang.org/x/sys/unix/zsyscall_freebsd_riscv64.go",
+      "src/vendor/golang.org/x/sys/unix/ztypes_freebsd_riscv64.go",
+      "src/syscall/zsysnum_freebsd_riscv64.go",
+      "src/internal/cpu/cpu_riscv64_linux.go",
+      "src/cmd/compile/internal/riscv64/ssa.go",
+      "src/vendor/golang.org/x/sys/unix/zsysnum_freebsd_riscv64.go",
+      "src/runtime/signal_freebsd_riscv64.go",
+      "src/internal/cpu/cpu_riscv64_other.go",
+      "src/cmd/link/internal/ld/outbuf_freebsd.go",
+      "src/internal/abi/abi_riscv64.go",
+      "src/syscall/syscall_freebsd_riscv64.go",
+      "src/syscall/zerrors_freebsd_riscv64.go",
+      "src/syscall/zsyscall_freebsd_riscv64.go",
+      "src/internal/goarch/goarch_riscv64.go",
+      "src/cmd/compile/internal/riscv64/ggen.go",
+      "src/cmd/asm/internal/arch/riscv64.go"
+    ]
+  },
+  "49390.md": {
+    "found_files": [
+      "src/internal/testenv/opt.go",
+      "src/internal/testenv/testenv.go",
+      "src/cmd/compile/internal/base/debug.go",
+      "src/internal/testenv/noopt.go",
+      "src/cmd/compile/internal/base/flag.go"
+    ]
+  },
+  "39351.md": {
+    "found_files": [
+      "src/sync/atomic/value.go",
+      "src/sync/atomic/value_test.go",
+      "test/atomicload.go"
+    ]
+  },
+  "47142.md": {
+    "found_files": [
+      "src/database/sql/driver/types_test.go",
+      "src/database/sql/sql.go",
+      "src/database/sql/driver/driver.go",
+      "src/database/sql/sql_test.go",
+      "src/database/sql/driver/types.go"
+    ]
+  },
+  "46742.md": {
+    "found_files": [
+      "src/runtime/unsafe.go",
+      "src/cmd/compile/internal/test/testdata/unsafe_test.go",
+      "test/unsafe_slice_data.go",
+      "src/cmd/compile/internal/types2/slice.go",
+      "src/runtime/slice.go",
+      "test/unsafe_string_data.go",
+      "test/unsafe_string.go",
+      "src/unsafe/unsafe.go",
+      "test/unsafebuiltins.go"
+    ]
+  },
+  "46505.md": {
+    "found_files": [
+      "test/fixedbugs/issue39505.go",
+      "test/fixedbugs/issue39505b.go"
+    ]
+  },
+  "52376.md": {
+    "found_files": [
+      "src/reflect/type.go",
+      "test/clear.go",
+      "src/reflect/export_test.go",
+      "src/reflect/all_test.go",
+      "src/reflect/value.go"
+    ]
+  },
+  "44815.md": {
+    "found_files": [
+      "src/bufio/bufio_test.go",
+      "src/bufio/bufio.go"
+    ]
+  },
+  "45033.md": {
+    "found_files": [
+      "src/reflect/type.go",
+      "fmt/scan.go",
+      "src/fmt/scan.go",
+      "src/strconv/quote_test.go",
+      "src/strconv/quote.go",
+      "text/template/parse/lex.go",
+      "reflect/type.go",
+      "src/text/template/parse/lex.go"
+    ]
+  },
+  "48218.md": {
+    "found_files": [
+      "src/reflect/value.go"
+    ]
+  },
+  "47066.md": {
+    "found_files": [
+      "src/reflect/value.go",
+      "src/reflect/type.go"
+    ]
+  },
+  "51572.md": {
+    "found_files": [
+      "src/os/os_unix_test.go",
+      "src/net/dnsconfig_unix_test.go",
+      "src/cmd/go/internal/base/error_unix.go",
+      "src/os/stat_unix.go",
+      "src/net/unixsock_readmsg_cmsg_cloexec.go",
+      "src/net/file_unix.go",
+      "src/net/unixsock.go",
+      "src/os/timeout_unix_test.go",
+      "src/net/tcpsock_unix.go",
+      "src/os/getwd_unix_test.go",
+      "src/os/pipe_unix.go",
+      "src/net/main_unix_test.go",
+      "src/runtime/os_unix.go",
+      "src/go/build/build.go",
+      "src/os/file_unix.go",
+      "src/path/filepath/example_unix_test.go",
+      "src/net/rawconn_unix_test.go",
+      "src/os/sys_unix.go",
+      "src/syscall/mmap_unix_test.go",
+      "src/net/cgo_unix_cgo_res.go",
+      "src/cmd/go/internal/base/error_notunix.go",
+      "src/net/unixsock_readmsg_other.go",
+      "src/net/cgo_unix_test.go",
+      "src/syscall/linkname_unix.go",
+      "src/syscall/syscall_unix.go",
+      "src/net/tcpsock_unix_test.go",
+      "src/path/filepath/example_unix_walk_test.go",
+      "src/os/removeall_unix.go",
+      "src/net/cgo_unix.go",
+      "src/syscall/sockcmsg_unix_other.go",
+      "src/runtime/signal_unix.go",
+      "src/net/dnsclient_unix.go",
+      "src/net/file_unix_test.go",
+      "src/net/cgo_unix_cgo.go",
+      "src/os/root_unix_test.go",
+      "src/net/cgo_unix_cgo_resn.go",
+      "src/net/write_unix_test.go",
+      "src/net/dnsconfig_unix.go",
+      "src/net/hook_unix.go",
+      "src/mime/type_unix_test.go",
+      "src/net/error_unix_test.go",
+      "src/go/build/build_test.go",
+      "src/net/platform_unix_test.go",
+      "src/net/error_unix.go",
+      "src/net/rlimit_unix.go",
+      "src/syscall/env_unix.go",
+      "src/net/sendfile_unix_test.go",
+      "src/path/filepath/symlink_unix.go",
+      "src/syscall/exec_unix_test.go",
+      "src/cmd/cgo/internal/test/test_unix.go",
+      "src/syscall/sockcmsg_unix.go",
+      "src/path/filepath/path_unix.go",
+      "src/net/unixsock_posix.go",
+      "src/cmd/go/internal/base/signal_notunix.go",
+      "src/net/tcpconn_keepalive_conf_unix_test.go",
+      "src/net/lookup_unix.go",
+      "src/time/sys_unix.go",
+      "src/net/writev_unix.go",
+      "src/os/exec_unix_test.go",
+      "src/net/unixsock_test.go",
+      "src/net/fd_unix.go",
+      "src/net/interface_unix_test.go",
+      "src/os/readfrom_unix_test.go",
+      "src/time/zoneinfo_unix.go",
+      "src/net/tcpsockopt_unix.go",
+      "src/syscall/exec_unix.go",
+      "src/mime/type_unix.go",
+      "src/runtime/syscall_unix_test.go",
+      "src/net/cgo_unix_syscall.go",
+      "src/cmd/go/internal/base/signal_unix.go",
+      "src/net/dnsclient_unix_test.go",
+      "src/net/unixsock_readmsg_cloexec.go",
+      "src/time/zoneinfo_unix_test.go",
+      "src/os/path_unix.go",
+      "src/os/exec_unix.go",
+      "src/syscall/syscall_unix_test.go",
+      "src/cmd/go/build.go",
+      "src/os/root_unix.go",
+      "src/net/unixsock_readmsg_test.go",
+      "src/net/unixsock_linux_test.go"
+    ]
+  },
+  "39057.md": {
+    "found_files": [
+      "src/log/log.go"
+    ]
+  },
+  "38781.md": {
+    "found_files": [
+      "src/testing/iotest/reader.go",
+      "src/testing/iotest/reader_test.go",
+      "src/testing/iotest/example_test.go"
+    ]
+  },
+  "36771.md": {
+    "found_files": [
+      "src/strconv/isprint.go",
+      "src/strconv/export_test.go",
+      "src/strconv/example_test.go",
+      "src/strconv/atof.go",
+      "src/strconv/atof_test.go",
+      "src/strconv/ftoa_test.go",
+      "src/fmt/scan_test.go",
+      "src/fmt/scan.go",
+      "src/strconv/atoc_test.go",
+      "src/strconv/quote_test.go",
+      "src/strconv/doc.go",
+      "src/strconv/quote.go",
+      "src/strconv/ctoa_test.go",
+      "src/strconv/atoc.go",
+      "src/strconv/atoi_test.go",
+      "src/strconv/ftoa.go",
+      "src/strconv/ctoa.go",
+      "src/strconv/atoi.go"
+    ]
+  },
+  "44435.md": {
+    "found_files": [
+      "src/cmd/go/internal/modload/query.go",
+      "src/cmd/go/internal/modload/load.go",
+      "src/cmd/go/internal/modcmd/download.go"
+    ]
+  },
+  "50101.md": {
+    "found_files": [
+      "src/net/dnsclient_unix_test.go",
+      "src/net/lookup_test.go",
+      "src/net/lookup_windows_test.go",
+      "src/net/lookup_unix.go",
+      "src/net/dnsconfig_windows.go",
+      "src/net/dnsconfig_unix_test.go",
+      "src/syscall/dll_windows.go",
+      "src/net/lookup_windows.go",
+      "src/net/lookup.go",
+      "src/net/dnsclient.go",
+      "src/net/dnsconfig.go",
+      "src/net/dnsconfig_unix.go",
+      "src/syscall/syscall_windows.go",
+      "src/net/dnsclient_test.go",
+      "src/net/dnsclient_unix.go"
+    ]
+  },
+  "29770.md": {
+    "found_files": [
+      "src/text/template/parse/parse.go",
+      "src/text/template/parse/parse_test.go",
+      "src/text/template/parse/lex_test.go",
+      "src/text/template/parse/lex.go"
+    ]
+  },
+  "51566.md": {
+    "found_files": [
+      "src/io/io.go",
+      "src/io/io_test.go"
+    ]
+  },
+  "38079.md": {
+    "found_files": [
+      "src/net/http/httputil/reverseproxy_test.go",
+      "src/net/http/httputil/reverseproxy.go"
+    ]
+  },
+  "51682.md": {
+    "found_files": [
+      "src/go/types/object_test.go",
+      "src/go/types/object.go"
+    ]
+  },
+  "39214.md": {
+    "found_files": [
+      "src/internal/cpu/cpu_loong64.go",
+      "src/internal/cpu/export_x86_test.go",
+      "src/internal/cpu/cpu_arm64_openbsd.go",
+      "src/internal/cpu/cpu_riscv64.go",
+      "src/testing/benchmark.go",
+      "src/internal/cpu/cpu_ppc64x_aix.go",
+      "src/internal/cpu/cpu_ppc64x.go",
+      "src/internal/cpu/cpu_wasm.go",
+      "src/internal/cpu/cpu_s390x_test.go",
+      "src/internal/cpu/cpu_loong64_hwcap.go",
+      "src/internal/cpu/cpu_x86.go",
+      "src/testing/testing.go",
+      "src/internal/cpu/cpu_loong64_linux.go",
+      "src/internal/cpu/cpu_arm64_linux.go",
+      "src/internal/cpu/cpu_arm64_hwcap.go",
+      "src/internal/cpu/cpu_ppc64x_linux.go",
+      "src/internal/cpu/cpu_riscv64_linux.go",
+      "src/internal/cpu/cpu_linux.go",
+      "src/internal/cpu/cpu_arm64_android.go",
+      "src/internal/cpu/cpu_mips64x.go",
+      "src/internal/cpu/cpu_arm64_darwin.go",
+      "src/internal/cpu/cpu_ppc64x_other.go",
+      "src/internal/cpu/cpu_aix.go",
+      "src/internal/cpu/export_test.go",
+      "src/internal/cpu/cpu.go",
+      "src/internal/cpu/cpu_arm64_other.go",
+      "src/internal/cpu/cpu_mips.go",
+      "src/internal/cpu/cpu_mipsle.go",
+      "src/internal/cpu/cpu_riscv64_other.go",
+      "src/internal/cpu/cpu_x86_test.go",
+      "src/internal/cpu/cpu_test.go",
+      "src/internal/cpu/cpu_zos.go",
+      "src/internal/cpu/proc_cpuinfo_linux.go",
+      "src/internal/cpu/cpu_arm.go",
+      "src/internal/cpu/cpu_mips64.go",
+      "src/internal/cpu/cpu_arm64_freebsd.go",
+      "src/internal/cpu/cpu_no_name.go",
+      "src/internal/cpu/cpu_arm64.go",
+      "src/internal/cpu/runtime_auxv.go",
+      "src/internal/cpu/cpu_s390x.go"
+    ]
+  },
+  "30715.md": {
+    "found_files": [
+      "src/net/http/request.go"
+    ]
+  },
+  "51972.md": {
+    "found_files": [
+      "src/sync/export_test.go",
+      "src/sync/map_test.go",
+      "src/sync/map.go"
+    ]
+  },
+  "50859.md": {
+    "found_files": [
+      "src/sync/cond.go",
+      "src/sync/mutex.go",
+      "src/sync/waitgroup.go",
+      "src/sync/atomic/doc_32.go",
+      "src/runtime/mbarrier.go",
+      "src/sync/atomic/doc.go",
+      "src/sync/atomic/type.go",
+      "src/sync/atomic/value.go",
+      "src/sync/atomic/doc_64.go",
+      "src/sync/doc.go",
+      "src/sync/rwmutex.go",
+      "src/runtime/mem.go"
+    ]
+  },
+  "32406.md": {
+    "found_files": [
+      "src/net/http/server.go",
+      "src/crypto/tls/conn_test.go",
+      "src/crypto/tls/handshake_client.go",
+      "src/crypto/tls/handshake_server.go",
+      "src/crypto/tls/conn.go",
+      "src/crypto/tls/handshake_server_test.go",
+      "src/crypto/tls/handshake_client_test.go",
+      "src/crypto/tls/common.go"
+    ]
+  },
+  "45899.md": {
+    "found_files": [
+      "src/io/io.go",
+      "src/io/io_test.go"
+    ]
+  },
+  "47658.md": {
+    "found_files": [
+      "src/reflect/value.go",
+      "src/reflect/type.go"
+    ]
+  },
+  "47609.md": {
+    "found_files": [
+      "src/runtime/utf8.go",
+      "test/utf.go",
+      "src/unicode/utf8/utf8_test.go",
+      "src/unicode/utf8/example_test.go",
+      "src/unicode/utf8/utf8.go"
+    ]
+  },
+  "38776.md": {
+    "found_files": [
+      "src/hash/crc64/crc64.go",
+      "src/hash/crc32/crc32.go",
+      "src/hash/maphash/maphash.go",
+      "src/hash/adler32/adler32.go",
+      "src/crypto/sha512/sha512.go",
+      "src/crypto/sha1/sha1.go",
+      "src/crypto/sha256/sha256.go",
+      "src/hash/fnv/fnv.go"
+    ]
+  }
+}

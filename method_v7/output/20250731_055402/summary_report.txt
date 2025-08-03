@@ -1,0 +1,185 @@
+Method v7 Coordinated Workflow - Summary Report
+==================================================
+
+Execution Time: 20250731_055402
+Batch Size: 20
+Total Proposals: 20
+
+Granularity Breakdown:
+  Directory: 2 proposals
+  File: 6 proposals
+  Function: 12 proposals
+
+Results by Proposal:
+------------------------------
+
+40239.md (file granularity):
+  Found Files: 2
+    - src/net/url/url.go
+    - src/net/url/url_test.go
+
+47459.md (function granularity):
+  Found Files: 8
+    - src/cmd/compile/internal/types2/typeset.go
+    - src/go/types/instantiate_test.go
+    - src/go/types/instantiate.go
+    - src/go/types/types.go
+    - src/cmd/compile/internal/types2/type_test.go
+    ... and 3 more
+  Found Functions: 37
+  Final Functions (Yes): 0
+
+29951.md (function granularity):
+  Found Files: 4
+    - src/math/big/arith.go
+    - math/big/int.go
+    - src/math/big/int.go
+    - src/math/big/nat.go
+  Found Functions: 20
+  Final Functions (Yes): 3
+    - src/math/big/int.go:NewInt
+    - src/math/big/int.go:Add
+    - src/math/big/int.go:SetInt64
+
+39528.md (directory granularity):
+  Found Files: 2
+    - src/reflect/value.go
+    - src/reflect/type.go
+
+44412.md (function granularity):
+  Found Files: 2
+    - src/time/time_test.go
+    - src/time/time.go
+  Found Functions: 9
+  Final Functions (Yes): 6
+    - src/time/time_test.go:TestUnixMilli
+    - src/time/time_test.go:TestUnixMicro
+    - src/time/time.go:UnixMilli
+    ... and 3 more
+
+34593.md (function granularity):
+  Found Files: 2
+    - src/database/sql/driver/types.go
+    - src/database/sql/sql.go
+  Found Functions: 14
+  Final Functions (Yes): 0
+
+52157.md (function granularity):
+  Found Files: 18
+    - src/runtime/map_fast32_noswiss.go
+    - src/runtime/map_fast64_noswiss.go
+    - src/runtime/map_faststr_noswiss.go
+    - test/map1.go
+    - src/cmd/compile/internal/reflectdata/map_noswiss.go
+    ... and 13 more
+  Found Functions: 53
+  Final Functions (Yes): 1
+    - src/runtime/map_noswiss.go:makemap
+
+43223.md (file granularity):
+  Found Files: 3
+    - src/net/http/fs.go
+    - src/net/http/server.go
+    - src/io/fs/fs.go
+
+51039.md (function granularity):
+  Found Files: 2
+    - src/strings/strings_test.go
+    - src/strings/strings.go
+  Found Functions: 15
+  Final Functions (Yes): 2
+    - src/strings/strings.go:SplitAfter
+    - src/strings/strings.go:Cut
+
+42099.md (function granularity):
+  Found Files: 2
+    - src/reflect/value.go
+    - src/reflect/type.go
+  Found Functions: 8
+  Final Functions (Yes): 2
+    - src/reflect/value.go:NumMethod
+    - src/reflect/type.go:NumMethod
+
+46802.md (file granularity):
+  Found Files: 8
+    - src/syscall/asm_tamago_arm.s
+    - src/runtime/lock_js.go
+    - src/runtime/os_tamago_arm.go
+    - src/syscall/time_tamago_arm.s
+    - src/runtime/mem_plan9.go
+    ... and 3 more
+
+52310.md (function granularity):
+  Found Files: 3
+    - src/reflect/value.go
+    - src/reflect/type.go
+    - src/reflect/all_test.go
+  Found Functions: 12
+  Final Functions (Yes): 2
+    - src/reflect/value.go:ValueOf
+    - src/reflect/value.go:Set
+
+45568.md (function granularity):
+  Found Files: 2
+    - src/errors/wrap.go
+    - src/errors/wrap_test.go
+  Found Functions: 6
+  Final Functions (Yes): 5
+    - src/errors/wrap.go:Is
+    - src/errors/wrap.go:is
+    - src/errors/wrap.go:As
+    ... and 2 more
+
+48702.md (directory granularity):
+  Found Files: 3
+    - src/encoding/json/decode.go
+    - src/encoding/json/json.go
+    - src/encoding/json/encode.go
+
+38891.md (file granularity):
+  Found Files: 2
+    - src/sync/rwmutex.go
+    - src/sync/rwmutex_test.go
+
+44484.md (file granularity):
+  Found Files: 18
+    - src/embed/embed.go
+    - test/embedfunc.go
+    - test/interface/embed1.go
+    - test/embed2.go
+    - test/embed.go
+    ... and 13 more
+
+41130.md (function granularity):
+  Found Files: 1
+    - src/builtin/builtin.go
+  Found Functions: 1
+  Final Functions (Yes): 1
+    - src/builtin/builtin.go:delete
+
+43217.md (file granularity):
+  Found Files: 10
+    - src/embed/example_test.go
+    - src/embed/embed.go
+    - test/interface/embed1.go
+    - test/typeparam/genembed2.go
+    - test/interface/embed.go
+    ... and 5 more
+
+53510.md (function granularity):
+  Found Files: 2
+    - src/slices/slices_test.go
+    - src/slices/slices.go
+  Found Functions: 6
+  Final Functions (Yes): 0
+
+51887.md (function granularity):
+  Found Files: 2
+    - src/strconv/quote.go
+    - src/strconv/quote_test.go
+  Found Functions: 9
+  Final Functions (Yes): 4
+    - src/strconv/quote.go:unquote
+    - src/strconv/quote.go:appendQuotedWith
+    - src/strconv/quote.go:QuotedPrefix
+    ... and 1 more

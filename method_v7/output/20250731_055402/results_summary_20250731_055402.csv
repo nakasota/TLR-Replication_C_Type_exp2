@@ -1,0 +1,81 @@
+Proposal No.,Issue URL,Granularity,Directory Level,File Level,Function Level,Code URL
+40239,https://github.com/golang/go/issues/40239,file,src/net/url,src/net/url/url.go,N/A,https://github.com/golang/go/blob/master/src/net/url/url.go
+,,,,src/net/url/url_test.go,,https://github.com/golang/go/blob/master/src/net/url/url_test.go
+47459,https://github.com/golang/go/issues/47459,function,src/cmd/compile/internal/types2,src/cmd/compile/internal/types2/typeset.go,not selected,https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,src/go/types,src/go/types/instantiate_test.go,not selected,https://github.com/golang/go/blob/master/src/go/types/instantiate_test.go
+,,,,src/go/types/instantiate.go,not selected,https://github.com/golang/go/blob/master/src/go/types/instantiate.go
+,,,src/cmd/compile/internal/types2,src/cmd/compile/internal/types2/typeparam.go,not selected,https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,src/go/types,src/go/types/typeparam.go,not selected,https://github.com/golang/go/blob/master/src/go/types/typeparam.go
+29951,https://github.com/golang/go/issues/29951,function,src/math/big,src/math/big/int.go,NewInt,https://github.com/golang/go/blob/master/src/math/big/int.go
+,,,,,Add,https://github.com/golang/go/blob/master/src/math/big/int.go
+,,,,,SetInt64,https://github.com/golang/go/blob/master/src/math/big/int.go
+39528,https://github.com/golang/go/issues/39528,directory,src/reflect,N/A,N/A,https://github.com/golang/go/tree/master/src/reflect
+44412,https://github.com/golang/go/issues/44412,function,src/time,src/time/time_test.go,TestUnixMilli,https://github.com/golang/go/blob/master/src/time/time_test.go
+,,,,,TestUnixMicro,https://github.com/golang/go/blob/master/src/time/time_test.go
+,,,,src/time/time.go,UnixMilli,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,,UnixMicro,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,,Unix,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,,unixTime,https://github.com/golang/go/blob/master/src/time/time.go
+34593,https://github.com/golang/go/issues/34593,function,src/database/sql/driver,src/database/sql/driver/types.go,not selected,https://github.com/golang/go/blob/master/src/database/sql/driver/types.go
+,,,src/database/sql,src/database/sql/sql.go,not selected,https://github.com/golang/go/blob/master/src/database/sql/sql.go
+52157,https://github.com/golang/go/issues/52157,function,src/runtime,src/runtime/map_noswiss.go,makemap,https://github.com/golang/go/blob/master/src/runtime/map_noswiss.go
+43223,https://github.com/golang/go/issues/43223,file,src/net/http,src/net/http/fs.go,N/A,https://github.com/golang/go/blob/master/src/net/http/fs.go
+,,,,src/net/http/server.go,,https://github.com/golang/go/blob/master/src/net/http/server.go
+,,,src/io/fs,src/io/fs/fs.go,,https://github.com/golang/go/blob/master/src/io/fs/fs.go
+51039,https://github.com/golang/go/issues/51039,function,src/strings,src/strings/strings.go,SplitAfter,https://github.com/golang/go/blob/master/src/strings/strings.go
+,,,,,Cut,https://github.com/golang/go/blob/master/src/strings/strings.go
+42099,https://github.com/golang/go/issues/42099,function,src/reflect,src/reflect/value.go,NumMethod,https://github.com/golang/go/blob/master/src/reflect/value.go
+,,,,src/reflect/type.go,,https://github.com/golang/go/blob/master/src/reflect/type.go
+46802,https://github.com/golang/go/issues/46802,file,src/syscall,src/syscall/asm_tamago_arm.s,N/A,https://github.com/golang/go/blob/master/src/syscall/asm_tamago_arm.s
+,,,src/runtime,src/runtime/lock_js.go,,https://github.com/golang/go/blob/master/src/runtime/lock_js.go
+,,,,src/runtime/os_tamago_arm.go,,https://github.com/golang/go/blob/master/src/runtime/os_tamago_arm.go
+,,,src/syscall,src/syscall/time_tamago_arm.s,,https://github.com/golang/go/blob/master/src/syscall/time_tamago_arm.s
+,,,src/runtime,src/runtime/mem_plan9.go,,https://github.com/golang/go/blob/master/src/runtime/mem_plan9.go
+,,,,src/runtime/rt0_tamago_arm.s,,https://github.com/golang/go/blob/master/src/runtime/rt0_tamago_arm.s
+,,,,src/runtime/sys_tamago_arm.s,,https://github.com/golang/go/blob/master/src/runtime/sys_tamago_arm.s
+,,,src/syscall,src/syscall/syscall_tamago.go,,https://github.com/golang/go/blob/master/src/syscall/syscall_tamago.go
+52310,https://github.com/golang/go/issues/52310,function,src/reflect,src/reflect/value.go,ValueOf,https://github.com/golang/go/blob/master/src/reflect/value.go
+,,,,,Set,https://github.com/golang/go/blob/master/src/reflect/value.go
+45568,https://github.com/golang/go/issues/45568,function,src/errors,src/errors/wrap.go,Is,https://github.com/golang/go/blob/master/src/errors/wrap.go
+,,,,,is,https://github.com/golang/go/blob/master/src/errors/wrap.go
+,,,,,As,https://github.com/golang/go/blob/master/src/errors/wrap.go
+,,,,,as,https://github.com/golang/go/blob/master/src/errors/wrap.go
+,,,,src/errors/wrap_test.go,As,https://github.com/golang/go/blob/master/src/errors/wrap_test.go
+48702,https://github.com/golang/go/issues/48702,directory,src/encoding/json,N/A,N/A,https://github.com/golang/go/tree/master/src/encoding/json
+38891,https://github.com/golang/go/issues/38891,file,src/sync,src/sync/rwmutex.go,N/A,https://github.com/golang/go/blob/master/src/sync/rwmutex.go
+,,,,src/sync/rwmutex_test.go,,https://github.com/golang/go/blob/master/src/sync/rwmutex_test.go
+44484,https://github.com/golang/go/issues/44484,file,src/embed,src/embed/embed.go,N/A,https://github.com/golang/go/blob/master/src/embed/embed.go
+,,,test,test/embedfunc.go,,https://github.com/golang/go/blob/master/test/embedfunc.go
+,,,test/interface,test/interface/embed1.go,,https://github.com/golang/go/blob/master/test/interface/embed1.go
+,,,test,test/embed2.go,,https://github.com/golang/go/blob/master/test/embed2.go
+,,,,test/embed.go,,https://github.com/golang/go/blob/master/test/embed.go
+,,,test/interface/embed1.dir,test/interface/embed1.dir/embed1.go,,https://github.com/golang/go/blob/master/test/interface/embed1.dir/embed1.go
+,,,test,test/embed3.go,,https://github.com/golang/go/blob/master/test/embed3.go
+,,,test/interface/embed1.dir,test/interface/embed1.dir/embed0.go,,https://github.com/golang/go/blob/master/test/interface/embed1.dir/embed0.go
+,,,test/interface,test/interface/embed2.go,,https://github.com/golang/go/blob/master/test/interface/embed2.go
+,,,test,test/embed1.go,,https://github.com/golang/go/blob/master/test/embed1.go
+,,,test/interface,test/interface/embed.go,,https://github.com/golang/go/blob/master/test/interface/embed.go
+,,,test/interface/embed3.dir,test/interface/embed3.dir/embed1.go,,https://github.com/golang/go/blob/master/test/interface/embed3.dir/embed1.go
+,,,,test/interface/embed3.dir/embed0.go,,https://github.com/golang/go/blob/master/test/interface/embed3.dir/embed0.go
+,,,test/ken,test/ken/embed.go,,https://github.com/golang/go/blob/master/test/ken/embed.go
+,,,src/cmd/compile/internal/staticdata,src/cmd/compile/internal/staticdata/embed.go,,https://github.com/golang/go/blob/master/src/cmd/compile/internal/staticdata/embed.go
+,,,test,test/embedvers.go,,https://github.com/golang/go/blob/master/test/embedvers.go
+,,,test/interface,test/interface/embed3.go,,https://github.com/golang/go/blob/master/test/interface/embed3.go
+,,,src/embed/internal/embedtest,src/embed/internal/embedtest/embed_test.go,,https://github.com/golang/go/blob/master/src/embed/internal/embedtest/embed_test.go
+41130,https://github.com/golang/go/issues/41130,function,src/builtin,src/builtin/builtin.go,delete,https://github.com/golang/go/blob/master/src/builtin/builtin.go
+43217,https://github.com/golang/go/issues/43217,file,src/embed,src/embed/example_test.go,N/A,https://github.com/golang/go/blob/master/src/embed/example_test.go
+,,,,src/embed/embed.go,,https://github.com/golang/go/blob/master/src/embed/embed.go
+,,,test/interface,test/interface/embed1.go,,https://github.com/golang/go/blob/master/test/interface/embed1.go
+,,,test/typeparam,test/typeparam/genembed2.go,,https://github.com/golang/go/blob/master/test/typeparam/genembed2.go
+,,,test/interface,test/interface/embed.go,,https://github.com/golang/go/blob/master/test/interface/embed.go
+,,,test/typeparam,test/typeparam/genembed.go,,https://github.com/golang/go/blob/master/test/typeparam/genembed.go
+,,,test/ken,test/ken/embed.go,,https://github.com/golang/go/blob/master/test/ken/embed.go
+,,,src/cmd/compile/internal/staticdata,src/cmd/compile/internal/staticdata/embed.go,,https://github.com/golang/go/blob/master/src/cmd/compile/internal/staticdata/embed.go
+,,,test/interface,test/interface/embed3.go,,https://github.com/golang/go/blob/master/test/interface/embed3.go
+,,,,test/interface/embed2.go,,https://github.com/golang/go/blob/master/test/interface/embed2.go
+53510,https://github.com/golang/go/issues/53510,function,src/slices,src/slices/slices_test.go,not selected,https://github.com/golang/go/blob/master/src/slices/slices_test.go
+,,,,src/slices/slices.go,not selected,https://github.com/golang/go/blob/master/src/slices/slices.go
+51887,https://github.com/golang/go/issues/51887,function,src/strconv,src/strconv/quote.go,unquote,https://github.com/golang/go/blob/master/src/strconv/quote.go
+,,,,,appendQuotedWith,https://github.com/golang/go/blob/master/src/strconv/quote.go
+,,,,,QuotedPrefix,https://github.com/golang/go/blob/master/src/strconv/quote.go
+,,,,,Unquote,https://github.com/golang/go/blob/master/src/strconv/quote.go

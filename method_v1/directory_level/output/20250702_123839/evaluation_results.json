@@ -1,0 +1,82 @@
+{
+  "macro_precision": 0.5333333333333333,
+  "macro_recall": 0.7,
+  "macro_f1": 0.58,
+  "per_proposal": {
+    "45428": {
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "predicted": [
+        "src/crypto/tls/internal/fips140tls",
+        "src/crypto/tls/fipsonly",
+        "src/crypto/tls"
+      ],
+      "ground_truth": [
+        "src/crypto/tls"
+      ]
+    },
+    "48801": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "predicted": [
+        "src/cmd/vet",
+        "src/time",
+        "src/go/types"
+      ],
+      "ground_truth": [
+        "src/cmd/vet",
+        "src/cmd/vendor/golang.org/x/tools/go/analysis/passes/timeformat"
+      ]
+    },
+    "34875": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "predicted": [
+        "src/go/doc/comment"
+      ],
+      "ground_truth": [
+        "src/go/doc"
+      ]
+    },
+    "32716": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "predicted": [
+        "src/crypto/tls"
+      ],
+      "ground_truth": [
+        "src/crypto/tls"
+      ]
+    },
+    "51777": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "predicted": [
+        "src/net/netip"
+      ],
+      "ground_truth": [
+        "src/net/netip"
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "statistics": {
+    "total_proposals": 5,
+    "successful_proposals": 2,
+    "failed_proposals": 3,
+    "total_modified_files": 2,
+    "total_modified_functions": 1
+  },
+  "results": [
+    {
+      "proposal_file": "data/preprocess/accepted_proposals/test_proposals/20322.md",
+      "error": "no_cl_changes",
+      "modified_files": [],
+      "directory_level_changes": [],
+      "file_level_changes": [],
+      "function_level_changes": []
+    },
+    {
+      "proposal_file": "data/preprocess/accepted_proposals/test_proposals/19367.md",
+      "error": "no_cl_changes",
+      "modified_files": [],
+      "directory_level_changes": [],
+      "file_level_changes": [],
+      "function_level_changes": []
+    },
+    {
+      "proposal_file": "data/preprocess/accepted_proposals/test_proposals/26535.md",
+      "cl_number": "123478",
+      "status": "NEW",
+      "subject": "compress/lzw: optimize code hash table to reduce collisions",
+      "modified_files": [
+        "src/compress/lzw/writer.go"
+      ],
+      "directory_level_changes": [
+        "src/compress/lzw"
+      ],
+      "file_level_changes": [
+        "src/compress/lzw/writer.go"
+      ],
+      "function_level_changes": [
+        [
+          123478,
+          "src/compress/lzw/writer.go",
+          "Write",
+          122,
+          196
+        ]
+      ]
+    },
+    {
+      "proposal_file": "data/preprocess/accepted_proposals/test_proposals/15513.md",
+      "error": "no_cl_changes",
+      "modified_files": [],
+      "directory_level_changes": [],
+      "file_level_changes": [],
+      "function_level_changes": []
+    },
+    {
+      "proposal_file": "data/preprocess/accepted_proposals/test_proposals/21865.md",
+      "cl_number": "162297",
+      "status": "MERGED",
+      "subject": "crypto/rc4: remove false guarantees from Reset docs and deprecate it",
+      "modified_files": [
+        "src/crypto/rc4/rc4.go"
+      ],
+      "directory_level_changes": [
+        "src/crypto/rc4"
+      ],
+      "file_level_changes": [
+        "src/crypto/rc4/rc4.go"
+      ],
+      "function_level_changes": []
+    }
+  ]
+}

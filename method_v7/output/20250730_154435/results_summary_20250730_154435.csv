@@ -1,0 +1,46 @@
+Proposal No.,Issue URL,Granularity,Directory Level,File Level,Function Level,Code URL
+40239,https://github.com/golang/go/issues/40239,file,src/net/url,src/net/url/url.go,N/A,https://github.com/golang/go/blob/master/src/net/url/url.go
+,,,,src/net/url/url_test.go,,https://github.com/golang/go/blob/master/src/net/url/url_test.go
+47459,https://github.com/golang/go/issues/47459,function,src/cmd/compile/internal/types2,src/cmd/compile/internal/types2/typeset.go,IsEmpty (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,IsAll (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,IsMethodSet (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,IsComparable (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,NumMethods (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,Method (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,LookupMethod (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,String (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,hasTerms (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,subsetOf (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,typeset (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,,,is (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeset.go
+,,,src/go/types,src/go/types/methodset_test.go,TestNewMethodSet (not selected),https://github.com/golang/go/blob/master/src/go/types/methodset_test.go
+,,,,,TestNewMethodSet_RecursiveGeneric (not selected),https://github.com/golang/go/blob/master/src/go/types/methodset_test.go
+,,,,src/go/types/methodset.go,String (not selected),https://github.com/golang/go/blob/master/src/go/types/methodset.go
+,,,,,Len (not selected),https://github.com/golang/go/blob/master/src/go/types/methodset.go
+,,,,,At (not selected),https://github.com/golang/go/blob/master/src/go/types/methodset.go
+,,,,,Lookup (not selected),https://github.com/golang/go/blob/master/src/go/types/methodset.go
+,,,,,add (not selected),https://github.com/golang/go/blob/master/src/go/types/methodset.go
+,,,,,addOne (not selected),https://github.com/golang/go/blob/master/src/go/types/methodset.go
+,,,src/cmd/compile/internal/types2,src/cmd/compile/internal/types2/typeparam.go,NewTypeParam (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,newTypeParam (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,Obj (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,Index (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,Constraint (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,SetConstraint (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,Underlying (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,String (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,cleanup (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,iface (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,is (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+,,,,,typeset (not selected),https://github.com/golang/go/blob/master/src/cmd/compile/internal/types2/typeparam.go
+29951,https://github.com/golang/go/issues/29951,function,src/math/big,src/math/big/int.go,NewInt,https://github.com/golang/go/blob/master/src/math/big/int.go
+,,,,,Add,https://github.com/golang/go/blob/master/src/math/big/int.go
+,,,,,SetInt64,https://github.com/golang/go/blob/master/src/math/big/int.go
+39528,https://github.com/golang/go/issues/39528,directory,test,N/A,N/A,https://github.com/golang/go/tree/master/test
+,,,src/reflect,,,https://github.com/golang/go/tree/master/src/reflect
+44412,https://github.com/golang/go/issues/44412,function,src/time,src/time/time.go,UnixMilli,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,,UnixMicro,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,,Unix,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,,unixTime,https://github.com/golang/go/blob/master/src/time/time.go
+,,,,src/time/time_test.go,TestUnixMilli,https://github.com/golang/go/blob/master/src/time/time_test.go
+,,,,,TestUnixMicro,https://github.com/golang/go/blob/master/src/time/time_test.go

@@ -1,0 +1,1751 @@
+{
+  "metadata": {
+    "description": "Function-level CL-validated proposal mappings",
+    "method": "Gerrit CL diff validation with function-level analysis using tree-sitter",
+    "confidence_threshold": 0.6,
+    "total_proposals_validated": 288,
+    "total_cls_processed": 875,
+    "total_functions_validated": 0,
+    "high_confidence_functions": 0,
+    "medium_confidence_functions": 0,
+    "low_confidence_functions": 0,
+    "functions_not_found": 0
+  },
+  "proposal_to_functions": {
+    "45428": {
+      "issue_number": 45428,
+      "title": "crypto/tls: disable client-side TLS 1.0 and TLS 1.1",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48801": {
+      "issue_number": 48801,
+      "title": "cmd/vet: check for time formats with 2006-02-01",
+      "functions": [],
+      "total_functions": 0
+    },
+    "34875": {
+      "issue_number": 34875,
+      "title": "go/doc: add ToMarkdown",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52132": {
+      "issue_number": 52132,
+      "title": "x/crypto/ssh: add MultiAlgorithmSigner",
+      "functions": [],
+      "total_functions": 0
+    },
+    "32716": {
+      "issue_number": 32716,
+      "title": "crypto/tls: remove SSLv3 support",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51777": {
+      "issue_number": 51777,
+      "title": "net/netip: add IPv6Loopback",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47164": {
+      "issue_number": 47164,
+      "title": "log: optimize SetOutput(io.Discard)",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42710": {
+      "issue_number": 42710,
+      "title": "hash/maphash: add Bytes and String",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46259": {
+      "issue_number": 46259,
+      "title": "syscall: add Jail int32 to SysProcAttr on FreeBSD",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47257": {
+      "issue_number": 47257,
+      "title": "cmd/dist: remove precompiled .a files from binary distributions [freeze exception]",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47216": {
+      "issue_number": 47216,
+      "title": "runtime/metrics: add GOMAXPROCS, NumCgoCall, GC CPU time",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53747": {
+      "issue_number": 53747,
+      "title": "flag: add BoolFunc(name, usage string, fn func(string)error)",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46218": {
+      "issue_number": 46218,
+      "title": "cmd/vet: enable fuzz checks in 'tests' analysis pass",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42516": {
+      "issue_number": 42516,
+      "title": "x/crypto/acme: add AccountKeyRollover",
+      "functions": [],
+      "total_functions": 0
+    },
+    "34974": {
+      "issue_number": 34974,
+      "title": "archive/zip: add File.OpenRaw, Writer.CreateRaw, Writer.Copy",
+      "functions": [],
+      "total_functions": 0
+    },
+    "34626": {
+      "issue_number": 34626,
+      "title": "testing: print more precision in benchmark timings",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48530": {
+      "issue_number": 48530,
+      "title": "net: add tcp WriteTo func to enable splice socket data to file",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50102": {
+      "issue_number": 50102,
+      "title": "archive/tar: add FileInfoNames interface",
+      "functions": [],
+      "total_functions": 0
+    },
+    "38687": {
+      "issue_number": 38687,
+      "title": "cmd/go: add 'go generate -skip'",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41196": {
+      "issue_number": 41196,
+      "title": "doc: require auto-generated DO NOT EDIT comment at top of file",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50062": {
+      "issue_number": 50062,
+      "title": "time: add Time.ZoneBounds",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46731": {
+      "issue_number": 46731,
+      "title": "cmd/compile: replace `//go:notinheap` with runtime/internal/sys.NotInHeap",
+      "functions": [],
+      "total_functions": 0
+    },
+    "33184": {
+      "issue_number": 33184,
+      "title": "time: add Ticker.Reset",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50489": {
+      "issue_number": 50489,
+      "title": "math/big: Rat: add FloatPrec() (int, bool)",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47342": {
+      "issue_number": 47342,
+      "title": "hash/maphash: Provide a `purego` implementation",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37255": {
+      "issue_number": 37255,
+      "title": "os/signal: add NotifyContext function",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42502": {
+      "issue_number": 42502,
+      "title": "runtime/pprof: NewCPUProfile + cpuProfile.Start to allow profile configuration",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42782": {
+      "issue_number": 42782,
+      "title": "reflect: add VisibleFields function",
+      "functions": [],
+      "total_functions": 0
+    },
+    "38248": {
+      "issue_number": 38248,
+      "title": "cmd/compile: replace CallImport with go:wasmimport directive",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46279": {
+      "issue_number": 46279,
+      "title": "runtime: automatically bump RLIMIT_NOFILE on Unix",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40724": {
+      "issue_number": 40724,
+      "title": "cmd/compile: switch to a register-based calling convention for Go functions",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45346": {
+      "issue_number": 45346,
+      "title": "spec: generics: use type sets to remove type keyword in constraints",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51914": {
+      "issue_number": 51914,
+      "title": "net/http: support for the 103 status code",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42437": {
+      "issue_number": 42437,
+      "title": "x/crypto/acme: add ListCertAlternates",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40481": {
+      "issue_number": 40481,
+      "title": "unsafe: add Add function",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42584": {
+      "issue_number": 42584,
+      "title": "syscall: add DLLError.Unwrap() method [freeze exception]",
+      "functions": [],
+      "total_functions": 0
+    },
+    "33629": {
+      "issue_number": 33629,
+      "title": "x/playground: allow selecting supported versions of Go",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46552": {
+      "issue_number": 46552,
+      "title": "syscall: add SyscallN",
+      "functions": [],
+      "total_functions": 0
+    },
+    "33136": {
+      "issue_number": 33136,
+      "title": "reflect: optimize v.Set(reflect.Zero(v.Type())) to not allocate",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52221": {
+      "issue_number": 52221,
+      "title": "crypto/ecdh: new package",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44853": {
+      "issue_number": 44853,
+      "title": "runtime: enable address sanitizer in Go",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47528": {
+      "issue_number": 47528,
+      "title": "cmd/vet: warn when errors.As target has type *error",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48830": {
+      "issue_number": 48830,
+      "title": "x/net/http2: add Transport.WriteByteTimeout",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50599": {
+      "issue_number": 50599,
+      "title": "os/exec: improved API and default behavior for the PWD env variable",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40701": {
+      "issue_number": 40701,
+      "title": "cmd/vet: warn about variables/values of type reflect.{Slice,String}Header",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42537": {
+      "issue_number": 42537,
+      "title": "strings: add CutPrefix and CutSuffix",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40995": {
+      "issue_number": 40995,
+      "title": "all: add openbsd/mips64 port",
+      "functions": [],
+      "total_functions": 0
+    },
+    "39034": {
+      "issue_number": 39034,
+      "title": "time: add Time.GoString method to help %#v [freeze exception]",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45100": {
+      "issue_number": 45100,
+      "title": "net/url: add Values.Has(key)",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47005": {
+      "issue_number": 47005,
+      "title": "net/url: add JoinPath, URL.JoinPath",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53482": {
+      "issue_number": 53482,
+      "title": "net: add FlagRunning to the Flags of struct Interface, to exactly reflect the states of an interface or NIC",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37112": {
+      "issue_number": 37112,
+      "title": "runtime: API for unstable metrics",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46771": {
+      "issue_number": 46771,
+      "title": "mime/multipart: add FileContentDisposition",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48424": {
+      "issue_number": 48424,
+      "title": "spec: allow eliding interface{  } in constraint literals",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46485": {
+      "issue_number": 46485,
+      "title": "go/parser: add a SkipObjectResolution mode flag",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46654": {
+      "issue_number": 46654,
+      "title": "x/crypto/acme: delete a bunch of ACMEv1 code",
+      "functions": [],
+      "total_functions": 0
+    },
+    "34652": {
+      "issue_number": 34652,
+      "title": "text/template/parse: add CommentNode to the parse tree",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42098": {
+      "issue_number": 42098,
+      "title": "syscall: add SysProcAttr.NoInheritHandles on Windows",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43216": {
+      "issue_number": 43216,
+      "title": "embed: remove support for embedding directives on local variables",
+      "functions": [],
+      "total_functions": 0
+    },
+    "35998": {
+      "issue_number": 35998,
+      "title": "testing: add TB.TempDir() string",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43698": {
+      "issue_number": 43698,
+      "title": "cmd/vet: warn about \"// go:\" comments (with space)",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51414": {
+      "issue_number": 51414,
+      "title": "time: add Duration.Abs",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37023": {
+      "issue_number": 37023,
+      "title": "runtime: panicmem should expose the address it's panicking about.",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41438": {
+      "issue_number": 41438,
+      "title": "x/net: add xsrftoken.ValidFor",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46258": {
+      "issue_number": 46258,
+      "title": "syscall: add Pdeathsig to SysProcAttr for FreeBSD",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51430": {
+      "issue_number": 51430,
+      "title": "cmd/cover: extend coverage testing to include applications",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46308": {
+      "issue_number": 46308,
+      "title": "crypto/tls: add VersionName function to return a string version of the TLS Version",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37033": {
+      "issue_number": 37033,
+      "title": "runtime: provide centralized facility for managing (c)go pointer handles",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51766": {
+      "issue_number": 51766,
+      "title": "net/netip: add IPv6LinkLocalAllRouters",
+      "functions": [],
+      "total_functions": 0
+    },
+    "8606": {
+      "issue_number": 8606,
+      "title": "spec: define that structs are compared field-by-field as listed in source code",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51684": {
+      "issue_number": 51684,
+      "title": "regexp: add ErrNestingDepth error",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40962": {
+      "issue_number": 40962,
+      "title": "io: add ReadSeekCloser interface",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51896": {
+      "issue_number": 51896,
+      "title": "unicode/utf16: add AppendRune",
+      "functions": [],
+      "total_functions": 0
+    },
+    "27837": {
+      "issue_number": 27837,
+      "title": "x/sync/errgroup: add TryGo and SetLimit to control concurrency",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42088": {
+      "issue_number": 42088,
+      "title": "cmd/go: 'go run' should run executables in module mode outside a module",
+      "functions": [],
+      "total_functions": 0
+    },
+    "19367": {
+      "issue_number": 19367,
+      "title": "unsafe: add Slice(ptr *T, len anyIntegerType) []T",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37168": {
+      "issue_number": 37168,
+      "title": "crypto: new assembly policy",
+      "functions": [],
+      "total_functions": 0
+    },
+    "29062": {
+      "issue_number": 29062,
+      "title": "cmd/go: fail tests that invoke os.Exit(0) explicitly",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43823": {
+      "issue_number": 43823,
+      "title": "time: support Decimal Comma for fractional seconds",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48157": {
+      "issue_number": 48157,
+      "title": "cmd/go: add per-test timeouts",
+      "functions": [],
+      "total_functions": 0
+    },
+    "32779": {
+      "issue_number": 32779,
+      "title": "encoding/json: memoize strings during decode",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46131": {
+      "issue_number": 46131,
+      "title": "reflect: add MapIter.SetKey, SetValue, and friends",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51225": {
+      "issue_number": 51225,
+      "title": "cmd/compile: require build systems to specify -importcfg",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40025": {
+      "issue_number": 40025,
+      "title": "proposal: io/ioutil: move Discard, NopCloser, ReadAll to io",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47527": {
+      "issue_number": 47527,
+      "title": "bufio: add Writer.AvailableBuffer",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37974": {
+      "issue_number": 37974,
+      "title": "go/doc: drop //go:* comments from extracted docs",
+      "functions": [],
+      "total_functions": 0
+    },
+    "35921": {
+      "issue_number": 35921,
+      "title": "x/tools/go/packages: add module information to the Package struct",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37776": {
+      "issue_number": 37776,
+      "title": "net/url: add URL.RawFragment, like RawPath",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40357": {
+      "issue_number": 40357,
+      "title": "cmd/go: deprecate a major module version",
+      "functions": [],
+      "total_functions": 0
+    },
+    "39557": {
+      "issue_number": 39557,
+      "title": "proposal: flag: add Func",
+      "functions": [],
+      "total_functions": 0
+    },
+    "35804": {
+      "issue_number": 35804,
+      "title": "database/sql: add error getter on sql.Row",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53003": {
+      "issue_number": 53003,
+      "title": "unsafe: add StringData, String, SliceData",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40281": {
+      "issue_number": 40281,
+      "title": "reflect: back out multiple keys in key:value pair in struct tag",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41563": {
+      "issue_number": 41563,
+      "title": "reflect: add StructField.IsExported and Method.IsExported",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46303": {
+      "issue_number": 46303,
+      "title": "x/crypto/acme: allow setting client KID directly",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46121": {
+      "issue_number": 46121,
+      "title": "html/template: make FuncMap an alias for text/template.FuncMap",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43947": {
+      "issue_number": 43947,
+      "title": "os/exec: on Windows use NeedCurrentDirectoryForExePathW for LookPath behavior",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50860": {
+      "issue_number": 50860,
+      "title": "sync/atomic: add typed atomic values",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52444": {
+      "issue_number": 52444,
+      "title": "crypto/x509: provide method for generating conformant serial numbers",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43724": {
+      "issue_number": 43724,
+      "title": "os/exec: return error when PATH lookup would use current directory",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41730": {
+      "issue_number": 41730,
+      "title": "cmd/go: allow users to control VCS usage",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51668": {
+      "issue_number": 51668,
+      "title": "fmt: add FormatString(State) string",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41980": {
+      "issue_number": 41980,
+      "title": "testing: show diffs for incorrect output from Example tests",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41792": {
+      "issue_number": 41792,
+      "title": "flag: panic if flag name begins with - or contains =",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44226": {
+      "issue_number": 44226,
+      "title": "x/crypto/openpgp: mark as frozen and deprecated",
+      "functions": [],
+      "total_functions": 0
+    },
+    "35593": {
+      "issue_number": 35593,
+      "title": "all: make linux/arm64 a first-class port",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45453": {
+      "issue_number": 45453,
+      "title": "all: add GOAMD64 environment variable",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40276": {
+      "issue_number": 40276,
+      "title": "cmd/go: 'go install' should install executables in module mode outside a module",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42322": {
+      "issue_number": 42322,
+      "title": "io/fs: add func Sub(fsys FS, dir string) FS",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42100": {
+      "issue_number": 42100,
+      "title": "build: add ios/amd64 as a GOOS/GOARCH",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37475": {
+      "issue_number": 37475,
+      "title": "cmd/go: stamp git/vcs current HEAD hash/commit hash/dirty bit in binaries",
+      "functions": [],
+      "total_functions": 0
+    },
+    "39567": {
+      "issue_number": 39567,
+      "title": "net/http: add MaxBytesHandler(h Handler, n int64) Handler",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44808": {
+      "issue_number": 44808,
+      "title": "image, image/draw: add interfaces for using RGBA64 directly",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45754": {
+      "issue_number": 45754,
+      "title": "flag: add TextVar to handle types that implement encoding.TextUnmarshaler",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47651": {
+      "issue_number": 47651,
+      "title": "reflect: add Pointer",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48052": {
+      "issue_number": 48052,
+      "title": "debug/plan9obj: add ErrNoSymbols sentinel for case that no symbol section exists",
+      "functions": [],
+      "total_functions": 0
+    },
+    "33920": {
+      "issue_number": 33920,
+      "title": "io/ioutil: reject path separators in TempDir, TempFile pattern",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47209": {
+      "issue_number": 47209,
+      "title": "path/filepath: add SkipAll",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48152": {
+      "issue_number": 48152,
+      "title": "crypto/tls: expose all presented certs in error type on handshake failure",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41682": {
+      "issue_number": 41682,
+      "title": "crypto/x509: reject SHA-1 signatures in Verify",
+      "functions": [],
+      "total_functions": 0
+    },
+    "25192": {
+      "issue_number": 25192,
+      "title": "net/url: don't parse ';' as a separator in query string [freeze exception]",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53200": {
+      "issue_number": 53200,
+      "title": "go/token: add FileSet.RemoveFile method",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40082": {
+      "issue_number": 40082,
+      "title": "database/sql: add NullInt16 support",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45963": {
+      "issue_number": 45963,
+      "title": "cmd/go: add test -vet=all sentinel",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46518": {
+      "issue_number": 46518,
+      "title": "net/netip: add new IP address package, use in net",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40337": {
+      "issue_number": 40337,
+      "title": "crypto/dsa: deprecate and remove from crypto/x509 and x/crypto/ssh",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45973": {
+      "issue_number": 45973,
+      "title": "net/http: add AllowQuerySemicolons [freeze exception]",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44918": {
+      "issue_number": 44918,
+      "title": "new security policy",
+      "functions": [],
+      "total_functions": 0
+    },
+    "49471": {
+      "issue_number": 49471,
+      "title": "runtime: use MiniDumpWriteDump for GOTRACEBACK=crash on Windows",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46001": {
+      "issue_number": 46001,
+      "title": "net/http: use nontransitional IDNA processing",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52746": {
+      "issue_number": 52746,
+      "title": "time: add DateTime, DateOnly, TimeOnly format constants",
+      "functions": [],
+      "total_functions": 0
+    },
+    "49038": {
+      "issue_number": 49038,
+      "title": "cmd/vet: printf: warn about verbs that don\u2019t match a type parameter\u2019s type set",
+      "functions": [],
+      "total_functions": 0
+    },
+    "34293": {
+      "issue_number": 34293,
+      "title": "cmd/go: add go doc -json",
+      "functions": [],
+      "total_functions": 0
+    },
+    "30999": {
+      "issue_number": 30999,
+      "title": "net: reject leading zeros in IP address parsers [freeze exception]",
+      "functions": [],
+      "total_functions": 0
+    },
+    "31804": {
+      "issue_number": 31804,
+      "title": "crypto/ed25519: Implement Ed25519ph",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43744": {
+      "issue_number": 43744,
+      "title": "testing: benchmark unit properties",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47916": {
+      "issue_number": 47916,
+      "title": "go/types: additions to support type parameters",
+      "functions": [],
+      "total_functions": 0
+    },
+    "38978": {
+      "issue_number": 38978,
+      "title": "x/crypto/acme: support subproblems",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40356": {
+      "issue_number": 40356,
+      "title": "cmd/vet: ensure errors implement Is, As, and Unwrap anonymous interfaces",
+      "functions": [],
+      "total_functions": 0
+    },
+    "38968": {
+      "issue_number": 38968,
+      "title": "x/lint: freeze and deprecate",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40034": {
+      "issue_number": 40034,
+      "title": "net/smtp: add Client.TLSConfig field and Client.SendMail method",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52038": {
+      "issue_number": 52038,
+      "title": "spec: adjust scope of type parameters declared by method receivers",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53002": {
+      "issue_number": 53002,
+      "title": "net/http/httputil: replace Director with Rewrite",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44196": {
+      "issue_number": 44196,
+      "title": "time: add Time.UnixMilli and Time.UnixMicro (like Time.UnixNano)",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52593": {
+      "issue_number": 52593,
+      "title": "x/exp/maps: Copy should use two generic map types",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50465": {
+      "issue_number": 50465,
+      "title": "net/http/httputil: add X-Forwarded-Proto and X-Forwarded-Host by default",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46060": {
+      "issue_number": 46060,
+      "title": "x/sys/unix: add IoctlSetIntPtr",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41696": {
+      "issue_number": 41696,
+      "title": "cmd/go: deprecate the -i flag",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46336": {
+      "issue_number": 46336,
+      "title": "bytes, strings: add Cut",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44011": {
+      "issue_number": 44011,
+      "title": "syscall: add additional fields to SysProcAttr on Windows",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43620": {
+      "issue_number": 43620,
+      "title": "testing: add Elapsed() method to testing.B",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48256": {
+      "issue_number": 48256,
+      "title": "cmd/go: put workspace commands under `go work`",
+      "functions": [],
+      "total_functions": 0
+    },
+    "38017": {
+      "issue_number": 38017,
+      "title": "time: add time/tzdata package and timetzdata tag to embed tzdata in program",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50601": {
+      "issue_number": 50601,
+      "title": "encoding/binary: add AppendByteOrder",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46084": {
+      "issue_number": 46084,
+      "title": "x/sys/unix: add System V shared memory functions",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50842": {
+      "issue_number": 50842,
+      "title": "io: implement WriterTo on result of MultiReader",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41790": {
+      "issue_number": 41790,
+      "title": "database/sql: close driver.Connector if it implements an io.Closer",
+      "functions": [],
+      "total_functions": 0
+    },
+    "5901": {
+      "issue_number": 5901,
+      "title": "encoding/json: allow per-Encoder/per-Decoder registration of marshal/unmarshal functions",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52792": {
+      "issue_number": 52792,
+      "title": "cmd/go: `go list -e -m -json all` to start displaying hashes of modules",
+      "functions": [],
+      "total_functions": 0
+    },
+    "28308": {
+      "issue_number": 28308,
+      "title": "cmd/vet: flag using %s:%d to construct network addresses",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44006": {
+      "issue_number": 44006,
+      "title": "syscall/js: remove Wrapper type to avoid extreme allocations and improve performance",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53021": {
+      "issue_number": 53021,
+      "title": "crypto/subtle: add XORBytes",
+      "functions": [],
+      "total_functions": 0
+    },
+    "49580": {
+      "issue_number": 49580,
+      "title": "io/fs: add ReadLinkFS interface",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53015": {
+      "issue_number": 53015,
+      "title": "text/template: add \"return\" action",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41048": {
+      "issue_number": 41048,
+      "title": "net/http: add Transport.GetProxyConnectHeader",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48409": {
+      "issue_number": 48409,
+      "title": "runtime/debug: soft memory limit",
+      "functions": [],
+      "total_functions": 0
+    },
+    "35562": {
+      "issue_number": 35562,
+      "title": "net/http: mention Context and Client.Do in docs for Get, Head, Post, PostForm",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42102": {
+      "issue_number": 42102,
+      "title": "time: add Time.IsDST() bool method",
+      "functions": [],
+      "total_functions": 0
+    },
+    "39904": {
+      "issue_number": 39904,
+      "title": "testing: change -run regexp to make / have usual precedence",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42027": {
+      "issue_number": 42027,
+      "title": "path/filepath: add WalkDir (Walk using DirEntry)",
+      "functions": [],
+      "total_functions": 0
+    },
+    "49650": {
+      "issue_number": 49650,
+      "title": "x/sys/windows/namedpipe: new package",
+      "functions": [],
+      "total_functions": 0
+    },
+    "27628": {
+      "issue_number": 27628,
+      "title": "cmd/go: do not cache tool output if tools print to stdout/stderr",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51868": {
+      "issue_number": 51868,
+      "title": "debug/pe: add APIs to support reading COMDAT info for sections",
+      "functions": [],
+      "total_functions": 0
+    },
+    "28089": {
+      "issue_number": 28089,
+      "title": "go/ast: add func IsGenerated(*File) bool",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43676": {
+      "issue_number": 43676,
+      "title": "proposal: x/website: golang.org/s: print an index at the root",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41773": {
+      "issue_number": 41773,
+      "title": "net/http: add Server.OptionsHandler to allow custom handling of OPTIONS *",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50674": {
+      "issue_number": 50674,
+      "title": "crypto/x509: add ParseRevocationList, deprecate ParseCRL & ParseDERCRL",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50720": {
+      "issue_number": 50720,
+      "title": "x/tools/go/packages: add EmbedFiles and EmbedPatterns",
+      "functions": [],
+      "total_functions": 0
+    },
+    "26535": {
+      "issue_number": 26535,
+      "title": "compress/lzw: add Resetter interface to allow encoders to be reused",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37641": {
+      "issue_number": 37641,
+      "title": "cmd/go: reserve example/ and test/ as non-stdlib path prefixes",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45964": {
+      "issue_number": 45964,
+      "title": "all: require Linux kernel version 2.6.32",
+      "functions": [],
+      "total_functions": 0
+    },
+    "39444": {
+      "issue_number": 39444,
+      "title": "os: export errFinished as ErrProcessDone",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45430": {
+      "issue_number": 45430,
+      "title": "crypto/tls: deprecate PreferServerCipherSuites and CipherSuites ordering",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37533": {
+      "issue_number": 37533,
+      "title": "flag: exit 0 for default -h/-help option",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47781": {
+      "issue_number": 47781,
+      "title": "go/ast, go/token: additions to support type parameters",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52885": {
+      "issue_number": 52885,
+      "title": "x/sys/unix: add RecvmsgBuffers and SendmsgBuffers",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46057": {
+      "issue_number": 46057,
+      "title": "crypto/x509: add CertPool.Equal",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50792": {
+      "issue_number": 50792,
+      "title": "constraints: move to x/exp for Go 1.18",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48367": {
+      "issue_number": 48367,
+      "title": "strings, bytes: deprecate Title",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43401": {
+      "issue_number": 43401,
+      "title": "encoding/csv: add Reader.InputOffset method",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40728": {
+      "issue_number": 40728,
+      "title": "cmd/go: default to & improve -mod=readonly",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43993": {
+      "issue_number": 43993,
+      "title": "cmd/vet: warn about using reflect.DeepEqual and == on reflect.Value",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50770": {
+      "issue_number": 50770,
+      "title": "time: add Time.Compare",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44221": {
+      "issue_number": 44221,
+      "title": "encoding/csv: add the ability to get the line number of a record",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44143": {
+      "issue_number": 44143,
+      "title": "all: document uses of context.Background by APIs",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43931": {
+      "issue_number": 43931,
+      "title": "all: merge dev.typeparams to master during Go 1.17",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48294": {
+      "issue_number": 48294,
+      "title": "reflect: rename MapIter.SetKey/SetValue -> Value.SetIterKey/SetIterValue",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51428": {
+      "issue_number": 51428,
+      "title": "net: make errCanceled and errTimeout be \"errors.Is\" context.Canceled and context.DeadlineExceeded",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52463": {
+      "issue_number": 52463,
+      "title": "go/ast: formally deprecate Object",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47510": {
+      "issue_number": 47510,
+      "title": "x/net/idna: add pre-defined profile for non-transitional IDNA2008",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51115": {
+      "issue_number": 51115,
+      "title": "io: add an `Err` field to `LimitedReader`",
+      "functions": [],
+      "total_functions": 0
+    },
+    "35567": {
+      "issue_number": 35567,
+      "title": "testing: move Internal types to internal package",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40255": {
+      "issue_number": 40255,
+      "title": "all: drop GO386=387 support in Go 1.16",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46648": {
+      "issue_number": 46648,
+      "title": "go/types: add a Config.GoVersion field to set the target language version",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53346": {
+      "issue_number": 53346,
+      "title": "encoding/xml: Add (*Encoder).Close() to check for unclosed elements",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40127": {
+      "issue_number": 40127,
+      "title": "encoding/json: add Encoder.EncodeToken method",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51082": {
+      "issue_number": 51082,
+      "title": "go/doc: improve headings, lists, and links",
+      "functions": [],
+      "total_functions": 0
+    },
+    "35833": {
+      "issue_number": 35833,
+      "title": "math/big: add Int.FillBytes",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45460": {
+      "issue_number": 45460,
+      "title": "net/http: allow customizing proxy CONNECT url",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42387": {
+      "issue_number": 42387,
+      "title": "io: add FileInfoToDirEntry(FileInfo)",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45454": {
+      "issue_number": 45454,
+      "title": "cmd/go: provide build tags for architecture environment variables",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50436": {
+      "issue_number": 50436,
+      "title": "os/exec: add fields for managing termination signals and pipes",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44167": {
+      "issue_number": 44167,
+      "title": "proposal: runtime: GC pacer redesign",
+      "functions": [],
+      "total_functions": 0
+    },
+    "15513": {
+      "issue_number": 15513,
+      "title": "cmd/go: support compiling all tests without running",
+      "functions": [],
+      "total_functions": 0
+    },
+    "39178": {
+      "issue_number": 39178,
+      "title": "net/http: make DNS lookup timeouts return net.DNSError instead of poll.TimeoutError",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46287": {
+      "issue_number": 46287,
+      "title": "crypto/x509: use platform verifier on Windows, macOS and iOS",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48257": {
+      "issue_number": 48257,
+      "title": "cmd/go: add a `go work use` command",
+      "functions": [],
+      "total_functions": 0
+    },
+    "43602": {
+      "issue_number": 43602,
+      "title": "embed: remove type spelling restrictions",
+      "functions": [],
+      "total_functions": 0
+    },
+    "32958": {
+      "issue_number": 32958,
+      "title": "x/crypto/ssh: add NewControlClientConn",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50447": {
+      "issue_number": 50447,
+      "title": "x/exp/typeparams: a new module with a transitional API for tools",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46293": {
+      "issue_number": 46293,
+      "title": "reflect: add MapIter.Reset",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42026": {
+      "issue_number": 42026,
+      "title": "os: add ReadDir, ReadFile, WriteFile, CreateTemp, MkdirTemp & deprecate io/ioutil",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45435": {
+      "issue_number": 45435,
+      "title": "sync: add Mutex.TryLock",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48187": {
+      "issue_number": 48187,
+      "title": "cmd/go: go version to support non-executable Go binaries",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37519": {
+      "issue_number": 37519,
+      "title": "cmd/go: deprecate -insecure on go get",
+      "functions": [],
+      "total_functions": 0
+    },
+    "38627": {
+      "issue_number": 38627,
+      "title": "text/template/parse: add a SkipFuncCheck Mode flag to disable function checking during parse",
+      "functions": [],
+      "total_functions": 0
+    },
+    "31044": {
+      "issue_number": 31044,
+      "title": "x/crypto/ssh/terminal: move all APIs to x/term and deprecate",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47649": {
+      "issue_number": 47649,
+      "title": "maps: new package to provide generic map functions",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41260": {
+      "issue_number": 41260,
+      "title": "testing: add TB.Setenv()",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44505": {
+      "issue_number": 44505,
+      "title": "build: adopt Go 1.17 as bootstrap toolchain for Go 1.20",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45729": {
+      "issue_number": 45729,
+      "title": "net: deprecate Temporary error status",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50429": {
+      "issue_number": 50429,
+      "title": "go/ast: add Range token.Pos to RangeStmt",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53573": {
+      "issue_number": 53573,
+      "title": "crypto/x509: surface ReasonCode inside x509.RevocationList entries",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46059": {
+      "issue_number": 46059,
+      "title": "net/url: add OmitHost bool to URL",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42681": {
+      "issue_number": 42681,
+      "title": "build: move GOEXPERIMENT knob from make.bash to cmd/go",
+      "functions": [],
+      "total_functions": 0
+    },
+    "40592": {
+      "issue_number": 40592,
+      "title": "reflect: add func (Value) UnsafePointer() unsafe.Pointer",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51644": {
+      "issue_number": 51644,
+      "title": "encoding/binary: add AppendUvarint and AppendVarint",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53481": {
+      "issue_number": 53481,
+      "title": "x/crypto/cryptobyte: add ReadUint64 and AddUint64",
+      "functions": [],
+      "total_functions": 0
+    },
+    "34527": {
+      "issue_number": 34527,
+      "title": "cmd/go: add GOMODCACHE",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45628": {
+      "issue_number": 45628,
+      "title": "encoding/xml: add Decoder.InputPos",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46746": {
+      "issue_number": 46746,
+      "title": "reflect: add Value.Equal, Value.Comparable",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44940": {
+      "issue_number": 44940,
+      "title": "unicode/utf16: add RuneLen",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41066": {
+      "issue_number": 41066,
+      "title": "crypto/tls: export/replace errClosed",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41184": {
+      "issue_number": 41184,
+      "title": "cmd/go: continue conversion to bug-resistant //go:build constraints",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48866": {
+      "issue_number": 48866,
+      "title": "mime: allow duplicate media parameters with equal values",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50332": {
+      "issue_number": 50332,
+      "title": "cmd/go: add -C flag to change directory",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50035": {
+      "issue_number": 50035,
+      "title": "x/time/rate: expose the number of remaining tokens",
+      "functions": [],
+      "total_functions": 0
+    },
+    "42128": {
+      "issue_number": 42128,
+      "title": "x/net/dns/dnsmessage: use UnknownResource for an unrecognized DNS type",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51994": {
+      "issue_number": 51994,
+      "title": "x/crypto/ssh: add ServerConfig.NoClientAuthCallback",
+      "functions": [],
+      "total_functions": 0
+    },
+    "53466": {
+      "issue_number": 53466,
+      "title": "all: add freebsd/riscv64 port",
+      "functions": [],
+      "total_functions": 0
+    },
+    "49097": {
+      "issue_number": 49097,
+      "title": "net: add context-aware Dialer methods DialTCP, DialUDP, DialIP, DialUnix",
+      "functions": [],
+      "total_functions": 0
+    },
+    "49390": {
+      "issue_number": 49390,
+      "title": "cmd/compile: clarify whether \"-l\" and \"-N\" compiler flags are actually supported",
+      "functions": [],
+      "total_functions": 0
+    },
+    "39351": {
+      "issue_number": 39351,
+      "title": "sync/atomic: add (*Value).Swap and (*Value).CompareAndSwap",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47142": {
+      "issue_number": 47142,
+      "title": "database/sql: use errors.Is when checking for driver.ErrBadConn",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46742": {
+      "issue_number": 46742,
+      "title": "unsafe: double-check specified semantics for Slice((*T)(nil), 0) for Go 1.17",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52114": {
+      "issue_number": 52114,
+      "title": "x/net/http2: add DialTLSContext to Transport",
+      "functions": [],
+      "total_functions": 0
+    },
+    "46505": {
+      "issue_number": 46505,
+      "title": "spec: allow conversion from slice to array",
+      "functions": [],
+      "total_functions": 0
+    },
+    "34601": {
+      "issue_number": 34601,
+      "title": "x/website: add dark (night) theme",
+      "functions": [],
+      "total_functions": 0
+    },
+    "52376": {
+      "issue_number": 52376,
+      "title": "reflect: add Value.SetZero",
+      "functions": [],
+      "total_functions": 0
+    },
+    "41191": {
+      "issue_number": 41191,
+      "title": "embed, cmd/go: add support for embedded files",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44815": {
+      "issue_number": 44815,
+      "title": "bufio: use underlying ReadFrom even when data is buffered",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51447": {
+      "issue_number": 51447,
+      "title": "x/exp/winfsnotify: delete package",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45033": {
+      "issue_number": 45033,
+      "title": "strconv: add QuotedPrefix",
+      "functions": [],
+      "total_functions": 0
+    },
+    "48218": {
+      "issue_number": 48218,
+      "title": "reflect: add Value.FieldByIndexErr",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47066": {
+      "issue_number": 47066,
+      "title": "reflect: permit Value.Bytes (but not SetBytes) on addressable byte arrays",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51572": {
+      "issue_number": 51572,
+      "title": "cmd/go: add 'unix' build tag but not *_unix.go file support",
+      "functions": [],
+      "total_functions": 0
+    },
+    "39057": {
+      "issue_number": 39057,
+      "title": "log: add func Default() *Logger",
+      "functions": [],
+      "total_functions": 0
+    },
+    "38781": {
+      "issue_number": 38781,
+      "title": "testing/iotest: add ErrReader",
+      "functions": [],
+      "total_functions": 0
+    },
+    "36771": {
+      "issue_number": 36771,
+      "title": "strconv: add ParseComplex",
+      "functions": [],
+      "total_functions": 0
+    },
+    "44435": {
+      "issue_number": 44435,
+      "title": "cmd/go: narrow 'mod download' default set",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50101": {
+      "issue_number": 50101,
+      "title": "net: make LookupCNAME consistent between Unix and Windows, document",
+      "functions": [],
+      "total_functions": 0
+    },
+    "29770": {
+      "issue_number": 29770,
+      "title": "text/template: allow newlines within actions and pipelines",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51566": {
+      "issue_number": 51566,
+      "title": "io: make NopCloser forward WriterTo calls to underlying reader",
+      "functions": [],
+      "total_functions": 0
+    },
+    "37196": {
+      "issue_number": 37196,
+      "title": "time: make Timer/Ticker channels not receivable with old values after Stop or Reset returns",
+      "functions": [],
+      "total_functions": 0
+    },
+    "38079": {
+      "issue_number": 38079,
+      "title": "net/http/httputil: do not add to empty X-Forwarded-For header in ReverseProxy",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51682": {
+      "issue_number": 51682,
+      "title": "go/types: add Object.Origin [freeze exception]",
+      "functions": [],
+      "total_functions": 0
+    },
+    "39214": {
+      "issue_number": 39214,
+      "title": "testing: add CPU name to standard benchmark labels",
+      "functions": [],
+      "total_functions": 0
+    },
+    "30715": {
+      "issue_number": 30715,
+      "title": "net/http: add MaxBytesError",
+      "functions": [],
+      "total_functions": 0
+    },
+    "51972": {
+      "issue_number": 51972,
+      "title": "sync: add new Map methods CompareAndSwap, CompareAndDelete, Swap",
+      "functions": [],
+      "total_functions": 0
+    },
+    "50859": {
+      "issue_number": 50859,
+      "title": "doc: update Go memory model",
+      "functions": [],
+      "total_functions": 0
+    },
+    "32406": {
+      "issue_number": 32406,
+      "title": "crypto/tls: add (*tls.Conn).HandshakeContext and add context to ClientHelloInfo and CertificateRequestInfo",
+      "functions": [],
+      "total_functions": 0
+    },
+    "21865": {
+      "issue_number": 21865,
+      "title": "runtime/secret: add new package",
+      "functions": [],
+      "total_functions": 0
+    },
+    "35044": {
+      "issue_number": 35044,
+      "title": "crypto/x509: add CertPool.Clone",
+      "functions": [],
+      "total_functions": 0
+    },
+    "45899": {
+      "issue_number": 45899,
+      "title": "io: add OffsetWriter, NewOffsetWriter",
+      "functions": [],
+      "total_functions": 0
+    },
+    "33232": {
+      "issue_number": 33232,
+      "title": "spec: allow 'any' for 'interface{}' in non-constraint contexts",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47658": {
+      "issue_number": 47658,
+      "title": "reflect: add Value.CanInt, CanUint, CanFloat",
+      "functions": [],
+      "total_functions": 0
+    },
+    "47609": {
+      "issue_number": 47609,
+      "title": "unicode/utf8: add AppendRune",
+      "functions": [],
+      "total_functions": 0
+    },
+    "38776": {
+      "issue_number": 38776,
+      "title": "hash, crypto: add WriteByte, WriteString method to hash implementations",
+      "functions": [],
+      "total_functions": 0
+    }
+  },
+  "function_validations": [],
+  "confidence_stats": {
+    "high_confidence": [],
+    "medium_confidence": [],
+    "low_confidence": [],
+    "not_found": []
+  }
+}

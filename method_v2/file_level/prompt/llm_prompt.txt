@@ -1,0 +1,380 @@
+
+You are analyzing a Go proposal and repository to identify which files are **most relevant** to the given proposal.
+
+### Proposal Content ###
+# Proposal: 38776.md
+==== [Issue Title] ====
+hash, crypto: add WriteByte, WriteString method to hash implementations
+
+==== [Issue Body] ====
+This proposal was initially for embedding io.ByteWriter in hash.Hash, or adding a WriteByte() method with the same signature.
+
+This method is already added in the new maphash.Hash. Adding it elsewhere will extend the benefits in performance and usability to the other Hash implementations.
+
+Per feedback of @ianlancetaylor below, I'm instead proposing the addition `WriteByte()` from io.ByteWriter to the standard library hash.Hash implementations, including:
+
+adler32
+crc32
+crc64
+fnv
+
+
+==== [Comments] ====
+
+--- Comment #1 by ianlancetaylor ---
+Unfortunately, the proposed change would not be backward compatible.  It would mean that existing types that satisfy the hash.Hash interface would no longer implement the interface.  That could break working code, and violates the Go 1 compatibility guarantee (https://golang.org/doc/go1compat).
+
+So, in short, we can't do this.
+
+--- Comment #2 by geraldss ---
+Got it. How about adding another interface, or just adding the WriteByte() method to the standard library's hash implementations?
+
+Hashing is sometimes part of performance-sensitive code paths, and it would be beneficial to avoid conversions to byte slices whose only purpose is to satisfy the API.
+
+--- Comment #3 by ianlancetaylor ---
+I'm not sure we need another interface, since people can always do a type assertion to `io.ByteWriter`.
+
+Do you want to repurpose this proposal for adding `WriteByte` methods to various hash implementations?
+
+--- Comment #4 by ulikunitz ---
+How does performance benefit? My experience with WriteByte is that it is slower than appending to a byte slice and use the classic Write method every 256 or 512 bytes.
+
+--- Comment #5 by geraldss ---
+The performance benefit isn't for hashing byte slices. It's for hashing everything else: primitives, structs, maps, arrays, and combinations thereof.
+
+--- Comment #6 by ulikunitz ---
+Can you provide some example code helping me to understand your statement?
+
+--- Comment #7 by rsc ---
+Usually hashes can operate much faster on a block of data than a single byte at a time.
+One potential problem with adding WriteByte is that using it would be inherently slower
+than passing in a larger slice of data.
+
+What is the use case where WriteByte would be preferable over constructing a (presumably larger than one byte) slice and calling Write?
+
+
+
+--- Comment #8 by geraldss ---
+```
+type T struct {
+    A byte
+    B string
+    C byte
+    D string
+}
+
+func HashT(h hash.Hash, t *T) { ... }
+```
+To implement `HashT()`, it would be convenient if there were no conversions to byte slices. The current option is to use `encoding/binary`, but that API doesn't express the avoidance of byte slices when it calls a generic `io.Writer`. Ditto for supporting `WriteString()`.
+
+--- Comment #9 by ulikunitz ---
+I have combined bufio.Writer and hash.Hash to create a buffered hash
+
+Test here: https://play.golang.org/p/IHx5GcvLW1v
+
+```Go
+package main
+
+import (
+	"bufio"
+	"crypto/sha256"
+	"fmt"
+	"hash"
+)
+
+type BufferedHash struct {
+	h hash.Hash
+	*bufio.Writer
+}
+
+func NewBufferedHash(h hash.Hash) *BufferedHash {
+	return &BufferedHash{
+		h:      h,
+		Writer: bufio.NewWriter(h),
+	}
+}
+
+func (bh *BufferedHash) Sum(p []byte) []byte {
+	if err := bh.Flush(); err != nil {
+		panic(err)
+	}
+	return bh.h.Sum(p)
+}
+
+func (bh *BufferedHash) Reset() {
+	bh.h.Reset()
+	bh.Writer.Reset(bh.h)
+}
+
+func (bh *BufferedHash) Size() int {
+	return bh.h.Size()
+}
+
+func (bh *BufferedHash) BlockSize() int {
+	return bh.h.BlockSize()
+}
+
+type T struct {
+	A byte
+	B string
+	C byte
+	D string
+}
+
+func HashT(bh *BufferedHash, t T) {
+	bh.WriteByte(t.A)
+	bh.WriteString(t.B)
+	bh.WriteByte(t.C)
+	bh.WriteString(t.D)
+}
+
+func main() {
+	bh := NewBufferedHash(sha256.New())
+
+	t := T{A: 'A', B: "B", C: 'C', D: "D"}
+	HashT(bh, t)
+
+	fmt.Printf("hash(%+v): %x\n", t, bh.Sum(nil))
+	bh.Reset()
+
+	t = T{A: 'A', B: "B", C: 'C', D: "Dee"}
+	HashT(bh, t)
+	fmt.Printf("hash(%+v): %x\n", t, bh.Sum(nil))
+}
+```
+
+--- Comment #10 by ulikunitz ---
+The proverb "If I Had More Time, I Would Have Written a Shorter Letter" applies here. There is no need for creating an extra type: https://play.golang.org/p/Pp6GVhLpEx_9
+
+```go
+package main
+
+import (
+	"crypto/sha256"
+	"fmt"
+	"io"
+)
+
+type T struct {
+	A byte
+	B string
+	C byte
+	D string
+}
+
+func SerializeT(w io.Writer, t T) {
+	fmt.Fprintf(w, "%c%s%c%s", t.A, t.B, t.C, t.D)
+}
+
+func main() {
+	h := sha256.New()
+
+	t := T{A: 'A', B: "B", C: 'C', D: "D"}
+	SerializeT(h, t)
+
+	fmt.Printf("hash(%+v): %x\n", t, h.Sum(nil))
+	h.Reset()
+
+	t = T{A: 'A', B: "B", C: 'C', D: "Dee"}
+	SerializeT(h, t)
+	fmt.Printf("hash(%+v): %x\n", t, h.Sum(nil))
+}
+```
+
+--- Comment #11 by rsc ---
+What's the context where you are hashing non-byte-slices with functions like sha256?
+If you are building a hash table, hash/maphash is the package to use, and maphash.Hash _does_ have WriteByte.
+If you need a well-defined fixed hash function, that's almost always for use with a specific byte sequence.
+
+I suppose the crypto/* hashes all buffer already and the hash/* function all operate byte at a time. But they all still run faster with large sequences.
+
+
+
+--- Comment #12 by geraldss ---
+I'm building a relational database. I understand the reservations about changes / additions, but at high scale and high performance, it's important for APIs to not require avoidable overhead.
+
+--- Comment #13 by rsc ---
+> but at high scale and high performance, it's important for APIs to not require avoidable overhead.
+
+The argument I was trying to make _against_ adding WriteByte is precisely that it really can't be very high performance. Arranging for larger Writes is always going to beat a WriteByte loop. The reservation about provided WriteByte is exactly that it would tempt people toward a less efficient path.
+
+We may still want to add it for convenience, especially for cases that don't care about "high scale and high performance", but I don't think you'd want to use it in your relational database.
+
+--- Comment #14 by rsc ---
+All the hashes have buffers underneath, so they can all implement WriteByte efficiently - well, as efficiently as anyone can implement WriteByte.
+
+It's still more efficient to call Write with many bytes than to call WriteByte in a loop, but given that io.ByteWriter exists, it seems reasonable to make the hash.Hash implementations implement it.
+(To be clear, we can't modify hash.Hash itself, as was originally proposed.)
+
+Earlier this year we declined #14757 because the implementation would have to use unsafe, but @bradfitz points out that the buffer that enables WriteByte would also enable a safe implementation of WriteString. So maybe we should add WriteString at the same time, using safe code. (If passed a long string, WriteString would have to copy into the buffer, process the buffer, and repeat. That would still be a bit of copying, but not more than converting to a []byte.)
+
+Will retitle this issue to be WriteByte and WriteString and leave open for another week, but this seems headed for likely accept.
+
+
+--- Comment #15 by ulikunitz ---
+The premise that all hashes have buffers underneath is not correct. The non-cryptographic hashes in the adler32, crc32, crc64 and fnv packages in the hash directory of the standard library  don't have buffers. It is of course possible to implement WriteByte and WriteString for those hashes based on the Write logic.
+
+The cost of the proposal, implement WriteByte and WriteString for all hashes in the standard library, is increased code size and additional test code. Implementation will require the replication of the Write logic in
+both new methods unless the methods are implemented as wrappers around Write.
+
+The convenience argument for WriteByte still doesn't convince me. Why is it necessary to add a method to each hash function to do something that will result in slow code. Beginners will still struggle because they
+have to know that they need to convert the hash to a ByteWriter and experienced developers will be able to use `fmt.Fprintf(w, "%c", c)` or write their own wrapper since performance cannot be the concern in that
+case.
+
+I wonder whether we should look at the more general problem: **How can WriteByte and WriteString be supported for an io.Writer?**
+
+One option is to use bufio.Writer as a wrapper. But it complicates the program logic by requiring calls to Flush to ensure all data is written to the underlying writer.
+
+For WriteString there is the io.WriteString function, which has the disadvantage that it allocates a new byte slice and copies the data from string. The package unsafe is probably not used because the requirement
+that a Write method should not modify the slice cannot be enforced by the compiler. I suggest to provide an unsafe.WriteString function that assumes that the Writer doesn't modify the slice. It may be used in
+cases where performance is critical.
+
+For WriteByte an io.WriteByte convenience function would address the problem. Performance is not a concern here.
+
+Both proposals still allow the implementation of WriteByte and WriteString by hashes, but wouldn't make it mandatory.
+                    
+
+
+--- Comment #16 by rsc ---
+adler32, crc32, crc64, and fnv have no buffer because they are byte-at-a-time algorithms (the chunk size is 1 byte).
+They can implement WriteByte and WriteString by calling the single-byte update function.
+(That may involve refactoring Write, but inlining should be good enough now to keep from slowing down Write.)
+
+An io.WriteByte convenience function would have to allocate on every byte in the fallback, like io.WriteString allocates on every call (but with many fewer calls in typical cases!). That's too expensive to hide in an innocuous-looking function.
+
+
+
+--- Comment #17 by ulikunitz ---
+Thanks Ross for the response. I agree and I stated already it is possible to implement WriteByte and WriteString for adler32, etc. If a type supports the Write method it is always possible to implement
+WriteByte and WriteString regardless whether the Write operation is buffered or not.
+
+While I understand the performance argument for WriteString, I'm still not convinced about WriteByte. What is the actual use case requiring the implementation for all hashes? The original proposal cited the direct marshaling or serialization of a struct value into the hash. But that doesn't convince because the struct may include other types like larger integers and hashes will not support those directly.
+
+There is also the question about consistency for writers in the standard library. After this proposal is implemented all hashes will support WriteByte and WriteString, but os..File supports WriteString but not WriteByte and net.TCPConn supports only Write. Shouldn't there be a general rule for supporting WriteByte and WriteString?
+
+
+
+
+--- Comment #18 by rsc ---
+```
+% go doc io.ByteWriter
+package io // import "io"
+
+type ByteWriter interface {
+	WriteByte(c byte) error
+}
+    ByteWriter is the interface that wraps the WriteByte method.
+
+% go doc io.ByteReader
+package io // import "io"
+
+type ByteReader interface {
+	ReadByte() (byte, error)
+}
+    ByteReader is the interface that wraps the ReadByte method.
+
+    ReadByte reads and returns the next byte from the input or any error
+    encountered. If ReadByte returns an error, no input byte was consumed, and
+    the returned byte value is undefined.
+
+    ReadByte provides an efficient interface for byte-at-time processing. A
+    Reader that does not implement ByteReader can be wrapped using
+    bufio.NewReader to add this method.
+
+% 
+```
+
+The ByteWriter docs are not very helpful - there's nothing anywhere about what WriteByte means.
+It's possible we should say the same in ByteWriter as in ByteReader: if you can implement it efficiently, then it's okay to have one. If not, then not. 
+
+These hashes can implement it efficiently enough and so it's probably worth doing.
+
+
+
+
+--- Comment #19 by rsc ---
+Based on the discussion above, this seems like a **likely accept**.
+
+
+--- Comment #20 by ulikunitz ---
+Extending the ByteWriter document is surely helpful. The bufio Writer remark must however be modified because it requires the additional use of the Flush method.
+
+I wrote a package that provides a wrioter wrapper returning a Writer having all three Write methods: Write, WriteByte and WriteString. All writes are direct so new flusing is required.
+
+[github.com/ulikunitz/xio](https://github.com/ulikunitz/xio).
+
+--- Comment #21 by rsc ---
+No change in consensus, so accepted.
+
+
+--- Comment #22 by gopherbot ---
+Change https://golang.org/cl/301189 mentions this issue: `crypto/*, hash: add WriteString method to hash.Hash and all the algorithms`
+
+--- Comment #23 by tdakkota ---
+> Earlier this year we declined #14757 because the implementation would have to use unsafe, but @bradfitz points out that the buffer that enables WriteByte would also enable a safe implementation of WriteString.
+
+We can make a fast safe implementation of `WriteString` using generics.
+
+```go
+func write[T interface{ string | []byte }](d *digest, p T) (int, error) {
+          // Write implementation...
+}
+
+func (d *digest) Write(p []byte) (int, error) { return write[[]byte](d, p) }
+func (d *digest) WriteString(p string) (int, error) { return write[string](d, p) }
+```
+
+--- Comment #24 by imacks ---
+Any idea when this proposal is going to be implemented? I recently needed to work with sha256 and had to wrap it with a bufio.Writer to get decent performance (https://github.com/imacks/aws-sigv4/blob/master/signer.go#L267). I tried using unsafe `s2b` at first and although it reduced allocs, benchmark suggests things are slower.
+
+--- Comment #25 by gopherbot ---
+Change https://go.dev/cl/481478 mentions this issue: `crypto/sha256: add WriteString and WriteByte method`
+
+--- Comment #26 by ianlancetaylor ---
+@imacks It's not clear to me that this will help you, but https://go.dev/cl/481478 is a patch to add `WriteString` and `WriteByte` to crypto/sha256.  Does it make a difference for your code?
+
+--- Comment #27 by gopherbot ---
+Change https://go.dev/cl/483815 mentions this issue: `crypto/sha1: add WriteString and WriteByte method`
+
+--- Comment #28 by gopherbot ---
+Change https://go.dev/cl/483816 mentions this issue: `crypto/sha512: add WriteString and WriteByte method`
+
+--- Comment #29 by gopherbot ---
+Change https://go.dev/cl/492356 mentions this issue: `Revert "crypto/sha256: add WriteString and WriteByte method"`
+
+--- Comment #30 by gopherbot ---
+Change https://go.dev/cl/492355 mentions this issue: `Revert "crypto/sha512: add WriteString and WriteByte method"`
+
+
+### Localized Go Repository Directory Structure ###
+```
+
+```
+
+### Directory-Level Localization Results ###
+[]
+
+**CRITICAL OBJECTIVE**: Identify the **most relevant files** that are closely related to the proposal topic and discussion.
+
+**MANDATORY OUTPUT FORMAT:**
+Return a JSON object with the following format.
+The response MUST:
+- Be a valid JSON block.
+- Contain a key `found_files` with a list of file paths.
+- Each file path must be a string like "src/crypto/dsa/dsa.go" or "src/net/http/server.go".
+- Output ONLY the raw JSON object. Do NOT include any markdown formatting (no ```json or ```).
+- Do NOT add any explanations or additional text.
+
+Example of correct output:
+{
+  "found_files": [
+    "src/crypto/dsa/dsa.go",
+    "src/net/http/server.go"
+  ]
+}
+
+**MANDATORY SELECTION RULES:**
+- Select only the most essential files, not directories.
+- Only include files that are directly related to the accepted proposals.
+- The output must strictly follow the format.
+- If you are unsure, make your best guess based on the structure.
