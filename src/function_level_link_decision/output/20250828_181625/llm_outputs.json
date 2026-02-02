@@ -1,0 +1,114 @@
+{
+  "selected_function_level_output": "20250828_181512",
+  "20654.md": {
+    "src/math/big/nat.go": {
+      "norm": "No",
+      "make": "No",
+      "add": "No",
+      "sub": "Yes",
+      "cmp": "No",
+      "montgomery": "Yes",
+      "mulRange": "No",
+      "lsh": "No",
+      "rsh": "No",
+      "setBit": "No",
+      "bit": "No",
+      "sticky": "No",
+      "and": "No",
+      "andNot": "No",
+      "or": "No",
+      "xor": "No",
+      "expNN": "Yes",
+      "expNNMontgomeryEven": "No",
+      "expNNWindowed": "No",
+      "expNNMontgomery": "Yes",
+      "bytes": "No",
+      "setBytes": "No",
+      "sqrt": "No",
+      "subMod2N": "No"
+    },
+    "src/crypto/elliptic/elliptic.go": {
+      "GenerateKey": "No",
+      "P224": "No",
+      "P256": "No",
+      "P384": "No",
+      "P521": "No"
+    },
+    "src/math/big/int.go": {
+      "SetBitCap": "No",
+      "BitCap": "No",
+      "Add": "No",
+      "Sub": "No",
+      "Mul": "Yes",
+      "Exp": "Yes",
+      "Mod": "No",
+      "Div": "No",
+      "SetBytes": "No",
+      "Bytes": "No",
+      "FillBytes": "No",
+      "BitLen": "No",
+      "Cmp": "No",
+      "QuoRem": "No",
+      "DivMod": "No",
+      "ModInverse": "No",
+      "ModSqrt": "No",
+      "Lsh": "No",
+      "Rsh": "No",
+      "And": "No",
+      "Or": "No",
+      "Xor": "No",
+      "Not": "No"
+    },
+    "src/math/big/natmul.go": {
+      "mul": "No",
+      "sqr": "No",
+      "basicMul": "No",
+      "karatsuba": "No",
+      "karatsubaSqr": "No"
+    },
+    "src/crypto/dsa/dsa.go": {
+      "GenerateKey": "Yes",
+      "Sign": "Yes",
+      "Verify": "No",
+      "fermatInverse": "No"
+    },
+    "src/math/big/natdiv.go": {
+      "rem": "No",
+      "div": "No",
+      "divW": "No",
+      "modW": "No",
+      "divWVW": "No",
+      "divLarge": "No",
+      "divBasic": "No",
+      "divRecursive": "No",
+      "divRecursiveStep": "No"
+    },
+    "src/crypto/rsa/rsa.go": {
+      "GenerateKey": "No",
+      "GenerateMultiPrimeKey": "No",
+      "Decrypt": "No",
+      "Sign": "No",
+      "Precompute": "No",
+      "precompute": "No",
+      "precomputeLegacy": "No"
+    },
+    "src/crypto/ecdsa/ecdsa.go": {
+      "SignASN1": "No",
+      "signFIPS": "No",
+      "signRFC6979": "No",
+      "signFIPSDeterministic": "No",
+      "VerifyASN1": "No",
+      "verifyFIPS": "No",
+      "GenerateKey": "No",
+      "generateFIPS": "No"
+    },
+    "src/math/big/arith.go": {
+      "addVV_g": "No",
+      "subVV_g": "No",
+      "addVW": "No",
+      "subVW": "No",
+      "mulAddVWW_g": "No",
+      "addMulVVWW_g": "No"
+    }
+  }
+}

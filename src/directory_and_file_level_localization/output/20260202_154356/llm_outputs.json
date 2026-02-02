@@ -1,0 +1,9 @@
+{
+  "api_bar.md": {
+    "granularity": "file",
+    "found_files": [
+      "include/bar.h",
+      "src/bar.c"
+    ]
+  }
+}

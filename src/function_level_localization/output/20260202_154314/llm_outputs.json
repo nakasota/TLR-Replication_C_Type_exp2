@@ -1,0 +1,13 @@
+{
+  "selected_file_level_output": "20260202_154303",
+  "api_logger.md": {
+    "utils/logger.h": [
+      "log_info",
+      "log_error"
+    ],
+    "utils/logger.c": [
+      "log_info",
+      "log_error"
+    ]
+  }
+}

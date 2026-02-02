@@ -1,0 +1,163 @@
+{
+  "include/bar.h": {
+    "content": "#ifndef BAR_H\n#define BAR_H\n\nint bar_compute(int x, int y);\nconst char* bar_name(void);\n\n#endif /* BAR_H */\n",
+    "functions": {},
+    "function_declarations": {
+      "bar_compute": [
+        {
+          "name": "bar_compute",
+          "signature": "int bar_compute(int x, int y)",
+          "start_point": [
+            3,
+            0
+          ],
+          "end_point": [
+            3,
+            30
+          ]
+        }
+      ],
+      "bar_name": [
+        {
+          "name": "bar_name",
+          "signature": "const char* bar_name(void)",
+          "start_point": [
+            4,
+            0
+          ],
+          "end_point": [
+            4,
+            27
+          ]
+        }
+      ]
+    }
+  },
+  "include/foo.h": {
+    "content": "#ifndef FOO_H\n#define FOO_H\n\nint foo_init(void);\nvoid foo_cleanup(void);\n\n#endif /* FOO_H */\n",
+    "functions": {},
+    "function_declarations": {
+      "foo_init": [
+        {
+          "name": "foo_init",
+          "signature": "int foo_init(void)",
+          "start_point": [
+            3,
+            0
+          ],
+          "end_point": [
+            3,
+            19
+          ]
+        }
+      ],
+      "foo_cleanup": [
+        {
+          "name": "foo_cleanup",
+          "signature": "void foo_cleanup(void)",
+          "start_point": [
+            4,
+            0
+          ],
+          "end_point": [
+            4,
+            23
+          ]
+        }
+      ]
+    }
+  },
+  "tests/test_foo.c": {
+    "content": "#include \"../include/foo.h\"\n#include <assert.h>\n\nint main(void) {\n    assert(foo_init() == 0);\n    foo_cleanup();\n    return 0;\n}\n",
+    "functions": {
+      "main": [
+        {
+          "name": "main",
+          "signature": "int main(void)",
+          "content": "int main(void) {\n    assert(foo_init() == 0);\n    foo_cleanup();\n    return 0;\n}",
+          "start_point": [
+            3,
+            0
+          ],
+          "end_point": [
+            7,
+            1
+          ]
+        }
+      ]
+    },
+    "function_declarations": {}
+  },
+  "src/foo.c": {
+    "content": "#include \"../include/foo.h\"\n\nstatic int initialized = 0;\n\nint foo_init(void) {\n    initialized = 1;\n    return 0;\n}\n\nvoid foo_cleanup(void) {\n    initialized = 0;\n}\n",
+    "functions": {
+      "foo_init": [
+        {
+          "name": "foo_init",
+          "signature": "int foo_init(void)",
+          "content": "int foo_init(void) {\n    initialized = 1;\n    return 0;\n}",
+          "start_point": [
+            4,
+            0
+          ],
+          "end_point": [
+            7,
+            1
+          ]
+        }
+      ],
+      "foo_cleanup": [
+        {
+          "name": "foo_cleanup",
+          "signature": "void foo_cleanup(void)",
+          "content": "void foo_cleanup(void) {\n    initialized = 0;\n}",
+          "start_point": [
+            9,
+            0
+          ],
+          "end_point": [
+            11,
+            1
+          ]
+        }
+      ]
+    },
+    "function_declarations": {}
+  },
+  "src/bar.c": {
+    "content": "#include \"../include/bar.h\"\n\nstatic const char* name = \"bar\";\n\nint bar_compute(int x, int y) {\n    return x + y;\n}\n\nconst char* bar_name(void) {\n    return name;\n}\n",
+    "functions": {
+      "bar_compute": [
+        {
+          "name": "bar_compute",
+          "signature": "int bar_compute(int x, int y)",
+          "content": "int bar_compute(int x, int y) {\n    return x + y;\n}",
+          "start_point": [
+            4,
+            0
+          ],
+          "end_point": [
+            6,
+            1
+          ]
+        }
+      ],
+      "bar_name": [
+        {
+          "name": "bar_name",
+          "signature": "const char* bar_name(void)",
+          "content": "const char* bar_name(void) {\n    return name;\n}",
+          "start_point": [
+            8,
+            0
+          ],
+          "end_point": [
+            10,
+            1
+          ]
+        }
+      ]
+    },
+    "function_declarations": {}
+  }
+}

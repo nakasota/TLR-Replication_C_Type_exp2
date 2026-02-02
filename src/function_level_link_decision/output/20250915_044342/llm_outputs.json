@@ -1,0 +1,9 @@
+{
+  "selected_function_level_output": "20250915_044329",
+  "37642.md": {
+    "src/runtime/print.go": {
+      "printeface": "No",
+      "printiface": "No"
+    }
+  }
+}

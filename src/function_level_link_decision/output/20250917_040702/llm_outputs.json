@@ -1,0 +1,34 @@
+{
+  "selected_function_level_output": "20250917_040638",
+  "47099.md": {
+    "src/reflect/type.go": {
+      "FieldByName": "No",
+      "FieldByIndex": "No",
+      "Field": "No",
+      "Index": "No",
+      "Len": "No",
+      "NumField": "No",
+      "FieldByNameFunc": "No"
+    },
+    "src/reflect/value.go": {
+      "FieldByName": "Yes",
+      "Index": "No",
+      "Len": "No",
+      "FieldByIndex": "No",
+      "Field": "No",
+      "StructField": "No",
+      "arrayAt": "No"
+    }
+  },
+  "47187.md": {
+    "src/os/env.go": {
+      "Expand": "No",
+      "ExpandEnv": "Yes",
+      "getShellName": "No"
+    },
+    "src/os/env_test.go": {
+      "TestExpand": "No",
+      "BenchmarkExpand": "No"
+    }
+  }
+}

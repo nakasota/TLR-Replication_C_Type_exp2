@@ -3,15 +3,18 @@ requests==2.31.0
 tqdm>=4.65.0
 python-dotenv==1.0.0
 pydantic
-langchain
+tqdm>=4.65.0
+requests
 openai
 tiktoken
 langchain-community
 langchain_openai
 chromadb
 scikit-learn
+# Adding ijson as a dependency
+ijson
 # Optional: Install for better embedding-based retrieval
 # sentence-transformers
 tree-sitter==0.20.1
-tree-sitter-go==0.23.4
+# tree-sitter-c: use third_party/tree-sitter-c (build .so from grammar)
 PyGithub==2.1.1

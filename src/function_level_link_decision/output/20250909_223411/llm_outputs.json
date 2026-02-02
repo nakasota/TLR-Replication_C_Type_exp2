@@ -1,0 +1,16 @@
+{
+  "selected_function_level_output": "20250909_223401",
+  "34593.md": {
+    "src/database/sql/sql.go": {
+      "IsNull": "No",
+      "Scan": "No",
+      "Value": "No",
+      "NullBool": "No",
+      "NullString": "No",
+      "NullFloat64": "No",
+      "NullInt32": "No",
+      "NullInt64": "No",
+      "NullTime": "No"
+    }
+  }
+}

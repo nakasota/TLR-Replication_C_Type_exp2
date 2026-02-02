@@ -1,0 +1,72 @@
+{
+  "selected_function_level_output": "20250917_204104",
+  "50451.md": {
+    "src/syscall/ztypes_netbsd_arm64.go": {},
+    "src/syscall/syscall_netbsd_arm64.go": {
+      "setTimespec": "No",
+      "setTimeval": "No",
+      "SetKevent": "No",
+      "SetLen": "No",
+      "SetControllen": "No"
+    },
+    "src/runtime/os_netbsd_arm64.go": {
+      "lwp_mcontext_init": "No",
+      "cputicks": "No"
+    },
+    "src/syscall/zsysnum_netbsd_arm64.go": {},
+    "src/runtime/signal_netbsd_arm64.go": {
+      "regs": "No",
+      "r0": "No",
+      "r1": "No",
+      "r2": "No",
+      "r3": "No",
+      "r4": "No",
+      "r5": "No",
+      "r6": "No",
+      "r7": "No",
+      "r8": "No",
+      "r9": "No",
+      "r10": "No",
+      "r11": "No",
+      "r12": "No",
+      "r13": "No",
+      "r14": "No",
+      "r15": "No",
+      "r16": "No",
+      "r17": "No",
+      "r18": "No",
+      "r19": "No",
+      "r20": "No",
+      "r21": "No",
+      "r22": "No",
+      "r23": "No",
+      "r24": "No",
+      "r25": "No",
+      "r26": "No",
+      "r27": "No",
+      "r28": "No",
+      "r29": "No",
+      "lr": "No",
+      "sp": "No",
+      "pc": "No",
+      "fault": "No",
+      "trap": "No",
+      "error": "No",
+      "oldmask": "No",
+      "sigcode": "No",
+      "sigaddr": "No",
+      "set_pc": "No",
+      "set_sp": "No",
+      "set_lr": "No",
+      "set_r28": "No",
+      "set_sigcode": "No",
+      "set_sigaddr": "No"
+    },
+    "src/syscall/zsyscall_netbsd_arm64.go": {},
+    "src/runtime/defs1_netbsd_arm64.go": {
+      "setNsec": "No",
+      "set_usec": "No"
+    },
+    "src/syscall/zerrors_netbsd_arm64.go": {}
+  }
+}

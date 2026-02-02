@@ -1,0 +1,6 @@
+#ifndef SAMPLE_REPO_MODULE_08_COMPONENT_09_API_03_H
+#define SAMPLE_REPO_MODULE_08_COMPONENT_09_API_03_H
+
+int module_08_component_09_api_03_run(int input);
+
+#endif

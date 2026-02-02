@@ -25,12 +25,6 @@ pip-wheel-metadata/
 # Data and logs
 *.db
 *.sqlite
-data/raw/
-data/repos/
-data/db/
-data/processed/go_repo_structure.json
-data/preprocess/go_repo_structure.json
-data/ground_truth/go_repo_structure.json
 
 # Docker
 *.pid
@@ -64,19 +58,6 @@ evaluation_results/
 
 # GitHub token example
 .env.example
-
-# Large files (>50MB) - GitHub file size limits
-# Ground truth and analysis data
-data/ground_truth/go_repo_structure.json
-data/ground_truth/accepted_proposals_func_analysis*.json
-data/preprocess/accepted_proposals_func_analysis.json
-data/preprocess/go_repo_structure.json
-
-# Embedding cache files (pickle files can be regenerated)
-embedding_based/embeddings_cache_openai/*.pkl
-embedding_based/embeddings_cache_openai/intermediate/*.pkl
-embedding_based/output/
-embedding_based/embeddings_cache_openai/
 
 # Any large pickle files
 *.pkl

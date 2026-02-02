@@ -1,0 +1,10 @@
+{
+  "api_bar.md": {
+    "include/bar.h": {
+      "decision": "Yes"
+    },
+    "src/bar.c": {
+      "decision": "Yes"
+    }
+  }
+}

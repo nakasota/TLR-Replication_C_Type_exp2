@@ -1,0 +1,16 @@
+{
+  "selected_function_level_output": "20250916_181011",
+  "44092.md": {
+    "src/io/fs/glob.go": {
+      "Glob": "Yes",
+      "globWithLimit": "No",
+      "cleanGlobPath": "No",
+      "glob": "No"
+    },
+    "src/io/fs/glob_test.go": {
+      "TestGlob": "No",
+      "TestGlobError": "No",
+      "TestGlobMethod": "No"
+    }
+  }
+}

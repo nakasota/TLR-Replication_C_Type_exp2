@@ -1,0 +1,59 @@
+{
+  "workflow_info": {
+    "timestamp": "20260202_154400",
+    "batch_size": "1",
+    "total_documents": 1,
+    "granularity_breakdown": {
+      "directory": 0,
+      "file": 1,
+      "function": 0
+    }
+  },
+  "documents": {
+    "api_bar.md": {
+      "document": "api_bar.md",
+      "granularity": "file",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "file"
+        },
+        "directory_file_level": {
+          "granularity": "file",
+          "found_files": [
+            "include/bar.h",
+            "src/bar.c"
+          ]
+        },
+        "file_level_link_decision": {
+          "total_files": 2,
+          "files_with_yes": 2,
+          "files_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "include/bar.h",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/bar.c",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "include/bar.h",
+        "src/bar.c"
+      ],
+      "final_files": [
+        {
+          "file_path": "include/bar.h",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/bar.c",
+          "link_decision": "Yes"
+        }
+      ]
+    }
+  }
+}

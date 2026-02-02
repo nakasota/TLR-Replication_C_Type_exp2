@@ -1,0 +1,8 @@
+include/
+    bar.h
+    foo.h
+src/
+    bar.c
+    foo.c
+tests/
+    test_foo.c

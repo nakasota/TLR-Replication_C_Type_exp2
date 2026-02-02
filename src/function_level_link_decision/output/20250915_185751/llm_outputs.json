@@ -1,0 +1,20 @@
+{
+  "selected_function_level_output": "20250915_185731",
+  "41130.md": {
+    "src/builtin/builtin.go": {
+      "delete": "No"
+    }
+  },
+  "41625.md": {
+    "src/net/mail/message.go": {
+      "Parse": "No",
+      "decodeRFC2047Word": "No",
+      "Error": "No"
+    },
+    "src/mime/encodedword.go": {
+      "Decode": "No",
+      "DecodeHeader": "No",
+      "convert": "No"
+    }
+  }
+}

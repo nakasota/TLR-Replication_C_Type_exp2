@@ -1,0 +1,12 @@
+{
+  "selected_function_level_output": "20250915_173825",
+  "40674.md": {
+    "src/errors/errors_test.go": {
+      "TestNewEqual": "No",
+      "TestErrorMethod": "No"
+    },
+    "src/errors/errors.go": {
+      "Is": "No"
+    }
+  }
+}

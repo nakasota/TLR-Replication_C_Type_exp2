@@ -1,0 +1,80 @@
+{
+  "selected_function_level_output": "20250915_015655",
+  "38375.md": {
+    "src/net/http/fs.go": {
+      "toHTTPError": "Yes"
+    }
+  },
+  "38583.md": {
+    "src/net/http/client.go": {
+      "NewRequest": "No",
+      "NewRequestWithContext": "No"
+    },
+    "src/net/http/request.go": {
+      "NewRequest": "Yes",
+      "NewRequestWithContext": "Yes",
+      "Clone": "No"
+    }
+  },
+  "38935.md": {
+    "src/encoding/json/decode.go": {
+      "unmarshal": "No",
+      "object": "No",
+      "literalStore": "No",
+      "valueInterface": "No",
+      "arrayInterface": "No",
+      "objectInterface": "No",
+      "literalInterface": "No"
+    },
+    "src/encoding/json/encode.go": {
+      "newStructEncoder": "No",
+      "structEncoder.encode": "No",
+      "typeFields": "No",
+      "resolveKeyName": "No",
+      "marshalerEncoder": "No",
+      "textMarshalerEncoder": "No",
+      "interfaceEncoder": "No"
+    },
+    "src/encoding/json/tags.go": {
+      "parseTag": "No",
+      "Contains": "No"
+    }
+  },
+  "39155.md": {
+    "src/io/io.go": {
+      "ReadAtLeast": "Yes",
+      "ReadFull": "Yes",
+      "CopyN": "No",
+      "Copy": "Yes",
+      "CopyBuffer": "Yes",
+      "copyBuffer": "Yes",
+      "ReadAll": "Yes"
+    },
+    "src/io/io_test.go": {
+      "TestCopy": "No",
+      "TestCopyN": "No",
+      "TestCopyNEOF": "No",
+      "TestReadAtLeast": "No",
+      "TestReadAtLeastWithDataAndEOF": "No",
+      "TestReadAtLeastWithDataAndError": "No",
+      "Read": "No"
+    }
+  },
+  "39167.md": {
+    "src/errors/wrap.go": {
+      "Is": "Yes"
+    }
+  },
+  "39290.md": {
+    "src/net/http/httptest/recorder.go": {
+      "Result": "Yes"
+    }
+  },
+  "39291.md": {
+    "src/internal/fmtsort/sort.go": {
+      "Sort": "No",
+      "compare": "No",
+      "nilCompare": "No"
+    }
+  }
+}

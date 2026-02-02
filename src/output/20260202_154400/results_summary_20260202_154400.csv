@@ -1,0 +1,3 @@
+Document,Granularity,Directory Level,File Level,Function Level,Code Path
+api_bar,file,include,include/bar.h,N/A,include/bar.h
+,,src,src/bar.c,,src/bar.c

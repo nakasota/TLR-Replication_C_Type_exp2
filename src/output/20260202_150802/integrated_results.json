@@ -1,0 +1,111 @@
+{
+  "workflow_info": {
+    "timestamp": "20260202_150802",
+    "batch_size": "1",
+    "total_proposals": 1,
+    "granularity_breakdown": {
+      "directory": 0,
+      "file": 0,
+      "function": 1
+    }
+  },
+  "proposals": {
+    "api_logger.md": {
+      "proposal_file": "api_logger.md",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "utils/logger.c",
+            "utils/logger.h"
+          ]
+        },
+        "function_level_localization": {
+          "utils/logger.c": [
+            "log_info",
+            "log_error"
+          ],
+          "utils/logger.h": [
+            "log_info",
+            "log_error"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 4,
+          "functions_with_yes": 4,
+          "functions_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "utils/logger.c",
+              "function_name": "log_info",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "utils/logger.c",
+              "function_name": "log_error",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "utils/logger.h",
+              "function_name": "log_info",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "utils/logger.h",
+              "function_name": "log_error",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "utils/logger.c",
+        "utils/logger.h"
+      ],
+      "found_functions": [
+        {
+          "file_path": "utils/logger.c",
+          "function_name": "log_info"
+        },
+        {
+          "file_path": "utils/logger.c",
+          "function_name": "log_error"
+        },
+        {
+          "file_path": "utils/logger.h",
+          "function_name": "log_info"
+        },
+        {
+          "file_path": "utils/logger.h",
+          "function_name": "log_error"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "utils/logger.c",
+          "function_name": "log_info",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "utils/logger.c",
+          "function_name": "log_error",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "utils/logger.h",
+          "function_name": "log_info",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "utils/logger.h",
+          "function_name": "log_error",
+          "link_decision": "Yes"
+        }
+      ]
+    }
+  }
+}

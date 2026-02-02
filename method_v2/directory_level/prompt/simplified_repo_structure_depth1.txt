@@ -1,6 +1,0 @@
-test/
-    defererrcheck.go
-    import1.go
-    live.go
-    live2.go
-    wasmmemsize.go

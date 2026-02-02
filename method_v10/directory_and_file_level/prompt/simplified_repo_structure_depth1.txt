@@ -1,6 +1,0 @@
-test/
-    alias3.go
-    const.go
-    escape_param.go
-    inline_callers.go
-    nilptr.go

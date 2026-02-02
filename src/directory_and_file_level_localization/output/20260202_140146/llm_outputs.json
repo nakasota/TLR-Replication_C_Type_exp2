@@ -1,0 +1,39 @@
+{
+  "api_logger.md": {
+    "granularity": "file",
+    "found_files": [
+      "utils/logger.h",
+      "utils/logger.c"
+    ]
+  },
+  "api_math_utils.md": {
+    "granularity": "file",
+    "found_files": [
+      "tests/test_math.c",
+      "src/math_utils.c",
+      "include/math_utils.h"
+    ]
+  },
+  "api_string_utils.md": {
+    "granularity": "file",
+    "found_files": [
+      "src/string_utils.c",
+      "include/string_utils.h"
+    ]
+  },
+  "directory_structure.md": {
+    "granularity": "file",
+    "found_files": []
+  },
+  "overview.md": {
+    "granularity": "file",
+    "found_files": []
+  },
+  "tests.md": {
+    "granularity": "file",
+    "found_files": [
+      "tests/test_math.c",
+      "tests/test_string.c"
+    ]
+  }
+}

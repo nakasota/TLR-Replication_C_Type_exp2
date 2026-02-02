@@ -1,0 +1,13 @@
+{
+  "selected_function_level_output": "20260202_150753",
+  "api_logger.md": {
+    "utils/logger.c": {
+      "log_info": "Yes",
+      "log_error": "Yes"
+    },
+    "utils/logger.h": {
+      "log_info": "Yes",
+      "log_error": "Yes"
+    }
+  }
+}

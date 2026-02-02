@@ -1,0 +1,37 @@
+{
+  "api_logger.md": {
+    "utils/logger.h": {
+      "decision": "Yes"
+    },
+    "utils/logger.c": {
+      "decision": "Yes"
+    }
+  },
+  "api_math_utils.md": {
+    "tests/test_math.c": {
+      "decision": "No"
+    },
+    "src/math_utils.c": {
+      "decision": "Yes"
+    },
+    "include/math_utils.h": {
+      "decision": "Yes"
+    }
+  },
+  "api_string_utils.md": {
+    "src/string_utils.c": {
+      "decision": "Yes"
+    },
+    "include/string_utils.h": {
+      "decision": "Yes"
+    }
+  },
+  "tests.md": {
+    "tests/test_math.c": {
+      "decision": "Yes"
+    },
+    "tests/test_string.c": {
+      "decision": "Yes"
+    }
+  }
+}

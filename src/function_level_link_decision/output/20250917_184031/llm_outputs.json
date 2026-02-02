@@ -1,0 +1,23 @@
+{
+  "selected_function_level_output": "20250917_184010",
+  "48639.md": {
+    "src/errors/errors_test.go": {
+      "TestNewEqual": "No"
+    },
+    "src/errors/errors.go": {
+      "New": "Yes",
+      "Error": "No"
+    }
+  },
+  "49334.md": {
+    "src/encoding/json/v2_decode.go": {
+      "Unmarshal": "No"
+    },
+    "src/encoding/json/decode.go": {
+      "Unmarshal": "No",
+      "unmarshal": "No",
+      "object": "No",
+      "literalStore": "No"
+    }
+  }
+}
