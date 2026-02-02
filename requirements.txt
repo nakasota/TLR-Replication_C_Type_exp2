@@ -1,20 +1,26 @@
+# Core
+setuptools>=65.0.0  # provides distutils for Python 3.12+ (required by tree-sitter)
 pandas
 requests==2.31.0
 tqdm>=4.65.0
 python-dotenv==1.0.0
 pydantic
-tqdm>=4.65.0
-requests
+
+# LLM / API
 openai
 tiktoken
 langchain-community
 langchain_openai
+
+# Retrieval / embedding
 chromadb
 scikit-learn
-# Adding ijson as a dependency
 ijson
-# Optional: Install for better embedding-based retrieval
-# sentence-transformers
+# Optional: sentence-transformers
+
+# C parsing
 tree-sitter==0.20.1
 # tree-sitter-c: use third_party/tree-sitter-c (build .so from grammar)
+
+# GitHub API
 PyGithub==2.1.1
