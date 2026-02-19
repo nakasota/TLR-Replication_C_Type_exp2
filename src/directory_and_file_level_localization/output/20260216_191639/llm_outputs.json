@@ -1,9 +1,0 @@
-{
-  "api_logger.md": {
-    "granularity": "file",
-    "found_files": [
-      "utils/logger.h",
-      "utils/logger.c"
-    ]
-  }
-}

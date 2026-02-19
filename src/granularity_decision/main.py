@@ -13,7 +13,7 @@ from llm_client import get_llm_config, build_chat_payload
 
 # Import the prompt generator
 sys.path.append(str(Path(__file__).parent / 'prompt'))
-from granularity_decision_prompt import generate_granularity_decision_prompt
+from granularity_decision_prompt import generate_granularity_decision_prompt, generate_granularity_decision_diff_prompt
 
 def make_api_request_with_retry(api_url, headers, payload, max_retries=3, base_delay=2):
     """Execute API request with retries."""
@@ -75,19 +75,29 @@ except ValueError as e:
     print(f"Error: {e}", file=sys.stderr)
     sys.exit(1)
 
-# Design documents directory: data/docs/{DOCS_SET} (default DOCS_SET=sample_doc)
-docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
-docs_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
-if not docs_dir.exists():
-    print(f'Design docs directory not found: {docs_dir}', file=sys.stderr)
-    sys.exit(1)
-
-doc_files = sorted(docs_dir.glob('*.md'), key=lambda p: p.name)
-if not doc_files:
-    print('No design document files (.md) found.', file=sys.stderr)
-    sys.exit(1)
-
-print(f"Found {len(doc_files)} design documents")
+# Diff mode: DOCS_DIFF_SET set → read from data/docs_diff/{DOCS_DIFF_SET}/sample_pair_*/
+docs_diff_set = os.environ.get('DOCS_DIFF_SET', '').strip()
+if docs_diff_set:
+    docs_diff_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs_diff' / docs_diff_set
+    if not docs_diff_dir.exists():
+        print(f'Docs diff directory not found: {docs_diff_dir}', file=sys.stderr)
+        sys.exit(1)
+    pair_dirs = sorted([d for d in docs_diff_dir.iterdir() if d.is_dir() and (d / 'base.md').exists() and (d / 'changed.md').exists()], key=lambda p: p.name)
+    doc_files = None
+    pair_items = [(p.name, p) for p in pair_dirs]
+    print(f"Diff mode: Found {len(pair_items)} pairs in {docs_diff_set}")
+else:
+    docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
+    docs_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+    if not docs_dir.exists():
+        print(f'Design docs directory not found: {docs_dir}', file=sys.stderr)
+        sys.exit(1)
+    doc_files = sorted(docs_dir.glob('*.md'), key=lambda p: p.name)
+    if not doc_files:
+        print('No design document files (.md) found.', file=sys.stderr)
+        sys.exit(1)
+    pair_items = None
+    print(f"Found {len(doc_files)} design documents")
 
 # Output directory with timestamp
 output_root = Path(__file__).parent / 'output'
@@ -113,45 +123,54 @@ if not batch_size or not start_from:
         batch_size = "all"
         start_from = "0"
 
+items_to_process = pair_items if pair_items else [(f.name, f) for f in doc_files]
+total_items = len(items_to_process)
+
 try:
     start_from_int = int(start_from)
-    if start_from_int < 0 or start_from_int >= len(doc_files):
+    if start_from_int < 0 or start_from_int >= total_items:
         start_from_int = 0
 except ValueError:
     start_from_int = 0
 
 if batch_size.lower() == 'all':
-    max_docs = len(doc_files) - start_from_int
+    max_docs = total_items - start_from_int
 else:
     try:
-        max_docs = min(int(batch_size), len(doc_files) - start_from_int)
+        max_docs = min(int(batch_size), total_items - start_from_int)
         if max_docs < 1:
-            max_docs = len(doc_files) - start_from_int
+            max_docs = total_items - start_from_int
     except ValueError:
-        max_docs = len(doc_files) - start_from_int
+        max_docs = total_items - start_from_int
 
-print(f"Processing {max_docs} document(s) starting from index {start_from_int}...")
+print(f"Processing {max_docs} item(s) starting from index {start_from_int}...")
 
 processed_count = 0
-for i in range(start_from_int, len(doc_files)):
+for i in range(start_from_int, total_items):
     if processed_count >= max_docs:
         break
-    doc_file = doc_files[i]
-    doc_id = doc_file.name
+    doc_id, doc_or_pair = items_to_process[i]
     processed_count += 1
 
     print(f"[{processed_count}/{max_docs}] {doc_id}")
     sys.stdout.flush()
 
     try:
-        with open(doc_file, 'r', encoding='utf-8') as f:
-            doc_text = f.read()
-        prompt = generate_granularity_decision_prompt(doc_text)
+        if pair_items:
+            with open(doc_or_pair / 'base.md', 'r', encoding='utf-8') as f:
+                base_text = f.read()
+            with open(doc_or_pair / 'changed.md', 'r', encoding='utf-8') as f:
+                changed_text = f.read()
+            prompt = generate_granularity_decision_diff_prompt(base_text, changed_text)
+        else:
+            with open(doc_or_pair, 'r', encoding='utf-8') as f:
+                doc_text = f.read()
+            prompt = generate_granularity_decision_prompt(doc_text)
         
         # Log prompt if LOG_PROMPTS is enabled
         if os.environ.get('LOG_PROMPTS', '0') == '1':
             print(f"\n{'='*70}")
-            print(f"[PROMPT LOG] Document: {doc_id}")
+            print(f"[PROMPT LOG] Item: {doc_id}")
             print(f"{'='*70}")
             print(prompt)
             print(f"{'='*70}\n")

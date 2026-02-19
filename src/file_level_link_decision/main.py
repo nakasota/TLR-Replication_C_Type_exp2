@@ -14,7 +14,7 @@ from llm_client import get_llm_config, build_chat_payload
 # Import the file analysis function and prompt generator
 sys.path.append(str(Path(__file__).parent / 'prompt'))
 from file_level_analyzer import analyze_file_with_skeleton
-from file_level_prompt import generate_file_level_link_decision_prompt
+from file_level_prompt import generate_file_level_link_decision_prompt, generate_file_level_link_decision_diff_prompt
 
 def make_api_request_with_retry(api_url, headers, payload, max_retries=3, base_delay=2):
     """
@@ -103,11 +103,17 @@ if not selected_directory_file_output:
     selected_directory_file_output = subdirs[0]
     print(f'Using latest directory/file output: {selected_directory_file_output}')
 
-# Design documents: data/docs/{DOCS_SET} (default sample_doc)
-docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
-documents_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+# Diff mode: DOCS_DIFF_SET set → read from data/docs_diff/{DOCS_DIFF_SET}/
+docs_diff_set = os.environ.get('DOCS_DIFF_SET', '').strip()
+if docs_diff_set:
+    documents_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs_diff' / docs_diff_set
+    diff_mode = True
+else:
+    docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
+    documents_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+    diff_mode = False
 if not documents_dir.exists():
-    print(f"Design documents directory not found: {documents_dir}", file=sys.stderr)
+    print(f"Documents directory not found: {documents_dir}", file=sys.stderr)
     sys.exit(1)
 
 # Load directory_and_file_localization results
@@ -160,14 +166,21 @@ if len(sys.argv) > 1 and sys.argv[1] == '--show-prompt':
         sys.exit(1)
     file_path = found[0]
     doc_path = documents_dir / doc_name
-    with open(doc_path, 'r', encoding='utf-8') as f:
-        document_text = f.read()
     file_analysis = analyze_file_with_skeleton(file_path)
     if not file_analysis:
         print(f'Failed to get skeleton for {file_path}', file=sys.stderr)
         sys.exit(1)
     skeleton_view = file_analysis.get('skeleton_view', '')
-    prompt = generate_file_level_link_decision_prompt(document_text, file_path, skeleton_view)
+    if diff_mode:
+        with open(doc_path / 'base.md', 'r') as f:
+            base_text = f.read()
+        with open(doc_path / 'changed.md', 'r') as f:
+            changed_text = f.read()
+        prompt = generate_file_level_link_decision_diff_prompt(base_text, changed_text, file_path, skeleton_view)
+    else:
+        with open(doc_path, 'r') as f:
+            document_text = f.read()
+        prompt = generate_file_level_link_decision_prompt(document_text, file_path, skeleton_view)
     print('=== Generated prompt (first document, first file) ===')
     print(prompt)
     print('=== End of prompt ===')
@@ -217,8 +230,14 @@ for idx, (document_file, granularity) in enumerate(file_granularity_documents.it
         failed_documents.append((document_file, "document_file_not_found"))
         continue
     
-    with open(document_path, 'r', encoding='utf-8') as f:
-        document_text = f.read()
+    if diff_mode:
+        with open(document_path / 'base.md', 'r', encoding='utf-8') as f:
+            base_text = f.read()
+        with open(document_path / 'changed.md', 'r', encoding='utf-8') as f:
+            changed_text = f.read()
+    else:
+        with open(document_path, 'r', encoding='utf-8') as f:
+            document_text = f.read()
     
     # Process each file
     document_results = {}
@@ -242,7 +261,10 @@ for idx, (document_file, granularity) in enumerate(file_granularity_documents.it
             continue
         
         # Generate prompt for file-level link decision
-        prompt = generate_file_level_link_decision_prompt(document_text, file_path, skeleton_view)
+        if diff_mode:
+            prompt = generate_file_level_link_decision_diff_prompt(base_text, changed_text, file_path, skeleton_view)
+        else:
+            prompt = generate_file_level_link_decision_prompt(document_text, file_path, skeleton_view)
         
         # Log prompt if LOG_PROMPTS is enabled
         if os.environ.get('LOG_PROMPTS', '0') == '1':

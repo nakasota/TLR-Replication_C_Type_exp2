@@ -13,7 +13,7 @@ from llm_client import get_llm_config, build_chat_payload
 
 # Import skeleton builder and prompt from prompt module (one file, like directory_*)
 sys.path.append(str(Path(__file__).parent / 'prompt'))
-from function_level_localization import extract_c_skeleton, generate_function_level_localization_prompt
+from function_level_localization import extract_c_skeleton, generate_function_level_localization_prompt, generate_function_level_localization_diff_prompt
 
 def make_api_request_with_retry(api_url, headers, payload, max_retries=3, base_delay=2):
     """Execute API request with retries."""
@@ -91,11 +91,17 @@ if 'SELECTED_DIRECTORY_FILE_OUTPUT' in os.environ:
     selected_directory_file_output = os.environ['SELECTED_DIRECTORY_FILE_OUTPUT']
     print(f"Using coordinated directory_file output: {selected_directory_file_output}")
 
-# Design documents: data/docs/{DOCS_SET} (default sample_doc)
-docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
-docs_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+# Diff mode: DOCS_DIFF_SET set → read from data/docs_diff/{DOCS_DIFF_SET}/
+docs_diff_set = os.environ.get('DOCS_DIFF_SET', '').strip()
+if docs_diff_set:
+    docs_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs_diff' / docs_diff_set
+    diff_mode = True
+else:
+    docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
+    docs_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+    diff_mode = False
 if not docs_dir.exists():
-    print(f"Design docs directory not found: {docs_dir}", file=sys.stderr)
+    print(f"Docs directory not found: {docs_dir}", file=sys.stderr)
     sys.exit(1)
 
 # File-level output from directory_and_file_level_localization (under src/)
@@ -122,7 +128,10 @@ with open(file_level_llm_outputs, 'r') as f:
     file_level_results = json.load(f)
 
 # Document list: keys from file-level results (design doc names)
-proposal_files = [docs_dir / name for name in file_level_results if (docs_dir / name).exists()]
+if diff_mode:
+    proposal_files = [docs_dir / name for name in file_level_results if (docs_dir / name).is_dir() and (docs_dir / name / 'base.md').exists()]
+else:
+    proposal_files = [docs_dir / name for name in file_level_results if (docs_dir / name).exists()]
 proposal_files.sort(key=lambda p: p.name)
 
 # Optional granularity filter
@@ -172,13 +181,19 @@ for idx, doc_file in enumerate(proposal_files, 1):
         directory = os.path.dirname(file_path)
 
         try:
-            with open(doc_file, 'r', encoding='utf-8') as f:
-                doc_text = f.read()
+            if diff_mode:
+                with open(doc_file / 'base.md', 'r', encoding='utf-8') as f:
+                    base_text = f.read()
+                with open(doc_file / 'changed.md', 'r', encoding='utf-8') as f:
+                    changed_text = f.read()
+                prompt = generate_function_level_localization_diff_prompt(base_text, changed_text, file_path, directory, skeleton)
+            else:
+                with open(doc_file, 'r', encoding='utf-8') as f:
+                    doc_text = f.read()
+                prompt = generate_function_level_localization_prompt(doc_text, file_path, directory, skeleton)
         except Exception as e:
             print(f"[SKIP] Failed to read doc {doc_id}: {e}")
             continue
-
-        prompt = generate_function_level_localization_prompt(doc_text, file_path, directory, skeleton)
         
         # Log prompt if LOG_PROMPTS is enabled
         if os.environ.get('LOG_PROMPTS', '0') == '1':

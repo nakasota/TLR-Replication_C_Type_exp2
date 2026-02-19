@@ -63,7 +63,7 @@ Please output your answer in the following format:
 def generate_directory_and_file_level_diff_prompt(base_spec_text: str, changed_spec_text: str, repo_structure: str) -> str:
     """
     Generate prompt for directory and file level localization in diff (change-driven) mode.
-    Given base and changed spec sections, identify which files are most likely to have been modified.
+    Given base and changed spec sections, identify which files are **related to the changed area**.
     """
     output_format = """
 Return a JSON object with the following format.
@@ -89,7 +89,7 @@ Example of correct output when files are not found:
 """.strip()
 
     return f'''
-You are analyzing a specification change to identify which C source files were **most likely modified** to implement the change. Two specification sections are given: the base (before) and the changed (after) version.
+You are analyzing a specification change to identify which C source files are **related to the changed area**. Two specification sections are given: the base (before) and the changed (after) version.
 
 ### Base Specification (Before Change) ###
 {base_spec_text}
@@ -104,11 +104,11 @@ You are analyzing a specification change to identify which C source files were *
 
 **CRITICAL INSTRUCTION:** 
 You can ONLY select files that are explicitly shown in the repository structure above. 
-Focus on identifying the file(s) that would need to be modified to implement the specification change.
+Select file(s) that are **related to the changed area** — i.e., files that would contain code affected by or implementing the specification change.
 
 **Step-by-step process:**
 1. Compare the base and changed specifications to understand what changed.
-2. Scan the repository structure above for file paths that could implement this change.
+2. Scan the repository structure above for file paths related to the changed area.
 3. Include only those files you actually see listed.
 4. If none match, return an empty list (`[]`).
 

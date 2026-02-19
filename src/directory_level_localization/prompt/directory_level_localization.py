@@ -87,7 +87,7 @@ Please output your answer in the following format:
 def generate_directory_level_localization_diff_prompt(base_spec_text: str, changed_spec_text: str, repo_structure: str) -> str:
     """
     Generate prompt for directory level localization in diff (change-driven) mode.
-    Given base and changed spec sections, identify which directories were most likely modified.
+    Given base and changed spec sections, identify which directories are **related to the changed area**.
     """
     output_format = """
 Return a JSON object with the following format.
@@ -112,7 +112,7 @@ Example of correct output when directories are not found:
 }
 """.strip()
     return f'''
-You are analyzing a specification change to identify which C source directories were **most likely modified** to implement the change. Two specification sections are given: the base (before) and the changed (after) version.
+You are analyzing a specification change to identify which C source directories are **related to the changed area**. Two specification sections are given: the base (before) and the changed (after) version.
 
 ### Base Specification (Before Change) ###
 {base_spec_text}
@@ -127,11 +127,11 @@ You are analyzing a specification change to identify which C source directories 
 
 **CRITICAL INSTRUCTION:** 
 You can ONLY select directories that are explicitly shown in the repository structure above. 
-Focus on identifying the directory(ies) that would need to be modified to implement the specification change.
+Select directory(ies) that are **related to the changed area** — i.e., directories that would contain code affected by or implementing the specification change.
 
 **Step-by-step process:**
 1. Compare the base and changed specifications to understand what changed.
-2. Scan the repository structure above for matching directory paths.
+2. Scan the repository structure above for directory paths related to the changed area.
 3. Include only those directories you actually see listed.
 4. If none match, return an empty list (`[]`).
 

@@ -1,5 +1,0 @@
-Proposal No.,Issue URL,Granularity,Directory Level,File Level,Function Level,Code URL
-api_logger,N/A,function,utils,utils/logger.h,log_info,utils/logger.h
-,,,,,log_error,utils/logger.h
-,,,,utils/logger.c,log_info,utils/logger.c
-,,,,,log_error,utils/logger.c

@@ -11,6 +11,8 @@ import random
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from llm_client import get_llm_config, build_chat_payload
+sys.path.append(str(Path(__file__).parent / 'prompt'))
+from directory_and_file_level_localization import generate_directory_and_file_level_diff_prompt
 
 def make_api_request_with_retry(api_url, headers, payload, max_retries=3, base_delay=2):
     """
@@ -84,9 +86,15 @@ if 'GRANULARITY_RESULTS' in os.environ:
         print(f"Warning: Failed to parse granularity results: {e}")
         granularity_results = {}
 
-# Design documents: data/docs/{DOCS_SET} (default sample_doc)
-docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
-documents_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+# Diff mode: DOCS_DIFF_SET set → read from data/docs_diff/{DOCS_DIFF_SET}/
+docs_diff_set = os.environ.get('DOCS_DIFF_SET', '').strip()
+if docs_diff_set:
+    documents_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs_diff' / docs_diff_set
+    diff_mode = True
+else:
+    docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
+    documents_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+    diff_mode = False
 
 # C repository root: C_REPO_ROOT or data/repos/{REPO_SET} (default sample_repo)
 repo_set = os.environ.get('REPO_SET', 'sample_repo').strip()
@@ -137,19 +145,27 @@ output_json = output_dir / 'llm_outputs.json'
 
 llm_outputs = {}
 
-document_files = sorted(documents_dir.glob('*.md'))
+if diff_mode:
+    document_files = sorted([d for d in documents_dir.iterdir() if d.is_dir() and (d / 'base.md').exists() and (d / 'changed.md').exists()], key=lambda p: p.name)
+else:
+    document_files = sorted(documents_dir.glob('*.md'))
 
 # Filter proposal files based on granularity results if provided
 if granularity_results:
     print(f"Filtering documents based on granularity results: {list(granularity_results.keys())}")
     # Filter for file and function granularity documents only
-    file_function_documents = [
-        df for df in document_files
-        if df.name in granularity_results and granularity_results[df.name] in ["file", "function"]
-    ]
-    document_files = file_function_documents
+    if diff_mode:
+        file_function_names = [name for name, g in granularity_results.items() if g in ["file", "function"]]
+        document_files = [documents_dir / name for name in file_function_names if (documents_dir / name).is_dir() and (documents_dir / name / 'base.md').exists()]
+    else:
+        file_function_documents = [
+            df for df in document_files
+            if df.name in granularity_results and granularity_results[df.name] in ["file", "function"]
+        ]
+        document_files = file_function_documents
     print(f"Found {len(document_files)} file/function granularity documents to process")
-    print(f"Filtered from {len(list(documents_dir.glob('*.md')))} to {len(document_files)} documents")
+    total_before = len(list(documents_dir.glob('*.md'))) if not diff_mode else len(list(documents_dir.iterdir()))
+    print(f"Filtered from {total_before} to {len(document_files)} documents")
 
 total = len(document_files)
 
@@ -169,13 +185,13 @@ print("Starting document processing loop...")
 for idx, document_file in enumerate(document_files, 1):
     print(f"Processing {idx}/{total}: {document_file.name}")
     sys.stdout.flush()
-    # Skip empty files
-    with open(document_file, 'r', encoding='utf-8') as f:
-        lines = [line.strip() for line in f if line.strip()]
-    if not lines:
-        print(f"Skipping {document_file.name}: file is empty.")
-        sys.stdout.flush()
-        continue
+    if not diff_mode:
+        with open(document_file, 'r', encoding='utf-8') as f:
+            lines = [line.strip() for line in f if line.strip()]
+        if not lines:
+            print(f"Skipping {document_file.name}: file is empty.")
+            sys.stdout.flush()
+            continue
     
     print("  Processing document with granularity results from environment variable...")
     sys.stdout.flush()
@@ -188,21 +204,25 @@ for idx, document_file in enumerate(document_files, 1):
         print(f"  Processing with {structure_file.name}...")
         sys.stdout.flush()
         
-        # Generate prompt using directory_and_file_level_localization.py
-        prompt_script = Path(__file__).parent / 'prompt' / 'directory_and_file_level_localization.py'
-        print(f"    Generating prompt using: {prompt_script}")
-        sys.stdout.flush()
-        # Pass both document_file and structure_file as arguments
-        result = subprocess.run([
-            sys.executable, str(prompt_script), str(document_file.resolve()), str(structure_file.resolve())
-        ], capture_output=True, text=True)
-        
-        if result.returncode != 0:
-            print(f"    Prompt generation failed for {structure_file.name}: {result.stderr}")
-            sys.stdout.flush()
-            continue
-        
-        prompt = result.stdout
+        if diff_mode:
+            with open(document_file / 'base.md', 'r', encoding='utf-8') as f:
+                base_text = f.read()
+            with open(document_file / 'changed.md', 'r', encoding='utf-8') as f:
+                changed_text = f.read()
+            with open(structure_file, 'r', encoding='utf-8') as f:
+                chunk = f.read()
+            prompt = generate_directory_and_file_level_diff_prompt(base_text, changed_text, chunk)
+        else:
+            # Generate prompt using directory_and_file_level_localization.py
+            prompt_script = Path(__file__).parent / 'prompt' / 'directory_and_file_level_localization.py'
+            result = subprocess.run([
+                sys.executable, str(prompt_script), str(document_file.resolve()), str(structure_file.resolve())
+            ], capture_output=True, text=True)
+            if result.returncode != 0:
+                print(f"    Prompt generation failed for {structure_file.name}: {result.stderr}")
+                sys.stdout.flush()
+                continue
+            prompt = result.stdout
         print(f"    Generated prompt length: {len(prompt)} characters")
         sys.stdout.flush()
         

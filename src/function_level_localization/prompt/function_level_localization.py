@@ -110,9 +110,9 @@ Example of correct output:
 def generate_function_level_localization_diff_prompt(base_spec_text: str, changed_spec_text: str, file_path: str, directory: str, skeleton: str) -> str:
     """
     Generate prompt for function-level localization in diff (change-driven) mode.
-    Given base and changed spec sections, identify which function(s) in the file were modified.
+    Given base and changed spec sections, identify which function(s) in the file are **related to the changed area**.
     """
-    return f'''You are analyzing a specification change to identify which function(s) in a C source file were **modified** to implement the change. Two specification sections are given: the base (before) and the changed (after) version. Exactly one function in this file was modified.
+    return f'''You are analyzing a specification change to identify which function(s) in a C source file are **related to the changed area**. Two specification sections are given: the base (before) and the changed (after) version.
 
 ### Base Specification (Before Change) ###
 {base_spec_text}
@@ -127,10 +127,10 @@ Directory: {directory}
 ### File Skeleton ###
 {skeleton}
 
-**CRITICAL OBJECTIVE**: Identify the **function(s)** in this file that were modified to implement the specification change.
+**CRITICAL OBJECTIVE**: Identify the **function(s)** in this file that are related to the changed area — i.e., functions that the spec change refers to (by name or behavior) and that would need to be modified to implement the change.
 
 **WHAT TO INCLUDE:**
-- C functions (definitions and declarations shown in the skeleton) that correspond to the changed specification.
+- C functions (definitions and declarations shown in the skeleton) that correspond to or are related to the changed specification.
 
 **MANDATORY OUTPUT FORMAT:**
 Return a JSON object with the following format.
@@ -148,7 +148,7 @@ Example of correct output:
 }}
 
 **MANDATORY SELECTION RULES:**
-- Select only the function(s) that were modified to implement the specification change.
+- Select only the function(s) that are related to the changed area.
 - The output must strictly follow the format.
 - If you are unsure, make your best guess based on the file skeleton and the spec diff.
 '''.strip()

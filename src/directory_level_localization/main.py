@@ -11,6 +11,8 @@ import random
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from llm_client import get_llm_config, build_chat_payload
+sys.path.append(str(Path(__file__).parent / 'prompt'))
+from directory_level_localization import generate_directory_level_localization_diff_prompt
 
 def make_api_request_with_retry(api_url, headers, payload, max_retries=3, base_delay=2):
     """
@@ -90,9 +92,15 @@ except json.JSONDecodeError:
     sys.stdout.flush()
     granularity_results = {}
 
-# Design documents: data/docs/{DOCS_SET} (default sample_doc)
-docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
-documents_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+# Diff mode: DOCS_DIFF_SET set → read from data/docs_diff/{DOCS_DIFF_SET}/
+docs_diff_set = os.environ.get('DOCS_DIFF_SET', '').strip()
+if docs_diff_set:
+    documents_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs_diff' / docs_diff_set
+    diff_mode = True
+else:
+    docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
+    documents_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+    diff_mode = False
 
 # C repository root: C_REPO_ROOT or data/repos/{REPO_SET} (default REPO_SET=sample_repo)
 repo_set = os.environ.get('REPO_SET', 'sample_repo').strip()
@@ -161,16 +169,22 @@ sys.stdout.flush()
 # Process proposals
 llm_outputs = {}
 
-document_files = sorted(documents_dir.glob('*.md'))
+if diff_mode:
+    document_files = sorted([d for d in documents_dir.iterdir() if d.is_dir() and (d / 'base.md').exists()], key=lambda p: p.name)
+else:
+    document_files = sorted(documents_dir.glob('*.md'))
 
 # Filter for directory granularity documents only if results provided
 if granularity_results:
     directory_documents = [
-        doc for doc, granularity in granularity_results.items()
+        name for name, granularity in granularity_results.items()
         if granularity == "directory"
     ]
     if directory_documents:
-        document_files = [documents_dir / name for name in directory_documents if (documents_dir / name).exists()]
+        if diff_mode:
+            document_files = [documents_dir / name for name in directory_documents if (documents_dir / name).is_dir() and (documents_dir / name / 'base.md').exists()]
+        else:
+            document_files = [documents_dir / name for name in directory_documents if (documents_dir / name).exists()]
         print(f"Processing {len(document_files)} directory granularity documents: {[df.name for df in document_files]}")
         sys.stdout.flush()
 
@@ -192,13 +206,13 @@ sys.stdout.flush()
 for idx, document_file in enumerate(document_files, 1):
     print(f"Processing {idx}/{total}: {document_file.name}")
     sys.stdout.flush()
-    # Skip empty or marker-only files
-    with open(document_file, 'r', encoding='utf-8') as f:
-        lines = [line.strip() for line in f if line.strip()]
-    if not lines:
-        print(f"Skipping {document_file.name}: file is empty.")
-        sys.stdout.flush()
-        continue
+    if not diff_mode:
+        with open(document_file, 'r', encoding='utf-8') as f:
+            lines = [line.strip() for line in f if line.strip()]
+        if not lines:
+            print(f"Skipping {document_file.name}: file is empty.")
+            sys.stdout.flush()
+            continue
     
     # Aggregate found files from all structure files
     all_found_files = set()
@@ -209,19 +223,25 @@ for idx, document_file in enumerate(document_files, 1):
         print(f"  Processing with {structure_file.name}...")
         sys.stdout.flush()
         
-        # Generate prompt using directory_level_localization.py
-        prompt_script = Path(__file__).parent / 'prompt' / 'directory_level_localization.py'
-        # Pass both document_file and structure_file as arguments
-        result = subprocess.run([
-            sys.executable, str(prompt_script), str(document_file.resolve()), str(structure_file.resolve())
-        ], capture_output=True, text=True)
-        
-        if result.returncode != 0:
-            print(f"    Prompt generation failed for {structure_file.name}: {result.stderr}")
-            sys.stdout.flush()
-            continue
-        
-        prompt = result.stdout
+        if diff_mode:
+            with open(document_file / 'base.md', 'r', encoding='utf-8') as f:
+                base_text = f.read()
+            with open(document_file / 'changed.md', 'r', encoding='utf-8') as f:
+                changed_text = f.read()
+            with open(structure_file, 'r', encoding='utf-8') as f:
+                chunk = f.read()
+            prompt = generate_directory_level_localization_diff_prompt(base_text, changed_text, chunk)
+        else:
+            # Generate prompt using directory_level_localization.py
+            prompt_script = Path(__file__).parent / 'prompt' / 'directory_level_localization.py'
+            result = subprocess.run([
+                sys.executable, str(prompt_script), str(document_file.resolve()), str(structure_file.resolve())
+            ], capture_output=True, text=True)
+            if result.returncode != 0:
+                print(f"    Prompt generation failed for {structure_file.name}: {result.stderr}")
+                sys.stdout.flush()
+                continue
+            prompt = result.stdout
         
         # Log prompt if LOG_PROMPTS is enabled
         if os.environ.get('LOG_PROMPTS', '0') == '1':

@@ -32,10 +32,11 @@ Do NOT include any explanations, reasoning, or additional text.'''
 def generate_granularity_decision_diff_prompt(base_spec_text: str, changed_spec_text: str) -> str:
     """
     Generate prompt for granularity decision in diff (change-driven) mode.
-    Given base and changed spec sections, determine the granularity level at which
-    the code change occurred (directory / file / function).
+    Given base and changed spec sections, determine the granularity level that is
+    **related to the changed area** (directory / file / function).
+    C language specific: .c = implementation, .h = declarations/structs.
     """
-    return f'''You are analyzing a specification change to determine the most appropriate granularity level for linking the source code that would be modified to implement this change.
+    return f'''You are analyzing a specification change to determine the most appropriate granularity level for linking C source code that is **related to the changed area**.
 
 ### Base Specification (Before Change) ###
 {base_spec_text}
@@ -43,19 +44,19 @@ def generate_granularity_decision_diff_prompt(base_spec_text: str, changed_spec_
 ### Changed Specification (After Change) ###
 {changed_spec_text}
 
-**OBJECTIVE**: Determine the most appropriate granularity level for linking source code that would be relevant to implementing (not merely being affected by) this specification change.
+**OBJECTIVE**: Determine the granularity level that best corresponds to what is **related to the changed area**. When multiple levels apply, prefer the most specific (function > file > directory).
 
 - "directory"
-  - Definition: Choose ONLY when the spec change explicitly mandates creating/removing/renaming/moving files or modules, or otherwise changing the directory/module structure.
-  - Examples: adding new source files or headers; adding a new module; splitting code into new files; moving/renaming modules or files; adding platform-specific new files (when explicitly required).
+  - Choose when the changed area relates to directory-level scope: creating/removing/renaming/moving .c or .h files, or changing the directory/module structure.
+  - Examples: adding new .c or .h files; adding a new module; splitting code into new files; moving/renaming modules.
 
 - "file"
-  - Definition: Choose when ALL required edits are confined to EXISTING files only (even if the edits span multiple files or modules), and the spec change does NOT explicitly require new/removed/moved files or modules.
-  - Examples: adding functions/variables/types in existing files; exposing new APIs in an existing module; changing interfaces and updating callers in existing files; adding declarations in existing files.
+  - Choose when the changed area relates to file-level scope: .h files (declarations, struct definitions, macros) or adding new functions/variables/types.
+  - Examples: adding function declarations in a header; changing struct member definitions; adding new functions in a .c file; changing function signatures.
 
 - "function"
-  - Definition: Choose only when the change is limited to modifying the internal logic of EXISTING functions or their documentation, with no new top-level declarations and no other changes required outside the functions.
-  - Examples: editing statements; changing control flow; tweaking parameters/returns of existing functions without touching other parts; deprecating functions by adding deprecation comments; modifying inline documentation within function bodies.
+  - Choose when the changed area relates to function-level scope: changes inside the body of existing function(s) in .c files.
+  - Examples: editing assignment statements; changing control flow; changing return values or local logic; modifying default values or constants inside a function body.
 
 **OUTPUT FORMAT:**
 Respond with EXACTLY one word: "directory", "file", or "function"

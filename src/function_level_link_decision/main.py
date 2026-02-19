@@ -14,7 +14,7 @@ from llm_client import get_llm_config, build_chat_payload
 # Import the function analysis function and prompt generator
 sys.path.append(str(Path(__file__).parent / 'prompt'))
 from link_decision_analyzer import analyze_function_relevance
-from link_decision_prompt import generate_link_decision_prompt
+from link_decision_prompt import generate_link_decision_prompt, generate_link_decision_diff_prompt
 
 def make_api_request_with_retry(api_url, headers, payload, max_retries=3, base_delay=2):
     """
@@ -93,9 +93,18 @@ if 'SELECTED_FUNCTION_OUTPUT' in os.environ:
     selected_function_output = os.environ['SELECTED_FUNCTION_OUTPUT']
     print(f"Using coordinated function output: {selected_function_output}")
 
-# Design documents: data/docs/{DOCS_SET} (default sample_doc)
-docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
-docs_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+# Diff mode: DOCS_DIFF_SET set → read from data/docs_diff/{DOCS_DIFF_SET}/
+docs_diff_set = os.environ.get('DOCS_DIFF_SET', '').strip()
+if docs_diff_set:
+    docs_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs_diff' / docs_diff_set
+    diff_mode = True
+else:
+    docs_set = os.environ.get('DOCS_SET', 'sample_doc').strip()
+    docs_dir = Path(__file__).resolve().parent.parent.parent / 'data' / 'docs' / docs_set
+    diff_mode = False
+if not docs_dir.exists():
+    print(f"Docs directory not found: {docs_dir}", file=sys.stderr)
+    sys.exit(1)
 
 # Select function-level output directory: env var or latest under src/function_level_localization/output
 function_level_output_root = Path(__file__).resolve().parent.parent / 'function_level_localization' / 'output'
@@ -190,10 +199,19 @@ for proposal_id, file_data in function_level_results.items():
     if not proposal_file.exists():
         print(f"[SKIP] Document file {proposal_id} not found")
         continue
+    if diff_mode and not (proposal_file / 'base.md').exists():
+        print(f"[SKIP] Diff pair {proposal_id} missing base.md")
+        continue
 
     # Load document text
-    with open(proposal_file, 'r', encoding='utf-8') as f:
-        proposal_text = f.read()
+    if diff_mode:
+        with open(proposal_file / 'base.md', 'r', encoding='utf-8') as f:
+            base_text = f.read()
+        with open(proposal_file / 'changed.md', 'r', encoding='utf-8') as f:
+            changed_text = f.read()
+    else:
+        with open(proposal_file, 'r', encoding='utf-8') as f:
+            proposal_text = f.read()
     
     # Initialize output for this proposal
     if proposal_id not in llm_outputs:
@@ -219,13 +237,20 @@ for proposal_id, file_data in function_level_results.items():
                     continue
                 
                 # Generate prompt using the prompt module
-                prompt = generate_link_decision_prompt(
-                    proposal_text=proposal_text,
-                    file_path=file_path,
-                    function_name=function_name,
-                    function_code=function_info["function_code"],
-                    function_context=function_info["context"]
-                )
+                if diff_mode:
+                    prompt = generate_link_decision_diff_prompt(
+                        base_text, changed_text,
+                        file_path, function_name,
+                        function_info["function_code"]
+                    )
+                else:
+                    prompt = generate_link_decision_prompt(
+                        proposal_text=proposal_text,
+                        file_path=file_path,
+                        function_name=function_name,
+                        function_code=function_info["function_code"],
+                        function_context=function_info["context"]
+                    )
                 
                 # Log prompt if LOG_PROMPTS is enabled
                 if os.environ.get('LOG_PROMPTS', '0') == '1':

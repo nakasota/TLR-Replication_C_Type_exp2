@@ -483,13 +483,16 @@ def run_function_level_link_decision(granularity_results, function_output_dir, w
 
 def create_integrated_results(granularity_results, granularity_output_dir, 
                             directory_output_dir, file_output_dir, file_link_decision_output_dir, 
-                            function_output_dir, function_link_decision_output_dir, batch_size, repo_set):
-    """Create integrated results combining all phases. repo_set: REPO_SET for loading repo_structure_{repo_set}.json."""
+                            function_output_dir, function_link_decision_output_dir, batch_size, repo_set,
+                            output_root=None):
+    """Create integrated results combining all phases. repo_set: REPO_SET for loading repo_structure_{repo_set}.json.
+    output_root: optional; if None, uses Path(__file__).parent / 'output'."""
     print_phase_header("FINAL", "RESULT INTEGRATION")
     print_progress("Creating integrated results from all phases...")
     
     # Create output directory with timestamp
-    output_root = Path(__file__).parent / 'output'
+    if output_root is None:
+        output_root = Path(__file__).parent / 'output'
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     output_dir = output_root / timestamp
     output_dir.mkdir(parents=True, exist_ok=True)

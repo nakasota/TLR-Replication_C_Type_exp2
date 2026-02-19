@@ -1,5 +1,0 @@
-Document,Granularity,Directory Level,File Level,Function Level,Code Path
-api_math_utils,function,include,include/math_utils.h,add,include/math_utils.h
-,,,,sub,include/math_utils.h
-,,src,src/math_utils.c,add,src/math_utils.c
-,,,,sub,src/math_utils.c
