@@ -193,8 +193,6 @@ python coordinated_workflow.py
   - `data/docs_diff/sample_doc_diff/sample_pair_1/base.md`, `changed.md`  
   - `data/docs_diff/sample_doc_diff_1/sample_pair_1/base.md`, `changed.md`
 
-同梱のダミーデータ: `sample_doc_diff`（12 ペア）、`sample_doc_diff_1`（3 ペア）。各ペアに `expected.json` で正解を記載。`sample_doc_diff` の sample_pair_6〜12 は、関数名を直接記載しない間接的な仕様記述による難易度の高いペア。
-
 ### 実行方法
 
 `coordinated_workflow.py` と同様に、`src` ディレクトリで実行します。
