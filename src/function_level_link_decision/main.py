@@ -227,6 +227,15 @@ for proposal_id, file_data in function_level_results.items():
                     function_context=function_info["context"]
                 )
                 
+                # Log prompt if LOG_PROMPTS is enabled
+                if os.environ.get('LOG_PROMPTS', '0') == '1':
+                    print(f"\n{'='*70}")
+                    print(f"[PROMPT LOG] Document: {proposal_id}, File: {file_path}, Function: {function_name}")
+                    print(f"{'='*70}")
+                    print(prompt)
+                    print(f"{'='*70}\n")
+                    sys.stdout.flush()
+                
                 payload = build_chat_payload(
                     [{"role": "user", "content": prompt}],
                     temperature=0.0,

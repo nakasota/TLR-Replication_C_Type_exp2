@@ -1120,6 +1120,8 @@ def main():
     workflow_env["REPO_SET"] = repo_set
     workflow_env["C_REPO_ROOT"] = str(repo_dir)
     workflow_env["REPOSITORY_STRUCTURE"] = repository_structure
+    # Enable prompt logging by default
+    workflow_env["LOG_PROMPTS"] = os.environ.get("LOG_PROMPTS", "0")
 
     # Phase 0: Granularity Decision
     granularity_results, granularity_output_dir = run_granularity_decision(batch_size, start_from, workflow_env)

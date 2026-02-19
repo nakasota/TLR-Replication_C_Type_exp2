@@ -1,0 +1,22 @@
+{
+  "pairs": [
+    {
+      "pair": "sample_pair_5",
+      "granularity": "file",
+      "found_directories": [],
+      "found_files": [
+        "include/string_utils.h",
+        "src/string_utils.c"
+      ],
+      "found_functions": [],
+      "final_directory": null,
+      "final_files": [
+        {
+          "file_path": "include/string_utils.h"
+        }
+      ],
+      "final_function": null
+    }
+  ],
+  "timestamp": "20260219_164313"
+}

@@ -1,0 +1,17 @@
+{
+  "api_math_utils.md": {
+    "granularity": "function",
+    "found_files": [
+      "src/math_utils.c",
+      "include/math_utils.h"
+    ]
+  },
+  "api_string_utils.md": {
+    "granularity": "function",
+    "found_files": [
+      "tests/test_string.c",
+      "include/string_utils.h",
+      "src/string_utils.c"
+    ]
+  }
+}

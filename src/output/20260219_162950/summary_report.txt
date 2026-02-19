@@ -1,0 +1,26 @@
+C Design Document Link Workflow - Summary Report
+==================================================
+
+Execution Time: 20260219_162950
+Batch Size: 1
+Total Documents: 1
+
+Granularity Breakdown:
+  Directory: 0 documents
+  File: 0 documents
+  Function: 1 documents
+
+Results by Document:
+------------------------------
+
+api_math_utils.md (function granularity):
+  Found Files: 3
+    - include/math_utils.h
+    - tests/test_math.c
+    - src/math_utils.c
+  Found Functions: 5
+  Final Functions (Yes): 4
+    - include/math_utils.h:add
+    - include/math_utils.h:sub
+    - src/math_utils.c:add
+    ... and 1 more

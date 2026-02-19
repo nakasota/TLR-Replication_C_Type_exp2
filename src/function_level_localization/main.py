@@ -179,6 +179,15 @@ for idx, doc_file in enumerate(proposal_files, 1):
             continue
 
         prompt = generate_function_level_localization_prompt(doc_text, file_path, directory, skeleton)
+        
+        # Log prompt if LOG_PROMPTS is enabled
+        if os.environ.get('LOG_PROMPTS', '0') == '1':
+            print(f"\n{'='*70}")
+            print(f"[PROMPT LOG] Document: {doc_id}, File: {file_path}")
+            print(f"{'='*70}")
+            print(prompt)
+            print(f"{'='*70}\n")
+            sys.stdout.flush()
 
         payload = build_chat_payload(
             [{"role": "user", "content": prompt}],

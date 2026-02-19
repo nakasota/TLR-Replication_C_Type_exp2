@@ -105,3 +105,50 @@ Example of correct output:
 - The output must strictly follow the format.
 - If you are unsure, make your best guess based on the file skeleton and document.
 '''.strip()
+
+
+def generate_function_level_localization_diff_prompt(base_spec_text: str, changed_spec_text: str, file_path: str, directory: str, skeleton: str) -> str:
+    """
+    Generate prompt for function-level localization in diff (change-driven) mode.
+    Given base and changed spec sections, identify which function(s) in the file were modified.
+    """
+    return f'''You are analyzing a specification change to identify which function(s) in a C source file were **modified** to implement the change. Two specification sections are given: the base (before) and the changed (after) version. Exactly one function in this file was modified.
+
+### Base Specification (Before Change) ###
+{base_spec_text}
+
+### Changed Specification (After Change) ###
+{changed_spec_text}
+
+### File Information ###
+File: {file_path}
+Directory: {directory}
+
+### File Skeleton ###
+{skeleton}
+
+**CRITICAL OBJECTIVE**: Identify the **function(s)** in this file that were modified to implement the specification change.
+
+**WHAT TO INCLUDE:**
+- C functions (definitions and declarations shown in the skeleton) that correspond to the changed specification.
+
+**MANDATORY OUTPUT FORMAT:**
+Return a JSON object with the following format.
+The response MUST:
+- Be a valid JSON block.
+- Contain a key `relevant_functions` with a list of function names (strings).
+- Output ONLY the raw JSON object. Do NOT include any markdown formatting (no ```json or ```).
+- Do NOT add any explanations or additional text.
+
+Example of correct output:
+{{
+  "relevant_functions": [
+    "function_name_one"
+  ]
+}}
+
+**MANDATORY SELECTION RULES:**
+- Select only the function(s) that were modified to implement the specification change.
+- The output must strictly follow the format.
+- If you are unsure, make your best guess based on the file skeleton and the spec diff.
+'''.strip()

@@ -244,6 +244,15 @@ for idx, (document_file, granularity) in enumerate(file_granularity_documents.it
         # Generate prompt for file-level link decision
         prompt = generate_file_level_link_decision_prompt(document_text, file_path, skeleton_view)
         
+        # Log prompt if LOG_PROMPTS is enabled
+        if os.environ.get('LOG_PROMPTS', '0') == '1':
+            print(f"\n{'='*70}")
+            print(f"[PROMPT LOG] Document: {document_file}, File: {file_path}")
+            print(f"{'='*70}")
+            print(prompt)
+            print(f"{'='*70}\n")
+            sys.stdout.flush()
+        
         # API request payload
         payload = build_chat_payload(
             [{"role": "user", "content": prompt}],

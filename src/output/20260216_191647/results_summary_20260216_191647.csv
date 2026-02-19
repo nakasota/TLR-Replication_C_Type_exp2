@@ -1,0 +1,3 @@
+Document,Granularity,Directory Level,File Level,Function Level,Code Path
+api_logger,file,utils,utils/logger.h,N/A,utils/logger.h
+,,,utils/logger.c,,utils/logger.c

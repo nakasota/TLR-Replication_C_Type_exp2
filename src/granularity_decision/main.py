@@ -147,6 +147,16 @@ for i in range(start_from_int, len(doc_files)):
         with open(doc_file, 'r', encoding='utf-8') as f:
             doc_text = f.read()
         prompt = generate_granularity_decision_prompt(doc_text)
+        
+        # Log prompt if LOG_PROMPTS is enabled
+        if os.environ.get('LOG_PROMPTS', '0') == '1':
+            print(f"\n{'='*70}")
+            print(f"[PROMPT LOG] Document: {doc_id}")
+            print(f"{'='*70}")
+            print(prompt)
+            print(f"{'='*70}\n")
+            sys.stdout.flush()
+        
         payload = build_chat_payload(
             [{"role": "user", "content": prompt}],
             temperature=0.0,

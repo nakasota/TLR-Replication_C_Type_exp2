@@ -1,0 +1,11 @@
+{
+  "directory_structure.md": {
+    "found_files": [],
+    "found_directories": [
+      "tests/",
+      "utils/",
+      "include/",
+      "src/"
+    ]
+  }
+}

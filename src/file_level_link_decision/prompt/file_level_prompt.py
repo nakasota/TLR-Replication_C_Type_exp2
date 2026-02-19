@@ -26,3 +26,36 @@ File: {file_path}
 Respond with EXACTLY one word: "Yes" or "No"
 
 Do NOT include any explanations, reasoning, or additional text.'''
+
+
+def generate_file_level_link_decision_diff_prompt(base_spec_text: str, changed_spec_text: str, file_path: str, skeleton_view: str) -> str:
+    """
+    Generate prompt for file-level link decision in diff (change-driven) mode.
+    Given base and changed spec sections, determine if this specific file was modified.
+
+    """
+    return f'''You are analyzing whether a specific C file was **modified** to implement a specification change. Two specification sections are given: the base (before) and the changed (after) version.
+
+### Base Specification (Before Change) ###
+{base_spec_text}
+
+### Changed Specification (After Change) ###
+{changed_spec_text}
+
+### File Information ###
+File: {file_path}
+
+### File Skeleton View ###
+{skeleton_view}
+
+**OBJECTIVE**: Determine if this specific file was modified to implement the specification change.
+
+**IMPORTANT GUIDELINES:**
+- Answer "Yes" only if this file would need to be modified to implement the changed specification.
+- Otherwise, answer "No"
+- Focus on whether the file's contents (skeleton, functions, types) relate to the spec change.
+
+**OUTPUT FORMAT:**
+Respond with EXACTLY one word: "Yes" or "No"
+
+Do NOT include any explanations, reasoning, or additional text.'''

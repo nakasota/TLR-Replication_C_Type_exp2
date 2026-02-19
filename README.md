@@ -4,6 +4,13 @@
 
 ---
 
+## 本リポジトリについて
+
+- **メイン実装**（`coordinated_workflow.py`）: 仕様の 1 節に対する成果物のトレーサビリティリンクを生成する実験。既に共有済み。
+- **追加実験**（`coordinated_workflow_diff.py`）: 差分開発に対する変更箇所のトレーサビリティリンクを生成する実験。本 README に記載。
+
+---
+
 ## プロジェクト概要
 
 ### 実験目的
@@ -153,6 +160,70 @@ python coordinated_workflow.py
 
 4. **最終：結果統合（Result Integration）**  
    - 上記の結果をまとめ、`src/output/{timestamp}/` に JSON・CSV・サマリレポートを出力します。
+
+---
+
+## 追加実験：差分開発用トレーサビリティリンク（coordinated_workflow_diff.py）
+
+### 実験目的
+
+**差分開発に対する変更箇所のトレーサビリティ**をとることを目的とします。
+
+### 概要
+
+仕様の一節を 2 つ（ベース仕様・変更後仕様）与えると、変更後の仕様に合わせた結果としてコードリポジトリ内の 1 つの関数が変更されている。本ツールは、**その変更されたディレクトリ・ファイル・関数を特定する**ことを目的とします。
+
+### 入力
+
+- **ベース仕様**（`base.md`）  
+  - 変更前の仕様の一節。
+- **変更後仕様**（`changed.md`）  
+  - 変更後の仕様の一節。
+- **コード**  
+  - 既存と同様、`data/repos/{REPO_SET}` の C プロジェクト。
+
+### データ配置
+
+差分実験用データは `data/docs_diff/{DOCS_DIFF_SET}/` 以下に配置します。`coordinated_workflow.py` の `data/docs/{DOCS_SET}/` と同様の構造です。
+
+- **差分ペアセット**  
+  - `data/docs_diff/{DOCS_DIFF_SET}/` にサブディレクトリ（例: `sample_pair_1/`）を置く。  
+  - 各サブディレクトリに `base.md`（ベース仕様）と `changed.md`（変更後仕様）を配置する。
+- **例**  
+  - `data/docs_diff/sample_doc_diff/sample_pair_1/base.md`, `changed.md`  
+  - `data/docs_diff/sample_doc_diff_1/sample_pair_1/base.md`, `changed.md`
+
+同梱のダミーデータ: `sample_doc_diff`（12 ペア）、`sample_doc_diff_1`（3 ペア）。各ペアに `expected.json` で正解を記載。`sample_doc_diff` の sample_pair_6〜12 は、関数名を直接記載しない間接的な仕様記述による難易度の高いペア。
+
+### 実行方法
+
+`coordinated_workflow.py` と同様に、`src` ディレクトリで実行します。
+
+```bash
+cd src
+python coordinated_workflow_diff.py
+```
+
+起動後、対話形式で次の項目を入力します（括弧内はデフォルト値）。
+
+1. **差分ペアセット（DOCS_DIFF_SET）**  
+   - 使用する差分ペアセットを選ぶ。`data/docs_diff/` の下にあるディレクトリ名を指定。  
+   - 例: `sample_doc_diff`, `sample_doc_diff_1`。未入力で `sample_doc_diff`。
+2. **リポジトリ（REPO_SET）**  
+   - 対象 C リポジトリ。`data/repos/` の下のディレクトリ名。未入力で `sample_repo`。
+3. **リポジトリ構造タイプ**  
+   - `full`, `500`, `1000`, `2000` のいずれか。未入力で `2000`。
+4. **バッチサイズ**  
+   - 処理するペア数（数値）または `all`。未入力で `all`。
+5. **開始位置（Start from index）**  
+   - 0 始まりのインデックス。未入力で `0`。
+
+環境変数 `DOCS_DIFF_SET`, `REPO_SET`, `REPOSITORY_STRUCTURE_TYPE`, `BATCH_SIZE`, `START_FROM` を設定すれば非対話実行も可能。
+
+### 出力
+
+- `src/output_diff/{timestamp}/diff_results.json`  
+  - 各ペアについて、特定されたディレクトリ・ファイル・関数の結果を JSON で出力します。
 
 ---
 

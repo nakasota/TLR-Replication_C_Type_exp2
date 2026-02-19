@@ -1,0 +1,30 @@
+{
+  "pairs": [
+    {
+      "pair": "sample_pair_1",
+      "granularity": "function",
+      "found_directories": [],
+      "found_files": [
+        "include/modules/module_01/component_01/api_01.h",
+        "src/modules/module_01/component_01/api_01.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "include/modules/module_01/component_01/api_01.h",
+          "function_name": "module_01_component_01_api_01_run"
+        },
+        {
+          "file_path": "src/modules/module_01/component_01/api_01.c",
+          "function_name": "module_01_component_01_api_01_run"
+        }
+      ],
+      "final_directory": null,
+      "final_files": [],
+      "final_function": {
+        "file_path": "include/modules/module_01/component_01/api_01.h",
+        "function_name": "module_01_component_01_api_01_run"
+      }
+    }
+  ],
+  "timestamp": "20260219_152032"
+}

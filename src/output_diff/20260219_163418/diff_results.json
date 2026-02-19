@@ -1,0 +1,22 @@
+{
+  "pairs": [
+    {
+      "pair": "sample_pair_1",
+      "granularity": "file",
+      "found_directories": [],
+      "found_files": [
+        "src/modules/module_01/component_01/api_01.c",
+        "include/modules/module_01/component_01/api_01.h"
+      ],
+      "found_functions": [],
+      "final_directory": null,
+      "final_files": [
+        {
+          "file_path": "src/modules/module_01/component_01/api_01.c"
+        }
+      ],
+      "final_function": null
+    }
+  ],
+  "timestamp": "20260219_163418"
+}

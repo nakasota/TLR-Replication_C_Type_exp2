@@ -222,6 +222,16 @@ for idx, document_file in enumerate(document_files, 1):
             continue
         
         prompt = result.stdout
+        
+        # Log prompt if LOG_PROMPTS is enabled
+        if os.environ.get('LOG_PROMPTS', '0') == '1':
+            print(f"\n{'='*70}")
+            print(f"[PROMPT LOG] Document: {document_file.name}, Structure: {structure_file.name}")
+            print(f"{'='*70}")
+            print(prompt)
+            print(f"{'='*70}\n")
+            sys.stdout.flush()
+        
         payload = build_chat_payload(
             [{"role": "user", "content": prompt}],
             temperature=0.0,

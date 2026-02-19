@@ -1,0 +1,22 @@
+C Design Document Link Workflow - Summary Report
+==================================================
+
+Execution Time: 20260216_191647
+Batch Size: 1
+Total Documents: 1
+
+Granularity Breakdown:
+  Directory: 0 documents
+  File: 1 documents
+  Function: 0 documents
+
+Results by Document:
+------------------------------
+
+api_logger.md (file granularity):
+  Found Files: 2
+    - utils/logger.h
+    - utils/logger.c
+  Final Files (Yes): 2
+    - utils/logger.h
+    - utils/logger.c
