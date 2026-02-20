@@ -216,7 +216,6 @@ python coordinated_workflow_diff.py
 5. **開始位置（Start from index）**  
    - 0 始まりのインデックス。未入力で `0`。
 
-環境変数 `DOCS_DIFF_SET`, `REPO_SET`, `REPOSITORY_STRUCTURE_TYPE`, `BATCH_SIZE`, `START_FROM` を設定すれば非対話実行も可能。
 
 ### 出力
 
