@@ -1,0 +1,52 @@
+C Design Document Link Workflow - Summary Report
+==================================================
+
+Execution Time: 20260220_110536
+Batch Size: 5
+Total Documents: 5
+
+Granularity Breakdown:
+  Directory: 2 documents
+  File: 1 documents
+  Function: 2 documents
+
+Results by Document:
+------------------------------
+
+api_logger.md (file granularity):
+  Found Files: 2
+    - utils/logger.c
+    - utils/logger.h
+  Final Files (Yes): 2
+    - utils/logger.c
+    - utils/logger.h
+
+api_math_utils.md (function granularity):
+  Found Files: 3
+    - src/math_utils.c
+    - tests/test_math.c
+    - include/math_utils.h
+  Found Functions: 5
+  Final Functions (Yes): 4
+    - src/math_utils.c:add
+    - src/math_utils.c:sub
+    - include/math_utils.h:add
+    ... and 1 more
+
+api_string_utils.md (function granularity):
+  Found Files: 3
+    - src/string_utils.c
+    - tests/test_string.c
+    - include/string_utils.h
+  Found Functions: 6
+  Final Functions (Yes): 4
+    - src/string_utils.c:strlen_safe
+    - src/string_utils.c:strrev
+    - include/string_utils.h:strlen_safe
+    ... and 1 more
+
+directory_structure.md (directory granularity):
+  Found Files: 0
+
+overview.md (directory granularity):
+  Found Files: 0

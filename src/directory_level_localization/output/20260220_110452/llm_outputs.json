@@ -1,0 +1,27 @@
+{
+  "directory_structure.md": {
+    "found_files": [],
+    "found_directories": [
+      "tests/",
+      "src/",
+      "utils/",
+      "include/"
+    ]
+  },
+  "overview.md": {
+    "found_files": [],
+    "found_directories": [
+      "include/core/",
+      "src/",
+      "src/core/",
+      "src/storage/",
+      "include/",
+      "tests/",
+      "src/modules/",
+      "tests/modules/",
+      "src/net/",
+      "include/modules/",
+      "utils/"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "timestamp": "20260220_111539",
+  "total_documents": 2,
+  "successful_documents": 2,
+  "failed_documents": 0,
+  "failed_details": [],
+  "granularity_filter": "file",
+  "input_source": "directory_and_file_level_localization/20260220_111442"
+}

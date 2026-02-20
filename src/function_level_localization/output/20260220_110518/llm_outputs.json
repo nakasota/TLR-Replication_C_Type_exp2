@@ -1,0 +1,30 @@
+{
+  "selected_file_level_output": "20260220_110503",
+  "api_math_utils.md": {
+    "src/math_utils.c": [
+      "add",
+      "sub"
+    ],
+    "tests/test_math.c": [
+      "main"
+    ],
+    "include/math_utils.h": [
+      "add",
+      "sub"
+    ]
+  },
+  "api_string_utils.md": {
+    "src/string_utils.c": [
+      "strlen_safe",
+      "strrev"
+    ],
+    "tests/test_string.c": [
+      "strlen_safe",
+      "strrev"
+    ],
+    "include/string_utils.h": [
+      "strlen_safe",
+      "strrev"
+    ]
+  }
+}

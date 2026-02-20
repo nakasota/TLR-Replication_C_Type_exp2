@@ -1,0 +1,26 @@
+Document,Granularity,Directory Level,File Level,Function Level,Code Path
+api_logger,file,utils,utils/logger.c,N/A,utils/logger.c
+,,,utils/logger.h,,utils/logger.h
+api_math_utils,function,src,src/math_utils.c,add,src/math_utils.c
+,,,,sub,src/math_utils.c
+,,include,include/math_utils.h,add,include/math_utils.h
+,,,,sub,include/math_utils.h
+api_string_utils,function,src,src/string_utils.c,strlen_safe,src/string_utils.c
+,,,,strrev,src/string_utils.c
+,,include,include/string_utils.h,strlen_safe,include/string_utils.h
+,,,,strrev,include/string_utils.h
+directory_structure,directory,tests/,N/A,N/A,tests/
+,,src/,,,src/
+,,utils/,,,utils/
+,,include/,,,include/
+overview,directory,include/core/,N/A,N/A,include/core/
+,,src/,,,src/
+,,src/core/,,,src/core/
+,,src/storage/,,,src/storage/
+,,include/,,,include/
+,,tests/,,,tests/
+,,src/modules/,,,src/modules/
+,,tests/modules/,,,tests/modules/
+,,src/net/,,,src/net/
+,,include/modules/,,,include/modules/
+,,utils/,,,utils/

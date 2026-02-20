@@ -1,0 +1,30 @@
+{
+  "selected_function_level_output": "20260220_110518",
+  "api_math_utils.md": {
+    "src/math_utils.c": {
+      "add": "Yes",
+      "sub": "Yes"
+    },
+    "tests/test_math.c": {
+      "main": "No"
+    },
+    "include/math_utils.h": {
+      "add": "Yes",
+      "sub": "Yes"
+    }
+  },
+  "api_string_utils.md": {
+    "src/string_utils.c": {
+      "strlen_safe": "Yes",
+      "strrev": "Yes"
+    },
+    "tests/test_string.c": {
+      "strlen_safe": "No",
+      "strrev": "No"
+    },
+    "include/string_utils.h": {
+      "strlen_safe": "Yes",
+      "strrev": "Yes"
+    }
+  }
+}

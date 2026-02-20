@@ -1,0 +1,1182 @@
+{
+  "workflow_info": {
+    "timestamp": "20260220_111727",
+    "batch_size": "all",
+    "total_documents": 15,
+    "granularity_breakdown": {
+      "directory": 1,
+      "file": 2,
+      "function": 12
+    }
+  },
+  "documents": {
+    "sample_pair_1": {
+      "document": "sample_pair_1",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "include/modules/module_01/component_01/api_01.h",
+            "src/modules/module_01/component_01/api_01.c"
+          ]
+        },
+        "function_level_localization": {
+          "include/modules/module_01/component_01/api_01.h": [
+            "module_01_component_01_api_01_run"
+          ],
+          "src/modules/module_01/component_01/api_01.c": [
+            "module_01_component_01_api_01_run"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 2,
+          "functions_with_yes": 2,
+          "functions_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "include/modules/module_01/component_01/api_01.h",
+              "function_name": "module_01_component_01_api_01_run",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/modules/module_01/component_01/api_01.c",
+              "function_name": "module_01_component_01_api_01_run",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "include/modules/module_01/component_01/api_01.h",
+        "src/modules/module_01/component_01/api_01.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "include/modules/module_01/component_01/api_01.h",
+          "function_name": "module_01_component_01_api_01_run"
+        },
+        {
+          "file_path": "src/modules/module_01/component_01/api_01.c",
+          "function_name": "module_01_component_01_api_01_run"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "include/modules/module_01/component_01/api_01.h",
+          "function_name": "module_01_component_01_api_01_run",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/modules/module_01/component_01/api_01.c",
+          "function_name": "module_01_component_01_api_01_run",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_10": {
+      "document": "sample_pair_10",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "src/modules/module_01/component_01/api_02.c",
+            "src/net/tcp_client.c",
+            "include/net/tcp_client.h",
+            "src/modules/module_01/component_01/api_03.c",
+            "src/modules/module_01/component_01/api_01.c"
+          ]
+        },
+        "function_level_localization": {
+          "src/modules/module_01/component_01/api_02.c": [
+            "module_01_component_01_api_02_run"
+          ],
+          "src/net/tcp_client.c": [
+            "tcp_open"
+          ],
+          "include/net/tcp_client.h": [
+            "tcp_open"
+          ],
+          "src/modules/module_01/component_01/api_03.c": [
+            "module_01_component_01_api_03_run"
+          ],
+          "src/modules/module_01/component_01/api_01.c": [
+            "module_01_component_01_api_01_run"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 5,
+          "functions_with_yes": 2,
+          "functions_with_no": 3,
+          "detailed_results": [
+            {
+              "file_path": "src/modules/module_01/component_01/api_02.c",
+              "function_name": "module_01_component_01_api_02_run",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/net/tcp_client.c",
+              "function_name": "tcp_open",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "include/net/tcp_client.h",
+              "function_name": "tcp_open",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/modules/module_01/component_01/api_03.c",
+              "function_name": "module_01_component_01_api_03_run",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/modules/module_01/component_01/api_01.c",
+              "function_name": "module_01_component_01_api_01_run",
+              "link_decision": "No"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "src/modules/module_01/component_01/api_02.c",
+        "src/net/tcp_client.c",
+        "include/net/tcp_client.h",
+        "src/modules/module_01/component_01/api_03.c",
+        "src/modules/module_01/component_01/api_01.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "src/modules/module_01/component_01/api_02.c",
+          "function_name": "module_01_component_01_api_02_run"
+        },
+        {
+          "file_path": "src/net/tcp_client.c",
+          "function_name": "tcp_open"
+        },
+        {
+          "file_path": "include/net/tcp_client.h",
+          "function_name": "tcp_open"
+        },
+        {
+          "file_path": "src/modules/module_01/component_01/api_03.c",
+          "function_name": "module_01_component_01_api_03_run"
+        },
+        {
+          "file_path": "src/modules/module_01/component_01/api_01.c",
+          "function_name": "module_01_component_01_api_01_run"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "src/net/tcp_client.c",
+          "function_name": "tcp_open",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "include/net/tcp_client.h",
+          "function_name": "tcp_open",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_11": {
+      "document": "sample_pair_11",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "src/modules/module_01/component_01/api_02.c",
+            "include/math_utils.h",
+            "src/modules/module_01/component_01/api_03.c",
+            "src/modules/module_01/component_01/api_01.c",
+            "src/math_utils.c"
+          ]
+        },
+        "function_level_localization": {
+          "src/modules/module_01/component_01/api_02.c": [
+            "module_01_component_01_api_02_run"
+          ],
+          "include/math_utils.h": [
+            "sub"
+          ],
+          "src/modules/module_01/component_01/api_03.c": [
+            "module_01_component_01_api_03_run"
+          ],
+          "src/modules/module_01/component_01/api_01.c": [
+            "module_01_component_01_api_01_run"
+          ],
+          "src/math_utils.c": [
+            "sub"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 5,
+          "functions_with_yes": 2,
+          "functions_with_no": 3,
+          "detailed_results": [
+            {
+              "file_path": "src/modules/module_01/component_01/api_02.c",
+              "function_name": "module_01_component_01_api_02_run",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "include/math_utils.h",
+              "function_name": "sub",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/modules/module_01/component_01/api_03.c",
+              "function_name": "module_01_component_01_api_03_run",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/modules/module_01/component_01/api_01.c",
+              "function_name": "module_01_component_01_api_01_run",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/math_utils.c",
+              "function_name": "sub",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "src/modules/module_01/component_01/api_02.c",
+        "include/math_utils.h",
+        "src/modules/module_01/component_01/api_03.c",
+        "src/modules/module_01/component_01/api_01.c",
+        "src/math_utils.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "src/modules/module_01/component_01/api_02.c",
+          "function_name": "module_01_component_01_api_02_run"
+        },
+        {
+          "file_path": "include/math_utils.h",
+          "function_name": "sub"
+        },
+        {
+          "file_path": "src/modules/module_01/component_01/api_03.c",
+          "function_name": "module_01_component_01_api_03_run"
+        },
+        {
+          "file_path": "src/modules/module_01/component_01/api_01.c",
+          "function_name": "module_01_component_01_api_01_run"
+        },
+        {
+          "file_path": "src/math_utils.c",
+          "function_name": "sub"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "include/math_utils.h",
+          "function_name": "sub",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/math_utils.c",
+          "function_name": "sub",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_12": {
+      "document": "sample_pair_12",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "src/modules/module_08/component_02/api_02.c",
+            "tests/modules/module_08/test_component_02_api_02.c",
+            "src/modules/module_08/component_02/api_03.c",
+            "include/modules/module_08/component_02/api_02.h",
+            "tests/modules/module_08/test_component_02_api_01.c",
+            "tests/modules/module_08/test_component_02_api_03.c",
+            "src/modules/module_08/component_02/api_01.c"
+          ]
+        },
+        "function_level_localization": {
+          "src/modules/module_08/component_02/api_02.c": [
+            "module_08_component_02_api_02_run"
+          ],
+          "tests/modules/module_08/test_component_02_api_02.c": [
+            "test_module_08_component_02_api_02"
+          ],
+          "src/modules/module_08/component_02/api_03.c": [
+            "module_08_component_02_api_03_run"
+          ],
+          "include/modules/module_08/component_02/api_02.h": [
+            "module_08_component_02_api_02_run"
+          ],
+          "tests/modules/module_08/test_component_02_api_01.c": [
+            "test_module_08_component_02_api_01"
+          ],
+          "tests/modules/module_08/test_component_02_api_03.c": [
+            "test_module_08_component_02_api_03"
+          ],
+          "src/modules/module_08/component_02/api_01.c": [
+            "module_08_component_02_api_01_run"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 7,
+          "functions_with_yes": 3,
+          "functions_with_no": 4,
+          "detailed_results": [
+            {
+              "file_path": "src/modules/module_08/component_02/api_02.c",
+              "function_name": "module_08_component_02_api_02_run",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "tests/modules/module_08/test_component_02_api_02.c",
+              "function_name": "test_module_08_component_02_api_02",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/modules/module_08/component_02/api_03.c",
+              "function_name": "module_08_component_02_api_03_run",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "include/modules/module_08/component_02/api_02.h",
+              "function_name": "module_08_component_02_api_02_run",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "tests/modules/module_08/test_component_02_api_01.c",
+              "function_name": "test_module_08_component_02_api_01",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "tests/modules/module_08/test_component_02_api_03.c",
+              "function_name": "test_module_08_component_02_api_03",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/modules/module_08/component_02/api_01.c",
+              "function_name": "module_08_component_02_api_01_run",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "src/modules/module_08/component_02/api_02.c",
+        "tests/modules/module_08/test_component_02_api_02.c",
+        "src/modules/module_08/component_02/api_03.c",
+        "include/modules/module_08/component_02/api_02.h",
+        "tests/modules/module_08/test_component_02_api_01.c",
+        "tests/modules/module_08/test_component_02_api_03.c",
+        "src/modules/module_08/component_02/api_01.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "src/modules/module_08/component_02/api_02.c",
+          "function_name": "module_08_component_02_api_02_run"
+        },
+        {
+          "file_path": "tests/modules/module_08/test_component_02_api_02.c",
+          "function_name": "test_module_08_component_02_api_02"
+        },
+        {
+          "file_path": "src/modules/module_08/component_02/api_03.c",
+          "function_name": "module_08_component_02_api_03_run"
+        },
+        {
+          "file_path": "include/modules/module_08/component_02/api_02.h",
+          "function_name": "module_08_component_02_api_02_run"
+        },
+        {
+          "file_path": "tests/modules/module_08/test_component_02_api_01.c",
+          "function_name": "test_module_08_component_02_api_01"
+        },
+        {
+          "file_path": "tests/modules/module_08/test_component_02_api_03.c",
+          "function_name": "test_module_08_component_02_api_03"
+        },
+        {
+          "file_path": "src/modules/module_08/component_02/api_01.c",
+          "function_name": "module_08_component_02_api_01_run"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "src/modules/module_08/component_02/api_02.c",
+          "function_name": "module_08_component_02_api_02_run",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "include/modules/module_08/component_02/api_02.h",
+          "function_name": "module_08_component_02_api_02_run",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/modules/module_08/component_02/api_01.c",
+          "function_name": "module_08_component_02_api_01_run",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_13": {
+      "document": "sample_pair_13",
+      "granularity": "file",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "file"
+        },
+        "directory_file_level": {
+          "granularity": "file",
+          "found_files": [
+            "src/math_utils.c",
+            "include/math_utils.h"
+          ]
+        },
+        "file_level_link_decision": {
+          "total_files": 2,
+          "files_with_yes": 2,
+          "files_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "src/math_utils.c",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "include/math_utils.h",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "src/math_utils.c",
+        "include/math_utils.h"
+      ],
+      "final_files": [
+        {
+          "file_path": "src/math_utils.c",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "include/math_utils.h",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_14": {
+      "document": "sample_pair_14",
+      "granularity": "file",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "file"
+        },
+        "directory_file_level": {
+          "granularity": "file",
+          "found_files": [
+            "include/core/config.h",
+            "src/core/config.c"
+          ]
+        },
+        "file_level_link_decision": {
+          "total_files": 2,
+          "files_with_yes": 2,
+          "files_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "include/core/config.h",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/core/config.c",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "include/core/config.h",
+        "src/core/config.c"
+      ],
+      "final_files": [
+        {
+          "file_path": "include/core/config.h",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/core/config.c",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_15": {
+      "document": "sample_pair_15",
+      "granularity": "directory",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "directory"
+        },
+        "directory_file_level": {
+          "found_files": [],
+          "found_directories": [
+            "src/net/",
+            "include/net/"
+          ]
+        }
+      },
+      "found_directories": [
+        "src/net/",
+        "include/net/"
+      ],
+      "found_files": []
+    },
+    "sample_pair_2": {
+      "document": "sample_pair_2",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "tests/modules/module_01/test_component_02_api_01.c",
+            "include/modules/module_01/component_02/api_01.h",
+            "src/modules/module_01/component_02/api_01.c"
+          ]
+        },
+        "function_level_localization": {
+          "tests/modules/module_01/test_component_02_api_01.c": [
+            "test_module_01_component_02_api_01"
+          ],
+          "include/modules/module_01/component_02/api_01.h": [
+            "module_01_component_02_api_01_run"
+          ],
+          "src/modules/module_01/component_02/api_01.c": [
+            "module_01_component_02_api_01_run"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 3,
+          "functions_with_yes": 3,
+          "functions_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "tests/modules/module_01/test_component_02_api_01.c",
+              "function_name": "test_module_01_component_02_api_01",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "include/modules/module_01/component_02/api_01.h",
+              "function_name": "module_01_component_02_api_01_run",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/modules/module_01/component_02/api_01.c",
+              "function_name": "module_01_component_02_api_01_run",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "tests/modules/module_01/test_component_02_api_01.c",
+        "include/modules/module_01/component_02/api_01.h",
+        "src/modules/module_01/component_02/api_01.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "tests/modules/module_01/test_component_02_api_01.c",
+          "function_name": "test_module_01_component_02_api_01"
+        },
+        {
+          "file_path": "include/modules/module_01/component_02/api_01.h",
+          "function_name": "module_01_component_02_api_01_run"
+        },
+        {
+          "file_path": "src/modules/module_01/component_02/api_01.c",
+          "function_name": "module_01_component_02_api_01_run"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "tests/modules/module_01/test_component_02_api_01.c",
+          "function_name": "test_module_01_component_02_api_01",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "include/modules/module_01/component_02/api_01.h",
+          "function_name": "module_01_component_02_api_01_run",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/modules/module_01/component_02/api_01.c",
+          "function_name": "module_01_component_02_api_01_run",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_3": {
+      "document": "sample_pair_3",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "include/modules/module_06/component_01/api_01.h",
+            "src/modules/module_06/component_01/api_01.c",
+            "tests/modules/module_06/test_component_01_api_01.c"
+          ]
+        },
+        "function_level_localization": {
+          "include/modules/module_06/component_01/api_01.h": [
+            "module_06_component_01_api_01_run"
+          ],
+          "src/modules/module_06/component_01/api_01.c": [
+            "module_06_component_01_api_01_run"
+          ],
+          "tests/modules/module_06/test_component_01_api_01.c": [
+            "test_module_06_component_01_api_01"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 3,
+          "functions_with_yes": 3,
+          "functions_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "include/modules/module_06/component_01/api_01.h",
+              "function_name": "module_06_component_01_api_01_run",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/modules/module_06/component_01/api_01.c",
+              "function_name": "module_06_component_01_api_01_run",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "tests/modules/module_06/test_component_01_api_01.c",
+              "function_name": "test_module_06_component_01_api_01",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "include/modules/module_06/component_01/api_01.h",
+        "src/modules/module_06/component_01/api_01.c",
+        "tests/modules/module_06/test_component_01_api_01.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "include/modules/module_06/component_01/api_01.h",
+          "function_name": "module_06_component_01_api_01_run"
+        },
+        {
+          "file_path": "src/modules/module_06/component_01/api_01.c",
+          "function_name": "module_06_component_01_api_01_run"
+        },
+        {
+          "file_path": "tests/modules/module_06/test_component_01_api_01.c",
+          "function_name": "test_module_06_component_01_api_01"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "include/modules/module_06/component_01/api_01.h",
+          "function_name": "module_06_component_01_api_01_run",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/modules/module_06/component_01/api_01.c",
+          "function_name": "module_06_component_01_api_01_run",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "tests/modules/module_06/test_component_01_api_01.c",
+          "function_name": "test_module_06_component_01_api_01",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_4": {
+      "document": "sample_pair_4",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "src/math_utils.c",
+            "include/math_utils.h"
+          ]
+        },
+        "function_level_localization": {
+          "src/math_utils.c": [
+            "add"
+          ],
+          "include/math_utils.h": [
+            "add"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 2,
+          "functions_with_yes": 2,
+          "functions_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "src/math_utils.c",
+              "function_name": "add",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "include/math_utils.h",
+              "function_name": "add",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "src/math_utils.c",
+        "include/math_utils.h"
+      ],
+      "found_functions": [
+        {
+          "file_path": "src/math_utils.c",
+          "function_name": "add"
+        },
+        {
+          "file_path": "include/math_utils.h",
+          "function_name": "add"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "src/math_utils.c",
+          "function_name": "add",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "include/math_utils.h",
+          "function_name": "add",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_5": {
+      "document": "sample_pair_5",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "include/string_utils.h",
+            "src/string_utils.c"
+          ]
+        },
+        "function_level_localization": {
+          "include/string_utils.h": [
+            "strlen_safe"
+          ],
+          "src/string_utils.c": [
+            "strlen_safe"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 2,
+          "functions_with_yes": 2,
+          "functions_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "include/string_utils.h",
+              "function_name": "strlen_safe",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/string_utils.c",
+              "function_name": "strlen_safe",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "include/string_utils.h",
+        "src/string_utils.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "include/string_utils.h",
+          "function_name": "strlen_safe"
+        },
+        {
+          "file_path": "src/string_utils.c",
+          "function_name": "strlen_safe"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "include/string_utils.h",
+          "function_name": "strlen_safe",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/string_utils.c",
+          "function_name": "strlen_safe",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_6": {
+      "document": "sample_pair_6",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "src/modules/module_01/component_01/api_02.c",
+            "include/net/http_client.h",
+            "src/net/http_client.c",
+            "src/modules/module_01/component_01/api_03.c",
+            "src/modules/module_01/component_01/api_01.c"
+          ]
+        },
+        "function_level_localization": {
+          "src/modules/module_01/component_01/api_02.c": [
+            "module_01_component_01_api_02_run"
+          ],
+          "include/net/http_client.h": [
+            "http_get"
+          ],
+          "src/net/http_client.c": [
+            "http_get"
+          ],
+          "src/modules/module_01/component_01/api_03.c": [
+            "module_01_component_01_api_03_run"
+          ],
+          "src/modules/module_01/component_01/api_01.c": [
+            "module_01_component_01_api_01_run"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 5,
+          "functions_with_yes": 2,
+          "functions_with_no": 3,
+          "detailed_results": [
+            {
+              "file_path": "src/modules/module_01/component_01/api_02.c",
+              "function_name": "module_01_component_01_api_02_run",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "include/net/http_client.h",
+              "function_name": "http_get",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/net/http_client.c",
+              "function_name": "http_get",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/modules/module_01/component_01/api_03.c",
+              "function_name": "module_01_component_01_api_03_run",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/modules/module_01/component_01/api_01.c",
+              "function_name": "module_01_component_01_api_01_run",
+              "link_decision": "No"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "src/modules/module_01/component_01/api_02.c",
+        "include/net/http_client.h",
+        "src/net/http_client.c",
+        "src/modules/module_01/component_01/api_03.c",
+        "src/modules/module_01/component_01/api_01.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "src/modules/module_01/component_01/api_02.c",
+          "function_name": "module_01_component_01_api_02_run"
+        },
+        {
+          "file_path": "include/net/http_client.h",
+          "function_name": "http_get"
+        },
+        {
+          "file_path": "src/net/http_client.c",
+          "function_name": "http_get"
+        },
+        {
+          "file_path": "src/modules/module_01/component_01/api_03.c",
+          "function_name": "module_01_component_01_api_03_run"
+        },
+        {
+          "file_path": "src/modules/module_01/component_01/api_01.c",
+          "function_name": "module_01_component_01_api_01_run"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "include/net/http_client.h",
+          "function_name": "http_get",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/net/http_client.c",
+          "function_name": "http_get",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_7": {
+      "document": "sample_pair_7",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "include/core/config.h",
+            "src/core/config.c"
+          ]
+        },
+        "function_level_localization": {
+          "include/core/config.h": [
+            "default_config"
+          ],
+          "src/core/config.c": [
+            "default_config"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 2,
+          "functions_with_yes": 2,
+          "functions_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "include/core/config.h",
+              "function_name": "default_config",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/core/config.c",
+              "function_name": "default_config",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "include/core/config.h",
+        "src/core/config.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "include/core/config.h",
+          "function_name": "default_config"
+        },
+        {
+          "file_path": "src/core/config.c",
+          "function_name": "default_config"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "include/core/config.h",
+          "function_name": "default_config",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/core/config.c",
+          "function_name": "default_config",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_8": {
+      "document": "sample_pair_8",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "include/core/errors.h",
+            "src/core/errors.c"
+          ]
+        },
+        "function_level_localization": {
+          "include/core/errors.h": [
+            "error_message"
+          ],
+          "src/core/errors.c": [
+            "error_message"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 2,
+          "functions_with_yes": 2,
+          "functions_with_no": 0,
+          "detailed_results": [
+            {
+              "file_path": "include/core/errors.h",
+              "function_name": "error_message",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "src/core/errors.c",
+              "function_name": "error_message",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "include/core/errors.h",
+        "src/core/errors.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "include/core/errors.h",
+          "function_name": "error_message"
+        },
+        {
+          "file_path": "src/core/errors.c",
+          "function_name": "error_message"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "include/core/errors.h",
+          "function_name": "error_message",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/core/errors.c",
+          "function_name": "error_message",
+          "link_decision": "Yes"
+        }
+      ]
+    },
+    "sample_pair_9": {
+      "document": "sample_pair_9",
+      "granularity": "function",
+      "phase_results": {
+        "granularity_decision": {
+          "decided_granularity": "function"
+        },
+        "directory_file_level": {
+          "granularity": "function",
+          "found_files": [
+            "include/string_utils.h",
+            "tests/test_string.c",
+            "src/string_utils.c"
+          ]
+        },
+        "function_level_localization": {
+          "include/string_utils.h": [
+            "strrev"
+          ],
+          "tests/test_string.c": [
+            "main"
+          ],
+          "src/string_utils.c": [
+            "strrev"
+          ]
+        },
+        "function_level_link_decision": {
+          "total_functions": 3,
+          "functions_with_yes": 2,
+          "functions_with_no": 1,
+          "detailed_results": [
+            {
+              "file_path": "include/string_utils.h",
+              "function_name": "strrev",
+              "link_decision": "Yes"
+            },
+            {
+              "file_path": "tests/test_string.c",
+              "function_name": "main",
+              "link_decision": "No"
+            },
+            {
+              "file_path": "src/string_utils.c",
+              "function_name": "strrev",
+              "link_decision": "Yes"
+            }
+          ]
+        }
+      },
+      "found_files": [
+        "include/string_utils.h",
+        "tests/test_string.c",
+        "src/string_utils.c"
+      ],
+      "found_functions": [
+        {
+          "file_path": "include/string_utils.h",
+          "function_name": "strrev"
+        },
+        {
+          "file_path": "tests/test_string.c",
+          "function_name": "main"
+        },
+        {
+          "file_path": "src/string_utils.c",
+          "function_name": "strrev"
+        }
+      ],
+      "final_functions": [
+        {
+          "file_path": "include/string_utils.h",
+          "function_name": "strrev",
+          "link_decision": "Yes"
+        },
+        {
+          "file_path": "src/string_utils.c",
+          "function_name": "strrev",
+          "link_decision": "Yes"
+        }
+      ]
+    }
+  }
+}
